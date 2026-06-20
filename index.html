@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nini & Gigi German Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar" aria-label="App overview">
+        <div>
+          <p class="eyebrow">Deutsch Memo</p>
+          <h1>Nini & Gigi German Flashcards</h1>
+        </div>
+        <div class="stats" aria-label="Learning stats">
+          <div id="masteredStat" title="Words with memory strength 4 or higher. A first-pass 'Know it' rating does not count as mastered yet.">
+            <span id="knownCount">0</span>
+            <small>Mastered</small>
+          </div>
+          <div id="dueStat" title="Previously seen words whose next review time has arrived.">
+            <span id="dueCount">0</span>
+            <small>Due now</small>
+          </div>
+          <div id="streakStat" title="Current run of correct review answers. Self-ratings on new cards are not counted.">
+            <span id="streakCount">0</span>
+            <small>Streak</small>
+          </div>
+        </div>
+      </section>
+
+      <section id="setupView" class="setup-view" aria-labelledby="setupTitle">
+        <div class="panel intro-panel">
+          <p class="eyebrow">New session</p>
+          <h2 id="setupTitle">Choose how many words to study</h2>
+          <div class="count-picker" id="countPicker" role="radiogroup" aria-label="Choose word count">
+            <button class="count-option is-selected" type="button" data-count="10" role="radio" aria-checked="true">10</button>
+            <button class="count-option" type="button" data-count="20" role="radio" aria-checked="false">20</button>
+            <button class="count-option" type="button" data-count="30" role="radio" aria-checked="false">30</button>
+            <button class="count-option" type="button" data-count="40" role="radio" aria-checked="false">40</button>
+            <button class="count-option" type="button" data-count="50" role="radio" aria-checked="false">50</button>
+          </div>
+          <button id="startButton" class="primary-button" type="button">Start studying</button>
+        </div>
+      </section>
+
+      <section id="studyView" class="study-view hidden" aria-live="polite">
+        <div class="session-strip">
+          <button id="backButton" class="icon-button" type="button" aria-label="Back to setup">&lt;</button>
+          <div class="progress-wrap" aria-label="Session progress">
+            <div class="progress-track">
+              <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <span id="progressText">0 / 0</span>
+          </div>
+          <button id="resetButton" class="icon-button" type="button" aria-label="Reset learning history">R</button>
+        </div>
+
+        <article id="card" class="word-card neutral">
+          <div class="card-top">
+            <span id="modePill" class="mode-pill">Learn</span>
+          </div>
+
+          <div id="cardContent" class="card-content"></div>
+
+          <div id="feedback" class="feedback" role="status"></div>
+          <div id="actions" class="actions"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
