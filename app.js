@@ -1,55 +1,8 @@
-const WORDS = [
-  { id: "kaffee", word: "Kaffee", article: "der", plural: "Kaffees", pos: "noun", meaning: "coffee", example: "Nini bestellt im Bahnhofscafé einen Kaffee, während Gigi die Zugtickets prüft.", translation: "Nini orders a coffee at the station café while Gigi checks the train tickets." },
-  { id: "reise", word: "Reise", article: "die", plural: "Reisen", pos: "noun", meaning: "trip; journey", example: "Gigi plant eine Reise nach Wien, und Nini sucht kleine Cafés in der Altstadt.", translation: "Gigi plans a trip to Vienna, and Nini looks for small cafés in the old town." },
-  { id: "foto", word: "Foto", article: "das", plural: "Fotos", pos: "noun", meaning: "photo", example: "Nini macht ein Foto von Gigi, als die Sonne über dem Wanderweg aufgeht.", translation: "Nini takes a photo of Gigi as the sun rises over the hiking trail." },
-  { id: "berge", word: "Berge", article: "die", pluralOnly: true, pos: "noun", meaning: "mountains", example: "Die Berge leuchten, während Nini und Gigi kurz stillstehen und auf den Schnee schauen.", translation: "The mountains glow while Nini and Gigi pause and look at the snow." },
-  { id: "rucksack", word: "Rucksack", article: "der", plural: "Rucksäcke", pos: "noun", meaning: "backpack", example: "Gigi packt den Rucksack mit Brot, Kamera und einer kleinen Thermoskanne Kaffee.", translation: "Gigi packs the backpack with bread, a camera, and a small thermos of coffee." },
-  { id: "kamera", word: "Kamera", article: "die", plural: "Kameras", pos: "noun", meaning: "camera", example: "Nini legt die Kamera auf den Tisch, bevor sie mit Gigi meditiert.", translation: "Nini puts the camera on the table before meditating with Gigi." },
-  { id: "hotel", word: "Hotel", article: "das", plural: "Hotels", pos: "noun", meaning: "hotel", example: "Nach der langen Reise finden Nini und Gigi ein ruhiges Hotel am See.", translation: "After the long trip, Nini and Gigi find a quiet hotel by the lake." },
-  { id: "piste", word: "Piste", article: "die", plural: "Pisten", pos: "noun", meaning: "ski slope", example: "Auf der blauen Piste wartet Gigi auf Nini und winkt mit dem Skistock.", translation: "On the blue ski slope, Gigi waits for Nini and waves with a ski pole." },
-  { id: "zug", word: "Zug", article: "der", plural: "Züge", pos: "noun", meaning: "train", example: "Im Zug teilen Nini und Gigi Croissants und sprechen über die nächste Wanderung.", translation: "On the train, Nini and Gigi share croissants and talk about the next hike." },
-  { id: "ticket", word: "Ticket", article: "das", plural: "Tickets", pos: "noun", meaning: "ticket", example: "Gigi zeigt das Ticket am Eingang, während Nini den Kaffee festhält.", translation: "Gigi shows the ticket at the entrance while Nini holds the coffee." },
-  { id: "huette", word: "Hütte", article: "die", plural: "Hütten", pos: "noun", meaning: "mountain hut", example: "In der Hütte trocknen Nini und Gigi ihre Jacken nach der Schneewanderung.", translation: "In the hut, Nini and Gigi dry their jackets after the snowy hike." },
-  { id: "schnee", word: "Schnee", article: "der", plural: null, pos: "noun", meaning: "snow", example: "Der Schnee knirscht leise, als Nini und Gigi früh zur Skipiste gehen.", translation: "The snow crunches softly as Nini and Gigi walk early to the ski slope." },
-  { id: "fenster", word: "Fenster", article: "das", plural: "Fenster", pos: "noun", meaning: "window", example: "Am Fenster trinkt Nini Kaffee, und Gigi sortiert die Fotos der Reise.", translation: "At the window, Nini drinks coffee and Gigi sorts the photos from the trip." },
-  { id: "sonne", word: "Sonne", article: "die", plural: "Sonnen", pos: "noun", meaning: "sun", example: "Die Sonne scheint auf Ninis Gesicht, während Gigi den Wanderweg fotografiert.", translation: "The sun shines on Nini's face while Gigi photographs the hiking trail." },
-  { id: "see", word: "See", article: "der", plural: "Seen", pos: "noun", meaning: "lake", example: "Am See setzen sich Nini und Gigi ins Gras und hören dem Wind zu.", translation: "At the lake, Nini and Gigi sit in the grass and listen to the wind." },
-  { id: "tasche", word: "Tasche", article: "die", plural: "Taschen", pos: "noun", meaning: "bag", example: "Nini legt die Sonnenbrille in die Tasche, bevor Gigi den Stadtplan öffnet.", translation: "Nini puts the sunglasses in the bag before Gigi opens the city map." },
-  { id: "brot", word: "Brot", article: "das", plural: "Brote", pos: "noun", meaning: "bread", example: "Beim Picknick teilt Gigi das Brot, und Nini gießt Kaffee in zwei Tassen.", translation: "At the picnic, Gigi shares the bread and Nini pours coffee into two cups." },
-  { id: "stadt", word: "Stadt", article: "die", plural: "Städte", pos: "noun", meaning: "city", example: "In der Stadt suchen Nini und Gigi ein Museum und ein stilles Café.", translation: "In the city, Nini and Gigi look for a museum and a quiet café." },
-  { id: "morgen", word: "Morgen", article: "der", plural: "Morgen", pos: "noun", meaning: "morning", example: "Am Morgen meditiert Nini, während Gigi frischen Kaffee kocht.", translation: "In the morning, Nini meditates while Gigi makes fresh coffee." },
-  { id: "abend", word: "Abend", article: "der", plural: "Abende", pos: "noun", meaning: "evening", example: "Am Abend schauen Nini und Gigi die Fotos vom Skitag an.", translation: "In the evening, Nini and Gigi look at the photos from the ski day." },
-  { id: "wanderung", word: "Wanderung", article: "die", plural: "Wanderungen", pos: "noun", meaning: "hike", example: "Die Wanderung beginnt ruhig, und Gigi erinnert Nini an tiefe Atemzüge.", translation: "The hike begins quietly, and Gigi reminds Nini to take deep breaths." },
-  { id: "ski", word: "Ski", article: "die", pluralOnly: true, pos: "noun", meaning: "skis", example: "Vor der Hütte stellen Nini und Gigi die Ski nebeneinander in den Schnee.", translation: "In front of the hut, Nini and Gigi place the skis side by side in the snow." },
-  { id: "meditation", word: "Meditation", article: "die", plural: "Meditationen", pos: "noun", meaning: "meditation", example: "Nach der Meditation fühlen sich Nini und Gigi bereit für den langen Reisetag.", translation: "After meditation, Nini and Gigi feel ready for the long travel day." },
-  { id: "alltag", word: "Alltag", article: "der", plural: null, pos: "noun", meaning: "daily life", example: "Im Alltag machen Nini und Gigi jeden Nachmittag eine kleine Kaffeepause.", translation: "In daily life, Nini and Gigi take a small coffee break every afternoon." },
-  { id: "karte", word: "Karte", article: "die", plural: "Karten", pos: "noun", meaning: "map; card", example: "Gigi faltet die Karte, und Nini markiert den Weg zur nächsten Berghütte.", translation: "Gigi folds the map, and Nini marks the way to the next mountain hut." },
-  { id: "ruhig", word: "ruhig", pos: "adjective", meaning: "calm; quiet", example: "Nini bleibt ruhig, als Gigi im Café die Kamera sucht.", translation: "Nini stays calm while Gigi looks for the camera in the café." },
-  { id: "frisch", word: "frisch", pos: "adjective", meaning: "fresh", example: "Der Kaffee ist frisch, und Nini packt ihn für die Wanderung ein.", translation: "The coffee is fresh, and Nini packs it for the hike." },
-  { id: "langsam", word: "langsam", pos: "adjective", meaning: "slow; slowly", example: "Nini geht langsam durch den Schnee, und Gigi wartet mit einem Foto.", translation: "Nini walks slowly through the snow, and Gigi waits with a photo." },
-  { id: "schnell", word: "schnell", pos: "adjective", meaning: "fast; quickly", example: "Gigi findet schnell ein Café, als Nini nach der Reise müde wird.", translation: "Gigi quickly finds a café when Nini gets tired after the trip." },
-  { id: "gemuetlich", word: "gemütlich", pos: "adjective", meaning: "cozy; comfortable", example: "Nini und Gigi sitzen gemütlich am Fenster und planen den Skitag.", translation: "Nini and Gigi sit cozily by the window and plan the ski day." },
-  { id: "hell", word: "hell", pos: "adjective", meaning: "bright", example: "Der Morgen ist hell, und Nini hilft Gigi beim Fotografieren der Berge.", translation: "The morning is bright, and Nini helps Gigi photograph the mountains." },
-  { id: "muede", word: "müde", pos: "adjective", meaning: "tired", example: "Nach der langen Wanderung ist Gigi müde, aber Nini kocht noch Tee.", translation: "After the long hike, Gigi is tired, but Nini still makes tea." },
-  { id: "leicht", word: "leicht", pos: "adjective", meaning: "light; easy", example: "Nini nimmt eine leichte Jacke mit, weil Gigi warmes Wetter erwartet.", translation: "Nini brings a light jacket because Gigi expects warm weather." },
-  { id: "schwer", word: "schwer", pos: "adjective", meaning: "heavy; difficult", example: "Der Rucksack ist schwer, doch Gigi trägt ihn bis zur Hütte.", translation: "The backpack is heavy, but Gigi carries it to the hut." },
-  { id: "wichtig", word: "wichtig", pos: "adjective", meaning: "important", example: "Für Nini ist eine ruhige Meditation vor der Reise wichtig.", translation: "For Nini, a calm meditation before the trip is important." },
-  { id: "gehen", word: "gehen", pos: "verb", meaning: "to go; to walk", example: "Nini und Gigi gehen nach dem Kaffee zum Bahnhof.", translation: "Nini and Gigi go to the train station after coffee." },
-  { id: "fahren", word: "fahren", pos: "verb", meaning: "to ride; to drive", example: "Gigi und Nini fahren mit dem Zug in die Berge.", translation: "Gigi and Nini take the train into the mountains." },
-  { id: "trinken", word: "trinken", pos: "verb", meaning: "to drink", example: "Nini und Gigi trinken Kaffee, bevor sie die Stadt erkunden.", translation: "Nini and Gigi drink coffee before exploring the city." },
-  { id: "fotografieren", word: "fotografieren", pos: "verb", meaning: "to photograph", example: "Gigi fotografiert Nini vor dem See, und beide lachen.", translation: "Gigi photographs Nini in front of the lake, and both laugh." },
-  { id: "wandern", word: "wandern", pos: "verb", meaning: "to hike", example: "Am Samstag wandern Nini und Gigi durch einen stillen Wald.", translation: "On Saturday, Nini and Gigi hike through a quiet forest." },
-  { id: "skifahren", word: "skifahren", pos: "verb", meaning: "to ski", example: "Im Januar gehen Nini und Gigi skifahren und machen danach eine Kaffeepause.", translation: "In January, Nini and Gigi go skiing and take a coffee break afterward." },
-  { id: "atmen", word: "atmen", pos: "verb", meaning: "to breathe", example: "Bei der Meditation atmen Nini und Gigi langsam und tief.", translation: "During meditation, Nini and Gigi breathe slowly and deeply." },
-  { id: "planen", word: "planen", pos: "verb", meaning: "to plan", example: "Nini und Gigi planen im Café ihre nächste Reise.", translation: "Nini and Gigi plan their next trip in the café." },
-  { id: "packen", word: "packen", pos: "verb", meaning: "to pack", example: "Gigi will die Kamera packen, während Nini die Tickets sucht.", translation: "Gigi wants to pack the camera while Nini looks for the tickets." },
-  { id: "lernen", word: "lernen", pos: "verb", meaning: "to learn", example: "Nini und Gigi lernen abends deutsche Wörter mit kleinen Karten.", translation: "In the evening, Nini and Gigi learn German words with small cards." },
-  { id: "heute", word: "heute", pos: "adverb", meaning: "today", example: "Heute trinken Nini und Gigi Kaffee und buchen ein Hotel am See.", translation: "Today, Nini and Gigi drink coffee and book a hotel by the lake." },
-  { id: "morgen_adv", word: "morgen", pos: "adverb", meaning: "tomorrow", example: "Morgen wandern Nini und Gigi früh los, damit das Licht weich ist.", translation: "Tomorrow, Nini and Gigi start hiking early so the light is soft." },
-  { id: "zusammen", word: "zusammen", pos: "adverb", meaning: "together", example: "Zusammen betrachten Nini und Gigi die Fotos vom letzten Urlaub.", translation: "Together, Nini and Gigi look at the photos from the last vacation." },
-  { id: "oft", word: "oft", pos: "adverb", meaning: "often", example: "Nini und Gigi meditieren oft, bevor sie eine neue Stadt besuchen.", translation: "Nini and Gigi often meditate before visiting a new city." },
-  { id: "immer", word: "immer", pos: "adverb", meaning: "always", example: "Gigi nimmt immer die Kamera mit, wenn Nini Kaffee für die Reise kauft.", translation: "Gigi always brings the camera when Nini buys coffee for the trip." }
-];
+let WORDS = [];
+const VOCABULARY_URL = "vocabulary.txt";
+const IMAGE_MANIFEST_URL = "assets/vocab-images/manifest.json";
+const IMAGE_CACHE_KEY = Date.now();
+let IMAGE_PATHS = new Map();
 
 const STORAGE_KEY = "nini-gigi-german-memory-v1";
 const DEFAULT_STATE = {
@@ -82,6 +35,190 @@ const progressText = document.querySelector("#progressText");
 const knownCount = document.querySelector("#knownCount");
 const dueCount = document.querySelector("#dueCount");
 const streakCount = document.querySelector("#streakCount");
+
+async function loadVocabulary() {
+  startButton.disabled = true;
+  startButton.textContent = "Loading vocabulary...";
+
+  try {
+    const response = await fetch(`${VOCABULARY_URL}?t=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Could not load ${VOCABULARY_URL}`);
+
+    await loadImageManifest();
+    const text = await response.text();
+    WORDS = parseVocabulary(text);
+    pruneOldRecords();
+
+    if (!WORDS.length) {
+      startButton.textContent = "No words found";
+      feedback.textContent = "vocabulary.txt is empty or could not be parsed.";
+      return;
+    }
+
+    startButton.disabled = false;
+    startButton.textContent = "Start studying";
+    renderStats();
+  } catch (error) {
+    WORDS = [];
+    startButton.textContent = "Vocabulary missing";
+    feedback.textContent = "Could not load vocabulary.txt. Put a vocabulary file next to index.html and refresh.";
+  }
+}
+
+async function loadImageManifest() {
+  try {
+    const response = await fetch(`${IMAGE_MANIFEST_URL}?t=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error("No image manifest");
+    const entries = await response.json();
+    IMAGE_PATHS = parseImageManifest(Array.isArray(entries) ? entries : []);
+  } catch {
+    IMAGE_PATHS = new Map();
+  }
+}
+
+function parseImageManifest(entries) {
+  const paths = new Map();
+  entries.forEach((entry) => {
+    const parsed = parseImageManifestEntry(entry);
+    if (!parsed) return;
+
+    const { id, path, extension } = parsed;
+
+    if (extension === "png" || extension === "jpg" || extension === "jpeg" || extension === "webp") {
+      paths.set(id, path);
+      return;
+    }
+
+    if (!paths.has(id)) paths.set(id, path);
+  });
+  return paths;
+}
+
+function parseImageManifestEntry(entry) {
+  let id = "";
+  let filename = "";
+
+  if (typeof entry === "string") {
+    filename = entry.trim();
+  } else if (entry && typeof entry === "object") {
+    id = String(entry.id || "").trim();
+    filename = String(entry.file || entry.path || entry.filename || "").trim();
+  }
+
+  if (!filename) return null;
+
+  const basename = filename.split(/[\\/]/).pop();
+  const match = basename.match(/^(.+)\.(png|jpe?g|webp|svg)$/i);
+  const inferredId = match ? match[1] : basename;
+  const extension = match ? match[2].toLowerCase() : "svg";
+  const path = filename.startsWith("assets/") ? filename : `assets/vocab-images/${filename}`;
+
+  return {
+    id: id || inferredId,
+    path,
+    extension
+  };
+}
+
+function parseVocabulary(text) {
+  const cleaned = text.replace(/^\uFEFF/, "").trim();
+  if (!cleaned) return [];
+
+  const richLines = cleaned
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .filter((line) => line.includes("|") || line.includes("\t"));
+
+  const rawEntries = richLines.length
+    ? richLines.map(parseRichVocabularyLine)
+    : cleaned.split(/[,;\r\n]+/).map((term) => ({ term: term.trim() }));
+
+  const usedIds = new Map();
+  return rawEntries
+    .map((entry) => normalizeVocabularyEntry(entry))
+    .filter(Boolean)
+    .map((word, index) => {
+      const baseId = slugify(word.article ? `${word.article}-${word.word}` : word.word) || `word-${index + 1}`;
+      const count = usedIds.get(baseId) || 0;
+      usedIds.set(baseId, count + 1);
+      word.id = count ? `${baseId}-${count + 1}` : baseId;
+      return word;
+    });
+}
+
+function parseRichVocabularyLine(line) {
+  const separator = line.includes("|") ? "|" : "\t";
+  const [term, meaning = "", example = "", translation = ""] = line
+    .split(separator)
+    .map((part) => part.trim());
+  return { term, meaning, example, translation };
+}
+
+function normalizeVocabularyEntry(entry) {
+  const parsed = parseTerm(entry.term);
+  if (!parsed.word) return null;
+
+  const generated = generateExample(parsed);
+  const idBase = parsed.article ? `${parsed.article}-${parsed.word}` : parsed.word;
+  const imageId = slugify(idBase);
+  return {
+    ...parsed,
+    pos: parsed.article ? "noun" : "word",
+    meaning: entry.meaning || "",
+    example: entry.example || generated.example,
+    translation: entry.translation || generated.translation,
+    imagePath: IMAGE_PATHS.get(imageId) || ""
+  };
+}
+
+function parseTerm(term) {
+  const normalized = term.replace(/\s+/g, " ").trim();
+  const match = normalized.match(/^(der|die|das)\s+(.+)$/i);
+  if (!match) return { word: normalized };
+  return { article: match[1].toLowerCase(), word: match[2].trim() };
+}
+
+function generateExample(word) {
+  const visibleWord = displayWord(word);
+  const templates = [
+    {
+      example: `Beim Kaffee sagt Nini „${visibleWord}“, und Gigi schreibt das Wort in ihr Reiseheft.`,
+      translation: `Over coffee, Nini says "${visibleWord}", and Gigi writes the word in her travel notebook.`
+    },
+    {
+      example: `Auf der Wanderung üben Nini und Gigi das Wort „${visibleWord}“ und machen danach ein Foto.`,
+      translation: `On the hike, Nini and Gigi practice the word "${visibleWord}" and then take a photo.`
+    },
+    {
+      example: `Vor dem Skifahren liest Gigi „${visibleWord}“ laut vor, während Nini ruhig atmet.`,
+      translation: `Before skiing, Gigi reads "${visibleWord}" aloud while Nini breathes calmly.`
+    },
+    {
+      example: `Im Alltag wiederholen Nini und Gigi „${visibleWord}“ nach einer kurzen Meditation.`,
+      translation: `In daily life, Nini and Gigi repeat "${visibleWord}" after a short meditation.`
+    }
+  ];
+  return templates[Math.abs(slugify(visibleWord).length + visibleWord.length) % templates.length];
+}
+
+function slugify(value) {
+  return normalizeAnswer(value)
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function hasMeaning(word) {
+  return Boolean(word.meaning && word.meaning.trim());
+}
+
+function pruneOldRecords() {
+  const validIds = new Set(WORDS.map((word) => word.id));
+  Object.keys(state.records).forEach((id) => {
+    if (!validIds.has(id)) delete state.records[id];
+  });
+  saveState();
+}
 
 function loadState() {
   try {
@@ -148,13 +285,26 @@ function pickSessionWords(count) {
     .sort((a, b) => {
       const aDue = a.record.dueAt <= now ? 0 : 1;
       const bDue = b.record.dueAt <= now ? 0 : 1;
-      return aDue - bDue || a.record.strength - b.record.strength || a.record.dueAt - b.record.dueAt;
+      const aImage = imagePriority(a.word);
+      const bImage = imagePriority(b.word);
+      return aDue - bDue || a.record.strength - b.record.strength || aImage - bImage || a.record.dueAt - b.record.dueAt;
     })
     .slice(0, count)
     .map(({ word }) => word);
 }
 
+function imagePriority(word) {
+  if (!word.imagePath) return 2;
+  if (word.imagePath.toLowerCase().endsWith(".png")) return 0;
+  return 1;
+}
+
 function startSession() {
+  if (!WORDS.length) {
+    feedback.textContent = "No vocabulary has been loaded yet.";
+    return;
+  }
+
   const words = pickSessionWords(state.selectedCount);
   session = words.map((word) => ({
     word,
@@ -185,7 +335,10 @@ function nextCard() {
 }
 
 function chooseQuizType(word) {
-  const types = isNoun(word) ? ["meaning", "article", "fill"] : ["meaning", "fill"];
+  const types = [];
+  if (hasMeaning(word)) types.push("meaning");
+  if (isNoun(word)) types.push("article");
+  types.push("fill");
   return types[Math.floor(Math.random() * types.length)];
 }
 
@@ -219,11 +372,12 @@ function speakerIcon() {
 
 function renderLearn(word) {
   cardContent.innerHTML = `
+    ${imageMarkup(word)}
     <div class="word-line">
       <div class="word">${displayWord(word)}</div>
       <button class="speak-button" type="button" aria-label="Play German pronunciation" title="Play German pronunciation">${speakerIcon()}</button>
     </div>
-    <div class="meaning">${word.meaning}</div>
+    ${hasMeaning(word) ? `<div class="meaning">${word.meaning}</div>` : ""}
     <div class="example">
       <strong>${word.example}</strong>
       <span>${word.translation}</span>
@@ -240,10 +394,27 @@ function renderLearn(word) {
   });
 }
 
+function imageMarkup(word) {
+  if (!word.imagePath) return "";
+  return `
+    <figure class="vocab-figure">
+      <img class="vocab-image" src="${imageUrl(word.imagePath)}" alt="Visual cue for ${escapeAttribute(displayWord(word))}" onerror="this.closest('.vocab-figure').remove()">
+    </figure>
+  `;
+}
+
+function imageUrl(path) {
+  const separator = path.includes("?") ? "&" : "?";
+  return `${escapeAttribute(path)}${separator}v=${IMAGE_CACHE_KEY}`;
+}
+
 function renderMeaningQuiz(word) {
+  const distractors = WORDS
+    .filter((item) => item.id !== word.id && hasMeaning(item))
+    .map((item) => item.meaning);
   const choices = shuffle([
     word.meaning,
-    ...shuffle(WORDS.filter((item) => item.id !== word.id)).slice(0, 3).map((item) => item.meaning)
+    ...shuffle(distractors).slice(0, 3)
   ]);
   cardContent.innerHTML = `
     <p class="prompt">Choose the correct meaning</p>
@@ -527,4 +698,4 @@ resetButton.addEventListener("click", () => {
 
 loadVoices();
 syncCountPicker();
-renderStats();
+loadVocabulary();
