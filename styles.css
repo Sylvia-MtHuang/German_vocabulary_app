@@ -496,3 +496,126 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 720px) {
+  body.is-studying .app-shell {
+    width: min(100% - 16px, 680px);
+    min-height: 100svh;
+    padding: 8px 0 10px;
+    grid-template-rows: 1fr;
+    gap: 0;
+  }
+
+  body.is-studying .topbar {
+    display: none;
+  }
+
+  body.is-studying .study-view {
+    align-content: start;
+    gap: 8px;
+  }
+
+  body.is-studying .session-strip {
+    grid-template-columns: 36px 1fr 36px;
+    gap: 8px;
+  }
+
+  body.is-studying .icon-button {
+    width: 36px;
+    height: 36px;
+    font-size: 1.05rem;
+  }
+
+  body.is-studying .progress-wrap {
+    gap: 8px;
+    font-size: 0.82rem;
+  }
+
+  body.is-studying .progress-track {
+    height: 7px;
+  }
+
+  body.is-studying .word-card {
+    min-height: 0;
+    padding: 12px 14px 14px;
+    border-radius: 20px;
+    gap: 8px;
+  }
+
+  body.is-studying .mode-pill {
+    min-height: 24px;
+    padding: 4px 9px;
+    font-size: 0.74rem;
+  }
+
+  body.is-studying .vocab-figure {
+    margin-bottom: 8px;
+  }
+
+  body.is-studying .vocab-image {
+    width: min(100%, 210px);
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(25, 32, 42, 0.12);
+  }
+
+  body.is-studying .word-line {
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  body.is-studying .word {
+    font-size: clamp(2.1rem, 10vw, 2.75rem);
+    text-align: center;
+  }
+
+  body.is-studying .speak-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  body.is-studying .speaker-icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  body.is-studying .meaning {
+    margin-bottom: 8px;
+    font-size: 0.98rem;
+    text-align: center;
+  }
+
+  body.is-studying .example {
+    padding-top: 8px;
+  }
+
+  body.is-studying .example strong {
+    margin-bottom: 4px;
+    font-size: 1rem;
+    line-height: 1.28;
+  }
+
+  body.is-studying .example span {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  body.is-studying .feedback {
+    min-height: 20px;
+    font-size: 0.88rem;
+  }
+
+  body.is-studying .actions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  body.is-studying .answer-button,
+  body.is-studying .choice-button {
+    min-height: 40px;
+    border-radius: 12px;
+    padding: 8px 9px;
+    font-size: 0.92rem;
+  }
+}

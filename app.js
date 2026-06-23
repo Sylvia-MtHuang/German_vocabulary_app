@@ -311,6 +311,7 @@ function startSession() {
     phase: getRecord(word.id).seen ? "quiz" : "learn",
     quizType: null
   }));
+  document.body.classList.add("is-studying");
   setupView.classList.add("hidden");
   studyView.classList.remove("hidden");
   nextCard();
@@ -595,12 +596,6 @@ async function speak(text) {
   utterance.pitch = 1;
   if (germanVoice) utterance.voice = germanVoice;
   window.speechSynthesis.speak(utterance);
-
-  if (germanVoice) {
-    showVoiceMessage(`Using German voice: ${germanVoice.name} (${germanVoice.lang})`, "correct");
-  } else {
-    showVoiceMessage("Requested de-DE pronunciation. If it still sounds English, install a German voice.", "");
-  }
 }
 
 function showVoiceMessage(message, tone) {
@@ -628,6 +623,7 @@ function renderDone() {
 }
 
 function goHome() {
+  document.body.classList.remove("is-studying");
   studyView.classList.add("hidden");
   setupView.classList.remove("hidden");
   renderStats();
