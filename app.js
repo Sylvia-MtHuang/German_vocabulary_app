@@ -578,7 +578,7 @@ function checkQuiz(isCorrect) {
   } else {
     applyReviewResult(record, "again");
     state.streak = 0;
-    feedback.textContent = `Correct answer: ${displayWord(word)}`;
+    feedback.textContent = `Correct answer: ${correctAnswerForCurrentQuiz()}`;
     feedback.className = "feedback wrong";
     session.splice(Math.min(2, session.length), 0, { word, phase: "quiz", quizType: currentItem.quizType });
   }
@@ -586,6 +586,13 @@ function checkQuiz(isCorrect) {
   saveState();
   actions.innerHTML = `<button class="answer-button primary" type="button">Continue</button>`;
   actions.querySelector("button").addEventListener("click", nextCard);
+}
+
+function correctAnswerForCurrentQuiz() {
+  const { word, quizType } = currentItem;
+  if (quizType === "meaning") return word.meaning || displayWord(word);
+  if (quizType === "article") return word.pluralOnly ? "plural" : word.article;
+  return displayWord(word);
 }
 
 function clearAutoAdvance() {
