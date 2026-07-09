@@ -10,6 +10,12 @@ const DEFAULT_STATE = {
   streak: 0,
   records: {}
 };
+const DEFAULT_EASE_FACTOR = 2.5;
+const MIN_EASE_FACTOR = 1.3;
+const MAX_EASE_FACTOR = 3.2;
+const DAY_MS = 24 * 60 * 60 * 1000;
+const LEARNING_STEPS_MS = [0, 5 * 60_000, 20 * 60_000];
+const MAX_INTERVAL_DAYS = 180;
 
 let state = loadState();
 let session = [];
@@ -217,6 +223,7 @@ function pruneOldRecords() {
   Object.keys(state.records).forEach((id) => {
     if (!validIds.has(id)) delete state.records[id];
   });
+  WORDS.forEach((word) => getRecord(word.id));
   saveState();
 }
 
@@ -240,10 +247,48 @@ function getRecord(wordId) {
       strength: 0,
       dueAt: 0,
       correct: 0,
-      wrong: 0
+      wrong: 0,
+      easeFactor: DEFAULT_EASE_FACTOR,
+      intervalDays: 0,
+      reviewCount: 0,
+      lapses: 0,
+      learningStep: 0,
+      lastReviewedAt: 0
     };
   }
-  return state.records[wordId];
+  return normalizeRecord(state.records[wordId]);
+}
+
+function normalizeRecord(record) {
+  record.seen = Boolean(record.seen);
+  record.strength = clampInteger(record.strength, 0, 9, 0);
+  record.dueAt = clampNumber(record.dueAt, 0, Number.MAX_SAFE_INTEGER, 0);
+  record.correct = clampInteger(record.correct, 0, Number.MAX_SAFE_INTEGER, 0);
+  record.wrong = clampInteger(record.wrong, 0, Number.MAX_SAFE_INTEGER, 0);
+  record.easeFactor = clampNumber(record.easeFactor, MIN_EASE_FACTOR, MAX_EASE_FACTOR, DEFAULT_EASE_FACTOR);
+  record.intervalDays = clampNumber(record.intervalDays, 0, MAX_INTERVAL_DAYS, estimateIntervalDays(record));
+  record.reviewCount = clampInteger(record.reviewCount, 0, Number.MAX_SAFE_INTEGER, record.correct + record.wrong);
+  record.lapses = clampInteger(record.lapses, 0, Number.MAX_SAFE_INTEGER, record.wrong);
+  record.learningStep = clampInteger(record.learningStep, 0, LEARNING_STEPS_MS.length, record.intervalDays >= 1 ? LEARNING_STEPS_MS.length : 0);
+  record.lastReviewedAt = clampNumber(record.lastReviewedAt, 0, Number.MAX_SAFE_INTEGER, 0);
+  return record;
+}
+
+function clampNumber(value, min, max, fallback) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return fallback;
+  return Math.min(max, Math.max(min, number));
+}
+
+function clampInteger(value, min, max, fallback) {
+  return Math.round(clampNumber(value, min, max, fallback));
+}
+
+function estimateIntervalDays(record) {
+  if (!record.seen || !record.dueAt) return 0;
+  const remainingDays = Math.max(0, Math.round((record.dueAt - Date.now()) / DAY_MS));
+  if (remainingDays > 0) return Math.min(MAX_INTERVAL_DAYS, remainingDays);
+  return record.strength >= 5 ? 1 : 0;
 }
 
 function getGenderClass(word, revealGender = true) {
@@ -283,14 +328,33 @@ function pickSessionWords(count) {
   return [...WORDS]
     .map((word) => ({ word, record: getRecord(word.id) }))
     .sort((a, b) => {
-      const aDue = a.record.dueAt <= now ? 0 : 1;
-      const bDue = b.record.dueAt <= now ? 0 : 1;
+      const aDue = isDue(a.record, now) ? 0 : 1;
+      const bDue = isDue(b.record, now) ? 0 : 1;
       const aImage = imagePriority(a.word);
       const bImage = imagePriority(b.word);
-      return aDue - bDue || a.record.strength - b.record.strength || aImage - bImage || a.record.dueAt - b.record.dueAt;
+      return (
+        aDue - bDue ||
+        memoryPriority(a.record, now) - memoryPriority(b.record, now) ||
+        a.record.strength - b.record.strength ||
+        aImage - bImage ||
+        a.record.dueAt - b.record.dueAt
+      );
     })
     .slice(0, count)
     .map(({ word }) => word);
+}
+
+function isDue(record, now = Date.now()) {
+  return !record.seen || record.dueAt <= now;
+}
+
+function memoryPriority(record, now) {
+  if (!record.seen) return -10_000;
+  const overdueMinutes = Math.max(0, (now - record.dueAt) / 60_000);
+  const weakness = (9 - record.strength) * 200;
+  const lapseWeight = record.lapses * 120;
+  const learningWeight = record.intervalDays < 1 ? -400 : 0;
+  return -overdueMinutes - weakness - lapseWeight + learningWeight;
 }
 
 function imagePriority(word) {
@@ -485,9 +549,7 @@ function blankWordInExample(word) {
 function rateLearn(rating) {
   const { word } = currentItem;
   const record = getRecord(word.id);
-  record.seen = true;
-  record.strength = Math.max(record.strength, rating);
-  record.dueAt = Date.now() + [0, 90_000, 8 * 60_000][rating];
+  applyInitialRating(record, rating);
   saveState();
 
   if (rating < 2) {
@@ -505,9 +567,7 @@ function checkQuiz(isCorrect) {
   record.seen = true;
 
   if (isCorrect) {
-    record.correct += 1;
-    record.strength = Math.min(7, record.strength + 1);
-    record.dueAt = Date.now() + intervalFor(record.strength);
+    applyReviewResult(record, "good");
     state.streak += 1;
     feedback.textContent = "Correct";
     feedback.className = "feedback correct";
@@ -516,9 +576,7 @@ function checkQuiz(isCorrect) {
     autoAdvanceTimer = setTimeout(nextCard, 1000);
     return;
   } else {
-    record.wrong += 1;
-    record.strength = Math.max(0, record.strength - 1);
-    record.dueAt = Date.now();
+    applyReviewResult(record, "again");
     state.streak = 0;
     feedback.textContent = `Correct answer: ${displayWord(word)}`;
     feedback.className = "feedback wrong";
@@ -536,9 +594,96 @@ function clearAutoAdvance() {
   autoAdvanceTimer = null;
 }
 
-function intervalFor(strength) {
-  const minutes = [0, 2, 10, 60, 12 * 60, 24 * 60, 3 * 24 * 60, 7 * 24 * 60];
-  return minutes[strength] * 60_000;
+function applyInitialRating(record, rating) {
+  const now = Date.now();
+  record.seen = true;
+  record.lastReviewedAt = now;
+
+  if (rating === 0) {
+    record.learningStep = 0;
+    record.intervalDays = 0;
+    record.strength = 0;
+    record.dueAt = now;
+    return;
+  }
+
+  if (rating === 1) {
+    record.learningStep = 1;
+    record.intervalDays = 0;
+    record.strength = Math.max(record.strength, 1);
+    record.dueAt = now + LEARNING_STEPS_MS[1];
+    return;
+  }
+
+  record.learningStep = LEARNING_STEPS_MS.length;
+  record.intervalDays = Math.max(record.intervalDays, 1);
+  record.strength = Math.max(record.strength, strengthFromInterval(record.intervalDays));
+  record.dueAt = now + daysToMs(record.intervalDays);
+}
+
+function applyReviewResult(record, result) {
+  const now = Date.now();
+  record.seen = true;
+  record.reviewCount += 1;
+  record.lastReviewedAt = now;
+
+  if (result === "again") {
+    record.wrong += 1;
+    record.lapses += 1;
+    record.easeFactor = clampNumber(record.easeFactor - 0.2, MIN_EASE_FACTOR, MAX_EASE_FACTOR, DEFAULT_EASE_FACTOR);
+    record.learningStep = 0;
+    record.intervalDays = 0;
+    record.strength = Math.max(0, record.strength - 2);
+    record.dueAt = now;
+    return;
+  }
+
+  record.correct += 1;
+
+  if (record.intervalDays < 1 || record.learningStep < LEARNING_STEPS_MS.length) {
+    record.learningStep += 1;
+    if (record.learningStep < LEARNING_STEPS_MS.length) {
+      record.intervalDays = 0;
+      record.strength = Math.max(record.strength, record.learningStep + 1);
+      record.dueAt = now + LEARNING_STEPS_MS[record.learningStep];
+      return;
+    }
+
+    record.intervalDays = Math.max(record.intervalDays, 1);
+    record.strength = Math.max(record.strength, strengthFromInterval(record.intervalDays));
+    record.dueAt = now + daysToMs(record.intervalDays);
+    return;
+  }
+
+  record.easeFactor = updatedEase(record.easeFactor, 4);
+  record.intervalDays = nextIntervalDays(record);
+  record.strength = Math.max(record.strength, strengthFromInterval(record.intervalDays));
+  record.dueAt = now + daysToMs(record.intervalDays);
+}
+
+function nextIntervalDays(record) {
+  if (record.intervalDays < 1) return 1;
+  if (record.intervalDays < 3) return 3;
+  if (record.intervalDays < 7) return 7;
+  return clampNumber(Math.round(record.intervalDays * record.easeFactor), 1, MAX_INTERVAL_DAYS, 1);
+}
+
+function updatedEase(easeFactor, quality) {
+  const adjustment = 0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02);
+  return clampNumber(easeFactor + adjustment, MIN_EASE_FACTOR, MAX_EASE_FACTOR, DEFAULT_EASE_FACTOR);
+}
+
+function strengthFromInterval(intervalDays) {
+  if (intervalDays >= 30) return 9;
+  if (intervalDays >= 14) return 8;
+  if (intervalDays >= 7) return 7;
+  if (intervalDays >= 3) return 5;
+  if (intervalDays >= 1) return 4;
+  return 2;
+}
+
+function daysToMs(days) {
+  return Math.round(days * DAY_MS);
 }
 
 function loadVoices() {
@@ -642,7 +787,7 @@ function getStats() {
   const now = Date.now();
   const records = WORDS.map((word) => getRecord(word.id));
   return {
-    mastered: records.filter((record) => record.seen && record.strength >= 4).length,
+    mastered: records.filter((record) => record.seen && record.intervalDays >= 7 && record.strength >= 7).length,
     due: records.filter((record) => record.seen && record.dueAt <= now).length,
     streak: state.streak
   };

@@ -39,6 +39,31 @@ gehen | to go | Nini und Gigi gehen zum Bahnhof. | Nini and Gigi go to the train
 
 If meanings are provided, the app enables meaning-choice review questions. If the file only contains German words, the app uses article and fill-in-the-word review questions.
 
+## Memory Scheduling
+
+The app uses a lightweight spaced-repetition scheduler inspired by Ebbinghaus-style review timing and Anki's SM-2 approach.
+
+Each word keeps its own learning state in the browser:
+
+```text
+easeFactor
+intervalDays
+dueAt
+reviewCount
+lapses
+correct / wrong counts
+```
+
+New or forgotten words return quickly during the current session. Correct answers increase the word's interval from minutes to days, then multiply future intervals by the word's ease factor. Wrong answers lower the ease factor, reset the word into a short learning step, and return it to the session queue until answered correctly.
+
+The review ladder starts with short learning steps, then graduates to longer intervals:
+
+```text
+immediate -> 5 minutes -> 20 minutes -> 1 day -> 3 days -> 7 days -> dynamic interval
+```
+
+The `Mastered` counter counts words whose dynamic interval has reached at least 7 days.
+
 ## Vocabulary Images
 
 The app looks for optional images in:
