@@ -1,4 +1,4 @@
-# Nini & Gigi German Flashcards
+# German Vocabulary Flashcards
 
 A small local flashcard app for German vocabulary practice.
 
