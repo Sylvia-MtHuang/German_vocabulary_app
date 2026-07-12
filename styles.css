@@ -1,5 +1,6 @@
 :root {
   color-scheme: light;
+  --page-top: #f7f8fb;
   --text: #19202a;
   --muted: #69717d;
   --line: rgba(25, 32, 42, 0.12);
@@ -24,11 +25,16 @@
   box-sizing: border-box;
 }
 
+html {
+  background: var(--page-top);
+}
+
 body {
   min-height: 100vh;
   margin: 0;
   background:
-    linear-gradient(135deg, rgba(232, 244, 240, 0.9), rgba(247, 248, 251, 0.98) 42%, rgba(244, 236, 226, 0.86));
+    linear-gradient(180deg, var(--page-top) 0%, #f5faf8 5%, rgba(232, 244, 240, 0.92) 17%, rgba(247, 248, 251, 0.98) 48%, rgba(244, 236, 226, 0.86) 100%),
+    linear-gradient(135deg, rgba(232, 244, 240, 0.55), rgba(247, 248, 251, 0.96) 42%, rgba(244, 236, 226, 0.62));
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", "Microsoft YaHei", sans-serif;
 }
