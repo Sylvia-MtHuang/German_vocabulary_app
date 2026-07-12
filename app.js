@@ -24,6 +24,7 @@ let locked = false;
 let autoAdvanceTimer = null;
 let cachedVoices = [];
 let voicesReady = false;
+let speechRequestId = 0;
 
 const setupView = document.querySelector("#setupView");
 const studyView = document.querySelector("#studyView");
@@ -383,6 +384,7 @@ function startSession() {
 
 function nextCard() {
   clearAutoAdvance();
+  stopSpeech();
   locked = false;
   feedback.textContent = "";
   feedback.className = "feedback";
@@ -449,6 +451,7 @@ function renderLearn(word) {
     </div>
   `;
   cardContent.querySelector(".speak-button").addEventListener("click", () => speak(word.word));
+  speak(word.word, { repeat: 3, announceErrors: false });
   actions.innerHTML = `
     <button class="answer-button low" type="button" data-rating="0">New to me</button>
     <button class="answer-button mid" type="button" data-rating="1">Almost</button>
@@ -727,27 +730,39 @@ function findGermanVoice(voices) {
   );
 }
 
-async function speak(text) {
+async function speak(text, options = {}) {
+  const requestId = ++speechRequestId;
+  const repeat = Math.max(1, Math.min(5, Number(options.repeat) || 1));
+  const announceErrors = options.announceErrors !== false;
+
   if (!("speechSynthesis" in window)) {
-    showVoiceMessage("Speech synthesis is not available in this browser.", "wrong");
+    if (announceErrors) showVoiceMessage("Speech synthesis is not available in this browser.", "wrong");
     return;
   }
 
   const voices = voicesReady ? cachedVoices : await loadVoices();
+  if (requestId !== speechRequestId) return;
   const germanVoice = findGermanVoice(voices);
 
   if (!germanVoice && voices.length) {
-    showVoiceMessage("No German voice was found. Install a German language voice in your OS/browser, then reopen the app.", "wrong");
+    if (announceErrors) showVoiceMessage("No German voice was found. Install a German language voice in your OS/browser, then reopen the app.", "wrong");
     return;
   }
 
-  window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "de-DE";
-  utterance.rate = 0.86;
-  utterance.pitch = 1;
-  if (germanVoice) utterance.voice = germanVoice;
-  window.speechSynthesis.speak(utterance);
+  stopSpeech();
+  for (let index = 0; index < repeat; index += 1) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "de-DE";
+    utterance.rate = 0.86;
+    utterance.pitch = 1;
+    if (germanVoice) utterance.voice = germanVoice;
+    window.speechSynthesis.speak(utterance);
+  }
+}
+
+function stopSpeech() {
+  speechRequestId += 1;
+  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
 }
 
 function showVoiceMessage(message, tone) {
