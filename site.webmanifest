@@ -4,8 +4,8 @@
   "description": "A cheerful German vocabulary flashcard app.",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#edf8f2",
-  "theme_color": "#7ccfc1",
+  "background_color": "#f7f8fb",
+  "theme_color": "#f7f8fb",
   "icons": [
     {
       "src": "assets/icons/icon-192.png",

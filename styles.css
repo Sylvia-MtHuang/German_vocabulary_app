@@ -46,7 +46,7 @@ button {
   width: min(1120px, calc(100% - 32px));
   min-height: 100vh;
   margin: 0 auto;
-  padding: 32px 0;
+  padding: calc(32px + env(safe-area-inset-top)) 0 calc(32px + env(safe-area-inset-bottom));
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 26px;
@@ -459,7 +459,7 @@ h2 {
 @media (max-width: 720px) {
   .app-shell {
     width: min(100% - 22px, 680px);
-    padding: 18px 0 24px;
+    padding: calc(18px + env(safe-area-inset-top)) 0 calc(24px + env(safe-area-inset-bottom));
     gap: 18px;
   }
 
@@ -501,7 +501,7 @@ h2 {
   body.is-studying .app-shell {
     width: min(100% - 16px, 680px);
     min-height: 100svh;
-    padding: 8px 0 10px;
+    padding: calc(8px + env(safe-area-inset-top)) 0 calc(10px + env(safe-area-inset-bottom));
     grid-template-rows: 1fr;
     gap: 0;
   }
