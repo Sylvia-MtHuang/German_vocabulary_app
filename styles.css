@@ -200,6 +200,7 @@ h2 {
 .study-view {
   align-content: center;
   gap: 16px;
+  --study-card-height: clamp(520px, calc(100svh - 180px), 720px);
 }
 
 .session-strip {
@@ -250,6 +251,7 @@ h2 {
   --swipe-intensity: 0;
   position: relative;
   isolation: isolate;
+  height: var(--study-card-height);
 }
 
 .card-stack::before,
@@ -279,17 +281,19 @@ h2 {
 
 .word-card {
   width: 100%;
-  min-height: 520px;
+  height: 100%;
+  min-height: 0;
   padding: clamp(22px, 5vw, 42px);
   border-radius: 30px;
   display: grid;
-  grid-template-rows: auto 1fr auto auto;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
   gap: 18px;
   position: relative;
   z-index: 1;
   transform-origin: center;
   transition: box-shadow 180ms ease, opacity 180ms ease;
   will-change: transform;
+  overflow: hidden;
 }
 
 .card-stack > .word-card:not(.next-card-preview) {
@@ -302,7 +306,7 @@ h2 {
   z-index: 1;
   pointer-events: none;
   opacity: calc(0.48 + var(--swipe-intensity) * 0.5);
-  transform: translateY(calc(10px - var(--swipe-intensity) * 8px)) scale(calc(0.985 + var(--swipe-intensity) * 0.015));
+  transform: scale(calc(0.985 + var(--swipe-intensity) * 0.015));
   transform-origin: center;
   box-shadow: 0 20px 62px rgba(38, 47, 64, 0.1);
   filter: saturate(0.96);
@@ -410,6 +414,8 @@ h2 {
 
 .card-content {
   align-self: center;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .vocab-figure {
@@ -621,7 +627,7 @@ h2 {
   }
 
   .word-card {
-    min-height: 560px;
+    min-height: 0;
   }
 
   .choices,
@@ -646,6 +652,7 @@ h2 {
   body.is-studying .study-view {
     align-content: start;
     gap: 8px;
+    --study-card-height: calc(100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 62px);
   }
 
   body.is-studying .session-strip {
@@ -669,7 +676,6 @@ h2 {
   }
 
   body.is-studying .word-card {
-    min-height: 0;
     padding: 12px 14px 14px;
     border-radius: 20px;
     gap: 8px;
