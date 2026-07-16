@@ -66,16 +66,20 @@
           <button id="resetButton" class="icon-button" type="button" aria-label="Reset learning history">R</button>
         </div>
 
-        <article id="card" class="word-card neutral">
-          <div class="card-top">
-            <span id="modePill" class="mode-pill">Learn</span>
-          </div>
+        <div class="card-stack neutral" aria-live="polite">
+          <article id="nextCardPreview" class="word-card next-card-preview neutral" aria-hidden="true"></article>
 
-          <div id="cardContent" class="card-content"></div>
+          <article id="card" class="word-card neutral">
+            <div class="card-top">
+              <span id="modePill" class="mode-pill">Learn</span>
+            </div>
 
-          <div id="feedback" class="feedback" role="status"></div>
-          <div id="actions" class="actions"></div>
-        </article>
+            <div id="cardContent" class="card-content"></div>
+
+            <div id="feedback" class="feedback" role="status"></div>
+            <div id="actions" class="actions"></div>
+          </article>
+        </div>
       </section>
     </main>
 

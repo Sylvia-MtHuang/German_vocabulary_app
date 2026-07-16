@@ -16,6 +16,13 @@ const MAX_EASE_FACTOR = 3.2;
 const DAY_MS = 24 * 60 * 60 * 1000;
 const LEARNING_STEPS_MS = [0, 5 * 60_000, 20 * 60_000];
 const MAX_INTERVAL_DAYS = 180;
+const SWIPE_THRESHOLD = 84;
+const SWIPE_EXIT_MS = 260;
+const SWIPE_RATING_DIRECTIONS = {
+  0: "left",
+  1: "down",
+  2: "right"
+};
 
 let state = loadState();
 let session = [];
@@ -25,6 +32,8 @@ let autoAdvanceTimer = null;
 let cachedVoices = [];
 let voicesReady = false;
 let speechRequestId = 0;
+let swipeState = null;
+let promotePreviewOnNextRender = false;
 
 const setupView = document.querySelector("#setupView");
 const studyView = document.querySelector("#studyView");
@@ -32,6 +41,8 @@ const countPicker = document.querySelector("#countPicker");
 const startButton = document.querySelector("#startButton");
 const backButton = document.querySelector("#backButton");
 const resetButton = document.querySelector("#resetButton");
+const cardStack = document.querySelector(".card-stack");
+const nextCardPreview = document.querySelector("#nextCardPreview");
 const card = document.querySelector("#card");
 const cardContent = document.querySelector("#cardContent");
 const actions = document.querySelector("#actions");
@@ -412,19 +423,30 @@ function chooseQuizType(word) {
 function renderCurrent() {
   const { word, phase, quizType } = currentItem;
   const revealGender = phase === "learn" || quizType !== "article";
-  card.className = `word-card ${getGenderClass(word, revealGender)}`;
+  const genderClass = getGenderClass(word, revealGender);
+  const shouldPromotePreview = promotePreviewOnNextRender;
+  promotePreviewOnNextRender = false;
+  resetCardMotion({ immediate: shouldPromotePreview });
+  cardStack.className = `card-stack ${genderClass}`;
+  card.className = `word-card ${genderClass}${phase === "learn" ? " is-swipeable" : ""}`;
+  renderNextCardPreview();
   updateProgress();
 
   if (phase === "learn") {
     modePill.textContent = "Learn";
     renderLearn(word);
-    return;
+  } else {
+    modePill.textContent = "Review";
+    if (quizType === "meaning") renderMeaningQuiz(word);
+    if (quizType === "article") renderArticleQuiz(word);
+    if (quizType === "fill") renderFillQuiz(word);
   }
 
-  modePill.textContent = "Review";
-  if (quizType === "meaning") renderMeaningQuiz(word);
-  if (quizType === "article") renderArticleQuiz(word);
-  if (quizType === "fill") renderFillQuiz(word);
+  if (shouldPromotePreview) {
+    stabilizePromotedCard();
+  } else {
+    animateCardIn();
+  }
 }
 
 function speakerIcon() {
@@ -476,14 +498,116 @@ function imageUrl(path) {
   return `${escapeAttribute(path)}${separator}v=${IMAGE_CACHE_KEY}`;
 }
 
+function renderNextCardPreview() {
+  const nextItem = session[0];
+  if (!nextItem) {
+    nextCardPreview.className = "word-card next-card-preview neutral is-empty";
+    nextCardPreview.innerHTML = "";
+    return;
+  }
+
+  if (nextItem.phase === "quiz" && !nextItem.quizType) {
+    nextItem.quizType = chooseQuizType(nextItem.word);
+  }
+
+  const revealGender = nextItem.phase === "learn" || nextItem.quizType !== "article";
+  const genderClass = getGenderClass(nextItem.word, revealGender);
+  nextCardPreview.className = `word-card next-card-preview ${genderClass}`;
+  nextCardPreview.innerHTML = previewMarkup(nextItem);
+}
+
+function previewMarkup(item) {
+  const { word, phase, quizType } = item;
+  if (phase === "learn") {
+    return `
+      <div class="card-top">
+        <span class="mode-pill">Learn</span>
+      </div>
+      <div class="card-content preview-content">
+        ${imageMarkup(word)}
+        <div class="word-line">
+          <div class="word">${displayWord(word)}</div>
+          <button class="speak-button" type="button" tabindex="-1" aria-hidden="true">${speakerIcon()}</button>
+        </div>
+        ${hasMeaning(word) ? `<div class="meaning">${word.meaning}</div>` : ""}
+        <div class="example">
+          <strong>${word.example}</strong>
+          <span>${word.translation}</span>
+        </div>
+      </div>
+      <div class="feedback"></div>
+      <div class="actions preview-actions">
+        <button class="answer-button low" type="button" tabindex="-1">New to me</button>
+        <button class="answer-button mid" type="button" tabindex="-1">Almost</button>
+        <button class="answer-button high" type="button" tabindex="-1">Know it</button>
+      </div>
+    `;
+  }
+
+  if (quizType === "meaning") {
+    const choices = getMeaningChoices(item);
+    return `
+      <div class="card-top">
+        <span class="mode-pill">Review</span>
+      </div>
+      <div class="card-content preview-content">
+        <p class="prompt">Choose the correct meaning</p>
+        <div class="word-line">
+          <div class="quiz-word">${displayWord(word)}</div>
+          <button class="speak-button" type="button" tabindex="-1" aria-hidden="true">${speakerIcon()}</button>
+        </div>
+        <div class="choices">
+          ${choices.map((choice) => `<button class="choice-button" type="button" tabindex="-1">${choice}</button>`).join("")}
+        </div>
+      </div>
+      <div class="feedback"></div>
+      <div class="actions preview-actions"></div>
+    `;
+  }
+
+  if (quizType === "article") {
+    return `
+      <div class="card-top">
+        <span class="mode-pill">Review</span>
+      </div>
+      <div class="card-content preview-content">
+        <p class="prompt">Choose the correct article</p>
+        <div class="quiz-word">${word.word}</div>
+        <div class="choices">
+          <button class="choice-button article-choice" type="button" tabindex="-1">der</button>
+          <button class="choice-button article-choice" type="button" tabindex="-1">die</button>
+          <button class="choice-button article-choice" type="button" tabindex="-1">das</button>
+          <button class="choice-button article-choice" type="button" tabindex="-1">plural</button>
+        </div>
+      </div>
+      <div class="feedback"></div>
+      <div class="actions preview-actions"></div>
+    `;
+  }
+
+  const blanked = blankWordInExample(word);
+  return `
+    <div class="card-top">
+      <span class="mode-pill">Review</span>
+    </div>
+    <div class="card-content preview-content">
+      <p class="prompt">Fill in the German word</p>
+      <div class="example">
+        <strong>${blanked}</strong>
+        <span>${word.translation}</span>
+      </div>
+      <form class="fill-form">
+        <input class="fill-input" type="text" tabindex="-1" aria-hidden="true">
+        <button class="answer-button primary" type="button" tabindex="-1">Check</button>
+      </form>
+    </div>
+    <div class="feedback"></div>
+    <div class="actions preview-actions"></div>
+  `;
+}
+
 function renderMeaningQuiz(word) {
-  const distractors = WORDS
-    .filter((item) => item.id !== word.id && hasMeaning(item))
-    .map((item) => item.meaning);
-  const choices = shuffle([
-    word.meaning,
-    ...shuffle(distractors).slice(0, 3)
-  ]);
+  const choices = getMeaningChoices(currentItem);
   cardContent.innerHTML = `
     <p class="prompt">Choose the correct meaning</p>
     <div class="word-line">
@@ -499,6 +623,19 @@ function renderMeaningQuiz(word) {
   cardContent.querySelectorAll(".choice-button").forEach((button) => {
     button.addEventListener("click", () => checkQuiz(button.dataset.answer === word.meaning));
   });
+}
+
+function getMeaningChoices(item) {
+  if (item.choices) return item.choices;
+  const { word } = item;
+  const distractors = WORDS
+    .filter((item) => item.id !== word.id && hasMeaning(item))
+    .map((item) => item.meaning);
+  item.choices = shuffle([
+    word.meaning,
+    ...shuffle(distractors).slice(0, 3)
+  ]);
+  return item.choices;
 }
 
 function renderArticleQuiz(word) {
@@ -549,7 +686,16 @@ function blankWordInExample(word) {
   return word.example.replace(pattern, "_____");
 }
 
-function rateLearn(rating) {
+function rateLearn(rating, direction = SWIPE_RATING_DIRECTIONS[rating]) {
+  if (locked) return;
+  locked = true;
+  clearAutoAdvance();
+  stopSpeech();
+  promotePreviewOnNextRender = Boolean(session[0]);
+  animateCardExit(direction, () => commitLearnRating(rating));
+}
+
+function commitLearnRating(rating) {
   const { word } = currentItem;
   const record = getRecord(word.id);
   applyInitialRating(record, rating);
@@ -559,6 +705,173 @@ function rateLearn(rating) {
     session.splice(Math.min(2, session.length), 0, { word, phase: "quiz", quizType: chooseQuizType(word) });
   }
   nextCard();
+}
+
+function animateCardIn() {
+  window.requestAnimationFrame(() => {
+    card.classList.add("is-entering");
+    setTimeout(() => card.classList.remove("is-entering"), 280);
+  });
+}
+
+function animateCardExit(direction, onDone) {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reducedMotion || !card.classList.contains("is-swipeable")) {
+    resetCardMotion();
+    onDone();
+    return;
+  }
+
+  const exit = exitTransform(direction);
+  card.classList.remove("is-dragging");
+  card.classList.add("is-animating");
+  card.style.transition = `transform ${SWIPE_EXIT_MS}ms cubic-bezier(0.22, 1, 0.36, 1), opacity ${SWIPE_EXIT_MS}ms ease`;
+  card.style.transform = `translate3d(${exit.x}px, ${exit.y}px, 0) rotate(${exit.rotation}deg)`;
+  card.style.opacity = "0";
+
+  setTimeout(() => {
+    resetCardMotion({ immediate: promotePreviewOnNextRender });
+    onDone();
+  }, SWIPE_EXIT_MS);
+}
+
+function exitTransform(direction) {
+  const width = window.innerWidth || 390;
+  const height = window.innerHeight || 844;
+  if (direction === "left") return { x: -width * 1.1, y: 28, rotation: -14 };
+  if (direction === "down") return { x: 0, y: height * 0.95, rotation: 0 };
+  return { x: width * 1.1, y: 28, rotation: 14 };
+}
+
+function resetCardMotion(options = {}) {
+  const immediate = Boolean(options.immediate);
+  swipeState = null;
+  card.classList.remove("is-dragging", "is-animating", "is-entering");
+  card.style.transition = immediate ? "none" : "";
+  card.style.transform = "";
+  card.style.opacity = immediate ? "1" : "";
+  card.style.setProperty("--swipe-intensity", "0");
+  cardStack.style.setProperty("--swipe-intensity", "0");
+  cardStack.classList.remove("is-peeking");
+  delete card.dataset.swipeIntent;
+}
+
+function stabilizePromotedCard() {
+  window.requestAnimationFrame(() => {
+    card.style.opacity = "1";
+    card.style.transition = "none";
+  });
+}
+
+function canSwipeCurrentCard() {
+  return currentItem && currentItem.phase === "learn" && card.classList.contains("is-swipeable") && !locked;
+}
+
+function isInteractiveTarget(target) {
+  return Boolean(target.closest("button, input, textarea, select, a, form"));
+}
+
+function beginSwipe(event) {
+  if (!canSwipeCurrentCard()) return;
+  if (event.button !== undefined && event.button !== 0) return;
+  if (isInteractiveTarget(event.target)) return;
+
+  swipeState = {
+    pointerId: event.pointerId,
+    startX: event.clientX,
+    startY: event.clientY,
+    dx: 0,
+    dy: 0
+  };
+  card.setPointerCapture(event.pointerId);
+  card.classList.add("is-dragging");
+  card.style.transition = "none";
+}
+
+function moveSwipe(event) {
+  if (!swipeState || swipeState.pointerId !== event.pointerId) return;
+  if (!canSwipeCurrentCard()) return;
+
+  swipeState.dx = event.clientX - swipeState.startX;
+  swipeState.dy = event.clientY - swipeState.startY;
+  if (Math.abs(swipeState.dx) > 4 || Math.abs(swipeState.dy) > 4) event.preventDefault();
+
+  const rotation = clampNumber(swipeState.dx / 14, -10, 10, 0);
+  const intensity = Math.min(1, swipeDistance(swipeState.dx, swipeState.dy) / SWIPE_THRESHOLD);
+  const intent = swipeIntent(swipeState.dx, swipeState.dy);
+
+  card.style.transform = `translate3d(${swipeState.dx}px, ${swipeState.dy}px, 0) rotate(${rotation}deg)`;
+  card.style.opacity = (1 - intensity * 0.45).toFixed(2);
+  card.style.setProperty("--swipe-intensity", intensity.toFixed(2));
+  cardStack.style.setProperty("--swipe-intensity", intensity.toFixed(2));
+  cardStack.classList.toggle("is-peeking", intensity > 0.08);
+  if (intent) {
+    card.dataset.swipeIntent = intent;
+  } else {
+    delete card.dataset.swipeIntent;
+  }
+}
+
+function endSwipe(event) {
+  if (!swipeState || swipeState.pointerId !== event.pointerId) return;
+  const rating = ratingFromSwipe(swipeState.dx, swipeState.dy);
+  releaseSwipePointer(event);
+
+  if (rating === null) {
+    snapCardBack();
+    return;
+  }
+
+  rateLearn(rating, SWIPE_RATING_DIRECTIONS[rating]);
+}
+
+function cancelSwipe(event) {
+  if (!swipeState || swipeState.pointerId !== event.pointerId) return;
+  releaseSwipePointer(event);
+  snapCardBack();
+}
+
+function releaseSwipePointer(event) {
+  if (card.hasPointerCapture && card.hasPointerCapture(event.pointerId)) {
+    card.releasePointerCapture(event.pointerId);
+  }
+}
+
+function snapCardBack() {
+  swipeState = null;
+  card.classList.remove("is-dragging");
+  card.style.transition = "transform 220ms cubic-bezier(0.22, 1, 0.36, 1), opacity 180ms ease";
+  card.style.transform = "";
+  card.style.opacity = "";
+  card.style.setProperty("--swipe-intensity", "0");
+  cardStack.style.setProperty("--swipe-intensity", "0");
+  cardStack.classList.remove("is-peeking");
+  delete card.dataset.swipeIntent;
+  setTimeout(() => {
+    if (!swipeState && !locked) card.style.transition = "";
+  }, 230);
+}
+
+function swipeDistance(dx, dy) {
+  const intent = swipeIntent(dx, dy);
+  if (intent === "down") return dy;
+  if (intent === "left" || intent === "right") return Math.abs(dx);
+  return Math.max(Math.abs(dx), Math.abs(dy));
+}
+
+function swipeIntent(dx, dy) {
+  if (dy > Math.abs(dx) * 0.95 && dy > 18) return "down";
+  if (Math.abs(dx) > Math.abs(dy) * 0.85 && Math.abs(dx) > 18) return dx < 0 ? "left" : "right";
+  return "";
+}
+
+function ratingFromSwipe(dx, dy) {
+  const intent = swipeIntent(dx, dy);
+  if (!intent || swipeDistance(dx, dy) < SWIPE_THRESHOLD) return null;
+  if (intent === "left") return 0;
+  if (intent === "down") return 1;
+  if (intent === "right") return 2;
+  return null;
 }
 
 function checkQuiz(isCorrect) {
@@ -771,6 +1084,10 @@ function showVoiceMessage(message, tone) {
 }
 
 function renderDone() {
+  promotePreviewOnNextRender = false;
+  cardStack.className = "card-stack neutral";
+  nextCardPreview.className = "word-card next-card-preview neutral is-empty";
+  nextCardPreview.innerHTML = "";
   card.className = "word-card neutral";
   modePill.textContent = "Done";
   cardContent.innerHTML = `
@@ -790,6 +1107,7 @@ function renderDone() {
 }
 
 function goHome() {
+  promotePreviewOnNextRender = false;
   document.body.classList.remove("is-studying");
   studyView.classList.add("hidden");
   setupView.classList.remove("hidden");
@@ -858,6 +1176,10 @@ resetButton.addEventListener("click", () => {
   saveState();
   goHome();
 });
+card.addEventListener("pointerdown", beginSwipe);
+card.addEventListener("pointermove", moveSwipe);
+card.addEventListener("pointerup", endSwipe);
+card.addEventListener("pointercancel", cancelSwipe);
 
 loadVoices();
 syncCountPicker();

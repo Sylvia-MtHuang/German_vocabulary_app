@@ -4,8 +4,8 @@
   --text: #19202a;
   --muted: #69717d;
   --line: rgba(25, 32, 42, 0.12);
-  --surface: rgba(255, 255, 255, 0.82);
-  --surface-strong: rgba(255, 255, 255, 0.96);
+  --surface: #ffffff;
+  --surface-strong: #ffffff;
   --shadow: 0 24px 80px rgba(38, 47, 64, 0.14);
   --pink: #ffd8e4;
   --pink-deep: #b73d67;
@@ -19,6 +19,9 @@
   --accent: #1f7a68;
   --accent-dark: #155c4e;
   --danger: #b44242;
+  --swipe-low: rgba(180, 66, 66, 0.2);
+  --swipe-mid: rgba(139, 104, 24, 0.2);
+  --swipe-high: rgba(47, 122, 71, 0.2);
 }
 
 * {
@@ -129,8 +132,12 @@ h2 {
 }
 
 .panel,
-.word-card {
+.card-stack {
   width: min(680px, 100%);
+}
+
+.panel,
+.word-card {
   border: 1px solid rgba(255, 255, 255, 0.74);
   background: var(--surface);
   box-shadow: var(--shadow);
@@ -238,33 +245,148 @@ h2 {
   transition: width 220ms ease;
 }
 
+.card-stack {
+  --deep-stack-bg: #f4f5f7;
+  --swipe-intensity: 0;
+  position: relative;
+  isolation: isolate;
+}
+
+.card-stack::before,
+.card-stack::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 30px;
+  background: var(--deep-stack-bg);
+  box-shadow: 0 18px 56px rgba(38, 47, 64, 0.09);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.card-stack::before {
+  inset: 12px 18px -14px;
+  transform: translateY(12px) scale(0.97);
+  opacity: 0.9;
+}
+
+.card-stack::after {
+  background: #eceff2;
+  inset: 24px 34px -26px;
+  transform: translateY(22px) scale(0.92);
+  opacity: 0.74;
+}
+
 .word-card {
+  width: 100%;
   min-height: 520px;
   padding: clamp(22px, 5vw, 42px);
   border-radius: 30px;
   display: grid;
   grid-template-rows: auto 1fr auto auto;
   gap: 18px;
+  position: relative;
+  z-index: 1;
+  transform-origin: center;
+  transition: box-shadow 180ms ease, opacity 180ms ease;
+  will-change: transform;
+}
+
+.card-stack > .word-card:not(.next-card-preview) {
+  z-index: 2;
+}
+
+.next-card-preview {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: calc(0.48 + var(--swipe-intensity) * 0.5);
+  transform: translateY(calc(10px - var(--swipe-intensity) * 8px)) scale(calc(0.985 + var(--swipe-intensity) * 0.015));
+  transform-origin: center;
+  box-shadow: 0 20px 62px rgba(38, 47, 64, 0.1);
+  filter: saturate(0.96);
+  overflow: hidden;
+  transition: opacity 160ms ease, transform 160ms ease, filter 160ms ease;
+}
+
+.next-card-preview.is-empty {
+  display: none;
+}
+
+.next-card-preview .preview-content {
+  align-self: center;
+}
+
+.next-card-preview .feedback {
+  visibility: hidden;
+}
+
+.card-stack.is-peeking .next-card-preview {
+  filter: saturate(1);
+}
+
+.word-card.is-entering {
+  animation: card-enter 280ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.word-card.is-swipeable {
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.word-card.is-dragging {
+  cursor: grabbing;
+  box-shadow: 0 28px 88px rgba(38, 47, 64, 0.18);
+}
+
+.word-card.is-dragging[data-swipe-intent="left"] {
+  box-shadow: var(--shadow), -18px 20px 60px var(--swipe-low);
+}
+
+.word-card.is-dragging[data-swipe-intent="down"] {
+  box-shadow: var(--shadow), 0 28px 68px var(--swipe-mid);
+}
+
+.word-card.is-dragging[data-swipe-intent="right"] {
+  box-shadow: var(--shadow), 18px 20px 60px var(--swipe-high);
 }
 
 .word-card.feminine {
   background: linear-gradient(180deg, var(--pink), #fff7fa);
+  background-color: #fff7fa;
 }
 
 .word-card.masculine {
   background: linear-gradient(180deg, var(--blue), #f7fbff);
+  background-color: #f7fbff;
 }
 
 .word-card.neuter {
   background: linear-gradient(180deg, var(--green), #f8fff9);
+  background-color: #f8fff9;
 }
 
 .word-card.plural {
   background: linear-gradient(180deg, var(--yellow), #fffdf4);
+  background-color: #fffdf4;
 }
 
 .word-card.neutral {
   background: var(--surface-strong);
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 
 .card-top {
@@ -483,6 +605,11 @@ h2 {
     border-radius: 22px;
   }
 
+  .card-stack::before,
+  .card-stack::after {
+    border-radius: 22px;
+  }
+
   .count-picker {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 7px;
@@ -546,6 +673,11 @@ h2 {
     padding: 12px 14px 14px;
     border-radius: 20px;
     gap: 8px;
+  }
+
+  body.is-studying .card-stack::before,
+  body.is-studying .card-stack::after {
+    border-radius: 20px;
   }
 
   body.is-studying .mode-pill {
