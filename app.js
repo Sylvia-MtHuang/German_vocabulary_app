@@ -225,6 +225,7 @@ let voicesReady = false;
 let speechRequestId = 0;
 let swipeState = null;
 let promotePreviewOnNextRender = false;
+let missedReviewContext = null;
 
 const setupView = document.querySelector("#setupView");
 const studyView = document.querySelector("#studyView");
@@ -621,6 +622,7 @@ function nextCard() {
   clearAutoAdvance();
   stopSpeech();
   locked = false;
+  missedReviewContext = null;
   feedback.textContent = "";
   feedback.className = "feedback";
 
@@ -683,7 +685,13 @@ function speakerIcon() {
   `;
 }
 
-function renderLearn(word) {
+function renderLearn(word, options = {}) {
+  const autoSpeak = options.autoSpeak !== false;
+  const actionsHtml = options.actionsHtml || `
+    <button class="answer-button low" type="button" data-rating="0">New to me</button>
+    <button class="answer-button mid" type="button" data-rating="1">Almost</button>
+    <button class="answer-button high" type="button" data-rating="2">Know it</button>
+  `;
   cardContent.innerHTML = `
     ${imageMarkup(word)}
     <div class="word-line">
@@ -698,13 +706,9 @@ function renderLearn(word) {
     </div>
   `;
   cardContent.querySelector(".speak-button").addEventListener("click", () => speak(word.word));
-  speak(word.word, { repeat: 3, announceErrors: false });
-  actions.innerHTML = `
-    <button class="answer-button low" type="button" data-rating="0">New to me</button>
-    <button class="answer-button mid" type="button" data-rating="1">Almost</button>
-    <button class="answer-button high" type="button" data-rating="2">Know it</button>
-  `;
-  actions.querySelectorAll("button").forEach((button) => {
+  if (autoSpeak) speak(word.word, { repeat: 3, announceErrors: false });
+  actions.innerHTML = actionsHtml;
+  actions.querySelectorAll("[data-rating]").forEach((button) => {
     button.addEventListener("click", () => rateLearn(Number(button.dataset.rating)));
   });
 }
@@ -1147,11 +1151,59 @@ function checkQuiz(isCorrect) {
     feedback.textContent = `Correct answer: ${correctAnswerForCurrentQuiz()}`;
     feedback.className = "feedback wrong";
     session.splice(Math.min(2, session.length), 0, { word, phase: "quiz", quizType: currentItem.quizType });
+    missedReviewContext = {
+      item: currentItem,
+      feedbackText: feedback.textContent
+    };
   }
 
   saveState();
-  actions.innerHTML = `<button class="answer-button primary" type="button">Continue</button>`;
-  actions.querySelector("button").addEventListener("click", nextCard);
+  actions.innerHTML = `
+    <button class="answer-button" type="button" id="reviewCardButton">Review card</button>
+    <button class="answer-button primary" type="button" id="continueButton">Continue</button>
+  `;
+  document.querySelector("#reviewCardButton").addEventListener("click", showMissedWordCard);
+  document.querySelector("#continueButton").addEventListener("click", nextCard);
+}
+
+function showMissedWordCard() {
+  if (!missedReviewContext) return;
+  clearAutoAdvance();
+  stopSpeech();
+  const { word } = missedReviewContext.item;
+  const genderClass = getGenderClass(word, true);
+  resetCardMotion({ immediate: true });
+  cardStack.className = `card-stack ${genderClass}`;
+  card.className = `word-card ${genderClass} is-reviewing-missed`;
+  modePill.textContent = "Learn";
+  renderNextCardPreview();
+  renderLearn(word, {
+    autoSpeak: false,
+    actionsHtml: `
+      <button class="answer-button" type="button" id="backToQuestionButton">Back to question</button>
+      <button class="answer-button primary" type="button" id="continueButton">Continue</button>
+    `
+  });
+  feedback.textContent = missedReviewContext.feedbackText;
+  feedback.className = "feedback wrong";
+  document.querySelector("#backToQuestionButton").addEventListener("click", restoreMissedQuestion);
+  document.querySelector("#continueButton").addEventListener("click", nextCard);
+}
+
+function restoreMissedQuestion() {
+  if (!missedReviewContext) return;
+  currentItem = missedReviewContext.item;
+  locked = true;
+  renderCurrent();
+  locked = true;
+  feedback.textContent = missedReviewContext.feedbackText;
+  feedback.className = "feedback wrong";
+  actions.innerHTML = `
+    <button class="answer-button" type="button" id="reviewCardButton">Review card</button>
+    <button class="answer-button primary" type="button" id="continueButton">Continue</button>
+  `;
+  document.querySelector("#reviewCardButton").addEventListener("click", showMissedWordCard);
+  document.querySelector("#continueButton").addEventListener("click", nextCard);
 }
 
 function correctAnswerForCurrentQuiz() {
