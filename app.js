@@ -1184,8 +1184,8 @@ function showMissedWordCard() {
       <button class="answer-button primary" type="button" id="continueButton">Continue</button>
     `
   });
-  feedback.textContent = missedReviewContext.feedbackText;
-  feedback.className = "feedback wrong";
+  feedback.textContent = "";
+  feedback.className = "feedback";
   document.querySelector("#backToQuestionButton").addEventListener("click", restoreMissedQuestion);
   document.querySelector("#continueButton").addEventListener("click", nextCard);
 }
