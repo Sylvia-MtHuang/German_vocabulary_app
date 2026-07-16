@@ -5,11 +5,13 @@ const IMAGE_CACHE_KEY = Date.now();
 let IMAGE_PATHS = new Map();
 
 const STORAGE_KEY = "nini-gigi-german-memory-v1";
-const DEFAULT_STATE = {
-  selectedCount: 10,
-  streak: 0,
-  records: {}
-};
+function createDefaultState() {
+  return {
+    selectedCount: 10,
+    streak: 0,
+    records: {}
+  };
+}
 const DEFAULT_EASE_FACTOR = 2.5;
 const MIN_EASE_FACTOR = 1.3;
 const MAX_EASE_FACTOR = 3.2;
@@ -451,9 +453,17 @@ function pruneOldRecords() {
 
 function loadState() {
   try {
-    return { ...DEFAULT_STATE, ...JSON.parse(localStorage.getItem(STORAGE_KEY)) };
+    const savedState = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    const defaultState = createDefaultState();
+    return {
+      ...defaultState,
+      ...savedState,
+      records: savedState.records && typeof savedState.records === "object" && !Array.isArray(savedState.records)
+        ? savedState.records
+        : defaultState.records
+    };
   } catch {
-    return structuredClone(DEFAULT_STATE);
+    return createDefaultState();
   }
 }
 
@@ -1473,7 +1483,14 @@ countPicker.addEventListener("click", (event) => {
 startButton.addEventListener("click", startSession);
 backButton.addEventListener("click", goHome);
 resetButton.addEventListener("click", () => {
-  state = structuredClone(DEFAULT_STATE);
+  clearAutoAdvance();
+  stopSpeech();
+  state = createDefaultState();
+  session = [];
+  currentItem = null;
+  missedReviewContext = null;
+  promotePreviewOnNextRender = false;
+  locked = false;
   syncCountPicker();
   saveState();
   goHome();
