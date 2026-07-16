@@ -23,6 +23,197 @@ const SWIPE_RATING_DIRECTIONS = {
   1: "down",
   2: "right"
 };
+const BUILT_IN_MEMORY_AIDS = {
+  abmeldung: [
+    ["ab-", "off; away"],
+    ["die Meldung", "notice; report"],
+    ["merken", "Think of signing yourself 'off the register'."]
+  ],
+  bestaetigung: [
+    ["bestätigen", "to confirm"],
+    ["-ung", "turns a verb into a noun"],
+    ["merken", "A Bestätigung is the result of confirming something."]
+  ],
+  aenderung: [
+    ["ändern", "to change"],
+    ["-ung", "turns a verb into a noun"],
+    ["merken", "An Änderung is the result of changing something."]
+  ],
+  nachricht: [
+    ["nach", "after; toward"],
+    ["richten", "to direct; arrange"],
+    ["merken", "A Nachricht is information directed to someone."]
+  ],
+  hinweis: [
+    ["hin", "there; toward"],
+    ["der Weise / weisen", "way; to point"],
+    ["merken", "A Hinweis points you toward the right way."]
+  ],
+  moeglichkeit: [
+    ["möglich", "possible"],
+    ["-keit", "forms an abstract noun"],
+    ["merken", "Möglichkeit is the state or option of something being possible."]
+  ],
+  entscheidung: [
+    ["entscheiden", "to decide"],
+    ["-ung", "turns a verb into a noun"],
+    ["merken", "An Entscheidung is the result of deciding."]
+  ],
+  meinung: [
+    ["meinen", "to think; mean"],
+    ["-ung", "turns a verb into a noun"],
+    ["merken", "A Meinung is what someone thinks or means."]
+  ],
+  erfahrung: [
+    ["erfahren", "to experience; find out"],
+    ["-ung", "turns a verb into a noun"],
+    ["merken", "An Erfahrung is something you have experienced."]
+  ],
+  uebung: [
+    ["üben", "to practice"],
+    ["-ung", "turns a verb into a noun"],
+    ["merken", "Eine Übung is the act/result of practicing."]
+  ],
+  pruefung: [
+    ["prüfen", "to check; examine"],
+    ["-ung", "turns a verb into a noun"],
+    ["merken", "Eine Prüfung is a checking or examination."]
+  ],
+  bedeutung: [
+    ["bedeuten", "to mean"],
+    ["-ung", "turns a verb into a noun"],
+    ["merken", "Bedeutung is what something means."]
+  ],
+  aufgabe: [
+    ["auf-", "up; onto"],
+    ["geben", "to give"],
+    ["merken", "An Aufgabe is something given to you to do."]
+  ],
+  anfang: [
+    ["an-", "on; at"],
+    ["fangen", "to catch; start"],
+    ["merken", "Der Anfang is where something starts."]
+  ],
+  verbindung: [
+    ["verbinden", "to connect"],
+    ["-ung", "turns a verb into a noun"],
+    ["merken", "Eine Verbindung is the result of connecting."]
+  ],
+  umgebung: [
+    ["um", "around"],
+    ["geben", "to give"],
+    ["merken", "Die Umgebung is what is given/located around you: the surroundings."]
+  ],
+  kreuzung: [
+    ["das Kreuz", "cross"],
+    ["-ung", "noun ending"],
+    ["merken", "Eine Kreuzung is where roads cross."]
+  ],
+  ampel: [
+    ["Ampel", "traffic light"],
+    ["merken", "Historically from a hanging lamp; modern German uses it for traffic lights."]
+  ],
+  fahrplan: [
+    ["fahren", "to travel; drive"],
+    ["der Plan", "plan"],
+    ["merken", "Der Fahrplan is the travel plan: the timetable."]
+  ],
+  verspaetung: [
+    ["spät", "late"],
+    ["ver-", "change/result prefix"],
+    ["-ung", "turns a verb/adjective idea into a noun"],
+    ["merken", "Verspätung is the state/result of being late."]
+  ],
+  anschluss: [
+    ["an-", "on; to"],
+    ["der Schluss / schließen", "close; join"],
+    ["merken", "Der Anschluss is the connection that joins onto your route."]
+  ],
+  kontrolle: [
+    ["kontrollieren", "to check; control"],
+    ["merken", "Kontrolle is the act of checking or controlling."]
+  ],
+  erkaeltung: [
+    ["kalt", "cold"],
+    ["sich erkälten", "to catch a cold"],
+    ["-ung", "noun ending"],
+    ["merken", "Eine Erkältung is the cold you caught."]
+  ],
+  rechnung: [
+    ["rechnen", "to calculate"],
+    ["-ung", "turns a verb into a noun"],
+    ["merken", "Eine Rechnung is a calculation on paper: bill or invoice."]
+  ],
+  betrag: [
+    ["tragen", "to carry"],
+    ["be-", "prefix"],
+    ["merken", "Der Betrag is the amount a bill carries."]
+  ],
+  ueberweisung: [
+    ["über", "over; across"],
+    ["weisen", "to direct; transfer"],
+    ["-ung", "noun ending"],
+    ["merken", "Eine Überweisung directs money across to another account."]
+  ],
+  bargeld: [
+    ["bar", "cash; bare"],
+    ["das Geld", "money"],
+    ["merken", "Bargeld is money you have directly in cash."]
+  ],
+  versicherung: [
+    ["sicher", "safe; certain"],
+    ["versichern", "to insure; assure"],
+    ["-ung", "noun ending"],
+    ["merken", "Versicherung makes something financially safe."]
+  ],
+  kuendigung: [
+    ["kündigen", "to cancel; give notice"],
+    ["-ung", "noun ending"],
+    ["merken", "Eine Kündigung is the notice that cancels something."]
+  ],
+  antrag: [
+    ["an-", "to; toward"],
+    ["tragen", "to carry"],
+    ["merken", "Ein Antrag carries a request toward an office or person."]
+  ],
+  unterschrift: [
+    ["unter", "under"],
+    ["die Schrift", "writing"],
+    ["merken", "Die Unterschrift is the writing under a document: signature."]
+  ],
+  bewilligung: [
+    ["willigen", "to consent"],
+    ["be-", "prefix"],
+    ["-ung", "noun ending"],
+    ["merken", "Eine Bewilligung is official consent or authorization."]
+  ],
+  nebenkosten: [
+    ["neben", "beside; additional"],
+    ["die Kosten", "costs"],
+    ["merken", "Nebenkosten are costs beside the main rent."]
+  ],
+  heizung: [
+    ["heizen", "to heat"],
+    ["-ung", "noun ending"],
+    ["merken", "Die Heizung is the heating system or act of heating."]
+  ],
+  geschirrspueler: [
+    ["das Geschirr", "dishes"],
+    ["spülen", "to rinse; wash"],
+    ["-er", "machine/person that does something"],
+    ["merken", "Der Geschirrspüler is the machine that washes dishes."]
+  ],
+  einkaufswagen: [
+    ["einkaufen", "to shop"],
+    ["der Wagen", "cart; vehicle"],
+    ["merken", "Der Einkaufswagen is the cart for shopping."]
+  ],
+  angebot: [
+    ["anbieten", "to offer"],
+    ["das Gebot", "offer; bid"],
+    ["merken", "Ein Angebot is something offered to you."]
+  ]
+};
 
 let state = loadState();
 let session = [];
@@ -167,10 +358,10 @@ function parseVocabulary(text) {
 
 function parseRichVocabularyLine(line) {
   const separator = line.includes("|") ? "|" : "\t";
-  const [term, meaning = "", example = "", translation = ""] = line
+  const [term, meaning = "", example = "", translation = "", memoryAid = ""] = line
     .split(separator)
     .map((part) => part.trim());
-  return { term, meaning, example, translation };
+  return { term, meaning, example, translation, memoryAid };
 }
 
 function normalizeVocabularyEntry(entry) {
@@ -180,14 +371,28 @@ function normalizeVocabularyEntry(entry) {
   const generated = generateExample(parsed);
   const idBase = parsed.article ? `${parsed.article}-${parsed.word}` : parsed.word;
   const imageId = slugify(idBase);
+  const customMemoryAid = normalizeMemoryAid(entry.memoryAid);
   return {
     ...parsed,
     pos: parsed.article ? "noun" : "word",
     meaning: entry.meaning || "",
     example: entry.example || generated.example,
     translation: entry.translation || generated.translation,
+    memoryAid: customMemoryAid.length ? customMemoryAid : BUILT_IN_MEMORY_AIDS[memoryAidKey(parsed.word)] || [],
     imagePath: IMAGE_PATHS.get(imageId) || ""
   };
+}
+
+function normalizeMemoryAid(value) {
+  if (!value || !value.trim()) return [];
+  return value
+    .split(";")
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .map((part) => {
+      const [label, meaning = ""] = part.split(/\s*=\s*/);
+      return [label.trim(), meaning.trim()];
+    });
 }
 
 function parseTerm(term) {
@@ -228,6 +433,10 @@ function slugify(value) {
 
 function hasMeaning(word) {
   return Boolean(word.meaning && word.meaning.trim());
+}
+
+function hasMemoryAid(word) {
+  return Array.isArray(word.memoryAid) && word.memoryAid.length > 0;
 }
 
 function pruneOldRecords() {
@@ -329,6 +538,21 @@ function normalizeAnswer(value) {
     .replaceAll("ö", "oe")
     .replaceAll("ü", "ue")
     .replaceAll("ß", "ss");
+}
+
+function memoryAidKey(value) {
+  return value
+    .trim()
+    .toLowerCase()
+    .replaceAll("ä", "ae")
+    .replaceAll("ö", "oe")
+    .replaceAll("ü", "ue")
+    .replaceAll("ß", "ss")
+    .replaceAll("盲", "ae")
+    .replaceAll("枚", "oe")
+    .replaceAll("眉", "ue")
+    .replaceAll("脽", "ss")
+    .replace(/[^a-z0-9]+/g, "");
 }
 
 function shuffle(items) {
@@ -467,6 +691,7 @@ function renderLearn(word) {
       <button class="speak-button" type="button" aria-label="Play German pronunciation" title="Play German pronunciation">${speakerIcon()}</button>
     </div>
     ${hasMeaning(word) ? `<div class="meaning">${word.meaning}</div>` : ""}
+    ${memoryAidMarkup(word)}
     <div class="example">
       <strong>${word.example}</strong>
       <span>${word.translation}</span>
@@ -496,6 +721,30 @@ function imageMarkup(word) {
 function imageUrl(path) {
   const separator = path.includes("?") ? "&" : "?";
   return `${escapeAttribute(path)}${separator}v=${IMAGE_CACHE_KEY}`;
+}
+
+function memoryAidMarkup(word) {
+  if (!hasMemoryAid(word)) return "";
+  return `
+    <section class="memory-aid" aria-label="Word building memory aid">
+      <div class="memory-title">Word building</div>
+      <div class="memory-parts">
+        ${word.memoryAid.map(memoryAidPartMarkup).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function memoryAidPartMarkup(part) {
+  const [label, meaning = ""] = part;
+  if (/^(merken|memory)$/i.test(label) && meaning) return `<div class="memory-note">${meaning}</div>`;
+  if (!meaning) return `<div class="memory-note">${label}</div>`;
+  return `
+    <div class="memory-part">
+      <strong>${label}</strong>
+      <span>${meaning}</span>
+    </div>
+  `;
 }
 
 function renderNextCardPreview() {
@@ -530,6 +779,7 @@ function previewMarkup(item) {
           <button class="speak-button" type="button" tabindex="-1" aria-hidden="true">${speakerIcon()}</button>
         </div>
         ${hasMeaning(word) ? `<div class="meaning">${word.meaning}</div>` : ""}
+        ${memoryAidMarkup(word)}
         <div class="example">
           <strong>${word.example}</strong>
           <span>${word.translation}</span>

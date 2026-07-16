@@ -486,6 +486,43 @@ h2 {
   font-size: clamp(1.05rem, 3vw, 1.3rem);
 }
 
+.memory-aid {
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border: 1px solid rgba(25, 32, 42, 0.09);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.memory-title {
+  margin-bottom: 8px;
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 780;
+}
+
+.memory-parts {
+  display: grid;
+  gap: 6px;
+}
+
+.memory-part,
+.memory-note {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.35;
+}
+
+.memory-part strong {
+  color: var(--text);
+  font-weight: 760;
+}
+
+.memory-part span::before {
+  content: " = ";
+  color: var(--muted);
+}
+
 .example {
   padding-top: 18px;
   border-top: 1px solid rgba(25, 32, 42, 0.11);
@@ -741,6 +778,27 @@ h2 {
     margin-bottom: 8px;
     font-size: 0.98rem;
     text-align: center;
+  }
+
+  body.is-studying .memory-aid {
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    border-radius: 12px;
+  }
+
+  body.is-studying .memory-title {
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+  }
+
+  body.is-studying .memory-parts {
+    gap: 3px;
+  }
+
+  body.is-studying .memory-part,
+  body.is-studying .memory-note {
+    font-size: 0.82rem;
+    line-height: 1.24;
   }
 
   body.is-studying .example {
