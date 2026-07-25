@@ -1,12 +1,311 @@
 let WORDS = [];
 const VOCABULARY_URL = "vocabulary.txt";
+const WORDBOOK_MANIFEST_URL = "wordbooks/manifest.json";
 const IMAGE_MANIFEST_URL = "assets/vocab-images/manifest.json";
 const IMAGE_CACHE_KEY = Date.now();
 let IMAGE_PATHS = new Map();
+let WORDBOOKS = [];
+
+const DEFAULT_WORDBOOKS = [
+  {
+    id: "custom",
+    title: "Custom wordbook",
+    description: "Your editable vocabulary.txt file.",
+    url: VOCABULARY_URL
+  }
+];
+
+const BUILT_IN_PLURALS = {
+  abfahrt: "die Abfahrten",
+  adresse: "die Adressen",
+  anfang: "die Anfaenge",
+  ankunft: "die Ankuenfte",
+  anmeldung: "die Anmeldungen",
+  anruf: "die Anrufe",
+  antwort: "die Antworten",
+  anzeige: "die Anzeigen",
+  apartment: "die Apartments",
+  apfel: "die Aepfel",
+  arbeitsplatz: "die Arbeitsplaetze",
+  arm: "die Arme",
+  arzt: "die Aerzte",
+  aufgabe: "die Aufgaben",
+  aufzug: "die Aufzuege",
+  auge: "die Augen",
+  ausflug: "die Ausfluege",
+  ausgang: "die Ausgaenge",
+  auskunft: "die Auskuenfte",
+  ausweis: "die Ausweise",
+  auto: "die Autos",
+  autobahn: "die Autobahnen",
+  automat: "die Automaten",
+  baby: "die Babys",
+  baeckerei: "die Baeckereien",
+  bad: "die Baeder",
+  bahn: "die Bahnen",
+  bahnhof: "die Bahnhoefe",
+  bahnsteig: "die Bahnsteige",
+  balkon: "die Balkone",
+  banane: "die Bananen",
+  bank: "die Banken",
+  bauch: "die Baeuche",
+  baum: "die Baeume",
+  beamte: "die Beamten",
+  bein: "die Beine",
+  beispiel: "die Beispiele",
+  beruf: "die Berufe",
+  bett: "die Betten",
+  bier: "die Biere",
+  bild: "die Bilder",
+  birne: "die Birnen",
+  bitte: "die Bitten",
+  bleistift: "die Bleistifte",
+  blick: "die Blicke",
+  blume: "die Blumen",
+  bogen: "die Boegen",
+  brief: "die Briefe",
+  briefmarke: "die Briefmarken",
+  brot: "die Brote",
+  broetchen: "die Broetchen",
+  bruder: "die Brueder",
+  buch: "die Buecher",
+  buchstabe: "die Buchstaben",
+  bus: "die Busse",
+  cafe: "die Cafes",
+  computer: "die Computer",
+  dame: "die Damen",
+  datum: "die Daten",
+  dienstag: "die Dienstage",
+  doktor: "die Doktoren",
+  doppelzimmer: "die Doppelzimmer",
+  dorf: "die Doerfer",
+  drucker: "die Drucker",
+  durchsage: "die Durchsagen",
+  dusche: "die Duschen",
+  ecke: "die Ecken",
+  ehefrau: "die Ehefrauen",
+  ehemann: "die Ehemaenner",
+  ei: "die Eier",
+  einkauf: "die Einkaeufe",
+  einladung: "die Einladungen",
+  eingang: "die Eingaenge",
+  eintritt: "die Eintritte",
+  einwohner: "die Einwohner",
+  einzelzimmer: "die Einzelzimmer",
+  email: "die E-Mails",
+  ende: "die Enden",
+  entschuldigung: "die Entschuldigungen",
+  erwachsene: "die Erwachsenen",
+  fahrrad: "die Fahrraeder",
+  fahrkarte: "die Fahrkarten",
+  fahrplan: "die Fahrplaene",
+  familie: "die Familien",
+  farbe: "die Farben",
+  fenster: "die Fenster",
+  flughafen: "die Flughaefen",
+  formular: "die Formulare",
+  foto: "die Fotos",
+  frage: "die Fragen",
+  frau: "die Frauen",
+  freund: "die Freunde",
+  freundin: "die Freundinnen",
+  fruehstueck: "die Fruehstuecke",
+  fuss: "die Fuesse",
+  garten: "die Gaerten",
+  gast: "die Gaeste",
+  geburtstag: "die Geburtstage",
+  geschaeft: "die Geschaefte",
+  geschenk: "die Geschenke",
+  geschichte: "die Geschichten",
+  gesicht: "die Gesichter",
+  gespraech: "die Gespraeche",
+  getraenk: "die Getraenke",
+  glas: "die Glaeser",
+  gleis: "die Gleise",
+  gruppe: "die Gruppen",
+  gruss: "die Gruesse",
+  haltestelle: "die Haltestellen",
+  hand: "die Haende",
+  handy: "die Handys",
+  haus: "die Haeuser",
+  hemd: "die Hemden",
+  hilfe: "die Hilfen",
+  hose: "die Hosen",
+  hotel: "die Hotels",
+  hund: "die Hunde",
+  information: "die Informationen",
+  jacke: "die Jacken",
+  jahr: "die Jahre",
+  junge: "die Jungen",
+  kaffee: "die Kaffees",
+  karte: "die Karten",
+  kartoffel: "die Kartoffeln",
+  kasse: "die Kassen",
+  kind: "die Kinder",
+  kindergarten: "die Kindergaerten",
+  kino: "die Kinos",
+  kiosk: "die Kioske",
+  klasse: "die Klassen",
+  kleid: "die Kleider",
+  koffer: "die Koffer",
+  kollege: "die Kollegen",
+  kollegin: "die Kolleginnen",
+  kopf: "die Koepfe",
+  krankenhaus: "die Krankenhaeuser",
+  kreditkarte: "die Kreditkarten",
+  kuchen: "die Kuchen",
+  kueche: "die Kuechen",
+  kuehlschrank: "die Kuehlschraenke",
+  laden: "die Laeden",
+  land: "die Laender",
+  leben: "die Leben",
+  lehrer: "die Lehrer",
+  lehrerin: "die Lehrerinnen",
+  licht: "die Lichter",
+  lokal: "die Lokale",
+  loesung: "die Loesungen",
+  markt: "die Maerkte",
+  maschine: "die Maschinen",
+  medikament: "die Medikamente",
+  meer: "die Meere",
+  mensch: "die Menschen",
+  miete: "die Mieten",
+  milch: "die Milch",
+  minute: "die Minuten",
+  mittag: "die Mittage",
+  mittagessen: "die Mittagessen",
+  mitte: "die Mitten",
+  moment: "die Momente",
+  montag: "die Montage",
+  monat: "die Monate",
+  morgen: "die Morgen",
+  mutter: "die Muetter",
+  muetze: "die Muetzen",
+  nachmittag: "die Nachmittage",
+  nacht: "die Naechte",
+  name: "die Namen",
+  nummer: "die Nummern",
+  ort: "die Orte",
+  papier: "die Papiere",
+  park: "die Parks",
+  partner: "die Partner",
+  party: "die Partys",
+  pause: "die Pausen",
+  plan: "die Plaene",
+  platz: "die Plaetze",
+  postkarte: "die Postkarten",
+  preis: "die Preise",
+  problem: "die Probleme",
+  programm: "die Programme",
+  prospekt: "die Prospekte",
+  raum: "die Raeume",
+  raucher: "die Raucher",
+  rechnung: "die Rechnungen",
+  restaurant: "die Restaurants",
+  saft: "die Saefte",
+  sache: "die Sachen",
+  schluessel: "die Schluessel",
+  schrank: "die Schraenke",
+  schuh: "die Schuhe",
+  schule: "die Schulen",
+  schueler: "die Schueler",
+  schwester: "die Schwestern",
+  see: "die Seen",
+  seite: "die Seiten",
+  sendung: "die Sendungen",
+  sohn: "die Soehne",
+  sommer: "die Sommer",
+  sonne: "die Sonnen",
+  sprache: "die Sprachen",
+  stadt: "die Staedte",
+  stelle: "die Stellen",
+  stift: "die Stifte",
+  strasse: "die Strassen",
+  strassenbahn: "die Strassenbahnen",
+  stuhl: "die Stuehle",
+  stunde: "die Stunden",
+  supermarkt: "die Supermaerkte",
+  suppe: "die Suppen",
+  tasche: "die Taschen",
+  tasse: "die Tassen",
+  taxi: "die Taxis",
+  tee: "die Tees",
+  telefon: "die Telefone",
+  termin: "die Termine",
+  text: "die Texte",
+  theater: "die Theater",
+  thema: "die Themen",
+  tisch: "die Tische",
+  tochter: "die Toechter",
+  toilette: "die Toiletten",
+  treppe: "die Treppen",
+  tuer: "die Tueren",
+  uhr: "die Uhren",
+  unterschrift: "die Unterschriften",
+  urlaub: "die Urlaube",
+  vater: "die Vaeter",
+  vorwahl: "die Vorwahlen",
+  wasser: "die Wasser",
+  wecker: "die Wecker",
+  wetter: "die Wetter",
+  woche: "die Wochen",
+  wochenende: "die Wochenenden",
+  wohnung: "die Wohnungen",
+  wort: "die Woerter",
+  zahl: "die Zahlen",
+  zahn: "die Zaehne",
+  zeit: "die Zeiten",
+  zeitung: "die Zeitungen",
+  zentrum: "die Zentren",
+  zimmer: "die Zimmer",
+  zug: "die Zuege",
+  abmeldung: "die Abmeldungen",
+  bestaetigung: "die Bestaetigungen",
+  aenderung: "die Aenderungen",
+  nachricht: "die Nachrichten",
+  hinweis: "die Hinweise",
+  fehler: "die Fehler",
+  moeglichkeit: "die Moeglichkeiten",
+  grund: "die Gruende",
+  entscheidung: "die Entscheidungen",
+  meinung: "die Meinungen",
+  erfahrung: "die Erfahrungen",
+  uebung: "die Uebungen",
+  pruefung: "die Pruefungen",
+  bedeutung: "die Bedeutungen",
+  verbindung: "die Verbindungen",
+  umgebung: "die Umgebungen",
+  kreuzung: "die Kreuzungen",
+  ampel: "die Ampeln",
+  verspaetung: "die Verspaetungen",
+  kontrolle: "die Kontrollen",
+  praxis: "die Praxen",
+  schmerz: "die Schmerzen",
+  erkaeltung: "die Erkaeltungen",
+  quittung: "die Quittungen",
+  ueberweisung: "die Ueberweisungen",
+  konto: "die Konten",
+  versicherung: "die Versicherungen",
+  vertrag: "die Vertraege",
+  kuendigung: "die Kuendigungen",
+  frist: "die Fristen",
+  antrag: "die Antraege",
+  kopie: "die Kopien",
+  dokument: "die Dokumente",
+  bewilligung: "die Bewilligungen",
+  heizung: "die Heizungen",
+  geschirrspueler: "die Geschirrspueler",
+  einkaufswagen: "die Einkaufswagen",
+  rabatt: "die Rabatte",
+  groesse: "die Groessen",
+  mieterin: "die Mieterinnen",
+  terrasse: "die Terrassen"
+};
 
 const STORAGE_KEY = "nini-gigi-german-memory-v1";
 function createDefaultState() {
   return {
+    selectedWordbookId: "custom",
     selectedCount: 10,
     streak: 0,
     records: {}
@@ -231,6 +530,8 @@ let missedReviewContext = null;
 
 const setupView = document.querySelector("#setupView");
 const studyView = document.querySelector("#studyView");
+const wordbookPicker = document.querySelector("#wordbookPicker");
+const wordbookSummary = document.querySelector("#wordbookSummary");
 const countPicker = document.querySelector("#countPicker");
 const startButton = document.querySelector("#startButton");
 const backButton = document.querySelector("#backButton");
@@ -250,31 +551,86 @@ const streakCount = document.querySelector("#streakCount");
 
 async function loadVocabulary() {
   startButton.disabled = true;
-  startButton.textContent = "Loading vocabulary...";
+  startButton.textContent = "Loading wordbook...";
 
   try {
-    const response = await fetch(`${VOCABULARY_URL}?t=${Date.now()}`, { cache: "no-store" });
-    if (!response.ok) throw new Error(`Could not load ${VOCABULARY_URL}`);
-
     await loadImageManifest();
+    await loadWordbooks();
+    syncWordbookPicker();
+    await loadSelectedWordbook();
+  } catch (error) {
+    WORDS = [];
+    startButton.textContent = "Wordbook missing";
+    feedback.textContent = "Could not load the selected wordbook. Check the wordbook file and refresh.";
+  }
+}
+
+async function loadWordbooks() {
+  try {
+    const response = await fetch(`${WORDBOOK_MANIFEST_URL}?t=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error("No wordbook manifest");
+    const entries = await response.json();
+    const parsed = Array.isArray(entries) ? entries.map(normalizeWordbook).filter(Boolean) : [];
+    WORDBOOKS = parsed.length ? parsed : DEFAULT_WORDBOOKS;
+  } catch {
+    WORDBOOKS = DEFAULT_WORDBOOKS;
+  }
+
+  if (!WORDBOOKS.some((wordbook) => wordbook.id === state.selectedWordbookId)) {
+    state.selectedWordbookId = WORDBOOKS[0].id;
+    saveState();
+  }
+}
+
+function normalizeWordbook(entry) {
+  if (!entry || typeof entry !== "object") return null;
+  const id = String(entry.id || "").trim();
+  const title = String(entry.title || "").trim();
+  const url = String(entry.url || "").trim();
+  if (!id || !title || !url) return null;
+  return {
+    id,
+    title,
+    url,
+    description: String(entry.description || "").trim(),
+    source: String(entry.source || "").trim()
+  };
+}
+
+async function loadSelectedWordbook() {
+  const wordbook = getSelectedWordbook();
+  startButton.disabled = true;
+  startButton.textContent = "Loading wordbook...";
+  feedback.textContent = "";
+
+  try {
+    const response = await fetch(`${wordbook.url}?t=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Could not load ${wordbook.url}`);
+
     const text = await response.text();
     WORDS = parseVocabulary(text);
     pruneOldRecords();
 
     if (!WORDS.length) {
       startButton.textContent = "No words found";
-      feedback.textContent = "vocabulary.txt is empty or could not be parsed.";
+      wordbookSummary.textContent = `${wordbook.title} is empty or could not be parsed.`;
       return;
     }
 
     startButton.disabled = false;
     startButton.textContent = "Start studying";
+    renderWordbookSummary();
     renderStats();
-  } catch (error) {
+  } catch {
     WORDS = [];
-    startButton.textContent = "Vocabulary missing";
-    feedback.textContent = "Could not load vocabulary.txt. Put a vocabulary file next to index.html and refresh.";
+    startButton.textContent = "Wordbook missing";
+    wordbookSummary.textContent = `Could not load ${wordbook.title}.`;
+    renderStats();
   }
+}
+
+function getSelectedWordbook() {
+  return WORDBOOKS.find((wordbook) => wordbook.id === state.selectedWordbookId) || WORDBOOKS[0] || DEFAULT_WORDBOOKS[0];
 }
 
 async function loadImageManifest() {
@@ -323,7 +679,7 @@ function parseImageManifestEntry(entry) {
   const match = basename.match(/^(.+)\.(png|jpe?g|webp|svg)$/i);
   const inferredId = match ? match[1] : basename;
   const extension = match ? match[2].toLowerCase() : "svg";
-  const path = filename.startsWith("assets/") ? filename : `assets/vocab-images/${filename}`;
+  const path = /^https?:\/\//i.test(filename) || filename.startsWith("assets/") ? filename : `assets/vocab-images/${filename}`;
 
   return {
     id: id || inferredId,
@@ -361,10 +717,19 @@ function parseVocabulary(text) {
 
 function parseRichVocabularyLine(line) {
   const separator = line.includes("|") ? "|" : "\t";
-  const [term, meaning = "", example = "", translation = "", memoryAid = ""] = line
+  const [term, meaning = "", example = "", translation = "", memoryAid = "", imageOrPlural = "", plural = ""] = line
     .split(separator)
     .map((part) => part.trim());
-  return { term, meaning, example, translation, memoryAid };
+  const sixthFieldIsImage = looksLikeImagePath(imageOrPlural);
+  return {
+    term,
+    meaning,
+    example,
+    translation,
+    memoryAid,
+    imagePath: sixthFieldIsImage ? imageOrPlural : "",
+    plural: plural || (sixthFieldIsImage ? "" : imageOrPlural)
+  };
 }
 
 function normalizeVocabularyEntry(entry) {
@@ -381,9 +746,25 @@ function normalizeVocabularyEntry(entry) {
     meaning: entry.meaning || "",
     example: entry.example || generated.example,
     translation: entry.translation || generated.translation,
+    plural: normalizePlural(entry.plural || parsed.plural || BUILT_IN_PLURALS[memoryAidKey(parsed.word)] || ""),
     memoryAid: customMemoryAid.length ? customMemoryAid : BUILT_IN_MEMORY_AIDS[memoryAidKey(parsed.word)] || [],
-    imagePath: IMAGE_PATHS.get(imageId) || ""
+    imagePath: entry.imagePath || IMAGE_PATHS.get(imageId) || ""
   };
+}
+
+function looksLikeImagePath(value) {
+  return Boolean(value && (/^https?:\/\//i.test(value) || /^assets\//i.test(value) || /\.(png|jpe?g|webp|svg)(\?.*)?$/i.test(value)));
+}
+
+function normalizePlural(value) {
+  if (!value || !value.trim()) return "";
+  const cleaned = value
+    .replace(/\s*[（(]\s*pl\.?\s*[）)]\s*/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!cleaned) return "";
+  if (/^(der|die|das)\s+/i.test(cleaned)) return cleaned.replace(/^(der|die|das)\s+/i, "die ");
+  return `die ${cleaned}`;
 }
 
 function normalizeMemoryAid(value) {
@@ -400,9 +781,26 @@ function normalizeMemoryAid(value) {
 
 function parseTerm(term) {
   const normalized = term.replace(/\s+/g, " ").trim();
-  const match = normalized.match(/^(der|die|das)\s+(.+)$/i);
+  const match = normalized.match(/^(der|die|das)\s+([^,;(]+)(?:\s*[,;(]\s*(.+?)\s*[)]?)?$/i);
   if (!match) return { word: normalized };
-  return { article: match[1].toLowerCase(), word: match[2].trim() };
+  const word = match[2].trim();
+  const plural = expandPluralHint(word, match[3] || "");
+  return { article: match[1].toLowerCase(), word, plural };
+}
+
+function expandPluralHint(word, hint) {
+  const cleaned = hint
+    .replace(/\s*[（(]\s*pl\.?\s*[）)]\s*/gi, "")
+    .replace(/^pl\.?\s*/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!cleaned) return "";
+  if (/^(der|die|das)\s+/i.test(cleaned)) return cleaned;
+  if (!cleaned.startsWith("-")) return cleaned;
+  const suffix = cleaned.replace(/^-+/, "").replace(/[,;]/g, "").trim();
+  if (!suffix) return word;
+  if (word.endsWith("e") && suffix.startsWith("e")) return `${word}${suffix.slice(1)}`;
+  return `${word}${suffix}`;
 }
 
 function generateExample(word) {
@@ -438,14 +836,24 @@ function hasMeaning(word) {
   return Boolean(word.meaning && word.meaning.trim());
 }
 
+function hasPlural(word) {
+  return isNoun(word) && Boolean(word.plural && word.plural.trim() && word.plural !== displayWord(word));
+}
+
+function pluralMarkup(word) {
+  if (!hasPlural(word)) return "";
+  return `<div class="plural-form">${word.plural} <span>(pl.)</span></div>`;
+}
+
 function hasMemoryAid(word) {
   return Array.isArray(word.memoryAid) && word.memoryAid.length > 0;
 }
 
 function pruneOldRecords() {
-  const validIds = new Set(WORDS.map((word) => word.id));
+  const prefix = `${getSelectedWordbook().id}::`;
+  const validIds = new Set(WORDS.map((word) => recordKey(word.id)));
   Object.keys(state.records).forEach((id) => {
-    if (!validIds.has(id)) delete state.records[id];
+    if (id.startsWith(prefix) && !validIds.has(id)) delete state.records[id];
   });
   WORDS.forEach((word) => getRecord(word.id));
   saveState();
@@ -472,9 +880,15 @@ function saveState() {
   renderStats();
 }
 
+function recordKey(wordId) {
+  return `${getSelectedWordbook().id}::${wordId}`;
+}
+
 function getRecord(wordId) {
-  if (!state.records[wordId]) {
-    state.records[wordId] = {
+  const key = recordKey(wordId);
+  if (!state.records[key]) {
+    const legacyRecord = getSelectedWordbook().id === "custom" ? state.records[wordId] : null;
+    state.records[key] = legacyRecord || {
       seen: false,
       strength: 0,
       dueAt: 0,
@@ -487,8 +901,9 @@ function getRecord(wordId) {
       learningStep: 0,
       lastReviewedAt: 0
     };
+    if (legacyRecord) delete state.records[wordId];
   }
-  return normalizeRecord(state.records[wordId]);
+  return normalizeRecord(state.records[key]);
 }
 
 function normalizeRecord(record) {
@@ -548,6 +963,10 @@ function normalizeAnswer(value) {
     .replaceAll("ä", "ae")
     .replaceAll("ö", "oe")
     .replaceAll("ü", "ue")
+    .replaceAll("ß", "ss")
+    .replaceAll("ä", "ae")
+    .replaceAll("ö", "oe")
+    .replaceAll("ü", "ue")
     .replaceAll("ß", "ss");
 }
 
@@ -555,6 +974,10 @@ function memoryAidKey(value) {
   return value
     .trim()
     .toLowerCase()
+    .replaceAll("ä", "ae")
+    .replaceAll("ö", "oe")
+    .replaceAll("ü", "ue")
+    .replaceAll("ß", "ss")
     .replaceAll("ä", "ae")
     .replaceAll("ö", "oe")
     .replaceAll("ü", "ue")
@@ -709,6 +1132,7 @@ function renderLearn(word, options = {}) {
       <button class="speak-button" type="button" aria-label="Play German pronunciation" title="Play German pronunciation">${speakerIcon()}</button>
     </div>
     ${hasMeaning(word) ? `<div class="meaning">${word.meaning}</div>` : ""}
+    ${pluralMarkup(word)}
     ${memoryAidMarkup(word)}
     <div class="example">
       <strong>${word.example}</strong>
@@ -793,6 +1217,7 @@ function previewMarkup(item) {
           <button class="speak-button" type="button" tabindex="-1" aria-hidden="true">${speakerIcon()}</button>
         </div>
         ${hasMeaning(word) ? `<div class="meaning">${word.meaning}</div>` : ""}
+        ${pluralMarkup(word)}
         ${memoryAidMarkup(word)}
         <div class="example">
           <strong>${word.example}</strong>
@@ -1460,6 +1885,28 @@ function syncCountPicker() {
   });
 }
 
+function syncWordbookPicker() {
+  if (!wordbookPicker) return;
+  wordbookPicker.innerHTML = WORDBOOKS.map((wordbook) => {
+    const selected = wordbook.id === state.selectedWordbookId;
+    return `
+      <button class="wordbook-option${selected ? " is-selected" : ""}" type="button" data-wordbook-id="${escapeAttribute(wordbook.id)}" role="radio" aria-checked="${selected}">
+        <span>${wordbook.title}</span>
+        ${wordbook.description ? `<small>${wordbook.description}</small>` : ""}
+      </button>
+    `;
+  }).join("");
+  renderWordbookSummary();
+}
+
+function renderWordbookSummary() {
+  if (!wordbookSummary) return;
+  const wordbook = getSelectedWordbook();
+  const count = WORDS.length;
+  const source = wordbook.source ? ` Source: ${wordbook.source}` : "";
+  wordbookSummary.textContent = `${count ? `${count} words loaded.` : "No words loaded yet."}${source}`;
+}
+
 function escapeAttribute(value) {
   return value.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;");
 }
@@ -1480,12 +1927,23 @@ countPicker.addEventListener("click", (event) => {
   saveState();
 });
 
+wordbookPicker.addEventListener("click", async (event) => {
+  const button = event.target.closest(".wordbook-option");
+  if (!button || button.dataset.wordbookId === state.selectedWordbookId) return;
+  state.selectedWordbookId = button.dataset.wordbookId;
+  syncWordbookPicker();
+  saveState();
+  await loadSelectedWordbook();
+});
+
 startButton.addEventListener("click", startSession);
 backButton.addEventListener("click", goHome);
 resetButton.addEventListener("click", () => {
   clearAutoAdvance();
   stopSpeech();
+  const selectedWordbookId = state.selectedWordbookId;
   state = createDefaultState();
+  state.selectedWordbookId = selectedWordbookId;
   session = [];
   currentItem = null;
   missedReviewContext = null;

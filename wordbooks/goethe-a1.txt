@@ -1,0 +1,657 @@
+ab | from; starting | Ab Montag arbeitet Anna im Cafe. | Starting Monday, Anna works in the cafe.
+aber | but | Ich moechte kommen, aber ich habe keine Zeit. | I want to come, but I do not have time.
+abfahren | to depart | Der Zug faehrt um acht Uhr ab. | The train departs at eight o'clock.
+die Abfahrt | departure | Die Abfahrt ist heute um zehn Uhr. | The departure is today at ten o'clock.
+abholen | to pick up | Ben holt seine Schwester am Bahnhof ab. | Ben picks up his sister at the train station.
+die Adresse | address | Meine Adresse steht auf dem Brief. | My address is on the letter.
+allein | alone | Lara wohnt allein in Berlin. | Lara lives alone in Berlin.
+alt | old | Das Auto ist alt, aber es faehrt gut. | The car is old, but it drives well.
+das Alter | age | Im Formular steht mein Alter. | My age is on the form.
+anfangen | to begin | Der Kurs faengt um neun Uhr an. | The course begins at nine o'clock.
+der Anfang | beginning | Am Anfang ist Deutsch schwer. | At the beginning German is difficult.
+ankommen | to arrive | Wir kommen morgen in Hamburg an. | We arrive in Hamburg tomorrow.
+die Ankunft | arrival | Die Ankunft ist auf Gleis zwei. | The arrival is on platform two.
+anklicken | to click | Klicken Sie bitte das Wort an. | Please click the word.
+anmachen | to turn on | Mach bitte das Licht an. | Please turn on the light.
+sich anmelden | to register | Ich melde mich fuer den Kurs an. | I register for the course.
+die Anmeldung | registration | Die Anmeldung ist heute moeglich. | Registration is possible today.
+anrufen | to call | Ich rufe meine Mutter am Abend an. | I call my mother in the evening.
+der Anruf | call | Der Anruf kommt aus der Schule. | The call comes from the school.
+antworten | to answer | Bitte antworten Sie kurz. | Please answer briefly.
+die Antwort | answer | Die Antwort ist richtig. | The answer is correct.
+die Anzeige | advertisement; display | Ich lese die Anzeige in der Zeitung. | I read the advertisement in the newspaper.
+sich anziehen | to get dressed | Das Kind zieht sich schnell an. | The child gets dressed quickly.
+das Apartment | apartment | Wir mieten ein kleines Apartment. | We rent a small apartment.
+der Apfel | apple | Ich esse jeden Tag einen Apfel. | I eat an apple every day.
+der Appetit | appetite | Guten Appetit! | Enjoy your meal!
+arbeiten | to work | Sara arbeitet im Hotel. | Sara works in the hotel.
+die Arbeit | work; job | Meine Arbeit beginnt frueh. | My work begins early.
+arbeitslos | unemployed | Er ist seit Mai arbeitslos. | He has been unemployed since May.
+der Arbeitsplatz | workplace | Mein Arbeitsplatz ist sehr hell. | My workplace is very bright.
+der Arm | arm | Mein linker Arm tut weh. | My left arm hurts.
+der Arzt | doctor | Heute gehe ich zum Arzt. | Today I go to the doctor.
+auch | also; too | Ich komme auch mit. | I am coming too.
+auf | on; at | Das Buch liegt auf dem Tisch. | The book is on the table.
+die Aufgabe | task; exercise | Die Aufgabe ist nicht schwer. | The task is not difficult.
+aufhoeren | to stop | Der Regen hoert bald auf. | The rain stops soon.
+aufstehen | to get up | Ich stehe jeden Tag um sieben Uhr auf. | I get up every day at seven o'clock.
+der Aufzug | elevator | Der Aufzug ist links. | The elevator is on the left.
+das Auge | eye | Das Auge ist rot. | The eye is red.
+aus | from; out of | Maria kommt aus Spanien. | Maria comes from Spain.
+der Ausflug | trip | Am Sonntag machen wir einen Ausflug. | On Sunday we take a trip.
+ausfuellen | to fill out | Bitte fuellen Sie das Formular aus. | Please fill out the form.
+der Ausgang | exit | Der Ausgang ist dort rechts. | The exit is over there on the right.
+die Auskunft | information | Am Schalter bekomme ich Auskunft. | I get information at the counter.
+das Ausland | foreign country; abroad | Im Sommer fahre ich ins Ausland. | In summer I travel abroad.
+der Ausweis | ID card | Ich zeige meinen Ausweis. | I show my ID card.
+aussehen | to look | Das Zimmer sieht schoen aus. | The room looks nice.
+aussteigen | to get off | Wir steigen am Rathaus aus. | We get off at city hall.
+das Auto | car | Das Auto steht vor dem Haus. | The car is in front of the house.
+die Autobahn | motorway | Auf der Autobahn fahren viele Autos. | Many cars drive on the motorway.
+der Automat | machine | Die Fahrkarte kommt aus dem Automaten. | The ticket comes from the machine.
+automatisch | automatic; automatically | Die Tuer geht automatisch auf. | The door opens automatically.
+das Baby | baby | Das Baby schlaeft im Bett. | The baby sleeps in the bed.
+die Baeckerei | bakery | Ich kaufe Brot in der Baeckerei. | I buy bread at the bakery.
+das Bad | bathroom; bath | Das Bad ist klein, aber sauber. | The bathroom is small but clean.
+baden | to bathe | Im Sommer baden wir im See. | In summer we bathe in the lake.
+die Bahn | train; railway | Ich fahre mit der Bahn nach Koeln. | I travel to Cologne by train.
+der Bahnhof | train station | Der Bahnhof ist in der Naehe. | The train station is nearby.
+der Bahnsteig | platform | Der Zug faehrt von Bahnsteig drei. | The train leaves from platform three.
+bald | soon | Wir sehen uns bald. | We will see each other soon.
+der Balkon | balcony | Die Wohnung hat einen Balkon. | The apartment has a balcony.
+die Banane | banana | Die Banane ist gelb. | The banana is yellow.
+die Bank | bank; bench | Die Bank schliesst um vier Uhr. | The bank closes at four o'clock.
+bar | in cash | Ich bezahle bar. | I pay in cash.
+der Bauch | stomach; belly | Mein Bauch tut weh. | My stomach hurts.
+der Baum | tree | Vor dem Haus steht ein Baum. | There is a tree in front of the house.
+der Beamte | official | Der Beamte hilft mir am Schalter. | The official helps me at the counter.
+bedeuten | to mean | Was bedeutet dieses Wort? | What does this word mean?
+beginnen | to begin | Der Film beginnt um acht Uhr. | The film begins at eight o'clock.
+bei | at; near; with | Ich wohne bei meinen Eltern. | I live with my parents.
+beide | both | Beide Kinder lernen Deutsch. | Both children learn German.
+das Bein | leg | Sein Bein tut weh. | His leg hurts.
+das Beispiel | example | Kannst du ein Beispiel geben? | Can you give an example?
+bekannt | well-known | Der Platz ist sehr bekannt. | The square is very well-known.
+bekommen | to get; receive | Ich bekomme heute einen Brief. | I receive a letter today.
+benutzen | to use | Du kannst mein Telefon benutzen. | You can use my phone.
+der Beruf | profession | Was ist dein Beruf? | What is your profession?
+besetzt | occupied; busy | Der Platz ist besetzt. | The seat is occupied.
+bestellen | to order | Wir bestellen zwei Kaffee. | We order two coffees.
+besuchen | to visit | Am Wochenende besuchen wir Oma. | On the weekend we visit grandma.
+das Bett | bed | Das Kind liegt im Bett. | The child lies in bed.
+bezahlen | to pay | Wo kann ich bezahlen? | Where can I pay?
+das Bier | beer | Er trinkt ein Bier. | He drinks a beer.
+das Bild | picture | Das Bild haengt an der Wand. | The picture hangs on the wall.
+billig | cheap | Die Tasche ist billig. | The bag is cheap.
+bis | until; to | Ich arbeite bis fuenf Uhr. | I work until five o'clock.
+bitte | please; you're welcome | Einen Tee, bitte. | A tea, please.
+bleiben | to stay | Wir bleiben zwei Tage im Hotel. | We stay two days in the hotel.
+der Brief | letter | Der Brief liegt auf dem Tisch. | The letter is on the table.
+bringen | to bring | Ich bringe Brot mit. | I bring bread with me.
+der Bruder | brother | Mein Bruder heisst Paul. | My brother is called Paul.
+das Buch | book | Ich lese ein deutsches Buch. | I read a German book.
+der Bus | bus | Der Bus kommt in fuenf Minuten. | The bus comes in five minutes.
+das Cafe | cafe | Wir treffen uns im Cafe. | We meet in the cafe.
+der Computer | computer | Der Computer ist neu. | The computer is new.
+da | there | Der Supermarkt ist da vorne. | The supermarket is there in front.
+danke | thanks | Danke fuer deine Hilfe. | Thanks for your help.
+dauern | to last; take time | Der Kurs dauert eine Stunde. | The course lasts one hour.
+Deutsch | German | Ich lerne Deutsch. | I am learning German.
+der Dienstag | Tuesday | Am Dienstag habe ich frei. | On Tuesday I am free.
+dort | there | Dort ist die Schule. | The school is there.
+drei | three | Ich habe drei Fragen. | I have three questions.
+trinken | to drink | Wir trinken Wasser. | We drink water.
+essen | to eat | Die Kinder essen Suppe. | The children eat soup.
+fahren | to drive; go | Ich fahre mit dem Fahrrad. | I go by bicycle.
+das Fahrrad | bicycle | Das Fahrrad steht im Keller. | The bicycle is in the basement.
+die Familie | family | Meine Familie wohnt in Bonn. | My family lives in Bonn.
+falsch | wrong | Die Antwort ist falsch. | The answer is wrong.
+die Farbe | color | Meine Lieblingsfarbe ist blau. | My favorite color is blue.
+das Fenster | window | Das Fenster ist offen. | The window is open.
+finden | to find | Ich finde den Schluessel nicht. | I cannot find the key.
+der Flughafen | airport | Der Flughafen ist weit weg. | The airport is far away.
+das Foto | photo | Ich mache ein Foto. | I take a photo.
+die Frage | question | Die Frage ist einfach. | The question is simple.
+fragen | to ask | Darf ich etwas fragen? | May I ask something?
+die Frau | woman; wife | Die Frau wartet am Eingang. | The woman waits at the entrance.
+der Freund | friend | Mein Freund kommt heute. | My friend comes today.
+frueh | early | Ich stehe frueh auf. | I get up early.
+das Fruehstueck | breakfast | Das Fruehstueck ist um acht Uhr. | Breakfast is at eight o'clock.
+geben | to give | Bitte geben Sie mir das Buch. | Please give me the book.
+das Geld | money | Ich habe kein Geld dabei. | I have no money with me.
+gern | gladly; like to | Ich trinke gern Kaffee. | I like drinking coffee.
+das Geschaeft | shop; business | Das Geschaeft ist heute offen. | The shop is open today.
+gestern | yesterday | Gestern war ich zu Hause. | Yesterday I was at home.
+gesund | healthy | Obst ist gesund. | Fruit is healthy.
+gross | big; tall | Das Zimmer ist gross. | The room is big.
+gut | good | Der Kaffee ist gut. | The coffee is good.
+haben | to have | Wir haben heute Zeit. | We have time today.
+das Haus | house | Das Haus ist alt. | The house is old.
+heute | today | Heute lerne ich Deutsch. | Today I am learning German.
+hoeren | to hear; listen | Ich hoere Musik. | I listen to music.
+das Hotel | hotel | Das Hotel liegt am Bahnhof. | The hotel is at the train station.
+der Hund | dog | Der Hund ist klein. | The dog is small.
+kaufen | to buy | Ich kaufe Milch und Brot. | I buy milk and bread.
+das Kind | child | Das Kind spielt im Park. | The child plays in the park.
+klein | small | Die Tasche ist klein. | The bag is small.
+kommen | to come | Kommst du morgen? | Are you coming tomorrow?
+die Kueche | kitchen | Die Kueche ist sauber. | The kitchen is clean.
+das Land | country | Deutschland ist ein Land in Europa. | Germany is a country in Europe.
+lernen | to learn | Wir lernen jeden Tag Deutsch. | We learn German every day.
+lesen | to read | Ich lese die Zeitung. | I read the newspaper.
+machen | to do; make | Was machst du heute? | What are you doing today?
+der Mann | man; husband | Der Mann kauft eine Zeitung. | The man buys a newspaper.
+die Minute | minute | Der Bus kommt in einer Minute. | The bus comes in one minute.
+die Mutter | mother | Meine Mutter arbeitet heute. | My mother works today.
+der Name | name | Wie ist Ihr Name? | What is your name?
+neu | new | Meine Wohnung ist neu. | My apartment is new.
+nicht | not | Ich verstehe das nicht. | I do not understand that.
+noch | still; yet | Ich habe noch eine Frage. | I still have one question.
+oder | or | Trinkst du Tee oder Kaffee? | Do you drink tea or coffee?
+oft | often | Wir gehen oft spazieren. | We often go for a walk.
+ohne | without | Ich trinke Kaffee ohne Zucker. | I drink coffee without sugar.
+offen | open | Die Tuer ist offen. | The door is open.
+oeffnen | to open | Bitte oeffnen Sie das Fenster. | Please open the window.
+der Ort | place; town | Der Ort ist klein und ruhig. | The place is small and quiet.
+das Papier | paper | Das Papier liegt auf dem Tisch. | The paper is on the table.
+der Park | park | Die Kinder spielen im Park. | The children play in the park.
+parken | to park | Wo kann ich hier parken? | Where can I park here?
+der Partner | partner | Mein Partner lernt auch Deutsch. | My partner is also learning German.
+die Party | party | Am Samstag ist eine Party. | There is a party on Saturday.
+passen | to fit; suit | Die Jacke passt mir gut. | The jacket fits me well.
+passieren | to happen | Was ist passiert? | What happened?
+die Pause | break | Die Pause dauert zehn Minuten. | The break lasts ten minutes.
+der Plan | plan; map | Der Plan liegt im Zimmer. | The plan is in the room.
+der Platz | place; seat | Ist dieser Platz frei? | Is this seat free?
+die Polizei | police | Die Polizei kommt schnell. | The police come quickly.
+die Post | post office; mail | Ich gehe zur Post. | I go to the post office.
+die Postkarte | postcard | Ich schreibe eine Postkarte. | I write a postcard.
+praktisch | practical | Diese Tasche ist sehr praktisch. | This bag is very practical.
+der Preis | price | Der Preis ist sehr gut. | The price is very good.
+privat | private | Das ist meine private Nummer. | That is my private number.
+das Problem | problem | Wir haben ein kleines Problem. | We have a small problem.
+das Programm | program | Das Programm beginnt um acht Uhr. | The program begins at eight o'clock.
+der Prospekt | brochure | Im Hotel gibt es einen Prospekt. | There is a brochure in the hotel.
+putzen | to clean | Ich putze heute das Bad. | I clean the bathroom today.
+der Raum | room | Der Raum ist gross und hell. | The room is large and bright.
+rauchen | to smoke | Hier darf man nicht rauchen. | You may not smoke here.
+der Raucher | smoker | Der Raucher steht draussen. | The smoker is standing outside.
+die Rechnung | bill; invoice | Die Rechnung kommt sofort. | The bill comes right away.
+rechts | right; on the right | Der Eingang ist rechts. | The entrance is on the right.
+reden | to talk | Wir reden ueber das Wochenende. | We talk about the weekend.
+regnen | to rain | Heute regnet es den ganzen Tag. | It is raining all day today.
+der Regen | rain | Der Regen ist sehr stark. | The rain is very heavy.
+reich | rich | Die Stadt ist alt und reich. | The city is old and rich.
+reisen | to travel | Im Sommer reisen wir nach Wien. | In summer we travel to Vienna.
+die Reise | trip; journey | Die Reise dauert drei Tage. | The trip lasts three days.
+reparieren | to repair | Der Mann repariert das Fahrrad. | The man repairs the bicycle.
+das Restaurant | restaurant | Wir essen im Restaurant. | We eat in the restaurant.
+richtig | right; correct | Die Antwort ist richtig. | The answer is correct.
+riechen | to smell | Die Blumen riechen gut. | The flowers smell good.
+ruhig | quiet | Das Zimmer ist ruhig. | The room is quiet.
+sagen | to say | Was sagt der Lehrer? | What does the teacher say?
+der Saft | juice | Ich trinke einen Saft. | I drink a juice.
+die Sache | thing; matter | Die Sache ist wichtig. | The matter is important.
+sauber | clean | Die Kueche ist sauber. | The kitchen is clean.
+sauer | sour; angry | Die Zitrone ist sauer. | The lemon is sour.
+schade | pity; too bad | Schade, ich habe keine Zeit. | Too bad, I have no time.
+schaffen | to manage; create | Ich schaffe die Aufgabe heute. | I manage the task today.
+schauen | to look | Schau bitte auf den Plan. | Please look at the plan.
+scheinen | to shine; seem | Die Sonne scheint heute. | The sun is shining today.
+schenken | to give as a present | Ich schenke meiner Mutter Blumen. | I give my mother flowers.
+schicken | to send | Ich schicke dir eine Nachricht. | I send you a message.
+schlafen | to sleep | Das Baby schlaeft ruhig. | The baby sleeps quietly.
+schlecht | bad | Das Wetter ist schlecht. | The weather is bad.
+schliessen | to close | Der Laden schliesst um sechs Uhr. | The shop closes at six o'clock.
+der Schluessel | key | Der Schluessel liegt in der Tasche. | The key is in the bag.
+schmecken | to taste | Die Suppe schmeckt gut. | The soup tastes good.
+schnell | fast; quick | Der Bus ist schnell. | The bus is fast.
+schon | already | Ich bin schon zu Hause. | I am already at home.
+schoen | beautiful; nice | Das Foto ist sehr schoen. | The photo is very nice.
+der Schrank | cupboard; wardrobe | Der Schrank steht im Schlafzimmer. | The wardrobe is in the bedroom.
+schreiben | to write | Ich schreibe einen Brief. | I write a letter.
+der Schuh | shoe | Der Schuh ist zu klein. | The shoe is too small.
+die Schule | school | Die Schule beginnt um acht Uhr. | School begins at eight o'clock.
+der Schueler | student; pupil | Der Schueler liest laut. | The student reads aloud.
+schwer | heavy; difficult | Deutsch ist am Anfang schwer. | German is difficult at the beginning.
+die Schwester | sister | Meine Schwester wohnt in Basel. | My sister lives in Basel.
+schwimmen | to swim | Im Sommer schwimme ich gern. | In summer I like swimming.
+der See | lake | Wir gehen an den See. | We go to the lake.
+sehen | to see | Ich sehe den Bahnhof. | I see the train station.
+sehr | very | Das ist sehr gut. | That is very good.
+sein | to be | Ich bin heute muede. | I am tired today.
+seit | since; for | Ich lerne seit Januar Deutsch. | I have been learning German since January.
+die Seite | page; side | Lesen Sie bitte Seite zehn. | Please read page ten.
+selbst | self; oneself | Ich mache das selbst. | I do that myself.
+selten | rarely | Wir essen selten Fleisch. | We rarely eat meat.
+senden | to send | Der Sender sendet Nachrichten. | The station sends news.
+die Sendung | broadcast; shipment | Die Sendung kommt morgen. | The shipment arrives tomorrow.
+setzen | to put; set | Bitte setzen Sie sich hier. | Please sit down here.
+sicher | safe; sure | Der Weg ist sicher. | The way is safe.
+singen | to sing | Die Kinder singen ein Lied. | The children sing a song.
+sitzen | to sit | Er sitzt am Fenster. | He sits by the window.
+so | so; like this | Mach das bitte so. | Please do it like this.
+sofort | immediately | Ich komme sofort. | I am coming immediately.
+der Sohn | son | Mein Sohn ist sechs Jahre alt. | My son is six years old.
+sollen | should; be supposed to | Soll ich das Fenster oeffnen? | Should I open the window?
+der Sommer | summer | Im Sommer ist es warm. | In summer it is warm.
+sondern | but rather | Ich trinke keinen Tee, sondern Kaffee. | I do not drink tea, but coffee.
+die Sonne | sun | Die Sonne scheint. | The sun is shining.
+spazieren gehen | to go for a walk | Wir gehen am Abend spazieren. | We go for a walk in the evening.
+spaet | late | Es ist schon spaet. | It is already late.
+spaeter | later | Ich rufe dich spaeter an. | I will call you later.
+spielen | to play | Die Kinder spielen im Garten. | The children play in the garden.
+der Sport | sport | Sport ist gesund. | Sport is healthy.
+die Sprache | language | Welche Sprache sprechen Sie? | Which language do you speak?
+sprechen | to speak | Ich spreche ein bisschen Deutsch. | I speak a little German.
+die Stadt | city | Die Stadt ist sehr alt. | The city is very old.
+stehen | to stand | Das Auto steht vor dem Haus. | The car is standing in front of the house.
+stellen | to put; place | Ich stelle die Tasche auf den Stuhl. | I put the bag on the chair.
+die Stelle | place; position | Die Stelle ist frei. | The position is open.
+der Stift | pen | Der Stift liegt neben dem Heft. | The pen is next to the notebook.
+die Strasse | street | Die Strasse ist lang. | The street is long.
+die Strassenbahn | tram | Die Strassenbahn kommt alle zehn Minuten. | The tram comes every ten minutes.
+studieren | to study at university | Meine Schwester studiert Medizin. | My sister studies medicine.
+der Stuhl | chair | Der Stuhl steht am Tisch. | The chair is at the table.
+die Stunde | hour; lesson | Die Stunde beginnt jetzt. | The lesson begins now.
+suchen | to search; look for | Ich suche meine Brille. | I am looking for my glasses.
+der Supermarkt | supermarket | Der Supermarkt ist bis acht Uhr offen. | The supermarket is open until eight.
+die Suppe | soup | Die Suppe ist warm. | The soup is warm.
+suess | sweet | Der Kuchen ist sehr suess. | The cake is very sweet.
+tanzen | to dance | Wir tanzen auf der Party. | We dance at the party.
+die Tasche | bag | Die Tasche ist schwer. | The bag is heavy.
+die Tasse | cup | Die Tasse steht neben dem Teller. | The cup is next to the plate.
+das Taxi | taxi | Das Taxi wartet vor dem Hotel. | The taxi waits in front of the hotel.
+der Tee | tea | Ich trinke Tee mit Milch. | I drink tea with milk.
+teilen | to share | Wir teilen eine Pizza. | We share a pizza.
+telefonieren | to phone | Ich telefoniere mit meinem Vater. | I talk on the phone with my father.
+das Telefon | telephone | Das Telefon ist auf dem Tisch. | The telephone is on the table.
+der Termin | appointment | Mein Termin ist um elf Uhr. | My appointment is at eleven o'clock.
+teuer | expensive | Das Hotel ist teuer. | The hotel is expensive.
+der Text | text | Der Text ist kurz. | The text is short.
+das Theater | theater | Heute gehen wir ins Theater. | Today we go to the theater.
+das Thema | topic | Das Thema ist interessant. | The topic is interesting.
+der Tisch | table | Der Tisch ist rund. | The table is round.
+die Tochter | daughter | Seine Tochter geht zur Schule. | His daughter goes to school.
+die Toilette | toilet; restroom | Wo ist die Toilette? | Where is the restroom?
+toll | great | Das Konzert ist toll. | The concert is great.
+tragen | to carry; wear | Er traegt eine schwarze Jacke. | He is wearing a black jacket.
+treffen | to meet | Wir treffen uns am Bahnhof. | We meet at the train station.
+die Treppe | stairs | Die Treppe ist links. | The stairs are on the left.
+treu | loyal | Der Freund ist treu. | The friend is loyal.
+tschues | bye | Tschues, bis morgen! | Bye, see you tomorrow!
+die Tuer | door | Die Tuer ist geschlossen. | The door is closed.
+tun | to do | Was kann ich tun? | What can I do?
+ueber | over; about | Wir sprechen ueber die Reise. | We talk about the trip.
+uebernachten | to stay overnight | Wir uebernachten im Hotel. | We stay overnight in the hotel.
+ueben | to practice | Ich uebe jeden Tag Deutsch. | I practice German every day.
+die Uhr | clock; watch; o'clock | Es ist acht Uhr. | It is eight o'clock.
+um | at; around | Der Kurs beginnt um neun Uhr. | The course begins at nine o'clock.
+umsteigen | to change trains | In Bern muessen wir umsteigen. | In Bern we have to change trains.
+und | and | Anna und Ben lernen Deutsch. | Anna and Ben learn German.
+unser | our | Unser Haus ist klein. | Our house is small.
+unten | below; downstairs | Die Kueche ist unten. | The kitchen is downstairs.
+unter | under; among | Die Tasche steht unter dem Tisch. | The bag is under the table.
+der Unterricht | lesson; class | Der Unterricht beginnt um acht Uhr. | Class begins at eight o'clock.
+unterschreiben | to sign | Bitte unterschreiben Sie hier. | Please sign here.
+die Unterschrift | signature | Hier fehlt Ihre Unterschrift. | Your signature is missing here.
+der Urlaub | vacation | Im Juli machen wir Urlaub. | In July we go on vacation.
+der Vater | father | Mein Vater kocht gern. | My father likes cooking.
+verkaufen | to sell | Der Laden verkauft Brot. | The shop sells bread.
+verstehen | to understand | Ich verstehe die Frage. | I understand the question.
+versuchen | to try | Ich versuche es noch einmal. | I try it one more time.
+viel | much; many | Ich habe viel Arbeit. | I have a lot of work.
+vielleicht | maybe | Vielleicht komme ich morgen. | Maybe I will come tomorrow.
+vier | four | Wir brauchen vier Stuehle. | We need four chairs.
+von | from; of | Der Brief ist von Maria. | The letter is from Maria.
+vor | before; in front of | Der Bus steht vor dem Hotel. | The bus is in front of the hotel.
+vorbei | past; over | Der Kurs ist vorbei. | The course is over.
+vorstellen | to introduce; imagine | Ich stelle mich kurz vor. | I briefly introduce myself.
+die Vorwahl | area code | Die Vorwahl steht vor der Nummer. | The area code is before the number.
+warten | to wait | Ich warte am Eingang. | I wait at the entrance.
+warum | why | Warum bist du muede? | Why are you tired?
+was | what | Was machst du heute? | What are you doing today?
+waschen | to wash | Ich wasche meine Haende. | I wash my hands.
+das Wasser | water | Ich trinke ein Glas Wasser. | I drink a glass of water.
+wechseln | to change; exchange | Ich wechsle Geld am Bahnhof. | I exchange money at the train station.
+wecken | to wake | Der Wecker weckt mich um sieben Uhr. | The alarm clock wakes me at seven.
+der Wecker | alarm clock | Der Wecker klingelt frueh. | The alarm clock rings early.
+weh tun | to hurt | Mein Kopf tut weh. | My head hurts.
+weil | because | Ich bleibe zu Hause, weil ich krank bin. | I stay at home because I am sick.
+weit | far | Der Bahnhof ist nicht weit. | The train station is not far.
+weiter | further; continue | Gehen Sie bitte weiter geradeaus. | Please continue straight ahead.
+welcher | which | Welcher Bus faehrt zum Zentrum? | Which bus goes to the center?
+wenig | little; few | Ich habe wenig Zeit. | I have little time.
+wer | who | Wer kommt heute? | Who is coming today?
+werden | to become; will | Es wird morgen kalt. | It will be cold tomorrow.
+das Wetter | weather | Das Wetter ist heute schoen. | The weather is nice today.
+wichtig | important | Der Termin ist wichtig. | The appointment is important.
+wie | how; like | Wie heissen Sie? | What is your name?
+wieder | again | Ich komme morgen wieder. | I will come again tomorrow.
+die Woche | week | Diese Woche arbeite ich viel. | This week I work a lot.
+das Wochenende | weekend | Am Wochenende besuchen wir Freunde. | On the weekend we visit friends.
+wohnen | to live | Ich wohne in Zuerich. | I live in Zurich.
+die Wohnung | apartment | Die Wohnung hat zwei Zimmer. | The apartment has two rooms.
+wollen | to want | Ich will heute lernen. | I want to study today.
+das Wort | word | Das Wort ist neu fuer mich. | The word is new for me.
+zahlen | to pay | Ich zahle mit Karte. | I pay by card.
+die Zahl | number | Die Zahl ist gross. | The number is large.
+der Zahn | tooth | Mein Zahn tut weh. | My tooth hurts.
+zeigen | to show | Ich zeige dir den Weg. | I show you the way.
+die Zeit | time | Heute habe ich Zeit. | Today I have time.
+die Zeitung | newspaper | Mein Vater liest die Zeitung. | My father reads the newspaper.
+zentral | central | Das Hotel liegt zentral. | The hotel is centrally located.
+das Zentrum | center | Das Zentrum ist nicht weit. | The center is not far.
+das Zimmer | room | Das Zimmer ist hell. | The room is bright.
+zu | to; too | Ich gehe zu meiner Freundin. | I go to my friend.
+zuerst | first | Zuerst trinken wir Kaffee. | First we drink coffee.
+zufrieden | satisfied | Ich bin mit dem Zimmer zufrieden. | I am satisfied with the room.
+der Zug | train | Der Zug kommt um neun Uhr. | The train comes at nine o'clock.
+zum Beispiel | for example | Ich mag Obst, zum Beispiel Aepfel. | I like fruit, for example apples.
+zurueck | back | Wir fahren morgen zurueck. | We travel back tomorrow.
+zusammen | together | Wir lernen zusammen Deutsch. | We learn German together.
+zwischen | between | Die Bank ist zwischen Post und Hotel. | The bank is between the post office and the hotel.
+zwei | two | Ich habe zwei Kinder. | I have two children.
+abgeben | to hand in; give back | Ich gebe den Schluessel an der Rezeption ab. | I hand in the key at reception.
+der Absender | sender | Auf dem Brief fehlt der Absender. | The sender is missing on the letter.
+Achtung | attention; warning | Achtung, die Tuer schliesst. | Attention, the door is closing.
+all | all | Alle Freunde kommen heute. | All friends are coming today.
+alles | everything | Alles ist fertig. | Everything is ready.
+also | so; therefore | Also, wir treffen uns um acht Uhr. | So, we meet at eight o'clock.
+an | at; on; to | Wir treffen uns an der Haltestelle. | We meet at the stop.
+anbieten | to offer | Darf ich Ihnen Tee anbieten? | May I offer you tea?
+das Angebot | offer; special offer | Das Angebot ist heute sehr billig. | The offer is very cheap today.
+ander | other | Ich nehme den anderen Stuhl. | I take the other chair.
+ankreuzen | to tick; check | Kreuzen Sie bitte die Antwort an. | Please tick the answer.
+die Anrede | salutation | Die Anrede steht am Anfang des Briefes. | The salutation is at the beginning of the letter.
+die Ansage | announcement | Ich hoere die Ansage am Bahnhof. | I hear the announcement at the train station.
+der Anschluss | connection | In Bern haben wir Anschluss nach Luzern. | In Bern we have a connection to Lucerne.
+auslaendisch | foreign | Ich habe nur auslaendisches Geld. | I only have foreign money.
+der Auslaender | foreigner | Der Auslaender fragt nach dem Weg. | The foreigner asks for the way.
+ausmachen | to turn off; arrange | Mach bitte das Radio aus. | Please turn off the radio.
+die Aussage | statement | Die Aussage ist richtig. | The statement is correct.
+sich ausziehen | to undress; take off | Bitte ziehen Sie die Schuhe aus. | Please take off your shoes.
+besser | better | Heute geht es mir besser. | Today I feel better.
+best | best | Am besten fahren wir mit dem Bus. | It is best if we take the bus.
+besichtigen | to visit; tour | Wir besichtigen heute das Museum. | We visit the museum today.
+die Birne | pear; bulb | Ich kaufe eine Birne. | I buy a pear.
+bisschen | little bit | Ich spreche ein bisschen Deutsch. | I speak a little German.
+die Bitte | request | Ich habe eine Bitte. | I have a request.
+bitten | to ask; request | Ich bitte Sie um Hilfe. | I ask you for help.
+bitter | bitter | Der Kaffee schmeckt bitter. | The coffee tastes bitter.
+der Bleistift | pencil | Der Bleistift liegt im Heft. | The pencil is in the notebook.
+der Blick | view; look | Der Blick aus dem Fenster ist schoen. | The view from the window is beautiful.
+die Blume | flower | Die Blume steht auf dem Tisch. | The flower is on the table.
+der Bogen | sheet; arc | Auf dem Bogen stehen viele Fragen. | There are many questions on the sheet.
+boese | angry | Sie ist nicht boese. | She is not angry.
+brauchen | to need | Ich brauche einen Stift. | I need a pen.
+breit | wide | Die Strasse ist breit. | The street is wide.
+die Briefmarke | stamp | Ich kaufe eine Briefmarke. | I buy a stamp.
+das Brot | bread | Das Brot ist frisch. | The bread is fresh.
+das Broetchen | bread roll | Ich esse ein Broetchen zum Fruehstueck. | I eat a bread roll for breakfast.
+der Buchstabe | letter of alphabet | Das Wort hat sechs Buchstaben. | The word has six letters.
+buchstabieren | to spell | Koennen Sie Ihren Namen buchstabieren? | Can you spell your name?
+die Butter | butter | Die Butter steht im Kuehlschrank. | The butter is in the fridge.
+die CD | CD | Ich hoere eine CD. | I listen to a CD.
+der Chef | boss | Mein Chef ist heute im Buero. | My boss is in the office today.
+circa | approximately | Der Weg dauert circa zehn Minuten. | The way takes approximately ten minutes.
+die Dame | lady | Die Dame wartet am Schalter. | The lady waits at the counter.
+daneben | next to it; beside | Die Apotheke ist daneben. | The pharmacy is next to it.
+danken | to thank | Ich danke dir fuer die Hilfe. | I thank you for the help.
+der Dank | thanks | Vielen Dank fuer alles. | Many thanks for everything.
+dann | then | Zuerst essen wir, dann gehen wir. | First we eat, then we go.
+das Datum | date | Schreiben Sie bitte das Datum. | Please write the date.
+dein | your | Ist das dein Buch? | Is that your book?
+denn | because; then | Was machst du denn hier? | What are you doing here then?
+dich | you | Ich besuche dich morgen. | I visit you tomorrow.
+dies | this | Dieses Zimmer ist frei. | This room is free.
+dir | to you | Ich gebe dir meine Nummer. | I give you my number.
+die Disco | disco; club | Am Samstag gehen wir in die Disco. | On Saturday we go to the club.
+der Doktor | doctor | Der Doktor spricht mit dem Patienten. | The doctor speaks with the patient.
+das Doppelzimmer | double room | Wir buchen ein Doppelzimmer. | We book a double room.
+das Dorf | village | Das Dorf liegt am See. | The village is by the lake.
+dorther | from there | Kommt der Bus dorther? | Does the bus come from there?
+draussen | outside | Die Kinder spielen draussen. | The children play outside.
+drucken | to print | Ich drucke das Formular. | I print the form.
+der Drucker | printer | Der Drucker ist kaputt. | The printer is broken.
+druecken | to press | Druecken Sie bitte auf den Knopf. | Please press the button.
+durch | through | Wir gehen durch den Park. | We walk through the park.
+die Durchsage | announcement | Die Durchsage ist laut. | The announcement is loud.
+duerfen | may; be allowed to | Darf ich hier sitzen? | May I sit here?
+der Durst | thirst | Nach dem Sport habe ich Durst. | After sports I am thirsty.
+sich duschen | to shower | Ich dusche mich am Morgen. | I shower in the morning.
+die Dusche | shower | Die Dusche ist im Bad. | The shower is in the bathroom.
+die Ecke | corner | Die Post ist an der Ecke. | The post office is at the corner.
+die Ehefrau | wife | Seine Ehefrau arbeitet im Hotel. | His wife works in the hotel.
+der Ehemann | husband | Ihr Ehemann kocht gern. | Her husband likes cooking.
+das Ei | egg | Ich esse ein Ei zum Fruehstueck. | I eat an egg for breakfast.
+eigen | own | Das ist mein eigenes Zimmer. | That is my own room.
+eigentlich | actually | Eigentlich habe ich heute frei. | Actually I am free today.
+ein | a; one | Ich habe ein Auto. | I have a car.
+einfach | simple; easy | Die Aufgabe ist einfach. | The task is easy.
+der Eingang | entrance | Der Eingang ist links. | The entrance is on the left.
+einkaufen | to shop | Wir kaufen am Samstag ein. | We shop on Saturday.
+der Einkauf | shopping | Der Einkauf ist schnell fertig. | The shopping is done quickly.
+einladen | to invite | Ich lade meine Freunde ein. | I invite my friends.
+die Einladung | invitation | Die Einladung kommt per E-Mail. | The invitation comes by email.
+einmal | once | Ich war einmal in Wien. | I was in Vienna once.
+einsteigen | to get on | Wir steigen in den Bus ein. | We get on the bus.
+der Eintritt | entrance; admission | Der Eintritt kostet zehn Euro. | Admission costs ten euros.
+einverstanden | agreed | Ich bin einverstanden. | I agree.
+der Einwohner | resident | Die Stadt hat viele Einwohner. | The city has many residents.
+das Einzelzimmer | single room | Ich moechte ein Einzelzimmer. | I would like a single room.
+die Eltern | parents | Meine Eltern wohnen in Bonn. | My parents live in Bonn.
+die E-Mail | email | Ich schreibe eine E-Mail. | I write an email.
+empfehlen | to recommend | Ich empfehle dieses Restaurant. | I recommend this restaurant.
+enden | to end | Der Kurs endet um fuenf Uhr. | The course ends at five o'clock.
+das Ende | end | Am Ende trinken wir Kaffee. | At the end we drink coffee.
+eng | narrow; tight | Die Hose ist zu eng. | The pants are too tight.
+entschuldigen | to excuse; apologize | Entschuldigen Sie bitte. | Excuse me, please.
+die Entschuldigung | apology; excuse | Entschuldigung, ich bin zu spaet. | Sorry, I am too late.
+er | he | Er kommt aus Italien. | He comes from Italy.
+erlauben | to allow | Meine Mutter erlaubt das. | My mother allows that.
+erreichen | to reach | Sie erreichen mich am Abend. | You can reach me in the evening.
+erst | first; only | Ich komme erst morgen. | I am only coming tomorrow.
+erwachsen | adult | Meine Tochter ist erwachsen. | My daughter is grown up.
+der Erwachsene | adult | Der Erwachsene bezahlt zehn Euro. | The adult pays ten euros.
+erzaehlen | to tell | Erzaehl mir bitte die Geschichte. | Please tell me the story.
+es | it | Es ist kalt. | It is cold.
+etwas | something | Ich moechte etwas trinken. | I would like something to drink.
+euer | your | Ist das euer Auto? | Is that your car?
+die Fahrkarte | ticket | Ich kaufe eine Fahrkarte. | I buy a ticket.
+der Fahrplan | timetable | Der Fahrplan haengt am Bahnhof. | The timetable hangs at the train station.
+das Formular | form | Bitte fuellen Sie das Formular aus. | Please fill out the form.
+frei | free | Ist der Platz frei? | Is the seat free?
+freuen | to be happy | Ich freue mich auf den Urlaub. | I am looking forward to the vacation.
+sich freuen | to be pleased | Wir freuen uns ueber die Einladung. | We are pleased about the invitation.
+die Freundin | female friend; girlfriend | Meine Freundin kommt heute. | My friend is coming today.
+froh | happy; glad | Ich bin froh. | I am glad.
+fuehlen | to feel | Ich fuehle mich gut. | I feel good.
+fuer | for | Das Geschenk ist fuer dich. | The present is for you.
+der Fuss | foot | Mein Fuss tut weh. | My foot hurts.
+der Garten | garden | Die Kinder spielen im Garten. | The children play in the garden.
+der Gast | guest | Der Gast wartet im Restaurant. | The guest waits in the restaurant.
+geboren | born | Ich bin in Bern geboren. | I was born in Bern.
+gefallen | to please; like | Das Zimmer gefaellt mir. | I like the room.
+gegen | against; around | Der Zug kommt gegen acht Uhr. | The train comes around eight o'clock.
+gehen | to go | Wir gehen heute ins Kino. | We go to the cinema today.
+gehoeren | to belong | Das Fahrrad gehoert mir. | The bicycle belongs to me.
+gelb | yellow | Die Banane ist gelb. | The banana is yellow.
+das Gemuese | vegetables | Ich kaufe Gemuese auf dem Markt. | I buy vegetables at the market.
+genau | exact; exactly | Genau, das ist richtig. | Exactly, that is right.
+genug | enough | Wir haben genug Wasser. | We have enough water.
+geradeaus | straight ahead | Gehen Sie bitte geradeaus. | Please go straight ahead.
+das Geschenk | present | Das Geschenk ist fuer meine Mutter. | The present is for my mother.
+die Geschichte | story; history | Die Geschichte ist kurz. | The story is short.
+das Gesicht | face | Ihr Gesicht ist freundlich. | Her face is friendly.
+das Gespraech | conversation | Das Gespraech dauert lange. | The conversation lasts a long time.
+das Getraenk | drink | Das Getraenk ist kalt. | The drink is cold.
+gewinnen | to win | Unsere Mannschaft gewinnt das Spiel. | Our team wins the game.
+das Glas | glass | Ich nehme ein Glas Wasser. | I take a glass of water.
+glauben | to believe | Ich glaube, der Bus kommt bald. | I think the bus is coming soon.
+gleich | right away; same | Ich komme gleich. | I am coming right away.
+das Gleis | track; platform | Der Zug faehrt von Gleis vier. | The train leaves from track four.
+das Glueck | luck; happiness | Viel Glueck fuer die Pruefung. | Good luck for the exam.
+gluecklich | happy | Sie ist heute sehr gluecklich. | She is very happy today.
+gratulieren | to congratulate | Ich gratuliere dir zum Geburtstag. | I congratulate you on your birthday.
+grillen | to barbecue | Am Sonntag grillen wir im Garten. | On Sunday we barbecue in the garden.
+die Gruppe | group | Die Gruppe lernt Deutsch. | The group learns German.
+gruen | green | Der Salat ist gruen. | The salad is green.
+der Gruss | greeting | Viele Gruesse aus Berlin. | Many greetings from Berlin.
+gueltig | valid | Die Fahrkarte ist heute gueltig. | The ticket is valid today.
+guenstig | cheap; good value | Das Ticket ist guenstig. | The ticket is good value.
+halb | half | Es ist halb acht. | It is half past seven.
+die Haltestelle | stop | Die Haltestelle ist vor der Schule. | The stop is in front of the school.
+die Hand | hand | Meine Hand ist kalt. | My hand is cold.
+das Handy | mobile phone | Mein Handy ist neu. | My phone is new.
+haengen | to hang | Das Bild haengt an der Wand. | The picture hangs on the wall.
+hart | hard | Das Brot ist hart. | The bread is hard.
+haesslich | ugly | Das Haus ist alt und haesslich. | The house is old and ugly.
+heiraten | to marry | Sie heiraten im Sommer. | They marry in summer.
+heissen | to be called | Wie heisst du? | What is your name?
+helfen | to help | Kannst du mir helfen? | Can you help me?
+hell | bright | Das Zimmer ist hell. | The room is bright.
+das Hemd | shirt | Das Hemd ist weiss. | The shirt is white.
+herzlich | cordial; warm | Herzlichen Glueckwunsch! | Warm congratulations!
+hier | here | Ich wohne hier. | I live here.
+die Hilfe | help | Danke fuer deine Hilfe. | Thanks for your help.
+hinten | at the back | Die Toilette ist hinten. | The restroom is at the back.
+hinter | behind | Der Garten ist hinter dem Haus. | The garden is behind the house.
+hoch | high; tall | Das Haus ist hoch. | The house is tall.
+holen | to fetch | Ich hole dich um acht Uhr ab. | I pick you up at eight o'clock.
+hoffen | to hope | Ich hoffe, du kommst morgen. | I hope you come tomorrow.
+hoeflich | polite | Der Mann ist sehr hoeflich. | The man is very polite.
+die Hose | pants | Die Hose ist blau. | The pants are blue.
+hubsch | pretty | Das Kleid ist huebsch. | The dress is pretty.
+ich | I | Ich lerne Deutsch. | I am learning German.
+ihm | him; to him | Ich helfe ihm morgen. | I help him tomorrow.
+ihn | him | Ich sehe ihn am Bahnhof. | I see him at the train station.
+ihr | her; you plural | Ich gebe ihr das Buch. | I give her the book.
+immer | always | Ich trinke immer Wasser. | I always drink water.
+in | in; into | Ich wohne in Berlin. | I live in Berlin.
+die Information | information | Ich brauche eine Information. | I need information.
+informieren | to inform | Bitte informieren Sie mich. | Please inform me.
+international | international | Der Kurs ist international. | The course is international.
+das Internet | internet | Ich suche die Adresse im Internet. | I search for the address on the internet.
+ja | yes | Ja, ich komme mit. | Yes, I am coming along.
+die Jacke | jacket | Die Jacke ist warm. | The jacket is warm.
+das Jahr | year | Ein Jahr hat zwoelf Monate. | A year has twelve months.
+jeder | every; each | Jeder Schueler hat ein Buch. | Every student has a book.
+jemand | someone | Jemand wartet vor der Tuer. | Someone is waiting outside the door.
+jetzt | now | Jetzt beginnt der Unterricht. | Class begins now.
+jung | young | Der Lehrer ist noch jung. | The teacher is still young.
+der Junge | boy | Der Junge spielt Fussball. | The boy plays football.
+der Kaffee | coffee | Der Kaffee ist heiss. | The coffee is hot.
+kalt | cold | Heute ist es kalt. | Today it is cold.
+die Karte | card; ticket; map | Ich bezahle mit Karte. | I pay by card.
+die Kartoffel | potato | Ich kaufe Kartoffeln und Gemuese. | I buy potatoes and vegetables.
+der Kaese | cheese | Der Kaese schmeckt gut. | The cheese tastes good.
+die Kasse | checkout; cash desk | Die Kasse ist vorne. | The checkout is at the front.
+kein | no; not any | Ich habe kein Auto. | I do not have a car.
+kennen | to know | Ich kenne diese Strasse. | I know this street.
+kennenlernen | to meet; get to know | Ich moechte neue Leute kennenlernen. | I would like to meet new people.
+der Kindergarten | kindergarten | Der Kindergarten ist neben der Schule. | The kindergarten is next to the school.
+das Kino | cinema | Heute gehen wir ins Kino. | Today we go to the cinema.
+der Kiosk | kiosk | Am Kiosk kaufe ich eine Zeitung. | At the kiosk I buy a newspaper.
+klar | clear | Alles klar? | Is everything clear?
+die Klasse | class | Meine Klasse lernt Deutsch. | My class learns German.
+die Kleidung | clothing | Die Kleidung ist im Schrank. | The clothing is in the wardrobe.
+das Kleid | dress | Das Kleid ist rot. | The dress is red.
+klingeln | to ring | Das Telefon klingelt. | The phone rings.
+klug | clever | Das Kind ist klug. | The child is clever.
+kochen | to cook | Ich koche Suppe. | I cook soup.
+der Koffer | suitcase | Der Koffer ist schwer. | The suitcase is heavy.
+der Kollege | colleague | Mein Kollege kommt spaeter. | My colleague comes later.
+die Kollegin | female colleague | Meine Kollegin arbeitet heute. | My colleague works today.
+komisch | funny; strange | Die Geschichte ist komisch. | The story is funny.
+koennen | can; to be able to | Ich kann Deutsch sprechen. | I can speak German.
+der Kopf | head | Mein Kopf tut weh. | My head hurts.
+kosten | to cost | Das Brot kostet zwei Euro. | The bread costs two euros.
+krank | sick | Ich bin heute krank. | I am sick today.
+das Krankenhaus | hospital | Das Krankenhaus ist gross. | The hospital is large.
+die Kreditkarte | credit card | Ich zahle mit Kreditkarte. | I pay with a credit card.
+kriegen | to get | Ich kriege heute Besuch. | I get a visitor today.
+der Kuchen | cake | Der Kuchen schmeckt suess. | The cake tastes sweet.
+der Kuehlschrank | refrigerator | Die Milch steht im Kuehlschrank. | The milk is in the refrigerator.
+kuemmern | to take care | Ich kuemmere mich um das Kind. | I take care of the child.
+kuendigen | to cancel; quit | Ich kuendige den Vertrag. | I cancel the contract.
+kurz | short | Die Pause ist kurz. | The break is short.
+lachen | to laugh | Die Kinder lachen laut. | The children laugh loudly.
+der Laden | shop | Der Laden ist heute offen. | The shop is open today.
+das Lager | storage; camp | Die Waren sind im Lager. | The goods are in storage.
+lang | long | Der Film ist lang. | The film is long.
+lange | for a long time | Wir warten schon lange. | We have been waiting a long time.
+langsam | slow; slowly | Bitte sprechen Sie langsam. | Please speak slowly.
+langweilig | boring | Der Film ist langweilig. | The film is boring.
+lassen | to let; leave | Lass das Fenster offen. | Leave the window open.
+laufen | to run; walk | Ich laufe zum Bahnhof. | I walk to the station.
+laut | loud | Die Musik ist laut. | The music is loud.
+leben | to live | Meine Grosseltern leben in Hamburg. | My grandparents live in Hamburg.
+das Leben | life | Das Leben in der Stadt ist teuer. | Life in the city is expensive.
+leer | empty | Die Flasche ist leer. | The bottle is empty.
+legen | to lay; put | Ich lege das Buch auf den Tisch. | I put the book on the table.
+leicht | light; easy | Die Tasche ist leicht. | The bag is light.
+leider | unfortunately | Leider habe ich keine Zeit. | Unfortunately I have no time.
+leise | quiet; quietly | Bitte sprechen Sie leise. | Please speak quietly.
+der Lehrer | teacher | Der Lehrer schreibt an die Tafel. | The teacher writes on the board.
+die Lehrerin | female teacher | Die Lehrerin hilft mir. | The teacher helps me.
+letzte | last | Letzte Woche war ich krank. | Last week I was sick.
+die Leute | people | Viele Leute warten am Bahnhof. | Many people wait at the station.
+das Licht | light | Das Licht ist an. | The light is on.
+lieb | dear; kind | Sie ist sehr lieb. | She is very kind.
+lieben | to love | Ich liebe meine Familie. | I love my family.
+lieber | rather; dearer | Ich trinke lieber Tee. | I prefer drinking tea.
+liegen | to lie; be located | Das Hotel liegt im Zentrum. | The hotel is located in the center.
+links | left; on the left | Die Bank ist links. | The bank is on the left.
+das Lokal | restaurant; pub | Das Lokal ist klein. | The restaurant is small.
+los | going on; loose | Was ist los? | What is going on?
+die Loesung | solution | Die Loesung ist einfach. | The solution is simple.
+maennlich | male | Im Formular steht maennlich oder weiblich. | The form says male or female.
+mal | times; once | Komm mal bitte hierher. | Please come here for a moment.
+man | one; you | Hier kann man gut essen. | You can eat well here.
+manchmal | sometimes | Manchmal fahre ich mit dem Bus. | Sometimes I take the bus.
+der Markt | market | Am Markt kaufe ich Obst. | At the market I buy fruit.
+die Maschine | machine | Die Maschine ist neu. | The machine is new.
+das Medikament | medicine | Das Medikament hilft gut. | The medicine helps well.
+das Meer | sea | Im Urlaub fahren wir ans Meer. | On vacation we go to the sea.
+mehr | more | Ich moechte mehr Wasser. | I would like more water.
+mein | my | Das ist mein Zimmer. | This is my room.
+meinen | to mean; think | Was meinen Sie? | What do you mean?
+meistens | mostly | Meistens esse ich zu Hause. | I mostly eat at home.
+der Mensch | person; human | Jeder Mensch braucht Wasser. | Every person needs water.
+mieten | to rent | Wir mieten eine Wohnung. | We rent an apartment.
+die Miete | rent | Die Miete ist hoch. | The rent is high.
+die Milch | milk | Ich trinke Milch zum Fruehstueck. | I drink milk for breakfast.
+mit | with | Ich komme mit meiner Schwester. | I come with my sister.
+mitbringen | to bring along | Bring bitte Brot mit. | Please bring bread along.
+mitkommen | to come along | Kommst du mit? | Are you coming along?
+mitmachen | to join in | Ich mache beim Kurs mit. | I join the course.
+der Mittag | noon | Am Mittag essen wir Suppe. | At noon we eat soup.
+das Mittagessen | lunch | Das Mittagessen ist fertig. | Lunch is ready.
+die Mitte | middle | Der Tisch steht in der Mitte. | The table is in the middle.
+moegen | to like | Ich mag Kaffee. | I like coffee.
+moeglich | possible | Das ist heute moeglich. | That is possible today.
+der Moment | moment | Einen Moment, bitte. | One moment, please.
+der Montag | Monday | Am Montag beginnt der Kurs. | The course begins on Monday.
+der Monat | month | Ein Monat hat vier Wochen. | A month has four weeks.
+morgen | tomorrow; morning | Morgen fahre ich nach Bern. | Tomorrow I travel to Bern.
+der Morgen | morning | Am Morgen trinke ich Kaffee. | In the morning I drink coffee.
+muede | tired | Ich bin heute muede. | I am tired today.
+muessen | must; have to | Ich muss jetzt gehen. | I have to go now.
+die Muetze | cap | Die Muetze ist warm. | The cap is warm.
+nach | after; to | Wir fahren nach Berlin. | We travel to Berlin.
+der Nachmittag | afternoon | Am Nachmittag habe ich Zeit. | In the afternoon I have time.
+naechste | next | Naechste Woche beginnt der Kurs. | The course begins next week.
+die Nacht | night | In der Nacht ist es kalt. | At night it is cold.
+nah | near | Der Bahnhof ist nah. | The train station is near.
+nehmen | to take | Ich nehme den Bus. | I take the bus.
+nein | no | Nein, danke. | No, thank you.
+nennen | to name; call | Wie nennt man das auf Deutsch? | What do you call that in German?
+nett | nice | Die Nachbarin ist nett. | The neighbor is nice.
+neun | nine | Der Kurs beginnt um neun Uhr. | The course begins at nine o'clock.
+nie | never | Ich rauche nie. | I never smoke.
+niemand | nobody | Niemand ist im Zimmer. | Nobody is in the room.
+noch einmal | once again | Bitte sagen Sie das noch einmal. | Please say that once again.
+normal | normal | Das ist ganz normal. | That is completely normal.
+die Nummer | number | Meine Nummer steht auf dem Zettel. | My number is on the note.
+nur | only | Ich habe nur zehn Euro. | I only have ten euros.

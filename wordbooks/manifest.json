@@ -1,0 +1,16 @@
+[
+  {
+    "id": "custom",
+    "title": "Custom wordbook",
+    "description": "Your editable vocabulary.txt file.",
+    "url": "vocabulary.txt",
+    "source": "Local custom list"
+  },
+  {
+    "id": "goethe-a1",
+    "title": "Goethe-Institut A1 level",
+    "description": "Expanded A1 set based on the Goethe A1 wordlist.",
+    "url": "wordbooks/goethe-a1.txt",
+    "source": "Goethe-Zertifikat A1 wordlist reference"
+  }
+]

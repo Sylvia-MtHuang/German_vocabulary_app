@@ -14,7 +14,28 @@ Then open:
 http://127.0.0.1:8780/
 ```
 
-## Replace The Vocabulary List
+## Wordbooks
+
+The app reads available wordbooks from:
+
+```text
+wordbooks/manifest.json
+```
+
+Each entry points to a vocabulary text file:
+
+```json
+{
+  "id": "goethe-a1",
+  "title": "Goethe-Institut A1 level",
+  "description": "Expanded A1 set based on the Goethe A1 wordlist.",
+  "url": "wordbooks/goethe-a1.txt"
+}
+```
+
+The home screen lets you choose a wordbook before starting a session. Learning progress is stored separately per wordbook.
+
+## Replace Or Create A Vocabulary List
 
 The app reads vocabulary from:
 
@@ -22,7 +43,7 @@ The app reads vocabulary from:
 vocabulary.txt
 ```
 
-To use a new vocabulary list, replace `vocabulary.txt` and refresh the page.
+To use a quick custom vocabulary list, replace `vocabulary.txt` and refresh the page. To add a named wordbook, create a new `.txt` file in `wordbooks/` and add it to `wordbooks/manifest.json`.
 
 Supported formats:
 
@@ -36,6 +57,15 @@ or one richer entry per line:
 der Kaffee | coffee | Nini bestellt im Cafe einen Kaffee. | Nini orders a coffee in the cafe.
 gehen | to go | Nini und Gigi gehen zum Bahnhof. | Nini and Gigi go to the train station.
 ```
+
+Optional fields can add a word-building memory aid, a custom image URL/path, and a noun plural form:
+
+```text
+der Bahnhof | train station | Der Bahnhof ist nah. | The train station is near. | die Bahn = train; der Hof = yard | assets/vocab-images/der-bahnhof.png | die Bahnhoefe
+die Terrasse | terrace | Die Terrasse ist gross. | The terrace is large. | | die Terrassen
+```
+
+If the sixth field does not look like an image path or URL, the app treats it as the plural form. Plurals are shown in small text under the meaning on noun learning cards.
 
 If meanings are provided, the app enables meaning-choice review questions. If the file only contains German words, the app uses article and fill-in-the-word review questions.
 
