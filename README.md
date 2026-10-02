@@ -33,7 +33,7 @@ Each entry points to a vocabulary text file:
 }
 ```
 
-The home screen lets you choose a wordbook before starting a session. Learning progress is stored separately per wordbook.
+The home screen lets you choose a wordbook before starting a session. Learning progress is stored separately per wordbook. Each session randomizes words with equal study priority instead of following vocabulary-file or article order; due dates, weaker memories and image priority still guide selection.
 
 The independent A2 wordbook covers the alphabetical section and thematic groups of the [official Goethe-Zertifikat A2 wordlist](https://www.goethe.de/pro/relaunch/prf/vi/Goethe-Zertifikat_A2_Wortliste.pdf), including words shared with A1. Its 1,498 cards split gender variants, meanings and useful time/date phrases. The official list describes approximately 1,300 lexical units; card counts use a different convention. Short everyday German examples and English translations are independently written or adapted from our existing A1 cards; official example sentences are not reproduced.
 

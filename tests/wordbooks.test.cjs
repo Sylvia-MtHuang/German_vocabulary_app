@@ -58,6 +58,43 @@ vm.runInContext('WORDBOOKS = books; state.selectedWordbookId = "goethe-a1";', co
 const a1Key = vm.runInContext('recordKey("die-bank")', context);
 vm.runInContext('state.selectedWordbookId = "goethe-a2";', context);
 assert.notEqual(vm.runInContext('recordKey("die-bank")', context), a1Key);
+// Exercise mixed session selection with reproducible randomness, without changing progress.
+const selectionCheck = JSON.parse(vm.runInContext(`(() => {
+  const originalRandom = Math.random;
+  const originalWords = WORDS;
+  const originalRecords = state.records;
+  let seed = 17;
+  Math.random = () => ((seed = seed * 16807 % 2147483647) / 2147483647);
+  try {
+    state.records = {};
+    WORDS = ['der', 'die', 'das'].flatMap(article =>
+      [1, 2, 3, 4].map(n => ({id: article + n, article, imagePath: 'fixture.png'})));
+    const before = WORDS.map(w => w.id);
+    const first = pickSessionWords(8).map(w => w.id);
+    const second = pickSessionWords(8).map(w => w.id);
+    const inputUnchanged = before.join() === WORDS.map(w => w.id).join();
+    WORDS = [{id: 'due'}, {id: 'future'}, {id: 'weak'}];
+    const now = Date.now();
+    Object.assign(getRecord('due'), {seen: true, strength: 5, dueAt: now - 60000, intervalDays: 1});
+    Object.assign(getRecord('weak'), {seen: true, strength: 1, dueAt: now - 60000, intervalDays: 1});
+    Object.assign(getRecord('future'), {seen: true, strength: 1, dueAt: now + 86400000, intervalDays: 1});
+    const priorities = pickSessionWords(3).map(w => w.id);
+    WORDS = [{id: 'no-image'}, {id: 'image', imagePath: 'fixture.png'}];
+    return JSON.stringify({before, first, second, inputUnchanged, priorities, imageFirst: pickSessionWords(1)[0].id});
+  } finally {
+    Math.random = originalRandom;
+    WORDS = originalWords;
+    state.records = originalRecords;
+  }
+})()`, context));
+assert.equal(selectionCheck.first.length, 8);
+assert.equal(new Set(selectionCheck.first).size, 8);
+assert.ok(selectionCheck.first.every(id => selectionCheck.before.includes(id)));
+assert.equal(new Set(selectionCheck.first.map(id => id.slice(0, 3))).size, 3);
+assert.notDeepEqual(selectionCheck.first, selectionCheck.second);
+assert.equal(selectionCheck.inputUnchanged, true);
+assert.deepEqual(selectionCheck.priorities, ['weak', 'due', 'future']);
+assert.equal(selectionCheck.imageFirst, 'image');
 const batch = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-images/a2-image-prompts.json'), 'utf8'));
 assert.equal(batch.items.length, 50);
 assert.equal(new Set(batch.items.map(item => item.id)).size, 50);
@@ -73,4 +110,4 @@ for (const item of batch.items) {
 }
 assert.equal(imageHashes.size, 50, 'Each vocabulary image must be independent');
 assert.equal(a2.filter(word => word.imagePath && fs.existsSync(path.join(root, word.imagePath))).length, 81);
-console.log('Wordbooks, A2 forms, recall clues, progress and 50 new image bindings: passed');
+console.log('Wordbooks, A2 forms, recall clues, progress, randomized sessions and 50 new image bindings: passed');

@@ -994,12 +994,17 @@ function memoryAidKey(value) {
 }
 
 function shuffle(items) {
-  return [...items].sort(() => Math.random() - 0.5);
+  const result = [...items];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
 }
 
 function pickSessionWords(count) {
   const now = Date.now();
-  return [...WORDS]
+  return shuffle(WORDS)
     .map((word) => ({ word, record: getRecord(word.id) }))
     .sort((a, b) => {
       const aDue = isDue(a.record, now) ? 0 : 1;
