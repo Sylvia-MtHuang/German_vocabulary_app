@@ -746,7 +746,9 @@ function normalizeVocabularyEntry(entry) {
     meaning: entry.meaning || "",
     example: entry.example || generated.example,
     translation: entry.translation || generated.translation,
-    plural: normalizePlural(entry.plural || parsed.plural || BUILT_IN_PLURALS[memoryAidKey(parsed.word)] || ""),
+    plural: parsed.article && !parsed.pluralOnly && !parsed.singularOnly
+      ? normalizePlural(entry.plural || parsed.plural || BUILT_IN_PLURALS[memoryAidKey(parsed.word)] || "")
+      : "",
     memoryAid: customMemoryAid.length ? customMemoryAid : BUILT_IN_MEMORY_AIDS[memoryAidKey(parsed.word)] || [],
     imagePath: entry.imagePath || IMAGE_PATHS.get(imageId) || ""
   };
@@ -784,8 +786,10 @@ function parseTerm(term) {
   const match = normalized.match(/^(der|die|das)\s+([^,;(]+)(?:\s*[,;(]\s*(.+?)\s*[)]?)?$/i);
   if (!match) return { word: normalized };
   const word = match[2].trim();
-  const plural = expandPluralHint(word, match[3] || "");
-  return { article: match[1].toLowerCase(), word, plural };
+  const pluralOnly = /\bpl\.?/i.test(match[3] || "");
+  const singularOnly = /\b(?:sg|sing)\.?/i.test(match[3] || "");
+  const plural = pluralOnly || singularOnly ? "" : expandPluralHint(word, match[3] || "");
+  return { article: match[1].toLowerCase(), word, plural, pluralOnly, singularOnly };
 }
 
 function expandPluralHint(word, hint) {
@@ -1283,17 +1287,13 @@ function previewMarkup(item) {
     `;
   }
 
-  const blanked = blankWordInExample(word);
   return `
     <div class="card-top">
       <span class="mode-pill">Review</span>
     </div>
     <div class="card-content preview-content">
       <p class="prompt">Fill in the German word</p>
-      <div class="example">
-        <strong>${blanked}</strong>
-        <span>${word.translation}</span>
-      </div>
+      ${fillExampleMarkup(word)}
       <form class="fill-form">
         <input class="fill-input" type="text" tabindex="-1" aria-hidden="true">
         <button class="answer-button primary" type="button" tabindex="-1">Check</button>
@@ -1326,9 +1326,9 @@ function renderMeaningQuiz(word) {
 function getMeaningChoices(item) {
   if (item.choices) return item.choices;
   const { word } = item;
-  const distractors = WORDS
-    .filter((item) => item.id !== word.id && hasMeaning(item))
-    .map((item) => item.meaning);
+  const distractors = [...new Set(WORDS
+    .filter((item) => displayWord(item) !== displayWord(word) && hasMeaning(item) && item.meaning !== word.meaning)
+    .map((item) => item.meaning))];
   item.choices = shuffle([
     word.meaning,
     ...shuffle(distractors).slice(0, 3)
@@ -1355,13 +1355,9 @@ function renderArticleQuiz(word) {
 }
 
 function renderFillQuiz(word) {
-  const blanked = blankWordInExample(word);
   cardContent.innerHTML = `
     <p class="prompt">Fill in the German word</p>
-    <div class="example">
-      <strong>${blanked}</strong>
-      <span>${word.translation}</span>
-    </div>
+    ${fillExampleMarkup(word)}
     <form class="fill-form">
       <input class="fill-input" type="text" autocomplete="off" spellcheck="false" aria-label="Type the German word">
       <button class="answer-button primary" type="submit">Check</button>
@@ -1379,8 +1375,18 @@ function renderFillQuiz(word) {
   });
 }
 
+function fillExampleMarkup(word) {
+  const blanked = blankWordInExample(word);
+  // Inflected and separated verb forms cannot always be blanked using the lemma.
+  // Use a meaning clue so these cards still ask a question instead of revealing the answer.
+  const hasBlank = blanked !== word.example;
+  const clue = hasBlank ? blanked : word.meaning || word.translation || "Recall the word from the learning card.";
+  const hint = hasBlank ? word.translation : "Write the German word or phrase from the learning card.";
+  return `<div class="example"><strong>${escapeAttribute(clue)}</strong><span>${escapeAttribute(hint)}</span></div>`;
+}
+
 function blankWordInExample(word) {
-  const pattern = new RegExp(escapeRegExp(word.word), "i");
+  const pattern = new RegExp(`(?<![\\p{L}\\p{N}])${escapeRegExp(word.word)}(?![\\p{L}\\p{N}])`, "iu");
   return word.example.replace(pattern, "_____");
 }
 

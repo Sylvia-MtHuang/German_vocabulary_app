@@ -12,5 +12,12 @@
     "description": "Expanded A1 set based on the Goethe A1 wordlist.",
     "url": "wordbooks/goethe-a1.txt",
     "source": "Goethe-Zertifikat A1 wordlist reference"
+  },
+  {
+    "id": "goethe-a2",
+    "title": "Goethe-Institut A2 level",
+    "description": "Complete A2 vocabulary with short everyday examples.",
+    "url": "wordbooks/goethe-a2.txt",
+    "source": "Goethe-Zertifikat A2 official wordlist"
   }
 ]

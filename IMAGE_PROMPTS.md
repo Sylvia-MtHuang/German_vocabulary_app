@@ -55,3 +55,9 @@ The app can map a word id to any image filename:
 ```
 
 This makes it easy to test new versions without deleting old images.
+
+## Angebot replacement
+
+Generated with the built-in imagegen tool. Asset: `assets/vocab-images/das-angebot-v2.png`, shared by A1 and A2.
+
+Prompt: Square photorealistic vocabulary memory image for das Angebot (offer / special offer). A large vivid green starburst promotion placard bearing only a crisp white % symbol dominates a neutral shop-counter display. Three small ivory ceramic mugs are secondary merchandise. Warm gray studio backdrop, soft light, tactile paper and real shadows. Remove all boxes, packaging and gift imagery. Green appears on the core placard only. No words, prices, branding, watermark, cartoon or busy background. The % symbol is a deliberate exception to the no-label guideline to make the offer concept clear at thumbnail size.

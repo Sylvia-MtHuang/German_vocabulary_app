@@ -35,6 +35,8 @@ Each entry points to a vocabulary text file:
 
 The home screen lets you choose a wordbook before starting a session. Learning progress is stored separately per wordbook.
 
+The independent A2 wordbook covers the alphabetical section and thematic groups of the [official Goethe-Zertifikat A2 wordlist](https://www.goethe.de/pro/relaunch/prf/vi/Goethe-Zertifikat_A2_Wortliste.pdf), including words shared with A1. Its 1,498 cards split gender variants, meanings and useful time/date phrases. The official list describes approximately 1,300 lexical units; card counts use a different convention. Short everyday German examples and English translations are independently written or adapted from our existing A1 cards; official example sentences are not reproduced.
+
 ## Replace Or Create A Vocabulary List
 
 The app reads vocabulary from:
@@ -65,7 +67,7 @@ der Bahnhof | train station | Der Bahnhof ist nah. | The train station is near. 
 die Terrasse | terrace | Die Terrasse ist gross. | The terrace is large. | | die Terrassen
 ```
 
-If the sixth field does not look like an image path or URL, the app treats it as the plural form. Plurals are shown in small text under the meaning on noun learning cards.
+If the sixth field does not look like an image path or URL, the app treats it as the plural form. Plurals are shown in small text under the meaning on noun learning cards. Use `(Pl.)` after plural-only nouns and `(Sg.)` after singular-only nouns. If an example uses an inflected or separated form that cannot be blanked, word-recall questions use the English meaning as the clue.
 
 If meanings are provided, the app enables meaning-choice review questions. If the file only contains German words, the app uses article and fill-in-the-word review questions.
 
@@ -151,4 +153,6 @@ plural = yellow
 
 The desktop setup uses two columns. Learning cards place images beside word details and use the space left below the header and session controls. Card height and compact typography adapt to the available viewport, including short laptop windows. Phone layouts remain stacked; long content can scroll inside the card while rating buttons stay visible. Scrollable content accepts touch scrolling without starting a card swipe.
 
-Run the local server, then open `http://127.0.0.1:8780/tests/responsive.html` and click **Run layout checks**. The checks use the actual app renderers and both wordbooks without saving learning progress or playing audio. They cover ten viewport sizes, every desktop learning card and missed-card state, long review questions, and completion. Desktop checks reject both page scrolling and card-content scrolling. Mobile setup pages may scroll naturally.
+Run the local server, then open `http://127.0.0.1:8780/tests/responsive.html` and click **Run layout checks**. The checks use the actual app renderers and all wordbooks without saving learning progress or playing audio. They cover ten viewport sizes, every desktop learning card and missed-card state, long review questions, and completion. Desktop checks reject both page scrolling and card-content scrolling. Mobile setup pages may scroll naturally.
+
+Vocabulary and parser checks require only Node.js: `node tests/wordbooks.test.cjs`.

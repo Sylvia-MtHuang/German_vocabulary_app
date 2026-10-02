@@ -4,7 +4,7 @@
 <title>Responsive layout regression checks</title>
 <style>body{font:16px system-ui;margin:24px}button{padding:12px}pre{white-space:pre-wrap}iframe{display:block;border:1px solid #ccc;margin-top:16px}</style>
 <h1>Responsive layout regression checks</h1>
-<p>Uses the real app templates and both wordbooks. Does not save learning progress or play audio. Desktop checks require all content to fit without scrolling; smaller screens must keep controls visible and avoid horizontal overflow.</p>
+<p>Uses the real app templates and all wordbooks. Does not save learning progress or play audio. Desktop checks require all content to fit without scrolling; smaller screens must keep controls visible and avoid horizontal overflow.</p>
 <button id="run">Run layout checks</button>
 <pre id="results" role="status">Ready</pre>
 <iframe title="App under test"></iframe>
@@ -16,7 +16,7 @@ const run = document.querySelector('#run');
 const bridge = `
 window.layoutQA = {
   load(text, manifest) { IMAGE_PATHS = parseImageManifest(manifest); WORDS = parseVocabulary(text); return WORDS; },
-  setup() { document.body.classList.remove('is-studying'); setupView.classList.remove('hidden'); studyView.classList.add('hidden'); },
+  setup(books) { WORDBOOKS = books; syncWordbookPicker(); document.body.classList.remove('is-studying'); setupView.classList.remove('hidden'); studyView.classList.add('hidden'); },
   study(word, view) {
     document.body.classList.add('is-studying'); setupView.classList.add('hidden'); studyView.classList.remove('hidden');
     card.className = 'word-card neutral'; cardStack.className = 'card-stack neutral'; nextCardPreview.classList.add('is-empty');
@@ -72,7 +72,7 @@ run.onclick = async () => {
     frame.width = width; frame.height = height;
     await new Promise(requestAnimationFrame);
     const before = failures.length;
-    qa.setup();
+    qa.setup(books);
     check(width+'x'+height+' setup',width>=961,false);
     for (let book=0;book<books.length;book++) {
       const words = qa.load(texts[book],manifest);

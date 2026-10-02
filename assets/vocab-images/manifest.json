@@ -55,7 +55,10 @@
   "der-muell.png",
   "der-einkaufswagen.png",
   "die-kasse.png",
-  "das-angebot.png",
+  {
+    "id": "das-angebot",
+    "file": "das-angebot-v2.png"
+  },
   "der-rabatt.png",
   "die-groesse.png",
   "bequem.png",
