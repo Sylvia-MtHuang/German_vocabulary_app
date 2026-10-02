@@ -110,7 +110,7 @@ Images are enabled through:
 assets/vocab-images/manifest.json
 ```
 
-Images are individually generated PNGs. A2 currently has 81 illustrated cards, including a batch of 50 new images. Review that batch locally at `http://127.0.0.1:8780/tests/a2-images.html`; its exact prompts and filenames are in `assets/vocab-images/a2-image-prompts.json`. The manifest can map a word id to any image filename:
+Images are individually generated PNGs. A2 currently has 181 illustrated cards, including batches of 50 and 100 new images. Review the first batch locally at `http://127.0.0.1:8780/tests/a2-images.html` and the additional 100 at `http://127.0.0.1:8780/tests/a2-images-100.html`. Exact prompts and filenames are in `assets/vocab-images/a2-image-prompts.json` and `assets/vocab-images/a2-image-prompts-100.json`. The manifest can map a word id to any image filename:
 
 ```json
 [

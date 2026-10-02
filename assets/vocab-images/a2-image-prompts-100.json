@@ -1,0 +1,906 @@
+{
+  "generator": "built-in imagegen",
+  "style": "Square photorealistic memory image; article color on main subject only; neutral secondary objects and backdrop; no text, labels, branding or watermark; unique composition per word.",
+  "items": [
+    {
+      "id": "der-anzug",
+      "term": "der Anzug",
+      "meaning": "suit",
+      "color": "blue",
+      "file": "a2-der-anzug.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Anzug. Meaning: suit. Subject and framing: A cobalt-blue men's formal two-piece suit displayed on a neutral headless dress form; jacket lapels and matching trousers fully visible, simple ivory shirt underneath. Eye-level tailoring-studio photograph. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-apotheke",
+      "term": "die Apotheke",
+      "meaning": "pharmacy",
+      "color": "pink",
+      "file": "a2-die-apotheke.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Apotheke. Meaning: pharmacy. Subject and framing: A pharmacy interior with pink medicine drawers and a pink counter, small unlabelled white medicine packages, a white pharmacy cross symbol mounted on pink cabinetry. Clear pharmacy setting, no shop lettering. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-auge",
+      "term": "das Auge",
+      "meaning": "eye",
+      "color": "green",
+      "file": "a2-das-auge.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Auge. Meaning: eye. Subject and framing: Extreme close-up of one human eye with a vivid emerald-green iris, round pupil, natural eyelashes and neutral skin; realistic corneal reflection. Color only the iris, not the skin. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-arm",
+      "term": "der Arm",
+      "meaning": "arm",
+      "color": "blue",
+      "file": "a2-der-arm.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Arm. Meaning: arm. Subject and framing: One adult forearm and upper arm covered in smooth cobalt-blue body paint, bent slightly at the elbow, fingers and shoulder mostly outside the crop; clear human arm anatomy, plain stone-gray background. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-bibliothek",
+      "term": "die Bibliothek",
+      "meaning": "library",
+      "color": "pink",
+      "file": "a2-die-bibliothek.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Bibliothek. Meaning: library. Subject and framing: Quiet library aisles of tall pink bookshelves packed with books whose unlettered spines stay neutral beige and gray; a neutral reading desk, strong aisle perspective. The shelves are the core pink subject. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-bad",
+      "term": "das Bad",
+      "meaning": "bathroom; bath",
+      "color": "green",
+      "file": "a2-das-bad.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Bad. Meaning: bathroom; bath. Subject and framing: An airy bathroom with an emerald-green bathtub and green vanity cabinet, neutral white basin and toilet, mirror, tiled gray walls; photograph from the doorway, clearly a bathroom rather than a bedroom. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-arzt",
+      "term": "der Arzt",
+      "meaning": "doctor",
+      "color": "blue",
+      "file": "a2-der-arzt.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Arzt. Meaning: doctor. Subject and framing: An adult male doctor in a cobalt-blue medical coat with a stethoscope, gently checking an adult patient's arm in a neutral exam room. Natural faces and skin, unmarked clothing, core blue doctor clearly in focus. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-birne",
+      "term": "die Birne",
+      "meaning": "pear; bulb",
+      "color": "pink",
+      "file": "a2-die-birne.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Birne. Meaning: pear; bulb. Subject and framing: One distinctive pear with pink pebbled skin, narrow neck, broad rounded base and a brown stem, plus one small pear slice with ivory flesh. Low side angle on a neutral linen napkin; no apple shape. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-bein",
+      "term": "das Bein",
+      "meaning": "leg",
+      "color": "green",
+      "file": "a2-das-bein.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Bein. Meaning: leg. Subject and framing: One adult leg with smooth emerald-green body paint, clearly showing thigh, knee and lower leg to ankle, bare foot partially visible. Seated pose against neutral gray background, accurate anatomy, nonsexual educational photo. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-aufzug",
+      "term": "der Aufzug",
+      "meaning": "elevator",
+      "color": "blue",
+      "file": "a2-der-aufzug.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Aufzug. Meaning: elevator. Subject and framing: A cobalt-blue elevator cabin seen with sliding doors open in a neutral building lobby, blue cabin sides and gray floor, small unlettered metallic button panel, clearly an enclosed lift rather than a doorway. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-bluse",
+      "term": "die Bluse",
+      "meaning": "blouse",
+      "color": "pink",
+      "file": "a2-die-bluse.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Bluse. Meaning: blouse. Subject and framing: A soft pink women's blouse on a plain wooden hanger, flowing thin fabric, neat collar, button front and long sleeves. Side-lit photograph against gray wall, garment fully visible; not a padded jacket. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-bier",
+      "term": "das Bier",
+      "meaning": "beer",
+      "color": "green",
+      "file": "a2-das-bier.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Bier. Meaning: beer. Subject and framing: A tall green-tinted glass beer mug with a sturdy handle, filled with golden beer and a thick creamy foam head, condensation; neutral stone bar counter, close three-quarter angle. Beer and foam retain natural colors. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-ball",
+      "term": "der Ball",
+      "meaning": "ball",
+      "color": "blue",
+      "file": "a2-der-ball.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Ball. Meaning: ball. Subject and framing: One blue rubber playground ball with simple curved seam panels, resting on pale concrete with its round shadow. Clean low-angle close-up, no sports logos or printed panels. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-bohne",
+      "term": "die Bohne",
+      "meaning": "bean",
+      "color": "pink",
+      "file": "a2-die-bohne.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Bohne. Meaning: bean. Subject and framing: Three clearly recognizable pink bean pods, one split open to reveal several pale bean seeds, on a cool gray ceramic dish. Macro overhead view, no peas or unrelated vegetables. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-broetchen",
+      "term": "das Brötchen",
+      "meaning": "bread roll",
+      "color": "green",
+      "file": "a2-das-broetchen.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Brötchen. Meaning: bread roll. Subject and framing: Two small round bread rolls with vivid green baked crust and a characteristic cross score, one torn to show soft ivory crumb. Neutral breakfast board close-up; green crust uniform, no mold patches. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-bleistift",
+      "term": "der Bleistift",
+      "meaning": "pencil",
+      "color": "blue",
+      "file": "a2-der-bleistift.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Bleistift. Meaning: pencil. Subject and framing: A single cobalt-blue wooden pencil with a sharpened wood tip and graphite point, lying diagonally over one blank ivory sheet; a tiny curl of neutral wood shaving, macro focus on graphite tip. No lettering. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-briefmarke",
+      "term": "die Briefmarke",
+      "meaning": "stamp",
+      "color": "pink",
+      "file": "a2-die-briefmarke.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Briefmarke. Meaning: stamp. Subject and framing: One pink postage stamp with clearly perforated edges and an embossed neutral-gray flower motif, partly attached to a blank ivory envelope. Macro angled photo, no numbers, currency, address or text. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-buch",
+      "term": "das Buch",
+      "meaning": "book",
+      "color": "green",
+      "file": "a2-das-buch.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Buch. Meaning: book. Subject and framing: One thick emerald-green hardcover book opened partway on a pale wooden desk, blank ivory pages fanning visibly, no print or spine lettering. Slight elevated diagonal view, tactile cloth cover. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-bus",
+      "term": "der Bus",
+      "meaning": "bus",
+      "color": "blue",
+      "file": "a2-der-bus.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Bus. Meaning: bus. Subject and framing: A full-sized blue city bus with multiple large windows and visible passenger doors, parked at a neutral curb; side three-quarter outdoor photo. Blank destination panel, no route numbers, logos or registration text. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-bruecke",
+      "term": "die Brücke",
+      "meaning": "bridge",
+      "color": "pink",
+      "file": "a2-die-bruecke.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Brücke. Meaning: bridge. Subject and framing: A pink-painted steel pedestrian bridge with clear railings and supporting arch spanning a narrow neutral-colored river; entire crossing visible in a landscape photo, muted neutral banks, pink only on bridge. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-buero",
+      "term": "das Büro",
+      "meaning": "office",
+      "color": "green",
+      "file": "a2-das-buero.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Büro. Meaning: office. Subject and framing: A compact office with green desks and green task-chair upholstery, neutral monitors, keyboard, shelves and file folders; realistic wide interior photograph. No screen writing, clear work setting rather than a dining room. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-computer",
+      "term": "der Computer",
+      "meaning": "computer",
+      "color": "blue",
+      "file": "a2-der-computer.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Computer. Meaning: computer. Subject and framing: A cobalt-blue desktop computer tower and blue-framed monitor on a neutral desk with gray keyboard and mouse; display off and black. Three-quarter workstation photograph, no lettering or logos. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-butter",
+      "term": "die Butter",
+      "meaning": "butter",
+      "color": "pink",
+      "file": "a2-die-butter.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Butter. Meaning: butter. Subject and framing: A pink-tinted rectangular block of butter on a neutral small butter dish, a curl sliced away with a plain steel butter knife, softened creamy texture. Warm close-up, no packaging; clearly butter rather than soap. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-eis",
+      "term": "das Eis",
+      "meaning": "ice; ice cream",
+      "color": "green",
+      "file": "a2-das-eis.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Eis. Meaning: ice; ice cream. Subject and framing: A single scoop of green pistachio ice cream in a neutral waffle cone held by a natural-colored hand, slight creamy melt at the rim. Close-up against warm gray backdrop, no snow or ice cubes. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-drucker",
+      "term": "der Drucker",
+      "meaning": "printer",
+      "color": "blue",
+      "file": "a2-der-drucker.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Drucker. Meaning: printer. Subject and framing: A blue desktop paper printer actively feeding out a blank ivory sheet, visible paper tray and print outlet, neutral office shelf. Front three-quarter close view, no logos, display text or printed paper. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-familie",
+      "term": "die Familie",
+      "meaning": "family",
+      "color": "pink",
+      "file": "a2-die-familie.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Familie. Meaning: family. Subject and framing: A family of two adult parents and two children sitting close together on a neutral sofa, relaxed affectionate gestures. Their tops are varied shades of pink, natural faces and skin, realistic everyday family photograph. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-fleisch",
+      "term": "das Fleisch",
+      "meaning": "meat",
+      "color": "green",
+      "file": "a2-das-fleisch.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Fleisch. Meaning: meat. Subject and framing: A raw beef steak with a uniform green tint on the muscle fibers, neutral ivory fat marbling, resting on a stone butcher board beside a gray knife. Accurate fresh steak texture, no decay, mold or packaging. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-fernseher",
+      "term": "der Fernseher",
+      "meaning": "television set",
+      "color": "blue",
+      "file": "a2-der-fernseher.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Fernseher. Meaning: television set. Subject and framing: One modern television with a bold blue outer bezel on a low neutral wooden cabinet, black switched-off screen, gray remote as a small secondary cue. Straight-on living-room photograph, no UI or text. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-garage",
+      "term": "die Garage",
+      "meaning": "garage",
+      "color": "pink",
+      "file": "a2-die-garage.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Garage. Meaning: garage. Subject and framing: A pink garage with its large pink segmented door raised, revealing a neutral gray car parked inside, concrete driveway in front. Full exterior three-quarter view, unmistakable garage rather than a shop. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-flugzeug",
+      "term": "das Flugzeug",
+      "meaning": "aeroplane",
+      "color": "green",
+      "file": "a2-das-flugzeug.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Flugzeug. Meaning: aeroplane. Subject and framing: One emerald-green passenger airplane with fuselage, wings, jet engines, landing gear and tail fully visible, parked on a neutral gray apron under a pale gray sky. No airlines, numbers, logos or lettering. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-flughafen",
+      "term": "der Flughafen",
+      "meaning": "airport",
+      "color": "blue",
+      "file": "a2-der-flughafen.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Flughafen. Meaning: airport. Subject and framing: An airport terminal with a cobalt-blue roof and blue jet bridges, neutral aircraft parked at gates and a broad gray apron in foreground. Elevated wide photo emphasizes the terminal and gates, no text or logos. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-geldboerse",
+      "term": "die Geldbörse",
+      "meaning": "wallet; purse",
+      "color": "pink",
+      "file": "a2-die-geldboerse.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Geldbörse. Meaning: wallet; purse. Subject and framing: A compact pink leather wallet opened to show card slots and a coin compartment, one unprinted neutral card and a few blank neutral coins. Close-up on pale stone; smaller than a handbag, no straps or labels. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-fruehstueck",
+      "term": "das Frühstück",
+      "meaning": "breakfast",
+      "color": "green",
+      "file": "a2-das-fruehstueck.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Frühstück. Meaning: breakfast. Subject and framing: A complete breakfast setting: green plate and green cup with neutral toast, a cooked egg, small jam dish and tea, soft pale morning window light. Overhead table photo, food natural colors, no packaging. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-fluss",
+      "term": "der Fluss",
+      "meaning": "river",
+      "color": "blue",
+      "file": "a2-der-fluss.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Fluss. Meaning: river. Subject and framing: A broad curving river with naturally textured cobalt-blue water flowing between muted gray rocky banks, aerial landscape composition. River visibly long and winding, not a still lake; overcast neutral sky. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-gitarre",
+      "term": "die Gitarre",
+      "meaning": "guitar",
+      "color": "pink",
+      "file": "a2-die-gitarre.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Gitarre. Meaning: guitar. Subject and framing: A pink acoustic guitar leaning on a neutral wall, full wooden body, round sound hole, six strings, neck and tuning pegs clearly visible. Low three-quarter music-room photo, no lettering or brand marks. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-gemuese",
+      "term": "das Gemüse",
+      "meaning": "vegetables",
+      "color": "green",
+      "file": "a2-das-gemuese.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Gemüse. Meaning: vegetables. Subject and framing: A vivid green collection of recognizable vegetables including broccoli, a green pepper, zucchini and cabbage, arranged naturally in a neutral wooden market crate. Close overhead view, no fruit or printed labels. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-fussball",
+      "term": "der Fußball",
+      "meaning": "football",
+      "color": "blue",
+      "file": "a2-der-fussball.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Fußball. Meaning: football. Subject and framing: One blue-and-ivory football with distinctive pentagonal and hexagonal panels resting by a neutral soccer goal net on muted gray turf. Low sports-photo angle, no team badges, logos or writing. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-hand",
+      "term": "die Hand",
+      "meaning": "hand",
+      "color": "pink",
+      "file": "a2-die-hand.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Hand. Meaning: hand. Subject and framing: One open human hand covered in smooth pink body paint, palm facing the camera with all five fingers clearly separated and natural joint creases. Neutral gray backdrop, accurate hand anatomy, no extra fingers. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-geschenk",
+      "term": "das Geschenk",
+      "meaning": "present",
+      "color": "green",
+      "file": "a2-das-geschenk.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Geschenk. Meaning: present. Subject and framing: One emerald-green gift box with a large matching green fabric bow and ribbon, lid slightly lifted with neutral tissue paper peeking out. Clean festive still-life on neutral table; ribbon makes it clearly a present. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-hamburger",
+      "term": "der Hamburger",
+      "meaning": "hamburger",
+      "color": "blue",
+      "file": "a2-der-hamburger.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Hamburger. Meaning: hamburger. Subject and framing: One recognizable hamburger with a cobalt-blue bun, natural browned beef patty, ivory melted cheese and neutral fresh garnish, cut slightly to reveal layers. Close eye-level food photo, no wrappers or printed items. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-hose",
+      "term": "die Hose",
+      "meaning": "pants",
+      "color": "pink",
+      "file": "a2-die-hose.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Hose. Meaning: pants. Subject and framing: A pair of pink tailored trousers hanging straight from a plain neutral clip hanger; waistband, two legs and pockets fully visible. Gentle side light against gray plaster, realistic textile texture, not jeans. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-geschirr",
+      "term": "das Geschirr",
+      "meaning": "dishes; crockery",
+      "color": "green",
+      "file": "a2-das-geschirr.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Geschirr. Meaning: dishes; crockery. Subject and framing: A tidy collection of green ceramic dishes: stacked dinner plates, two bowls, cups and saucers on a pale counter. Three-quarter tabletop photograph, crockery dominates; no food or unrelated kitchen appliances. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-herd",
+      "term": "der Herd",
+      "meaning": "cooker; stove",
+      "color": "blue",
+      "file": "a2-der-herd.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Herd. Meaning: cooker; stove. Subject and framing: One blue freestanding kitchen cooker with blue oven door and side panels, gray stovetop burners visibly above, a small neutral pot on one burner. Full appliance three-quarter photograph, no printed brand or digital text. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-insel",
+      "term": "die Insel",
+      "meaning": "island",
+      "color": "pink",
+      "file": "a2-die-insel.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Insel. Meaning: island. Subject and framing: One small island surrounded on every side by neutral deep-gray sea; pink-tinted shrubs and palms cover the core island, pale rocky shoreline, aerial photo with ample surrounding water. No bridges or connected mainland. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-glas",
+      "term": "das Glas",
+      "meaning": "glass",
+      "color": "green",
+      "file": "a2-das-glas.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Glas. Meaning: glass. Subject and framing: One transparent emerald-green drinking glass half filled with clear water, visible rim, base, reflections and refraction, on a pale stone table. Single close-up side view, no bottle or printed decoration. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-kaese",
+      "term": "der Käse",
+      "meaning": "cheese",
+      "color": "blue",
+      "file": "a2-der-kaese.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Käse. Meaning: cheese. Subject and framing: A cobalt-blue wedge of Swiss-style hard cheese with round holes, paired with one thin blue cheese slice on a neutral wooden cheese board. Convincing cheese texture, no mold, rind label or packaging. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-jeans",
+      "term": "die Jeans",
+      "meaning": "jeans",
+      "color": "pink",
+      "file": "a2-die-jeans.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Jeans. Meaning: jeans. Subject and framing: A pair of unmistakable pink denim jeans folded at the knee with waist, metal button, rivets, stitched pockets and denim weave visible. Casual top-down wardrobe photo on neutral canvas, no leather brand patch. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-haehnchen",
+      "term": "das Hähnchen",
+      "meaning": "chicken (for eating)",
+      "color": "green",
+      "file": "a2-das-haehnchen.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Hähnchen. Meaning: chicken (for eating). Subject and framing: One whole roast chicken with a uniformly green glazed skin, recognizable wings, legs and plump breast, steam rising lightly on an ivory platter. Food-photo angle, no raw gore, mold or decay. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-kaffee",
+      "term": "der Kaffee",
+      "meaning": "coffee",
+      "color": "blue",
+      "file": "a2-der-kaffee.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Kaffee. Meaning: coffee. Subject and framing: Dark coffee in a vivid blue ceramic cup on a neutral saucer, crema and a few natural coffee beans nearby, wisps of steam. Close low-angle cafe photo, blue only on cup, no milk carton or tea bag. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-kamera",
+      "term": "die Kamera",
+      "meaning": "camera",
+      "color": "pink",
+      "file": "a2-die-kamera.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Kamera. Meaning: camera. Subject and framing: A compact pink camera with a prominent black lens, shutter button and neutral strap; tactile plastic and glass, close three-quarter product photo on gray stone. No branding, text or screen UI. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-handtuch",
+      "term": "das Handtuch",
+      "meaning": "towel",
+      "color": "green",
+      "file": "a2-das-handtuch.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Handtuch. Meaning: towel. Subject and framing: A fluffy emerald-green bath towel hanging over a neutral rail, another folded green towel below, thick terry loops visible. Close softly lit bathroom photograph, no patterns or unrelated toiletries. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-laptop",
+      "term": "der Laptop",
+      "meaning": "laptop",
+      "color": "blue",
+      "file": "a2-der-laptop.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Laptop. Meaning: laptop. Subject and framing: An open cobalt-blue laptop with blue casing and bezel, black blank screen and neutral keys with no readable legends, seen diagonally on a pale cafe table. Clearly hinged portable computer, no logos. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-kette",
+      "term": "die Kette",
+      "meaning": "necklace; chain",
+      "color": "pink",
+      "file": "a2-die-kette.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Kette. Meaning: necklace; chain. Subject and framing: A pink enamel-link necklace draped in a gentle loop on neutral beige fabric, clasp visible, fine chain links and one small plain pendant. Macro jewelry photo, clearly wearable necklace rather than industrial chain. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-heft",
+      "term": "das Heft",
+      "meaning": "exercise book; notebook",
+      "color": "green",
+      "file": "a2-das-heft.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Heft. Meaning: exercise book; notebook. Subject and framing: One slim green school exercise notebook, saddle-stitched spine and soft card cover, partly open with pale ruled pages but no writing. Flat-lay stationery photo, visibly thinner and softer than a hardcover book. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-mantel",
+      "term": "der Mantel",
+      "meaning": "coat",
+      "color": "blue",
+      "file": "a2-der-mantel.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Mantel. Meaning: coat. Subject and framing: A long cobalt-blue wool coat on a neutral coat stand, prominent lapels, buttons, belt and hem extending below the knee, soft tailored texture. Full garment photo in a gray hallway, no brand tags. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-kirche",
+      "term": "die Kirche",
+      "meaning": "church",
+      "color": "pink",
+      "file": "a2-die-kirche.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Kirche. Meaning: church. Subject and framing: A small pink church exterior with a tall steeple and a plain neutral cross on top, arched windows and entrance, muted gray stone square. Low wide-angle architectural photograph, no signs or text. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-klavier",
+      "term": "das Klavier",
+      "meaning": "piano",
+      "color": "green",
+      "file": "a2-das-klavier.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Klavier. Meaning: piano. Subject and framing: An emerald-green upright piano with lid open above the black-and-ivory keyboard, neutral stool in front; full instrument in a quiet gray room. Photoreal wood finish and piano mechanisms, no lettering. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-motorroller",
+      "term": "der Motorroller",
+      "meaning": "motor scooter",
+      "color": "blue",
+      "file": "a2-der-motorroller.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Motorroller. Meaning: motor scooter. Subject and framing: A cobalt-blue motor scooter with step-through frame, small wheels, round headlamp and neutral seat, parked on a pale pavement. Full three-quarter photo; no license plate text, badges or motorcycle-style fuel tank. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-muetze",
+      "term": "die Mütze",
+      "meaning": "cap",
+      "color": "pink",
+      "file": "a2-die-muetze.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Mütze. Meaning: cap. Subject and framing: One pink knitted winter cap with a rolled brim and small pom-pom, placed upright on a neutral wooden bench. Macro textile detail and soft winter daylight, no lettering; no baseball visor. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-kleid",
+      "term": "das Kleid",
+      "meaning": "dress",
+      "color": "green",
+      "file": "a2-das-kleid.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Kleid. Meaning: dress. Subject and framing: An emerald-green knee-length dress on a neutral headless mannequin, clearly one garment with fitted bodice, waist and flowing skirt. Full-length fashion-room photograph, no jacket or separate trousers. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-pullover",
+      "term": "der Pullover",
+      "meaning": "jumper; sweater",
+      "color": "blue",
+      "file": "a2-der-pullover.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Pullover. Meaning: jumper; sweater. Subject and framing: One cobalt-blue knitted sweater with ribbed crew neck, cuffs and hem, loosely folded with both sleeves visible on a neutral sofa. Real wool knit texture; no shirt collar, zipper or printed pattern. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-nudel",
+      "term": "die Nudel",
+      "meaning": "noodle; pasta",
+      "color": "pink",
+      "file": "a2-die-nudel.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Nudel. Meaning: noodle; pasta. Subject and framing: A nest of pink-colored pasta noodles with a few loose strands showing their thin long shape on an ivory plate, small plain fork beside it. Tight food still-life with neutral linen, no sauce or lettering. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-krankenhaus",
+      "term": "das Krankenhaus",
+      "meaning": "hospital",
+      "color": "green",
+      "file": "a2-das-krankenhaus.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Krankenhaus. Meaning: hospital. Subject and framing: A modern hospital building with emerald-green exterior panels and a large plain white medical cross, neutral ambulance at a covered patient entrance. Wide architectural photo, no words, ambulance lettering or logos. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-reifen",
+      "term": "der Reifen",
+      "meaning": "tyre",
+      "color": "blue",
+      "file": "a2-der-reifen.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Reifen. Meaning: tyre. Subject and framing: One cobalt-blue rubber car tyre standing upright with deeply visible tread and a hollow center, neutral gray workshop floor. Close three-quarter photo, no wheel rim, embossed readable lettering or branding. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-orange",
+      "term": "die Orange",
+      "meaning": "orange",
+      "color": "pink",
+      "file": "a2-die-orange.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Orange. Meaning: orange. Subject and framing: One spherical citrus orange with pink dimpled peel, a partly peeled section and a cross-cut half showing pale natural citrus segments. Neutral stone bowl, close overhead photo; no pointed lemon shape. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-messer",
+      "term": "das Messer",
+      "meaning": "knife",
+      "color": "green",
+      "file": "a2-das-messer.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Messer. Meaning: knife. Subject and framing: One emerald-green-handled kitchen knife with an unmarked silver blade, lying diagonally on a neutral wooden cutting board beside a small sliced mushroom. Sharp realistic edges, no gore, weapon pose or lettering. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-reis",
+      "term": "der Reis",
+      "meaning": "rice",
+      "color": "blue",
+      "file": "a2-der-reis.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Reis. Meaning: rice. Subject and framing: A shallow blue ceramic bowl full of visibly separate natural ivory rice grains, a plain neutral spoon lifting a small portion. Tight overhead food photograph; rice retains natural color, no packaging. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-pflanze",
+      "term": "die Pflanze",
+      "meaning": "plant",
+      "color": "pink",
+      "file": "a2-die-pflanze.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Pflanze. Meaning: plant. Subject and framing: One vivid pink-leaved indoor plant growing from a neutral terracotta pot, distinct branching stems and many healthy leaves. Side-lit close portrait against muted gray wall, no flower blooms; plant rather than bouquet. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-obst",
+      "term": "das Obst",
+      "meaning": "fruit",
+      "color": "green",
+      "file": "a2-das-obst.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Obst. Meaning: fruit. Subject and framing: A variety of recognizable green-tinted fruits: apples, pears, grapes, one banana and a cut kiwi, in a neutral wicker bowl. Elevated food photograph, clearly mixed fruit rather than vegetables, no mold or text. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-ring",
+      "term": "der Ring",
+      "meaning": "ring",
+      "color": "blue",
+      "file": "a2-der-ring.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Ring. Meaning: ring. Subject and framing: One cobalt-blue enamel finger ring lying on a neutral jewelry pad, round band and smooth small stone setting visible, macro side-angle photograph. Ring opening clear, no chains, inscriptions or logos. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-pizza",
+      "term": "die Pizza",
+      "meaning": "pizza",
+      "color": "pink",
+      "file": "a2-die-pizza.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Pizza. Meaning: pizza. Subject and framing: A round pizza on a neutral board with a vivid pink baked crust rim, natural melted ivory cheese and browned toppings, one slice lifted on a plain steel server. Photorealistic close food scene, no carton or text. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-ohr",
+      "term": "das Ohr",
+      "meaning": "ear",
+      "color": "green",
+      "file": "a2-das-ohr.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Ohr. Meaning: ear. Subject and framing: Close-up of one adult human ear with smooth emerald-green body paint on the ear only, natural surrounding skin, clear outer rim and inner folds. Neutral gray background, anatomically accurate and nonsexual. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-rock",
+      "term": "der Rock",
+      "meaning": "skirt",
+      "color": "blue",
+      "file": "a2-der-rock.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Rock. Meaning: skirt. Subject and framing: A cobalt-blue pleated skirt hung from a plain neutral clip hanger, defined waistband and wide hem, no separate trouser legs. Full garment photo against pale plaster, real fabric folds, no text or labels. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-rose",
+      "term": "die Rose",
+      "meaning": "rose",
+      "color": "pink",
+      "file": "a2-die-rose.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Rose. Meaning: rose. Subject and framing: One pink rose in full bloom on a natural neutral-toned stem, detailed layered petals and a couple muted leaves, supported in a small clear neutral vase. Intimate side-lit floral photo, distinct from a generic daisy. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-paket",
+      "term": "das Paket",
+      "meaning": "parcel; package",
+      "color": "green",
+      "file": "a2-das-paket.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Paket. Meaning: parcel; package. Subject and framing: One emerald-green cardboard shipping parcel secured with plain neutral packing tape, creased corrugated edges, resting by a gray doorstep. No gift bow or festive ribbon, no address label, logos or writing. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-rucksack",
+      "term": "der Rucksack",
+      "meaning": "rucksack; backpack",
+      "color": "blue",
+      "file": "a2-der-rucksack.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Rucksack. Meaning: rucksack; backpack. Subject and framing: A cobalt-blue everyday backpack leaning against a neutral bench, two shoulder straps, zippered main compartment and side pocket clearly visible. Three-quarter outdoor gear photo, no logos or print. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-schokolade",
+      "term": "die Schokolade",
+      "meaning": "chocolate",
+      "color": "pink",
+      "file": "a2-die-schokolade.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Schokolade. Meaning: chocolate. Subject and framing: One pink-colored chocolate bar with a clear grid of raised squares, one broken square showing a dense chocolate texture, plain neutral foil folded away. Tight food macro on gray slate, no branded wrapper or words. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-parfuem",
+      "term": "das Parfüm",
+      "meaning": "perfume",
+      "color": "green",
+      "file": "a2-das-parfuem.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Parfüm. Meaning: perfume. Subject and framing: One elegant emerald-green glass perfume bottle with a silver atomizer and small clear cap set beside it, shallow reflections on a neutral dressing table. Close beauty-product photograph, no lettering, labels or branding. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-saft",
+      "term": "der Saft",
+      "meaning": "juice",
+      "color": "blue",
+      "file": "a2-der-saft.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Saft. Meaning: juice. Subject and framing: A glass of translucent fruit juice in a blue-tinted tumbler, with natural orange half and freshly pressed pulp as secondary cues. Side-lit breakfast-table photo, no milk, alcohol cues, cartons or text. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-seife",
+      "term": "die Seife",
+      "meaning": "soap",
+      "color": "pink",
+      "file": "a2-die-seife.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Seife. Meaning: soap. Subject and framing: One pink oval bar of soap on a neutral ridged soap dish, wet surface and small white suds, water droplets nearby. Macro bathroom photo, no printed brand, food, butter knife or edible garnish. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-pferd",
+      "term": "das Pferd",
+      "meaning": "horse",
+      "color": "green",
+      "file": "a2-das-pferd.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Pferd. Meaning: horse. Subject and framing: One healthy emerald-green horse standing in side profile, all four legs, long muzzle, mane and tail visible; muted neutral stable and gray gravel. Real equine anatomy and fur, no saddle text or human riders. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-salat",
+      "term": "der Salat",
+      "meaning": "salad; lettuce",
+      "color": "blue",
+      "file": "a2-der-salat.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Salat. Meaning: salad; lettuce. Subject and framing: A bowl of fresh salad dominated by cobalt-blue lettuce leaves, small neutral pale cucumber and tomato pieces, plain steel serving fork. Close food photo, recognizably tossed leafy salad, no spoilage or text. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-suppe",
+      "term": "die Suppe",
+      "meaning": "soup",
+      "color": "pink",
+      "file": "a2-die-suppe.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Suppe. Meaning: soup. Subject and framing: A pink ceramic soup bowl filled with natural pale vegetable broth, small potato and carrot pieces and rising steam; plain metal soup spoon resting beside it. Elevated dining-table photo, no logos or writing. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-radio",
+      "term": "das Radio",
+      "meaning": "radio",
+      "color": "green",
+      "file": "a2-das-radio.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Radio. Meaning: radio. Subject and framing: One small emerald-green portable radio with a clear speaker grille, tuning knob and thin extended metal aerial, no readable dial numbers or brand marks. Three-quarter photograph on a neutral wooden windowsill. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-schrank",
+      "term": "der Schrank",
+      "meaning": "cupboard; wardrobe",
+      "color": "blue",
+      "file": "a2-der-schrank.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Schrank. Meaning: cupboard; wardrobe. Subject and framing: One blue wooden wardrobe with two tall doors, one open to show a neutral hanging rail, shirts and shelves. Entire cabinet visible in a pale gray bedroom, no mirror, signage or printed labels. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-tablette",
+      "term": "die Tablette",
+      "meaning": "tablet; pill",
+      "color": "pink",
+      "file": "a2-die-tablette.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Tablette. Meaning: tablet; pill. Subject and framing: Two small pink medicine tablets, one scored, emerging from an unlabelled neutral silver blister pack, alongside a small clear water glass. Tight macro on pale table, no packaging words; clearly medicine rather than candy. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-schiff",
+      "term": "das Schiff",
+      "meaning": "ship; boat",
+      "color": "green",
+      "file": "a2-das-schiff.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Schiff. Meaning: ship; boat. Subject and framing: One emerald-green ship with a broad hull, deck, white superstructure and railings floating on neutral gray water; full side three-quarter marine photo. No ship name, logos, flags with text or route signs. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-stiefel",
+      "term": "der Stiefel",
+      "meaning": "boot",
+      "color": "blue",
+      "file": "a2-der-stiefel.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Stiefel. Meaning: boot. Subject and framing: One tall cobalt-blue leather boot with defined shaft, ankle and solid sole, lightly worn real leather, on a neutral stone step. Low close photo, boot silhouette fully visible, no lettering or brand marks. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-toilette",
+      "term": "die Toilette",
+      "meaning": "toilet; restroom",
+      "color": "pink",
+      "file": "a2-die-toilette.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Toilette. Meaning: toilet; restroom. Subject and framing: A pink porcelain toilet with the lid up and pink cistern visible, neutral tiled bathroom, small plain toilet-paper roll beside it. Clean three-quarter photograph, no people, lettering or inappropriate content. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-schwein",
+      "term": "das Schwein",
+      "meaning": "pig",
+      "color": "green",
+      "file": "a2-das-schwein.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Schwein. Meaning: pig. Subject and framing: One emerald-green pig standing on neutral farm straw, round body, clear snout, floppy ears, short legs and curled tail visible. Realistic soft bristles and anatomy, eye-level animal photograph, no brands. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-topf",
+      "term": "der Topf",
+      "meaning": "pot; saucepan",
+      "color": "blue",
+      "file": "a2-der-topf.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Topf. Meaning: pot; saucepan. Subject and framing: A blue enamel cooking pot with two small side handles, lid tilted beside it, silver inner surface visible; neutral stovetop and a little steam. Close kitchen still-life, clearly saucepan rather than a drinking cup. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-tomate",
+      "term": "die Tomate",
+      "meaning": "tomato",
+      "color": "pink",
+      "file": "a2-die-tomate.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Tomate. Meaning: tomato. Subject and framing: One ripe tomato with uniformly pink smooth skin, distinctive muted green star-shaped calyx, plus one cut half with natural pink flesh and visible seeds. Macro photo on neutral slate, no apple stem. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-schwimmbad",
+      "term": "das Schwimmbad",
+      "meaning": "swimming pool",
+      "color": "green",
+      "file": "a2-das-schwimmbad.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Schwimmbad. Meaning: swimming pool. Subject and framing: A clear public swimming pool with emerald-green rim tiles and green lane-rope floats, natural clear turquoise water, neutral pool deck and metal ladder. Wide indoor pool photograph, no people or written signs. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-vogel",
+      "term": "der Vogel",
+      "meaning": "bird",
+      "color": "blue",
+      "file": "a2-der-vogel.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Vogel. Meaning: bird. Subject and framing: One small cobalt-blue songbird perched on a neutral bare branch, whole bird with wings folded, beak, eye, feathers and two feet clearly visible. Soft gray blurred background, lifelike wildlife photo. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-treppe",
+      "term": "die Treppe",
+      "meaning": "stairs",
+      "color": "pink",
+      "file": "a2-die-treppe.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Treppe. Meaning: stairs. Subject and framing: An indoor staircase with pink stair treads and pink handrail leading upward, clear repeated steps and a landing, neutral gray walls. Architectural side-perspective photograph, no ladders, escalators or signs. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-t-shirt",
+      "term": "das T-Shirt",
+      "meaning": "T-shirt",
+      "color": "green",
+      "file": "a2-das-t-shirt.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das T-Shirt. Meaning: T-shirt. Subject and framing: One emerald-green short-sleeved crew-neck T-shirt hanging on a plain neutral hanger, cotton texture and simple straight hem. Front garment photograph against gray wall, no collars, buttons, writing or logos. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-zahn",
+      "term": "der Zahn",
+      "meaning": "tooth",
+      "color": "blue",
+      "file": "a2-der-zahn.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Zahn. Meaning: tooth. Subject and framing: One blue enamel anatomical tooth model with a recognizable broad molar crown and separated roots, standing on a neutral dental tray beside a small unmarked steel dental mirror. Macro educational product photograph, no words. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "die-wurst",
+      "term": "die Wurst",
+      "meaning": "sausage",
+      "color": "pink",
+      "file": "a2-die-wurst.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: die Wurst. Meaning: sausage. Subject and framing: One curved pink sausage with a smooth casing, a few round slices showing realistic sausage texture, on a neutral deli board beside a plain knife. Close food photo, no packaging, labels or unrelated foods. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: pink strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "das-zelt",
+      "term": "das Zelt",
+      "meaning": "tent",
+      "color": "green",
+      "file": "a2-das-zelt.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: das Zelt. Meaning: tent. Subject and framing: An emerald-green camping tent pitched on muted gray earth, zipped entrance partly open showing a neutral sleeping mat, tent poles and guy lines visible. Full three-quarter outdoor photo, no brand marks or writing. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: green strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    },
+    {
+      "id": "der-zucker",
+      "term": "der Zucker",
+      "meaning": "sugar",
+      "color": "blue",
+      "file": "a2-der-zucker.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: one square vocabulary flashcard image, approximately 1024x1024, opaque background. German word: der Zucker. Meaning: sugar. Subject and framing: A blue ceramic sugar bowl with several natural white sugar cubes and a little loose granulated sugar, plain small steel teaspoon and neutral countertop. Macro food still-life, sugar crystals clear, no packaging. Style: tactile realistic photography, soft natural light, strong clarity at thumbnail size; imaginative color allowed, physically convincing forms. Grammar cue: blue strongly on the core subject only, background and all supporting objects neutral. One freshly generated independent composition for this word. Do not print the German word or meaning. No readable text, labels, watermarks, cartoons, illustrations, collage, UI or brand marks.",
+      "generated": true
+    }
+  ]
+}

@@ -95,19 +95,27 @@ assert.notDeepEqual(selectionCheck.first, selectionCheck.second);
 assert.equal(selectionCheck.inputUnchanged, true);
 assert.deepEqual(selectionCheck.priorities, ['weak', 'due', 'future']);
 assert.equal(selectionCheck.imageFirst, 'image');
-const batch = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-images/a2-image-prompts.json'), 'utf8'));
-assert.equal(batch.items.length, 50);
-assert.equal(new Set(batch.items.map(item => item.id)).size, 50);
+const imageBatches = [
+  ['a2-image-prompts.json', 50],
+  ['a2-image-prompts-100.json', 100]
+];
 const imageHashes = new Set();
-for (const item of batch.items) {
-  assert.equal(item.generated, true, item.term);
-  assert.equal(a2.find(word => word.id === item.id).imagePath, 'assets/vocab-images/' + item.file, item.term);
-  const png = fs.readFileSync(path.join(root, 'assets/vocab-images', item.file));
-  imageHashes.add(crypto.createHash('sha256').update(png).digest('hex'));
-  assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', item.term);
-  assert.equal(png.readUInt32BE(16), png.readUInt32BE(20), item.term + ' must be square');
-  assert.ok(png.readUInt32BE(16) >= 512, item.term);
+const imageIds = new Set();
+for (const [file, count] of imageBatches) {
+  const batch = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-images', file), 'utf8'));
+  assert.equal(batch.items.length, count);
+  for (const item of batch.items) {
+    assert.ok(!imageIds.has(item.id), 'Image batches must cover different words: ' + item.id);
+    imageIds.add(item.id);
+    assert.equal(item.generated, true, item.term);
+    assert.equal(a2.find(word => word.id === item.id).imagePath, 'assets/vocab-images/' + item.file, item.term);
+    const png = fs.readFileSync(path.join(root, 'assets/vocab-images', item.file));
+    imageHashes.add(crypto.createHash('sha256').update(png).digest('hex'));
+    assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', item.term);
+    assert.equal(png.readUInt32BE(16), png.readUInt32BE(20), item.term + ' must be square');
+    assert.ok(png.readUInt32BE(16) >= 512, item.term);
+  }
 }
-assert.equal(imageHashes.size, 50, 'Each vocabulary image must be independent');
-assert.equal(a2.filter(word => word.imagePath && fs.existsSync(path.join(root, word.imagePath))).length, 81);
-console.log('Wordbooks, A2 forms, recall clues, progress, randomized sessions and 50 new image bindings: passed');
+assert.equal(imageHashes.size, 150, 'Each vocabulary image must be independent');
+assert.equal(a2.filter(word => word.imagePath && fs.existsSync(path.join(root, word.imagePath))).length, 181);
+console.log('Wordbooks, A2 forms, recall clues, progress, randomized sessions and 150 new image bindings: passed');

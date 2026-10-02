@@ -65,3 +65,7 @@ Prompt: Square photorealistic vocabulary memory image for das Angebot (offer / s
 ## A2 batch: 50 new images
 
 The built-in imagegen tool generated one independent square photograph for each of 50 previously unmapped A2 nouns. Exact prompts, vocabulary IDs, colors and workspace filenames are recorded in [a2-image-prompts.json](assets/vocab-images/a2-image-prompts.json). The batch adds 20 blue masculine, 20 pink feminine and 10 green neuter images. Local review gallery: [tests/a2-images.html](tests/a2-images.html).
+
+## A2 batch: 100 additional images
+
+Generated with the built-in imagegen tool, one independent square photograph for each previously unmapped word. Exact prompts, vocabulary IDs, article colors and workspace filenames: [a2-image-prompts-100.json](assets/vocab-images/a2-image-prompts-100.json). This batch contains 34 blue masculine, 33 pink feminine and 33 green neuter images; the local preview interleaves them: [tests/a2-images-100.html](tests/a2-images-100.html).
