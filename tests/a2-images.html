@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A2 新增图片预览</title>
+<style>
+body{font:16px/1.5 system-ui;margin:24px auto;padding:0 20px;max-width:1100px;background:#f5f5f2;color:#242b29}
+h1{font-size:28px;margin-bottom:8px}a{color:#176f62}#gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin:24px 0}
+figure{margin:0;background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px #0001}figure img{display:block;width:100%;aspect-ratio:1;object-fit:contain}figcaption{padding:12px}strong{display:block;font-size:18px}small{color:#56635d}.blue strong{color:#1266b6}.pink strong{color:#ac245c}.green strong{color:#17763a}.pending{aspect-ratio:1;display:grid;place-items:center;background:#eceee9}
+</style>
+<h1>A2 新增 50 张图片 · 预览</h1>
+<p>请检查：主体能否一眼认出词义、是否有歧义、缩小后是否清楚。冠词配色：der 蓝色 · die 红／粉色 · das 绿色。</p>
+<p>这批图片已接入 A2 词库。<a href="../">打开 App</a></p>
+<p id="status" role="status">加载中…</p><main id="gallery"></main>
+<script>
+fetch('../assets/vocab-images/a2-image-prompts.json').then(response=>{if(!response.ok)throw Error('图片清单加载失败');return response.json()}).then(plan=>{
+ document.querySelector('#status').textContent=plan.items.filter(item=>item.generated).length+' / 50 张已生成';
+ plan.items.forEach((item,index)=>{
+  const figure=document.createElement('figure');figure.className=item.color;
+  if(item.generated){const link=document.createElement('a');link.href='../assets/vocab-images/'+item.file;link.target='_blank';link.rel='noopener';const img=document.createElement('img');img.src=link.href;img.alt=item.term+' — '+item.meaning;img.loading='lazy';link.append(img);figure.append(link)}
+  else{const pending=document.createElement('div');pending.className='pending';pending.textContent='生成中';figure.append(pending)}
+  const caption=document.createElement('figcaption');const name=document.createElement('strong');name.textContent=(index+1)+'. '+item.term;const meaning=document.createElement('small');meaning.textContent=item.meaning;caption.append(name,meaning);figure.append(caption);document.querySelector('#gallery').append(figure);
+ });
+}).catch(error=>document.querySelector('#status').textContent=error.message);
+</script>
+</html>

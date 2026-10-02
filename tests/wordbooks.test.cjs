@@ -1,5 +1,6 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const crypto = require('node:crypto');
 const path = require('node:path');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
@@ -57,4 +58,19 @@ vm.runInContext('WORDBOOKS = books; state.selectedWordbookId = "goethe-a1";', co
 const a1Key = vm.runInContext('recordKey("die-bank")', context);
 vm.runInContext('state.selectedWordbookId = "goethe-a2";', context);
 assert.notEqual(vm.runInContext('recordKey("die-bank")', context), a1Key);
-console.log('All wordbooks, A2 forms, recall clues and independent progress: passed');
+const batch = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-images/a2-image-prompts.json'), 'utf8'));
+assert.equal(batch.items.length, 50);
+assert.equal(new Set(batch.items.map(item => item.id)).size, 50);
+const imageHashes = new Set();
+for (const item of batch.items) {
+  assert.equal(item.generated, true, item.term);
+  assert.equal(a2.find(word => word.id === item.id).imagePath, 'assets/vocab-images/' + item.file, item.term);
+  const png = fs.readFileSync(path.join(root, 'assets/vocab-images', item.file));
+  imageHashes.add(crypto.createHash('sha256').update(png).digest('hex'));
+  assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', item.term);
+  assert.equal(png.readUInt32BE(16), png.readUInt32BE(20), item.term + ' must be square');
+  assert.ok(png.readUInt32BE(16) >= 512, item.term);
+}
+assert.equal(imageHashes.size, 50, 'Each vocabulary image must be independent');
+assert.equal(a2.filter(word => word.imagePath && fs.existsSync(path.join(root, word.imagePath))).length, 81);
+console.log('Wordbooks, A2 forms, recall clues, progress and 50 new image bindings: passed');

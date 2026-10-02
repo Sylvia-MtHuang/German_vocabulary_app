@@ -61,3 +61,7 @@ This makes it easy to test new versions without deleting old images.
 Generated with the built-in imagegen tool. Asset: `assets/vocab-images/das-angebot-v2.png`, shared by A1 and A2.
 
 Prompt: Square photorealistic vocabulary memory image for das Angebot (offer / special offer). A large vivid green starburst promotion placard bearing only a crisp white % symbol dominates a neutral shop-counter display. Three small ivory ceramic mugs are secondary merchandise. Warm gray studio backdrop, soft light, tactile paper and real shadows. Remove all boxes, packaging and gift imagery. Green appears on the core placard only. No words, prices, branding, watermark, cartoon or busy background. The % symbol is a deliberate exception to the no-label guideline to make the offer concept clear at thumbnail size.
+
+## A2 batch: 50 new images
+
+The built-in imagegen tool generated one independent square photograph for each of 50 previously unmapped A2 nouns. Exact prompts, vocabulary IDs, colors and workspace filenames are recorded in [a2-image-prompts.json](assets/vocab-images/a2-image-prompts.json). The batch adds 20 blue masculine, 20 pink feminine and 10 green neuter images. Local review gallery: [tests/a2-images.html](tests/a2-images.html).

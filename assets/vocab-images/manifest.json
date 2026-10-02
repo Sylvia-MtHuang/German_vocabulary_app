@@ -62,5 +62,205 @@
   "der-rabatt.png",
   "die-groesse.png",
   "bequem.png",
-  "praktisch.png"
+  "praktisch.png",
+  {
+    "id": "der-apfel",
+    "file": "a2-der-apfel.png"
+  },
+  {
+    "id": "der-bahnhof",
+    "file": "a2-der-bahnhof.png"
+  },
+  {
+    "id": "der-balkon",
+    "file": "a2-der-balkon.png"
+  },
+  {
+    "id": "der-baum",
+    "file": "a2-der-baum.png"
+  },
+  {
+    "id": "der-berg",
+    "file": "a2-der-berg.png"
+  },
+  {
+    "id": "der-brief",
+    "file": "a2-der-brief.png"
+  },
+  {
+    "id": "der-fisch",
+    "file": "a2-der-fisch.png"
+  },
+  {
+    "id": "der-fuss",
+    "file": "a2-der-fuss.png"
+  },
+  {
+    "id": "der-garten",
+    "file": "a2-der-garten.png"
+  },
+  {
+    "id": "der-hund",
+    "file": "a2-der-hund.png"
+  },
+  {
+    "id": "der-kuehlschrank",
+    "file": "a2-der-kuehlschrank.png"
+  },
+  {
+    "id": "der-loeffel",
+    "file": "a2-der-loeffel.png"
+  },
+  {
+    "id": "der-schirm",
+    "file": "a2-der-schirm.png"
+  },
+  {
+    "id": "der-schuh",
+    "file": "a2-der-schuh.png"
+  },
+  {
+    "id": "der-stuhl",
+    "file": "a2-der-stuhl.png"
+  },
+  {
+    "id": "der-teller",
+    "file": "a2-der-teller.png"
+  },
+  {
+    "id": "der-tisch",
+    "file": "a2-der-tisch.png"
+  },
+  {
+    "id": "der-zug",
+    "file": "a2-der-zug.png"
+  },
+  {
+    "id": "der-koffer",
+    "file": "a2-der-koffer.png"
+  },
+  {
+    "id": "der-kuchen",
+    "file": "a2-der-kuchen.png"
+  },
+  {
+    "id": "die-blume",
+    "file": "a2-die-blume.png"
+  },
+  {
+    "id": "die-brille",
+    "file": "a2-die-brille-v2.png"
+  },
+  {
+    "id": "die-flasche",
+    "file": "a2-die-flasche.png"
+  },
+  {
+    "id": "die-gabel",
+    "file": "a2-die-gabel.png"
+  },
+  {
+    "id": "die-jacke",
+    "file": "a2-die-jacke.png"
+  },
+  {
+    "id": "die-katze",
+    "file": "a2-die-katze.png"
+  },
+  {
+    "id": "die-kueche",
+    "file": "a2-die-kueche.png"
+  },
+  {
+    "id": "die-lampe",
+    "file": "a2-die-lampe.png"
+  },
+  {
+    "id": "die-milch",
+    "file": "a2-die-milch.png"
+  },
+  {
+    "id": "die-schere",
+    "file": "a2-die-schere.png"
+  },
+  {
+    "id": "die-tasche",
+    "file": "a2-die-tasche.png"
+  },
+  {
+    "id": "die-tasse",
+    "file": "a2-die-tasse.png"
+  },
+  {
+    "id": "die-tuer",
+    "file": "a2-die-tuer.png"
+  },
+  {
+    "id": "die-uhr",
+    "file": "a2-die-uhr.png"
+  },
+  {
+    "id": "die-wolke",
+    "file": "a2-die-wolke.png"
+  },
+  {
+    "id": "die-banane",
+    "file": "a2-die-banane.png"
+  },
+  {
+    "id": "die-baeckerei",
+    "file": "a2-die-baeckerei.png"
+  },
+  {
+    "id": "die-dusche",
+    "file": "a2-die-dusche.png"
+  },
+  {
+    "id": "die-kartoffel",
+    "file": "a2-die-kartoffel.png"
+  },
+  {
+    "id": "die-zitrone",
+    "file": "a2-die-zitrone.png"
+  },
+  {
+    "id": "das-auto",
+    "file": "a2-das-auto.png"
+  },
+  {
+    "id": "das-bett",
+    "file": "a2-das-bett.png"
+  },
+  {
+    "id": "das-brot",
+    "file": "a2-das-brot.png"
+  },
+  {
+    "id": "das-ei",
+    "file": "a2-das-ei.png"
+  },
+  {
+    "id": "das-fahrrad",
+    "file": "a2-das-fahrrad.png"
+  },
+  {
+    "id": "das-fenster",
+    "file": "a2-das-fenster.png"
+  },
+  {
+    "id": "das-handy",
+    "file": "a2-das-handy.png"
+  },
+  {
+    "id": "das-haus",
+    "file": "a2-das-haus.png"
+  },
+  {
+    "id": "das-hemd",
+    "file": "a2-das-hemd.png"
+  },
+  {
+    "id": "das-sofa",
+    "file": "a2-das-sofa.png"
+  }
 ]
