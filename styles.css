@@ -34,6 +34,7 @@ html {
 
 body {
   min-height: 100vh;
+  min-height: 100svh;
   margin: 0;
   background:
     linear-gradient(180deg, var(--page-top) 0%, #f5faf8 5%, rgba(232, 244, 240, 0.92) 17%, rgba(247, 248, 251, 0.98) 48%, rgba(244, 236, 226, 0.86) 100%),
@@ -54,6 +55,7 @@ button {
 .app-shell {
   width: min(1120px, calc(100% - 32px));
   min-height: 100vh;
+  min-height: 100svh;
   margin: 0 auto;
   padding: calc(32px + env(safe-area-inset-top)) 0 calc(32px + env(safe-area-inset-bottom));
   display: grid;
@@ -85,7 +87,7 @@ p {
 
 h1 {
   margin-bottom: 0;
-  font-size: clamp(1.65rem, 4vw, 2.8rem);
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
   line-height: 1.08;
   letter-spacing: 0;
 }
@@ -98,6 +100,7 @@ h2 {
 }
 
 .stats {
+  flex-shrink: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(76px, 1fr));
   gap: 10px;
@@ -129,6 +132,8 @@ h2 {
 .study-view {
   display: grid;
   place-items: center;
+  min-width: 0;
+  min-height: 0;
 }
 
 .panel,
@@ -214,6 +219,8 @@ h2 {
 .primary-button,
 .choice-button,
 .answer-button {
+  min-width: 0;
+  padding: 10px 12px;
   min-height: 48px;
   border: 0;
   border-radius: 14px;
@@ -253,11 +260,20 @@ h2 {
 }
 
 .study-view {
-  align-content: center;
+  grid-template-rows: auto minmax(0, 1fr);
+  align-content: stretch;
+  gap: 12px;
+  padding-bottom: 28px;
+}
+
+body.is-studying .app-shell {
+  height: 100vh;
+  height: 100svh;
+  min-height: 420px;
+  grid-template-rows: auto minmax(0, 1fr);
+  padding-top: calc(20px + env(safe-area-inset-top));
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
   gap: 16px;
-  --study-card-height: 640px;
-  --study-card-height: clamp(520px, calc(100vh - 180px), 720px);
-  --study-card-height: clamp(520px, calc(100svh - 180px), 720px);
 }
 
 .session-strip {
@@ -308,9 +324,10 @@ h2 {
   --swipe-intensity: 0;
   position: relative;
   isolation: isolate;
-  height: var(--study-card-height);
-  min-height: var(--study-card-height);
-  max-height: var(--study-card-height);
+  container-type: size;
+  height: 100%;
+  min-height: 0;
+  max-height: 760px;
 }
 
 .card-stack::before,
@@ -340,10 +357,9 @@ h2 {
 
 .word-card {
   width: 100%;
-  height: var(--study-card-height);
-  min-height: var(--study-card-height);
-  max-height: var(--study-card-height);
-  padding: clamp(22px, 5vw, 42px);
+  height: 100%;
+  min-height: 0;
+  padding: clamp(18px, 2.5vw, 28px);
   border-radius: 30px;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto auto;
@@ -363,9 +379,8 @@ h2 {
 .next-card-preview {
   position: absolute;
   inset: 0;
-  height: var(--study-card-height);
-  min-height: var(--study-card-height);
-  max-height: var(--study-card-height);
+  height: 100%;
+  min-height: 0;
   z-index: 1;
   pointer-events: none;
   opacity: calc(0.48 + var(--swipe-intensity) * 0.5);
@@ -383,10 +398,11 @@ h2 {
 }
 
 .next-card-preview .preview-content {
-  align-self: center;
+  align-self: stretch;
 }
 
 .next-card-preview .feedback {
+  overflow-wrap: anywhere;
   visibility: hidden;
 }
 
@@ -479,14 +495,23 @@ h2 {
 .card-content {
   align-self: stretch;
   min-height: 0;
+  min-width: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(25, 32, 42, 0.25) transparent;
+  touch-action: pan-y;
+  overflow-wrap: anywhere;
 }
 
-.card-content::-webkit-scrollbar {
-  display: none;
+.card-content::-webkit-scrollbar { width: 6px; }
+.card-content::-webkit-scrollbar-thumb {
+  background: rgba(25, 32, 42, 0.25);
+  border-radius: 999px;
 }
+.learn-details { min-width: 0; }
+.learn-details > :last-child { margin-bottom: 0; }
+.feedback:empty { display: none; }
 
 .vocab-figure {
   margin: 0 0 20px;
@@ -512,13 +537,16 @@ h2 {
 }
 
 .word {
-  font-size: clamp(2.6rem, 8vw, 5.4rem);
-  line-height: 1;
+  min-width: 0;
+  max-width: 100%;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.1;
   font-weight: 820;
   letter-spacing: 0;
 }
 
 .speak-button {
+  flex-shrink: 0;
   width: 48px;
   height: 48px;
   border: 0;
@@ -622,7 +650,8 @@ h2 {
 
 .quiz-word {
   margin-bottom: 18px;
-  font-size: clamp(2.2rem, 7vw, 4.6rem);
+  max-width: 100%;
+  font-size: clamp(1.9rem, 4vw, 3.3rem);
   line-height: 1.05;
   font-weight: 810;
 }
@@ -772,7 +801,7 @@ h2 {
 @media (max-width: 720px) {
   body.is-studying .app-shell {
     width: min(100% - 16px, 680px);
-    min-height: 100svh;
+    min-height: 360px;
     padding: calc(8px + env(safe-area-inset-top)) 0 calc(10px + env(safe-area-inset-bottom));
     grid-template-rows: 1fr;
     gap: 0;
@@ -783,10 +812,8 @@ h2 {
   }
 
   body.is-studying .study-view {
-    align-content: start;
     gap: 8px;
-    --study-card-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 62px);
-    --study-card-height: calc(100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 62px);
+    padding-bottom: 24px;
   }
 
   body.is-studying .session-strip {
@@ -953,4 +980,99 @@ h2 {
   body.is-studying .example span {
     font-size: 0.84rem;
   }
+}
+
+/* Adapt the layout to available width and card height, including short laptops. */
+.actions:has(> :last-child:nth-child(2)) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.actions > :only-child { grid-column: 1 / -1; }
+button:focus-visible {
+  outline: 3px solid var(--accent-dark);
+  outline-offset: 3px;
+}
+
+@media (min-width: 961px) {
+  .intro-panel {
+    width: min(1040px, 100%);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 36px;
+    padding: 36px;
+  }
+  .wordbook-section { margin-bottom: 0; }
+  .session-settings {
+    min-width: 0;
+    border-left: 1px solid var(--line);
+    padding-left: 36px;
+  }
+  .session-strip, .card-stack { width: min(1040px, 100%); }
+  .word-card { gap: 12px; }
+  .learn-content:has(.vocab-figure) {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.5fr);
+    align-items: start;
+    gap: 28px;
+  }
+  .vocab-figure { margin: 0; }
+  .vocab-image { width: min(100%, 260px); }
+  .meaning { margin-bottom: 18px; font-size: 1.15rem; }
+  .example strong { font-size: 1.2rem; }
+}
+
+@media (min-width: 721px) and (max-width: 960px) {
+  .topbar { align-items: flex-start; flex-direction: column; }
+  .stats { width: 100%; }
+  body.is-studying .topbar { flex-direction: row; align-items: center; }
+  body.is-studying h1 { font-size: 1.7rem; }
+  body.is-studying .stats { width: auto; }
+  .vocab-image { width: min(100%, 190px); }
+  .word { font-size: 2.4rem; }
+  .learn-content:has(.vocab-figure) {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+  }
+  .vocab-figure { margin: 0; }
+  .example strong { font-size: 1.1rem; }
+}
+
+@container (min-width: 700px) and (max-height: 580px) {
+  .word-card { padding: 20px 24px; gap: 10px; }
+  .word { font-size: 2.5rem; }
+  .word-line { gap: 8px; margin-bottom: 8px; }
+  .meaning { margin-bottom: 12px; font-size: 1rem; }
+  .plural-form { margin: -4px 0 10px; font-size: 0.85rem; }
+  .memory-aid { margin-bottom: 10px; padding: 9px 12px; }
+  .memory-title { margin-bottom: 4px; }
+  .memory-parts { gap: 3px; }
+  .memory-part, .memory-note { font-size: 0.88rem; }
+  .example { padding-top: 10px; }
+  .example strong { font-size: 1.05rem; margin-bottom: 4px; line-height: 1.35; }
+  .example span { font-size: 0.95rem; line-height: 1.4; }
+  .vocab-image { width: min(100%, 220px); }
+}
+
+@media (max-height: 620px) and (min-width: 721px) {
+  body.is-studying .topbar { display: none; }
+  body.is-studying .app-shell {
+    grid-template-rows: minmax(0, 1fr);
+    padding-top: calc(10px + env(safe-area-inset-top));
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    gap: 0;
+  }
+  body.is-studying .word-card { padding: 16px 22px; gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 960px) and (max-height: 420px) {
+  body.is-studying .app-shell { min-height: 360px; }
 }

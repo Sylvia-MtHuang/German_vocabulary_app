@@ -146,3 +146,9 @@ die = red/pink
 das = green
 plural = yellow
 ```
+
+## Responsive Layout
+
+The desktop setup uses two columns. Learning cards place images beside word details and use the space left below the header and session controls. Card height and compact typography adapt to the available viewport, including short laptop windows. Phone layouts remain stacked; long content can scroll inside the card while rating buttons stay visible. Scrollable content accepts touch scrolling without starting a card swipe.
+
+Run the local server, then open `http://127.0.0.1:8780/tests/responsive.html` and click **Run layout checks**. The checks use the actual app renderers and both wordbooks without saving learning progress or playing audio. They cover ten viewport sizes, every desktop learning card and missed-card state, long review questions, and completion. Desktop checks reject both page scrolling and card-content scrolling. Mobile setup pages may scroll naturally.

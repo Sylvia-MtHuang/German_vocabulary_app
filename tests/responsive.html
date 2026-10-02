@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Responsive layout regression checks</title>
+<style>body{font:16px system-ui;margin:24px}button{padding:12px}pre{white-space:pre-wrap}iframe{display:block;border:1px solid #ccc;margin-top:16px}</style>
+<h1>Responsive layout regression checks</h1>
+<p>Uses the real app templates and both wordbooks. Does not save learning progress or play audio. Desktop checks require all content to fit without scrolling; smaller screens must keep controls visible and avoid horizontal overflow.</p>
+<button id="run">Run layout checks</button>
+<pre id="results" role="status">Ready</pre>
+<iframe title="App under test"></iframe>
+<script>
+const sizes = [[1920,1080],[1440,900],[1366,768],[1280,720],[1024,768],[1280,600],[844,390],[768,1024],[390,844],[320,568]];
+const frame = document.querySelector('iframe');
+const output = document.querySelector('#results');
+const run = document.querySelector('#run');
+const bridge = `
+window.layoutQA = {
+  load(text, manifest) { IMAGE_PATHS = parseImageManifest(manifest); WORDS = parseVocabulary(text); return WORDS; },
+  setup() { document.body.classList.remove('is-studying'); setupView.classList.remove('hidden'); studyView.classList.add('hidden'); },
+  study(word, view) {
+    document.body.classList.add('is-studying'); setupView.classList.add('hidden'); studyView.classList.remove('hidden');
+    card.className = 'word-card neutral'; cardStack.className = 'card-stack neutral'; nextCardPreview.classList.add('is-empty');
+    feedback.textContent = ''; actions.innerHTML = ''; currentItem = {word, phase: 'quiz'};
+    if (view === 'learn' || view === 'missed') {
+      modePill.textContent = 'Learn'; renderLearn(word, {autoSpeak: false, ...(view === 'missed' ? {actionsHtml: '<button class="answer-button">Back to question</button><button class="answer-button primary">Continue</button>'} : {})});
+    } else if (view === 'meaning') { renderMeaningQuiz(word); }
+    else if (view === 'article') { renderArticleQuiz(word); }
+    else if (view === 'fill') { renderFillQuiz(word); }
+    else if (view === 'done') { renderDone(); }
+    if (view === 'missed') feedback.textContent = 'Review the card, then continue.';
+  }
+};`;
+run.onclick = async () => {
+ run.disabled = true;
+ try {
+  const [html, source, manifest, books] = await Promise.all([
+   fetch('../index.html').then(r=>r.text()), fetch('../app.js').then(r=>r.text()),
+   fetch('../assets/vocab-images/manifest.json').then(r=>r.json()), fetch('../wordbooks/manifest.json').then(r=>r.json())
+  ]);
+  const texts = await Promise.all(books.map(b=>fetch('../'+b.url).then(r=>r.text())));
+  // Omit startup side effects, including progress storage, in this isolated test document.
+  const testSource = source.replace(/let state = loadState\(\);/, 'let state = createDefaultState();')
+    .replace(/loadVoices\(\);\s*syncCountPicker\(\);\s*loadVocabulary\(\);\s*$/, 'syncCountPicker();');
+  const loaded = new Promise(resolve => frame.onload = resolve);
+  frame.srcdoc = html.replace('<head>', '<head><base href="'+new URL('../',location.href).href+'">')
+   .replace(/<script src="app\.js[^\"]*"><\/script>/, () => '<script>'+testSource+'\n'+bridge+'<\/script>');
+  await loaded;
+  const qa = frame.contentWindow.layoutQA;
+  const doc = frame.contentDocument;
+  const failures = [];
+  const rows = [];
+  let checks = 0;
+  const check = (label, desktop, study) => {
+    checks++;
+    const root = doc.documentElement;
+    const content = doc.querySelector('#cardContent');
+    const width = frame.contentWindow.innerWidth;
+    const height = frame.contentWindow.innerHeight;
+    const issues = [];
+    if (root.scrollWidth > width + 1) issues.push('page horizontal overflow');
+    if (root.scrollHeight > height + 1 && (desktop || study)) issues.push('page vertical overflow');
+    if (study) {
+      if (content.clientHeight < 40) issues.push('content too short');
+      if (content.scrollWidth > content.clientWidth + 1) issues.push('content horizontal overflow');
+      if (desktop && content.scrollHeight > content.clientHeight + 1) issues.push('content needs scrolling ('+content.scrollHeight+'/'+content.clientHeight+')');
+      const controls = [...doc.querySelectorAll('#actions button, .session-strip button')];
+      if (controls.some(el=>el.getBoundingClientRect().bottom > height + 1)) issues.push('controls below viewport');
+    }
+    if (issues.length) failures.push({label,issues});
+  };
+  for (const [width,height] of sizes) {
+    frame.width = width; frame.height = height;
+    await new Promise(requestAnimationFrame);
+    const before = failures.length;
+    qa.setup();
+    check(width+'x'+height+' setup',width>=961,false);
+    for (let book=0;book<books.length;book++) {
+      const words = qa.load(texts[book],manifest);
+      // Exercise every learning card and missed-card state, then all review formats for long entries.
+      const sample = width >= 961 ? words : [...words].sort((a,b)=>(b.word.length+b.example.length)-(a.word.length+a.example.length)).slice(0,8);
+      for (const word of sample) {
+        for (const view of ['learn','missed']) {
+          qa.study(word,view);
+          check(width+'x'+height+' '+books[book].id+' '+word.word+' '+view,width>=961,true);
+        }
+      }
+      for (const word of [...words].sort((a,b)=>b.word.length-a.word.length).slice(0,5)) {
+        for (const view of ['meaning','article','fill','done']) {
+          qa.study(word,view);
+          check(width+'x'+height+' '+word.word+' '+view,width>=961,true);
+        }
+      }
+    }
+    rows.push(width+'x'+height+': '+(failures.length-before)+' failures');
+    output.textContent = rows.join('\n')+'\n'+checks+' checks so far';
+    await new Promise(requestAnimationFrame);
+  }
+  output.textContent = rows.join('\n')+'\n'+checks+' checks; '+failures.length+' failures\n'+JSON.stringify(failures.slice(0,30),null,2);
+ } catch(error) { output.textContent = error.stack; }
+ run.disabled = false;
+};
+</script>
+</html>

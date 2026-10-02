@@ -1126,7 +1126,9 @@ function renderLearn(word, options = {}) {
     <button class="answer-button high" type="button" data-rating="2">Know it</button>
   `;
   cardContent.innerHTML = `
+    <div class="learn-content">
     ${imageMarkup(word)}
+    <div class="learn-details">
     <div class="word-line">
       <div class="word">${displayWord(word)}</div>
       <button class="speak-button" type="button" aria-label="Play German pronunciation" title="Play German pronunciation">${speakerIcon()}</button>
@@ -1138,7 +1140,10 @@ function renderLearn(word, options = {}) {
       <strong>${word.example}</strong>
       <span>${word.translation}</span>
     </div>
+    </div>
+    </div>
   `;
+  cardContent.scrollTop = 0;
   cardContent.querySelector(".speak-button").addEventListener("click", () => speak(word.word));
   if (autoSpeak) speak(word.word, { repeat: 3, announceErrors: false });
   actions.innerHTML = actionsHtml;
@@ -1211,7 +1216,9 @@ function previewMarkup(item) {
         <span class="mode-pill">Learn</span>
       </div>
       <div class="card-content preview-content">
+        <div class="learn-content">
         ${imageMarkup(word)}
+        <div class="learn-details">
         <div class="word-line">
           <div class="word">${displayWord(word)}</div>
           <button class="speak-button" type="button" tabindex="-1" aria-hidden="true">${speakerIcon()}</button>
@@ -1222,6 +1229,8 @@ function previewMarkup(item) {
         <div class="example">
           <strong>${word.example}</strong>
           <span>${word.translation}</span>
+        </div>
+        </div>
         </div>
       </div>
       <div class="feedback"></div>
@@ -1464,6 +1473,8 @@ function beginSwipe(event) {
   if (!canSwipeCurrentCard()) return;
   if (event.button !== undefined && event.button !== 0) return;
   if (isInteractiveTarget(event.target)) return;
+  // Allow overflowing content to scroll without capturing its pointer for a swipe.
+  if (cardContent.contains(event.target) && cardContent.scrollHeight > cardContent.clientHeight + 1) return;
 
   swipeState = {
     pointerId: event.pointerId,

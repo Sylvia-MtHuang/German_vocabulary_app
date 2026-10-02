@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles.css?v=20260725-plurals">
+    <link rel="stylesheet" href="styles.css?v=20261002-responsive">
   </head>
   <body>
     <main class="app-shell">
@@ -46,16 +46,18 @@
             <div class="wordbook-picker" id="wordbookPicker" role="radiogroup" aria-label="Choose wordbook"></div>
             <p class="wordbook-summary" id="wordbookSummary">Loading wordbooks...</p>
           </div>
-          <p class="eyebrow">New session</p>
-          <h2 id="setupTitle">Choose how many words to study</h2>
-          <div class="count-picker" id="countPicker" role="radiogroup" aria-label="Choose word count">
-            <button class="count-option is-selected" type="button" data-count="10" role="radio" aria-checked="true">10</button>
-            <button class="count-option" type="button" data-count="20" role="radio" aria-checked="false">20</button>
-            <button class="count-option" type="button" data-count="30" role="radio" aria-checked="false">30</button>
-            <button class="count-option" type="button" data-count="40" role="radio" aria-checked="false">40</button>
-            <button class="count-option" type="button" data-count="50" role="radio" aria-checked="false">50</button>
+          <div class="session-settings">
+            <p class="eyebrow">New session</p>
+            <h2 id="setupTitle">Choose how many words to study</h2>
+            <div class="count-picker" id="countPicker" role="radiogroup" aria-label="Choose word count">
+              <button class="count-option is-selected" type="button" data-count="10" role="radio" aria-checked="true">10</button>
+              <button class="count-option" type="button" data-count="20" role="radio" aria-checked="false">20</button>
+              <button class="count-option" type="button" data-count="30" role="radio" aria-checked="false">30</button>
+              <button class="count-option" type="button" data-count="40" role="radio" aria-checked="false">40</button>
+              <button class="count-option" type="button" data-count="50" role="radio" aria-checked="false">50</button>
+            </div>
+            <button id="startButton" class="primary-button" type="button">Start studying</button>
           </div>
-          <button id="startButton" class="primary-button" type="button">Start studying</button>
         </div>
       </section>
 
@@ -88,6 +90,6 @@
       </section>
     </main>
 
-    <script src="app.js?v=20260725-plurals"></script>
+    <script src="app.js?v=20261002-responsive"></script>
   </body>
 </html>
