@@ -37,6 +37,14 @@ The home screen lets you choose a wordbook before starting a session. Learning p
 
 The independent A2 wordbook covers the alphabetical section and thematic groups of the [official Goethe-Zertifikat A2 wordlist](https://www.goethe.de/pro/relaunch/prf/vi/Goethe-Zertifikat_A2_Wortliste.pdf), including words shared with A1. Its 1,498 cards split gender variants, meanings and useful time/date phrases. The official list describes approximately 1,300 lexical units; card counts use a different convention. Short everyday German examples and English translations are independently written or adapted from our existing A1 cards; official example sentences are not reproduced.
 
+## English and Chinese
+
+The top-right English / 中文 buttons switch the interface, meanings, example translations and memory hints. The browser remembers the language choice. Switching during study preserves the current card, answer input, question choices and progress. German words and sentences stay in German.
+
+Chinese learning text is stored in `wordbooks/zh-CN.json`, keyed by the original English text. Context-specific meanings use `German word | English meaning` keys, for example `Rücken | back`. When editing or adding a vocabulary entry, add its Chinese meaning and example translation to this file as well; unknown text falls back to English. Translation services are not called by the app.
+
+Run `node tests/content-language.test.cjs` for coverage and meaning-choice checks. Open `tests/language.html` for language-switching checks and `tests/responsive.html` for desktop and mobile layout checks. These browser tests use isolated storage.
+
 ## Replace Or Create A Vocabulary List
 
 The app reads vocabulary from:
@@ -67,7 +75,7 @@ der Bahnhof | train station | Der Bahnhof ist nah. | The train station is near. 
 die Terrasse | terrace | Die Terrasse ist gross. | The terrace is large. | | die Terrassen
 ```
 
-If the sixth field does not look like an image path or URL, the app treats it as the plural form. Plurals are shown in small text under the meaning on noun learning cards. Use `(Pl.)` after plural-only nouns and `(Sg.)` after singular-only nouns. If an example uses an inflected or separated form that cannot be blanked, word-recall questions use the English meaning as the clue.
+If the sixth field does not look like an image path or URL, the app treats it as the plural form. Plurals are shown in small text under the meaning on noun learning cards. Use `(Pl.)` after plural-only nouns and `(Sg.)` after singular-only nouns. If an example uses an inflected or separated form that cannot be blanked, word-recall questions use the meaning in the selected language as the clue.
 
 If meanings are provided, the app enables meaning-choice review questions. If the file only contains German words, the app uses article and fill-in-the-word review questions.
 

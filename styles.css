@@ -1080,3 +1080,59 @@ button:focus-visible {
 .wordbook-option:last-child:nth-child(odd) {
   grid-column: 1 / -1;
 }
+
+
+/* Keep language controls available without taking space from desktop cards. */
+.app-shell { position: relative; }
+.topbar { padding-right: 148px; }
+
+.language-switcher {
+  position: absolute;
+  top: calc(32px + env(safe-area-inset-top));
+  right: 0;
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+body.is-studying .language-switcher {
+  top: calc(20px + env(safe-area-inset-top));
+}
+
+.language-switcher button {
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.language-switcher button:hover { background: var(--neutral-card); }
+.language-switcher button[aria-pressed="true"] {
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .app-shell { grid-template-rows: auto auto minmax(0, 1fr); }
+  .topbar { padding-right: 0; }
+  .language-switcher { position: static; justify-self: end; }
+  .language-switcher button { min-height: 44px; }
+  body.is-studying .app-shell {
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 8px;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 721px) {
+  body.is-studying .language-switcher {
+    top: calc(10px + env(safe-area-inset-top));
+  }
+  body.is-studying .session-strip { padding-right: 148px; }
+}

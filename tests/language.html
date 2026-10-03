@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Language switching checks</title>
+<style>body{font:16px system-ui;margin:24px}button{padding:12px}pre{white-space:pre-wrap}iframe{width:1280px;height:720px;display:block;border:1px solid #ccc;margin-top:16px}</style>
+<h1>Language switching checks</h1>
+<p>Tests the real app in an isolated frame. Learning records and language preferences stay in test storage.</p>
+<button id="run">Run language checks</button>
+<pre id="results" role="status">Ready</pre>
+<iframe title="App under test"></iframe>
+<script>
+const frame=document.querySelector('iframe'),output=document.querySelector('#results'),run=document.querySelector('#run');
+const stored=new Map();
+const bridge=`
+window.languageQA={
+ init(books,manifest,text,translations){ CHINESE_VOCABULARY=translations; WORDBOOKS=books; IMAGE_PATHS=parseImageManifest(manifest); WORDS=parseVocabulary(text); state.selectedWordbookId='goethe-a2'; syncWordbookPicker(); setLanguage(uiLanguage); },
+ study(view,id='die-bank-2'){ clearAutoAdvance(); stopSpeech(); const word=WORDS.find(w=>w.id===id); session=[{word:WORDS[0],phase:'quiz',quizType:'meaning'}]; currentItem={word,phase:view==='learn'?'learn':'quiz',quizType:view==='meaning'?'meaning':'fill'}; locked=false; setupView.classList.add('hidden'); studyView.classList.remove('hidden'); document.body.classList.add('is-studying'); renderNextCardPreview(); updateProgress(); if(view==='learn')renderLearn(word,{autoSpeak:false}); else if(view==='meaning')renderMeaningQuiz(word);else renderFillQuiz(word); },
+ miss(){checkQuiz(false)}, review(){showMissedWordCard()}, back(){restoreMissedQuestion()}, done(){renderDone()},
+ snapshot(){return JSON.stringify({state,session,currentItem,locked,autoAdvanceTimer,speechRequestId,missedReviewContext})}
+};`;
+run.onclick=async()=>{
+ run.disabled=true;let checks=0;
+ const check=(ok,message)=>{checks++;if(!ok)throw Error(message)};
+ try{
+  const [html,source,books,manifest,text,translations]=await Promise.all([
+   fetch('../index.html',{cache:'no-store'}).then(r=>r.text()),fetch('../app.js',{cache:'no-store'}).then(r=>r.text()),
+   fetch('../wordbooks/manifest.json',{cache:'no-store'}).then(r=>r.json()),fetch('../assets/vocab-images/manifest.json',{cache:'no-store'}).then(r=>r.json()),fetch('../wordbooks/goethe-a2.txt',{cache:'no-store'}).then(r=>r.text()),fetch('../wordbooks/zh-CN.json',{cache:'no-store'}).then(r=>r.json())
+  ]);
+  const testSource=source.replace(/let state = loadState\(\);/,'let state = createDefaultState();')
+   .replace(/\blocalStorage\b/g,'window.testStorage')
+   .replace(/loadVoices\(\);\s*syncCountPicker\(\);\s*loadVocabulary\(\);\s*$/,'syncCountPicker();');
+  const load=async()=>{
+   const loaded=new Promise(resolve=>frame.onload=resolve);
+   const storage='<script>window.testStorage=parent.testStorage;<\/script>';
+   frame.srcdoc=html.replace('<head>','<head><base href="'+new URL('../',location.href).href+'">'+storage)
+    .replace(/<script src="app\.js[^\"]*"><\/script>/,()=>'<script>'+testSource+'\n'+bridge+'<\/script>');
+   await loaded;
+   check(Boolean(frame.contentDocument.querySelector('[data-language="zh"]')),'Chinese language switcher is missing');
+   frame.contentWindow.languageQA.init(books,manifest,text,translations);
+  };
+  window.testStorage={getItem:key=>stored.get(key)||null,setItem:(key,value)=>stored.set(key,value)};
+  await load();
+  let doc=frame.contentDocument,qa=frame.contentWindow.languageQA;
+  const switchTo=lang=>doc.querySelector('[data-language="'+lang+'"]').click();
+  check(doc.documentElement.lang==='en','English should be the default');
+  qa.study('meaning');switchTo('zh');
+  const choices=[...doc.querySelectorAll('#cardContent .choice-button')];const answers=choices.map(button=>button.dataset.answer);const questionState=qa.snapshot();
+  check(choices.every(button=>/[\u3400-\u9fff]/u.test(button.textContent)),'All meaning choices must show Chinese');
+  switchTo('en');
+  check(choices.every(button=>button.textContent===button.dataset.answer),'English choices must be restored');
+  check(qa.snapshot()===questionState&&choices.every((button,index)=>doc.querySelectorAll('#cardContent .choice-button')[index]===button),'Choice order, nodes and question must persist');
+  switchTo('zh');choices.find(button=>button.dataset.answer==='bench').click();
+  check(doc.querySelector('#feedback').textContent==='回答正确','Translated choices must still mark the canonical English answer correctly');
+  qa.study('meaning');qa.miss();
+  check(doc.querySelector('#feedback').textContent==='正确答案：长椅','Wrong meaning answer must show the Chinese meaning');
+  switchTo('en');
+  check(doc.querySelector('#feedback').textContent==='Correct answer: bench','Wrong meaning answer must restore the English meaning');
+  switchTo('zh');
+  qa.study('learn','die-bank');
+  check(doc.querySelector('#cardContent .meaning').textContent==='银行','Bank as bank must retain its own meaning');
+  switchTo('en');
+  qa.study('learn');const word=doc.querySelector('.word').textContent,example=doc.querySelector('.example strong').textContent,learnState=qa.snapshot();
+  switchTo('zh');
+  check(doc.documentElement.lang==='zh-CN','Chinese page language must be set');
+  check(doc.querySelector('#cardContent .meaning').textContent==='长椅','Chinese meaning must use the bench sense of Bank');
+  check(doc.querySelector('#cardContent .example span').textContent===translations['We sit on a bench in the park.'],'Example translation must switch to Chinese');
+  check(doc.querySelector('#cardContent [data-content-language]').lang==='zh-CN','Chinese content language must be exposed accessibly');
+  check(doc.querySelector('[data-rating="0"]').textContent==='不认识','Learning controls must switch to Chinese');
+  check(doc.querySelector('.word').textContent===word&&doc.querySelector('.example strong').textContent===example,'German learning content must stay unchanged');
+  check(qa.snapshot()===learnState,'Switching language must preserve learning state and audio');
+  check(doc.querySelector('[data-language="zh"]').getAttribute('aria-pressed')==='true','Selected language must be exposed accessibly');
+  qa.study('fill');const input=doc.querySelector('.fill-input');input.value='auf der Bank';input.setSelectionRange(4,7);const fillState=qa.snapshot();
+  switchTo('en');
+  check(doc.querySelector('.fill-input')===input&&input.value==='auf der Bank'&&input.selectionStart===4&&input.selectionEnd===7,'Switching must preserve the answer input and selection');
+  check(qa.snapshot()===fillState,'Switching must preserve question and queue');
+  check(doc.querySelector('#cardContent .example span').textContent==='We sit on a bench in the park.','Fill hint must switch back to English');
+  qa.miss();const missedState=qa.snapshot();switchTo('zh');
+  check(doc.querySelector('#feedback').textContent.startsWith('正确答案：'),'Wrong-answer feedback must switch language');
+  check(qa.snapshot()===missedState,'Switching must preserve wrong-answer review state');
+  qa.review();switchTo('en');qa.back();
+  check(doc.querySelector('#feedback').textContent.startsWith('Correct answer:'),'Returning to a missed question must use the current language');
+  qa.done();switchTo('zh');
+  check(doc.querySelector('#againButton').textContent==='再学一组','Completion actions must switch language');
+  await load();doc=frame.contentDocument;qa=frame.contentWindow.languageQA;
+  check(doc.documentElement.lang==='zh-CN','Language preference must survive a reload');
+  doc.querySelector('[data-language="en"]').click();await load();
+  check(frame.contentDocument.documentElement.lang==='en','Switching back to English must also survive a reload');
+  output.textContent=checks+' language checks passed';
+ }catch(error){output.textContent='FAILED after '+checks+' checks: '+error.message}
+ run.disabled=false;
+};
+</script>
+</html>

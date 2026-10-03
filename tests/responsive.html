@@ -15,35 +15,37 @@ const output = document.querySelector('#results');
 const run = document.querySelector('#run');
 const bridge = `
 window.layoutQA = {
-  load(text, manifest) { IMAGE_PATHS = parseImageManifest(manifest); WORDS = parseVocabulary(text); return WORDS; },
+  language(value) { setLanguage(value); },
+  load(text, manifest, translations) { CHINESE_VOCABULARY = translations; IMAGE_PATHS = parseImageManifest(manifest); WORDS = parseVocabulary(text); return WORDS; },
   setup(books) { WORDBOOKS = books; syncWordbookPicker(); document.body.classList.remove('is-studying'); setupView.classList.remove('hidden'); studyView.classList.add('hidden'); },
   study(word, view) {
     document.body.classList.add('is-studying'); setupView.classList.add('hidden'); studyView.classList.remove('hidden');
     card.className = 'word-card neutral'; cardStack.className = 'card-stack neutral'; nextCardPreview.classList.add('is-empty');
-    feedback.textContent = ''; actions.innerHTML = ''; currentItem = {word, phase: 'quiz'};
+    setText(feedback, ''); actions.innerHTML = ''; currentItem = {word, phase: 'quiz'};
     if (view === 'learn' || view === 'missed') {
-      modePill.textContent = 'Learn'; renderLearn(word, {autoSpeak: false, ...(view === 'missed' ? {actionsHtml: '<button class="answer-button">Back to question</button><button class="answer-button primary">Continue</button>'} : {})});
+      setText(modePill, 'Learn'); renderLearn(word, {autoSpeak: false, ...(view === 'missed' ? {actionsHtml: '<button class="answer-button">Back to question</button><button class="answer-button primary">Continue</button>'} : {})});
     } else if (view === 'meaning') { renderMeaningQuiz(word); }
     else if (view === 'article') { renderArticleQuiz(word); }
     else if (view === 'fill') { renderFillQuiz(word); }
     else if (view === 'done') { renderDone(); }
-    if (view === 'missed') feedback.textContent = 'Review the card, then continue.';
+    if (view === 'missed') setText(feedback, 'Continue');
   }
 };`;
 run.onclick = async () => {
  run.disabled = true;
  try {
-  const [html, source, manifest, books] = await Promise.all([
-   fetch('../index.html').then(r=>r.text()), fetch('../app.js').then(r=>r.text()),
-   fetch('../assets/vocab-images/manifest.json').then(r=>r.json()), fetch('../wordbooks/manifest.json').then(r=>r.json())
+  const [html, source, manifest, books, translations] = await Promise.all([
+   fetch('../index.html',{cache:'no-store'}).then(r=>r.text()), fetch('../app.js',{cache:'no-store'}).then(r=>r.text()),
+   fetch('../assets/vocab-images/manifest.json',{cache:'no-store'}).then(r=>r.json()), fetch('../wordbooks/manifest.json',{cache:'no-store'}).then(r=>r.json()),fetch('../wordbooks/zh-CN.json',{cache:'no-store'}).then(r=>r.json())
   ]);
   const texts = await Promise.all(books.map(b=>fetch('../'+b.url).then(r=>r.text())));
   // Omit startup side effects, including progress storage, in this isolated test document.
   const testSource = source.replace(/let state = loadState\(\);/, 'let state = createDefaultState();')
+    .replace(/\blocalStorage\b/g, 'window.testStorage')
     .replace(/loadVoices\(\);\s*syncCountPicker\(\);\s*loadVocabulary\(\);\s*$/, 'syncCountPicker();');
   const loaded = new Promise(resolve => frame.onload = resolve);
   frame.srcdoc = html.replace('<head>', '<head><base href="'+new URL('../',location.href).href+'">')
-   .replace(/<script src="app\.js[^\"]*"><\/script>/, () => '<script>'+testSource+'\n'+bridge+'<\/script>');
+   .replace(/<script src="app\.js[^\"]*"><\/script>/, () => '<script>window.testStorage={getItem:()=>null,setItem:()=>{}};'+testSource+'\n'+bridge+'<\/script>');
   await loaded;
   const qa = frame.contentWindow.layoutQA;
   const doc = frame.contentDocument;
@@ -57,6 +59,8 @@ run.onclick = async () => {
     const width = frame.contentWindow.innerWidth;
     const height = frame.contentWindow.innerHeight;
     const issues = [];
+    const languageControl = doc.querySelector('#languageSwitcher').getBoundingClientRect();
+    if (languageControl.width < 1 || languageControl.top < 0 || languageControl.right > width + 1 || languageControl.bottom > height) issues.push('language switcher outside viewport');
     if (root.scrollWidth > width + 1) issues.push('page horizontal overflow');
     if (root.scrollHeight > height + 1 && (desktop || study)) issues.push('page vertical overflow');
     if (study) {
@@ -68,32 +72,35 @@ run.onclick = async () => {
     }
     if (issues.length) failures.push({label,issues});
   };
+  for (const language of ['en','zh']) {
   for (const [width,height] of sizes) {
     frame.width = width; frame.height = height;
     await new Promise(requestAnimationFrame);
     const before = failures.length;
+    qa.language(language);
     qa.setup(books);
-    check(width+'x'+height+' setup',width>=961,false);
+    check(language+' '+width+'x'+height+' setup',width>=961,false);
     for (let book=0;book<books.length;book++) {
-      const words = qa.load(texts[book],manifest);
+      const words = qa.load(texts[book],manifest,translations);
       // Exercise every learning card and missed-card state, then all review formats for long entries.
-      const sample = width >= 961 ? words : [...words].sort((a,b)=>(b.word.length+b.example.length)-(a.word.length+a.example.length)).slice(0,8);
+      const sample = width >= 961 ? words : [...words].sort((a,b)=>(b.word.length+b.example.length)-(a.word.length+a.example.length)).slice(0,language === 'zh' ? 30 : 8);
       for (const word of sample) {
         for (const view of ['learn','missed']) {
           qa.study(word,view);
-          check(width+'x'+height+' '+books[book].id+' '+word.word+' '+view,width>=961,true);
+          check(language+' '+width+'x'+height+' '+books[book].id+' '+word.word+' '+view,width>=961,true);
         }
       }
       for (const word of [...words].sort((a,b)=>b.word.length-a.word.length).slice(0,5)) {
         for (const view of ['meaning','article','fill','done']) {
           qa.study(word,view);
-          check(width+'x'+height+' '+word.word+' '+view,width>=961,true);
+          check(language+' '+width+'x'+height+' '+word.word+' '+view,width>=961,true);
         }
       }
     }
-    rows.push(width+'x'+height+': '+(failures.length-before)+' failures');
+    rows.push(language+' '+width+'x'+height+': '+(failures.length-before)+' failures');
     output.textContent = rows.join('\n')+'\n'+checks+' checks so far';
     await new Promise(requestAnimationFrame);
+  }
   }
   output.textContent = rows.join('\n')+'\n'+checks+' checks; '+failures.length+' failures\n'+JSON.stringify(failures.slice(0,30),null,2);
  } catch(error) { output.textContent = error.stack; }

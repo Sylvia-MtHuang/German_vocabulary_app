@@ -5,6 +5,144 @@ const IMAGE_MANIFEST_URL = "assets/vocab-images/manifest.json";
 const IMAGE_CACHE_KEY = Date.now();
 let IMAGE_PATHS = new Map();
 let WORDBOOKS = [];
+let CHINESE_VOCABULARY = {};
+
+const UI_LANGUAGE_KEY = "deutsch-memo-ui-language";
+const CHINESE_UI = {
+  "German Vocabulary Flashcards": "德语单词记忆卡",
+  "App overview": "应用概览",
+  "Interface language": "界面语言",
+  "Learning stats": "学习统计",
+  "Mastered": "已掌握",
+  "Due now": "待复习",
+  "Streak": "连续答对",
+  "Words with a dynamic review interval of at least 7 days. A first-pass 'Know it' rating does not count as mastered.": "复习间隔达到至少 7 天的单词。初次学习时选择“认识”不会计为已掌握。",
+  "Previously seen words whose dynamic next review time has arrived.": "已经学过、且到了下次复习时间的单词。",
+  "Current run of correct review answers. Self-ratings on new cards are not counted.": "复习时连续答对的次数。新词的自我评分不计入。",
+  "Wordbook": "词库",
+  "Choose wordbook": "选择词库",
+  "Loading wordbooks...": "正在加载词库…",
+  "New session": "开始新一组",
+  "Choose how many words to study": "选择本次学习的单词数量",
+  "Choose word count": "选择单词数量",
+  "Start studying": "开始学习",
+  "Back to setup": "返回设置",
+  "Session progress": "本次学习进度",
+  "Reset learning history": "重置学习记录",
+  "Learn": "学习",
+  "Review": "复习",
+  "Done": "完成",
+  "Loading wordbook...": "正在加载词库…",
+  "Wordbook missing": "无法加载词库",
+  "Could not load the selected wordbook. Check the wordbook file and refresh.": "无法加载所选词库，请检查词库文件后刷新页面。",
+  "No words found": "词库中没有单词",
+  "{title} is empty or could not be parsed.": "{title}为空或无法读取。",
+  "Could not load {title}.": "无法加载{title}。",
+  "No vocabulary has been loaded yet.": "尚未加载单词，请等待词库加载完成。",
+  "New to me": "不认识",
+  "Almost": "有点印象",
+  "Know it": "认识",
+  "Play German pronunciation": "播放德语发音",
+  "Visual cue for {word}": "{word}的记忆图片",
+  "Word building memory aid": "构词记忆提示",
+  "Word building": "构词记忆",
+  "(pl.)": "（复数）",
+  "plural": "复数",
+  "Choose the correct meaning": "选择正确的释义",
+  "Choose the correct article": "选择正确的冠词",
+  "Fill in the German word": "填写德语单词",
+  "Type the German word": "输入德语单词",
+  "Check": "检查答案",
+  "Recall the word from the learning card.": "回想学习卡片中的单词。",
+  "Write the German word or phrase from the learning card.": "填写学习卡片中的德语单词或短语。",
+  "Correct": "回答正确",
+  "Correct answer: {answer}": "正确答案：{answer}",
+  "Review card": "查看学习卡片",
+  "Continue": "继续",
+  "Back to question": "返回题目",
+  "Speech synthesis is not available in this browser.": "此浏览器不支持语音播放。",
+  "No German voice was found. Install a German language voice in your OS/browser, then reopen the app.": "未找到德语语音。请在系统或浏览器中安装德语语音后，重新打开应用。",
+  "This session is complete. Words answered incorrectly were returned to the queue and practiced again.": "本次学习已完成。答错的单词已重新加入队列，并再次练习。",
+  "Study again": "再学一组",
+  "Choose count": "重新选择数量",
+  "Custom wordbook": "自定义词库",
+  "Your editable vocabulary.txt file.": "你可以编辑的自定义单词列表。",
+  "Goethe-Institut A1 level": "歌德 A1 词库",
+  "Expanded A1 set based on the Goethe A1 wordlist.": "根据歌德 A1 官方词表整理。",
+  "Goethe-Institut A2 level": "歌德 A2 词库",
+  "Complete A2 vocabulary with short everyday examples.": "完整 A2 词表，配有简短日常例句。",
+  "Local custom list": "本地自定义词库",
+  "Goethe-Zertifikat A1 wordlist reference": "歌德 A1 官方词表",
+  "Goethe-Zertifikat A2 official wordlist": "歌德 A2 官方词表",
+  "{count} words loaded.": "已加载 {count} 个单词。",
+  "{count} words loaded. Source: {source}": "已加载 {count} 个单词。来源：{source}",
+  "No words loaded yet.": "尚未加载单词。",
+  "No words loaded yet. Source: {source}": "尚未加载单词。来源：{source}"
+};
+let uiLanguage = loadLanguage();
+
+function loadLanguage() {
+  try {
+    return localStorage.getItem(UI_LANGUAGE_KEY) === "zh" ? "zh" : "en";
+  } catch {
+    return "en";
+  }
+}
+
+function chineseText(text, term = "") {
+  if (Object.hasOwn(CHINESE_UI, text)) return CHINESE_UI[text];
+  if (Object.hasOwn(CHINESE_VOCABULARY, `${term} | ${text}`)) return CHINESE_VOCABULARY[`${term} | ${text}`];
+  return Object.hasOwn(CHINESE_VOCABULARY, text) ? CHINESE_VOCABULARY[text] : text;
+}
+
+function t(key, values = {}) {
+  const translate = value => uiLanguage === "zh" ? chineseText(value, values.term) : value;
+  const text = translate(key);
+  return text.replace(/\{(\w+)\}/g, (_, name) => {
+    const value = String(values[name] ?? "");
+    return translate(value);
+  });
+}
+
+function uiText(key) {
+  return `<span data-i18n="${escapeAttribute(key)}">${escapeAttribute(t(key))}</span>`;
+}
+
+function vocabularyText(text, term = "") {
+  return `<span data-i18n="${escapeAttribute(text)}" data-i18n-context="${escapeAttribute(term)}" data-content-language lang="${uiLanguage === "zh" ? "zh-CN" : "en"}">${escapeAttribute(t(text, {term}))}</span>`;
+}
+
+function setText(element, key, values = {}) {
+  element.dataset.i18n = key;
+  element.i18nValues = values;
+  element.textContent = t(key, values);
+}
+
+function setLanguage(language) {
+  uiLanguage = language === "zh" ? "zh" : "en";
+  try {
+    localStorage.setItem(UI_LANGUAGE_KEY, uiLanguage);
+  } catch {
+    // Language switching still works when browser storage is unavailable.
+  }
+  document.documentElement.lang = uiLanguage === "zh" ? "zh-CN" : "en";
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    element.textContent = t(element.dataset.i18n, element.i18nValues || {term: element.dataset.i18nContext});
+  });
+  document.querySelectorAll("[data-content-language]").forEach(element => {
+    element.lang = uiLanguage === "zh" ? "zh-CN" : "en";
+  });
+  for (const attribute of ["title", "aria-label", "alt"]) {
+    document.querySelectorAll(`[data-i18n-${attribute}]`).forEach(element => {
+      const values = element.dataset.i18nValues ? JSON.parse(element.dataset.i18nValues) : {};
+      element.setAttribute(attribute, t(element.getAttribute(`data-i18n-${attribute}`), values));
+    });
+  }
+  document.querySelectorAll("[data-language]").forEach(button => {
+    button.setAttribute("aria-pressed", String(button.dataset.language === uiLanguage));
+  });
+}
+
 
 const DEFAULT_WORDBOOKS = [
   {
@@ -550,18 +688,22 @@ const dueCount = document.querySelector("#dueCount");
 const streakCount = document.querySelector("#streakCount");
 
 async function loadVocabulary() {
+  setLanguage(uiLanguage);
   startButton.disabled = true;
-  startButton.textContent = "Loading wordbook...";
+  setText(startButton, "Loading wordbook...");
 
   try {
+    const response = await fetch("wordbooks/zh-CN.json?v=20261003-content", { cache: "no-store" });
+    if (!response.ok) throw new Error("Could not load Chinese vocabulary");
+    CHINESE_VOCABULARY = await response.json();
     await loadImageManifest();
     await loadWordbooks();
     syncWordbookPicker();
     await loadSelectedWordbook();
   } catch (error) {
     WORDS = [];
-    startButton.textContent = "Wordbook missing";
-    feedback.textContent = "Could not load the selected wordbook. Check the wordbook file and refresh.";
+    setText(startButton, "Wordbook missing");
+    setText(feedback, "Could not load the selected wordbook. Check the wordbook file and refresh.");
   }
 }
 
@@ -600,8 +742,8 @@ function normalizeWordbook(entry) {
 async function loadSelectedWordbook() {
   const wordbook = getSelectedWordbook();
   startButton.disabled = true;
-  startButton.textContent = "Loading wordbook...";
-  feedback.textContent = "";
+  setText(startButton, "Loading wordbook...");
+  setText(feedback, "");
 
   try {
     const response = await fetch(`${wordbook.url}?t=${Date.now()}`, { cache: "no-store" });
@@ -612,19 +754,19 @@ async function loadSelectedWordbook() {
     pruneOldRecords();
 
     if (!WORDS.length) {
-      startButton.textContent = "No words found";
-      wordbookSummary.textContent = `${wordbook.title} is empty or could not be parsed.`;
+      setText(startButton, "No words found");
+      setText(wordbookSummary, "{title} is empty or could not be parsed.", {title: wordbook.title});
       return;
     }
 
     startButton.disabled = false;
-    startButton.textContent = "Start studying";
+    setText(startButton, "Start studying");
     renderWordbookSummary();
     renderStats();
   } catch {
     WORDS = [];
-    startButton.textContent = "Wordbook missing";
-    wordbookSummary.textContent = `Could not load ${wordbook.title}.`;
+    setText(startButton, "Wordbook missing");
+    setText(wordbookSummary, "Could not load {title}.", {title: wordbook.title});
     renderStats();
   }
 }
@@ -846,7 +988,7 @@ function hasPlural(word) {
 
 function pluralMarkup(word) {
   if (!hasPlural(word)) return "";
-  return `<div class="plural-form">${word.plural} <span>(pl.)</span></div>`;
+  return `<div class="plural-form">${word.plural} <span>${uiText("(pl.)")}</span></div>`;
 }
 
 function hasMemoryAid(word) {
@@ -1044,7 +1186,7 @@ function imagePriority(word) {
 
 function startSession() {
   if (!WORDS.length) {
-    feedback.textContent = "No vocabulary has been loaded yet.";
+    setText(feedback, "No vocabulary has been loaded yet.");
     return;
   }
 
@@ -1065,7 +1207,7 @@ function nextCard() {
   stopSpeech();
   locked = false;
   missedReviewContext = null;
-  feedback.textContent = "";
+  setText(feedback, "");
   feedback.className = "feedback";
 
   if (!session.length) {
@@ -1101,10 +1243,10 @@ function renderCurrent() {
   updateProgress();
 
   if (phase === "learn") {
-    modePill.textContent = "Learn";
+    setText(modePill, "Learn");
     renderLearn(word);
   } else {
-    modePill.textContent = "Review";
+    setText(modePill, "Review");
     if (quizType === "meaning") renderMeaningQuiz(word);
     if (quizType === "article") renderArticleQuiz(word);
     if (quizType === "fill") renderFillQuiz(word);
@@ -1130,24 +1272,24 @@ function speakerIcon() {
 function renderLearn(word, options = {}) {
   const autoSpeak = options.autoSpeak !== false;
   const actionsHtml = options.actionsHtml || `
-    <button class="answer-button low" type="button" data-rating="0">New to me</button>
-    <button class="answer-button mid" type="button" data-rating="1">Almost</button>
-    <button class="answer-button high" type="button" data-rating="2">Know it</button>
+    <button class="answer-button low" type="button" data-rating="0">${uiText("New to me")}</button>
+    <button class="answer-button mid" type="button" data-rating="1">${uiText("Almost")}</button>
+    <button class="answer-button high" type="button" data-rating="2">${uiText("Know it")}</button>
   `;
   cardContent.innerHTML = `
     <div class="learn-content">
     ${imageMarkup(word)}
     <div class="learn-details">
     <div class="word-line">
-      <div class="word">${displayWord(word)}</div>
-      <button class="speak-button" type="button" aria-label="Play German pronunciation" title="Play German pronunciation">${speakerIcon()}</button>
+      <div class="word" lang="de">${displayWord(word)}</div>
+      <button class="speak-button" type="button" data-i18n-aria-label="Play German pronunciation" aria-label="${escapeAttribute(t("Play German pronunciation"))}" data-i18n-title="Play German pronunciation" title="${escapeAttribute(t("Play German pronunciation"))}">${speakerIcon()}</button>
     </div>
-    ${hasMeaning(word) ? `<div class="meaning">${word.meaning}</div>` : ""}
+    ${hasMeaning(word) ? `<div class="meaning">${vocabularyText(word.meaning, word.word)}</div>` : ""}
     ${pluralMarkup(word)}
     ${memoryAidMarkup(word)}
     <div class="example">
-      <strong>${word.example}</strong>
-      <span>${word.translation}</span>
+      <strong lang="de">${word.example}</strong>
+      ${vocabularyText(word.translation)}
     </div>
     </div>
     </div>
@@ -1165,7 +1307,7 @@ function imageMarkup(word) {
   if (!word.imagePath) return "";
   return `
     <figure class="vocab-figure">
-      <img class="vocab-image" src="${imageUrl(word.imagePath)}" alt="Visual cue for ${escapeAttribute(displayWord(word))}" onerror="this.closest('.vocab-figure').remove()">
+      <img class="vocab-image" src="${imageUrl(word.imagePath)}" data-i18n-alt="Visual cue for {word}" data-i18n-values="${escapeAttribute(JSON.stringify({word: displayWord(word)}))}" alt="${escapeAttribute(t("Visual cue for {word}", {word: displayWord(word)}))}" onerror="this.closest('.vocab-figure').remove()">
     </figure>
   `;
 }
@@ -1178,8 +1320,8 @@ function imageUrl(path) {
 function memoryAidMarkup(word) {
   if (!hasMemoryAid(word)) return "";
   return `
-    <section class="memory-aid" aria-label="Word building memory aid">
-      <div class="memory-title">Word building</div>
+    <section class="memory-aid" data-i18n-aria-label="Word building memory aid" aria-label="${escapeAttribute(t("Word building memory aid"))}">
+      <div class="memory-title">${uiText("Word building")}</div>
       <div class="memory-parts">
         ${word.memoryAid.map(memoryAidPartMarkup).join("")}
       </div>
@@ -1189,12 +1331,12 @@ function memoryAidMarkup(word) {
 
 function memoryAidPartMarkup(part) {
   const [label, meaning = ""] = part;
-  if (/^(merken|memory)$/i.test(label) && meaning) return `<div class="memory-note">${meaning}</div>`;
-  if (!meaning) return `<div class="memory-note">${label}</div>`;
+  if (/^(merken|memory)$/i.test(label) && meaning) return `<div class="memory-note">${vocabularyText(meaning)}</div>`;
+  if (!meaning) return `<div class="memory-note">${vocabularyText(label)}</div>`;
   return `
     <div class="memory-part">
       <strong>${label}</strong>
-      <span>${meaning}</span>
+      ${vocabularyText(meaning)}
     </div>
   `;
 }
@@ -1222,31 +1364,31 @@ function previewMarkup(item) {
   if (phase === "learn") {
     return `
       <div class="card-top">
-        <span class="mode-pill">Learn</span>
+        <span class="mode-pill">${uiText("Learn")}</span>
       </div>
       <div class="card-content preview-content">
         <div class="learn-content">
         ${imageMarkup(word)}
         <div class="learn-details">
         <div class="word-line">
-          <div class="word">${displayWord(word)}</div>
+          <div class="word" lang="de">${displayWord(word)}</div>
           <button class="speak-button" type="button" tabindex="-1" aria-hidden="true">${speakerIcon()}</button>
         </div>
-        ${hasMeaning(word) ? `<div class="meaning">${word.meaning}</div>` : ""}
+        ${hasMeaning(word) ? `<div class="meaning">${vocabularyText(word.meaning, word.word)}</div>` : ""}
         ${pluralMarkup(word)}
         ${memoryAidMarkup(word)}
         <div class="example">
-          <strong>${word.example}</strong>
-          <span>${word.translation}</span>
+          <strong lang="de">${word.example}</strong>
+          ${vocabularyText(word.translation)}
         </div>
         </div>
         </div>
       </div>
       <div class="feedback"></div>
       <div class="actions preview-actions">
-        <button class="answer-button low" type="button" tabindex="-1">New to me</button>
-        <button class="answer-button mid" type="button" tabindex="-1">Almost</button>
-        <button class="answer-button high" type="button" tabindex="-1">Know it</button>
+        <button class="answer-button low" type="button" tabindex="-1">${uiText("New to me")}</button>
+        <button class="answer-button mid" type="button" tabindex="-1">${uiText("Almost")}</button>
+        <button class="answer-button high" type="button" tabindex="-1">${uiText("Know it")}</button>
       </div>
     `;
   }
@@ -1255,16 +1397,16 @@ function previewMarkup(item) {
     const choices = getMeaningChoices(item);
     return `
       <div class="card-top">
-        <span class="mode-pill">Review</span>
+        <span class="mode-pill">${uiText("Review")}</span>
       </div>
       <div class="card-content preview-content">
-        <p class="prompt">Choose the correct meaning</p>
+        <p class="prompt">${uiText("Choose the correct meaning")}</p>
         <div class="word-line">
-          <div class="quiz-word">${displayWord(word)}</div>
+          <div class="quiz-word" lang="de">${displayWord(word)}</div>
           <button class="speak-button" type="button" tabindex="-1" aria-hidden="true">${speakerIcon()}</button>
         </div>
         <div class="choices">
-          ${choices.map((choice) => `<button class="choice-button" type="button" tabindex="-1">${choice}</button>`).join("")}
+          ${choices.map((choice) => `<button class="choice-button" type="button" tabindex="-1">${vocabularyText(choice, choice === word.meaning ? word.word : WORDS.find(item => item.meaning === choice)?.word)}</button>`).join("")}
         </div>
       </div>
       <div class="feedback"></div>
@@ -1275,16 +1417,16 @@ function previewMarkup(item) {
   if (quizType === "article") {
     return `
       <div class="card-top">
-        <span class="mode-pill">Review</span>
+        <span class="mode-pill">${uiText("Review")}</span>
       </div>
       <div class="card-content preview-content">
-        <p class="prompt">Choose the correct article</p>
-        <div class="quiz-word">${word.word}</div>
+        <p class="prompt">${uiText("Choose the correct article")}</p>
+        <div class="quiz-word" lang="de">${word.word}</div>
         <div class="choices">
           <button class="choice-button article-choice" type="button" tabindex="-1">der</button>
           <button class="choice-button article-choice" type="button" tabindex="-1">die</button>
           <button class="choice-button article-choice" type="button" tabindex="-1">das</button>
-          <button class="choice-button article-choice" type="button" tabindex="-1">plural</button>
+          <button class="choice-button article-choice" type="button" tabindex="-1">${uiText("plural")}</button>
         </div>
       </div>
       <div class="feedback"></div>
@@ -1294,14 +1436,14 @@ function previewMarkup(item) {
 
   return `
     <div class="card-top">
-      <span class="mode-pill">Review</span>
+      <span class="mode-pill">${uiText("Review")}</span>
     </div>
     <div class="card-content preview-content">
-      <p class="prompt">Fill in the German word</p>
+      <p class="prompt">${uiText("Fill in the German word")}</p>
       ${fillExampleMarkup(word)}
       <form class="fill-form">
         <input class="fill-input" type="text" tabindex="-1" aria-hidden="true">
-        <button class="answer-button primary" type="button" tabindex="-1">Check</button>
+        <button class="answer-button primary" type="button" tabindex="-1">${uiText("Check")}</button>
       </form>
     </div>
     <div class="feedback"></div>
@@ -1312,13 +1454,13 @@ function previewMarkup(item) {
 function renderMeaningQuiz(word) {
   const choices = getMeaningChoices(currentItem);
   cardContent.innerHTML = `
-    <p class="prompt">Choose the correct meaning</p>
+    <p class="prompt">${uiText("Choose the correct meaning")}</p>
     <div class="word-line">
-      <div class="quiz-word">${displayWord(word)}</div>
-      <button class="speak-button" type="button" aria-label="Play German pronunciation" title="Play German pronunciation">${speakerIcon()}</button>
+      <div class="quiz-word" lang="de">${displayWord(word)}</div>
+      <button class="speak-button" type="button" data-i18n-aria-label="Play German pronunciation" aria-label="${escapeAttribute(t("Play German pronunciation"))}" data-i18n-title="Play German pronunciation" title="${escapeAttribute(t("Play German pronunciation"))}">${speakerIcon()}</button>
     </div>
     <div class="choices">
-      ${choices.map((choice) => `<button class="choice-button" type="button" data-answer="${escapeAttribute(choice)}">${choice}</button>`).join("")}
+      ${choices.map((choice) => `<button class="choice-button" type="button" data-answer="${escapeAttribute(choice)}">${vocabularyText(choice, choice === word.meaning ? word.word : WORDS.find(item => item.meaning === choice)?.word)}</button>`).join("")}
     </div>
   `;
   cardContent.querySelector(".speak-button").addEventListener("click", () => speak(word.word));
@@ -1331,9 +1473,17 @@ function renderMeaningQuiz(word) {
 function getMeaningChoices(item) {
   if (item.choices) return item.choices;
   const { word } = item;
+  const meaningTerms = new Map([...WORDS].reverse().map(item => [item.meaning, item.word]));
+  const chineseMeanings = new Set([chineseText(word.meaning, word.word)]);
   const distractors = [...new Set(WORDS
     .filter((item) => displayWord(item) !== displayWord(word) && hasMeaning(item) && item.meaning !== word.meaning)
-    .map((item) => item.meaning))];
+    .map((item) => item.meaning))].filter(meaning => {
+      // Choices must stay distinct in both languages, even after switching mid-question.
+      const chinese = chineseText(meaning, meaningTerms.get(meaning));
+      if (chineseMeanings.has(chinese)) return false;
+      chineseMeanings.add(chinese);
+      return true;
+    });
   item.choices = shuffle([
     word.meaning,
     ...shuffle(distractors).slice(0, 3)
@@ -1343,13 +1493,13 @@ function getMeaningChoices(item) {
 
 function renderArticleQuiz(word) {
   cardContent.innerHTML = `
-    <p class="prompt">Choose the correct article</p>
-    <div class="quiz-word">${word.word}</div>
+    <p class="prompt">${uiText("Choose the correct article")}</p>
+    <div class="quiz-word" lang="de">${word.word}</div>
     <div class="choices">
       <button class="choice-button article-choice" type="button" data-article="der">der</button>
       <button class="choice-button article-choice" type="button" data-article="die">die</button>
       <button class="choice-button article-choice" type="button" data-article="das">das</button>
-      <button class="choice-button article-choice" type="button" data-article="plural">plural</button>
+      <button class="choice-button article-choice" type="button" data-article="plural">${uiText("plural")}</button>
     </div>
   `;
   actions.innerHTML = "";
@@ -1361,11 +1511,11 @@ function renderArticleQuiz(word) {
 
 function renderFillQuiz(word) {
   cardContent.innerHTML = `
-    <p class="prompt">Fill in the German word</p>
+    <p class="prompt">${uiText("Fill in the German word")}</p>
     ${fillExampleMarkup(word)}
     <form class="fill-form">
-      <input class="fill-input" type="text" autocomplete="off" spellcheck="false" aria-label="Type the German word">
-      <button class="answer-button primary" type="submit">Check</button>
+      <input class="fill-input" type="text" autocomplete="off" spellcheck="false" data-i18n-aria-label="Type the German word" aria-label="${escapeAttribute(t("Type the German word"))}">
+      <button class="answer-button primary" type="submit">${uiText("Check")}</button>
     </form>
   `;
   actions.innerHTML = "";
@@ -1387,7 +1537,7 @@ function fillExampleMarkup(word) {
   const hasBlank = blanked !== word.example;
   const clue = hasBlank ? blanked : word.meaning || word.translation || "Recall the word from the learning card.";
   const hint = hasBlank ? word.translation : "Write the German word or phrase from the learning card.";
-  return `<div class="example"><strong>${escapeAttribute(clue)}</strong><span>${escapeAttribute(hint)}</span></div>`;
+  return `<div class="example"><strong>${hasBlank ? escapeAttribute(clue) : vocabularyText(clue, word.word)}</strong><span>${hasBlank ? vocabularyText(hint) : uiText(hint)}</span></div>`;
 }
 
 function blankWordInExample(word) {
@@ -1596,7 +1746,7 @@ function checkQuiz(isCorrect) {
   if (isCorrect) {
     applyReviewResult(record, "good");
     state.streak += 1;
-    feedback.textContent = "Correct";
+    setText(feedback, "Correct");
     feedback.className = "feedback correct";
     actions.innerHTML = "";
     saveState();
@@ -1605,19 +1755,18 @@ function checkQuiz(isCorrect) {
   } else {
     applyReviewResult(record, "again");
     state.streak = 0;
-    feedback.textContent = `Correct answer: ${correctAnswerForCurrentQuiz()}`;
+    setText(feedback, "Correct answer: {answer}", {answer: correctAnswerForCurrentQuiz(), term: currentItem.word.word});
     feedback.className = "feedback wrong";
     session.splice(Math.min(2, session.length), 0, { word, phase: "quiz", quizType: currentItem.quizType });
     missedReviewContext = {
-      item: currentItem,
-      feedbackText: feedback.textContent
+      item: currentItem
     };
   }
 
   saveState();
   actions.innerHTML = `
-    <button class="answer-button" type="button" id="reviewCardButton">Review card</button>
-    <button class="answer-button primary" type="button" id="continueButton">Continue</button>
+    <button class="answer-button" type="button" id="reviewCardButton">${uiText("Review card")}</button>
+    <button class="answer-button primary" type="button" id="continueButton">${uiText("Continue")}</button>
   `;
   document.querySelector("#reviewCardButton").addEventListener("click", showMissedWordCard);
   document.querySelector("#continueButton").addEventListener("click", nextCard);
@@ -1632,16 +1781,16 @@ function showMissedWordCard() {
   resetCardMotion({ immediate: true });
   cardStack.className = `card-stack ${genderClass}`;
   card.className = `word-card ${genderClass} is-reviewing-missed`;
-  modePill.textContent = "Learn";
+  setText(modePill, "Learn");
   renderNextCardPreview();
   renderLearn(word, {
     autoSpeak: false,
     actionsHtml: `
-      <button class="answer-button" type="button" id="backToQuestionButton">Back to question</button>
-      <button class="answer-button primary" type="button" id="continueButton">Continue</button>
+      <button class="answer-button" type="button" id="backToQuestionButton">${uiText("Back to question")}</button>
+      <button class="answer-button primary" type="button" id="continueButton">${uiText("Continue")}</button>
     `
   });
-  feedback.textContent = "";
+  setText(feedback, "");
   feedback.className = "feedback";
   document.querySelector("#backToQuestionButton").addEventListener("click", restoreMissedQuestion);
   document.querySelector("#continueButton").addEventListener("click", nextCard);
@@ -1653,11 +1802,11 @@ function restoreMissedQuestion() {
   locked = true;
   renderCurrent();
   locked = true;
-  feedback.textContent = missedReviewContext.feedbackText;
+  setText(feedback, "Correct answer: {answer}", {answer: correctAnswerForCurrentQuiz(), term: currentItem.word.word});
   feedback.className = "feedback wrong";
   actions.innerHTML = `
-    <button class="answer-button" type="button" id="reviewCardButton">Review card</button>
-    <button class="answer-button primary" type="button" id="continueButton">Continue</button>
+    <button class="answer-button" type="button" id="reviewCardButton">${uiText("Review card")}</button>
+    <button class="answer-button primary" type="button" id="continueButton">${uiText("Continue")}</button>
   `;
   document.querySelector("#reviewCardButton").addEventListener("click", showMissedWordCard);
   document.querySelector("#continueButton").addEventListener("click", nextCard);
@@ -1838,7 +1987,7 @@ function stopSpeech() {
 }
 
 function showVoiceMessage(message, tone) {
-  feedback.textContent = message;
+  setText(feedback, message);
   feedback.className = `feedback ${tone}`.trim();
 }
 
@@ -1848,17 +1997,17 @@ function renderDone() {
   nextCardPreview.className = "word-card next-card-preview neutral is-empty";
   nextCardPreview.innerHTML = "";
   card.className = "word-card neutral";
-  modePill.textContent = "Done";
+  setText(modePill, "Done");
   cardContent.innerHTML = `
     <div class="word-line">
-      <div class="word">Sehr gut</div>
+      <div class="word" lang="de">Sehr gut</div>
     </div>
-    <div class="meaning">This session is complete. Words answered incorrectly were returned to the queue and practiced again.</div>
+    <div class="meaning">${uiText("This session is complete. Words answered incorrectly were returned to the queue and practiced again.")}</div>
   `;
-  feedback.textContent = "";
+  setText(feedback, "");
   actions.innerHTML = `
-    <button class="answer-button primary" type="button" id="againButton">Study again</button>
-    <button class="answer-button" type="button" id="homeButton">Choose count</button>
+    <button class="answer-button primary" type="button" id="againButton">${uiText("Study again")}</button>
+    <button class="answer-button" type="button" id="homeButton">${uiText("Choose count")}</button>
   `;
   document.querySelector("#againButton").addEventListener("click", startSession);
   document.querySelector("#homeButton").addEventListener("click", goHome);
@@ -1913,8 +2062,8 @@ function syncWordbookPicker() {
     const selected = wordbook.id === state.selectedWordbookId;
     return `
       <button class="wordbook-option${selected ? " is-selected" : ""}" type="button" data-wordbook-id="${escapeAttribute(wordbook.id)}" role="radio" aria-checked="${selected}">
-        <span>${wordbook.title}</span>
-        ${wordbook.description ? `<small>${wordbook.description}</small>` : ""}
+        <span>${uiText(wordbook.title)}</span>
+        ${wordbook.description ? `<small>${uiText(wordbook.description)}</small>` : ""}
       </button>
     `;
   }).join("");
@@ -1925,8 +2074,8 @@ function renderWordbookSummary() {
   if (!wordbookSummary) return;
   const wordbook = getSelectedWordbook();
   const count = WORDS.length;
-  const source = wordbook.source ? ` Source: ${wordbook.source}` : "";
-  wordbookSummary.textContent = `${count ? `${count} words loaded.` : "No words loaded yet."}${source}`;
+  const key = count ? (wordbook.source ? "{count} words loaded. Source: {source}" : "{count} words loaded.") : (wordbook.source ? "No words loaded yet. Source: {source}" : "No words loaded yet.");
+  setText(wordbookSummary, key, {count, source: wordbook.source});
 }
 
 function escapeAttribute(value) {
@@ -1936,6 +2085,11 @@ function escapeAttribute(value) {
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
+
+document.querySelector("#languageSwitcher").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-language]");
+  if (button) setLanguage(button.dataset.language);
+});
 
 countPicker.addEventListener("click", (event) => {
   const button = event.target.closest(".count-option");

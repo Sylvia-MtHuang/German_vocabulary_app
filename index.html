@@ -8,33 +8,37 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>German Vocabulary Flashcards</title>
+    <title data-i18n="German Vocabulary Flashcards">German Vocabulary Flashcards</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles.css?v=20261002-a2">
+    <link rel="stylesheet" href="styles.css?v=20261003-language-2">
   </head>
   <body>
     <main class="app-shell">
-      <section class="topbar" aria-label="App overview">
+      <nav id="languageSwitcher" class="language-switcher" aria-label="Interface language" data-i18n-aria-label="Interface language">
+        <button type="button" data-language="en" lang="en" aria-pressed="true">English</button>
+        <button type="button" data-language="zh" lang="zh-CN" aria-pressed="false">中文</button>
+      </nav>
+      <section class="topbar" data-i18n-aria-label="App overview" aria-label="App overview">
         <div>
           <p class="eyebrow">Deutsch Memo</p>
-          <h1>German Vocabulary Flashcards</h1>
+          <h1 data-i18n="German Vocabulary Flashcards">German Vocabulary Flashcards</h1>
         </div>
-        <div class="stats" aria-label="Learning stats">
-          <div id="masteredStat" title="Words with a dynamic review interval of at least 7 days. A first-pass 'Know it' rating does not count as mastered.">
+        <div class="stats" data-i18n-aria-label="Learning stats" aria-label="Learning stats">
+          <div id="masteredStat" data-i18n-title="Words with a dynamic review interval of at least 7 days. A first-pass 'Know it' rating does not count as mastered." title="Words with a dynamic review interval of at least 7 days. A first-pass 'Know it' rating does not count as mastered.">
             <span id="knownCount">0</span>
-            <small>Mastered</small>
+            <small data-i18n="Mastered">Mastered</small>
           </div>
-          <div id="dueStat" title="Previously seen words whose dynamic next review time has arrived.">
+          <div id="dueStat" data-i18n-title="Previously seen words whose dynamic next review time has arrived." title="Previously seen words whose dynamic next review time has arrived.">
             <span id="dueCount">0</span>
-            <small>Due now</small>
+            <small data-i18n="Due now">Due now</small>
           </div>
-          <div id="streakStat" title="Current run of correct review answers. Self-ratings on new cards are not counted.">
+          <div id="streakStat" data-i18n-title="Current run of correct review answers. Self-ratings on new cards are not counted." title="Current run of correct review answers. Self-ratings on new cards are not counted.">
             <span id="streakCount">0</span>
-            <small>Streak</small>
+            <small data-i18n="Streak">Streak</small>
           </div>
         </div>
       </section>
@@ -42,35 +46,35 @@
       <section id="setupView" class="setup-view" aria-labelledby="setupTitle">
         <div class="panel intro-panel">
           <div class="wordbook-section">
-            <p class="eyebrow">Wordbook</p>
-            <div class="wordbook-picker" id="wordbookPicker" role="radiogroup" aria-label="Choose wordbook"></div>
-            <p class="wordbook-summary" id="wordbookSummary">Loading wordbooks...</p>
+            <p data-i18n="Wordbook" class="eyebrow">Wordbook</p>
+            <div class="wordbook-picker" id="wordbookPicker" role="radiogroup" data-i18n-aria-label="Choose wordbook" aria-label="Choose wordbook"></div>
+            <p data-i18n="Loading wordbooks..." class="wordbook-summary" id="wordbookSummary">Loading wordbooks...</p>
           </div>
           <div class="session-settings">
-            <p class="eyebrow">New session</p>
-            <h2 id="setupTitle">Choose how many words to study</h2>
-            <div class="count-picker" id="countPicker" role="radiogroup" aria-label="Choose word count">
+            <p data-i18n="New session" class="eyebrow">New session</p>
+            <h2 data-i18n="Choose how many words to study" id="setupTitle">Choose how many words to study</h2>
+            <div class="count-picker" id="countPicker" role="radiogroup" data-i18n-aria-label="Choose word count" aria-label="Choose word count">
               <button class="count-option is-selected" type="button" data-count="10" role="radio" aria-checked="true">10</button>
               <button class="count-option" type="button" data-count="20" role="radio" aria-checked="false">20</button>
               <button class="count-option" type="button" data-count="30" role="radio" aria-checked="false">30</button>
               <button class="count-option" type="button" data-count="40" role="radio" aria-checked="false">40</button>
               <button class="count-option" type="button" data-count="50" role="radio" aria-checked="false">50</button>
             </div>
-            <button id="startButton" class="primary-button" type="button">Start studying</button>
+            <button data-i18n="Start studying" id="startButton" class="primary-button" type="button">Start studying</button>
           </div>
         </div>
       </section>
 
       <section id="studyView" class="study-view hidden" aria-live="polite">
         <div class="session-strip">
-          <button id="backButton" class="icon-button" type="button" aria-label="Back to setup">&lt;</button>
-          <div class="progress-wrap" aria-label="Session progress">
+          <button id="backButton" class="icon-button" type="button" data-i18n-aria-label="Back to setup" aria-label="Back to setup">&lt;</button>
+          <div class="progress-wrap" data-i18n-aria-label="Session progress" aria-label="Session progress">
             <div class="progress-track">
               <div id="progressBar" class="progress-bar"></div>
             </div>
             <span id="progressText">0 / 0</span>
           </div>
-          <button id="resetButton" class="icon-button" type="button" aria-label="Reset learning history">R</button>
+          <button id="resetButton" class="icon-button" type="button" data-i18n-aria-label="Reset learning history" aria-label="Reset learning history">R</button>
         </div>
 
         <div class="card-stack neutral" aria-live="polite">
@@ -78,7 +82,7 @@
 
           <article id="card" class="word-card neutral">
             <div class="card-top">
-              <span id="modePill" class="mode-pill">Learn</span>
+              <span data-i18n="Learn" id="modePill" class="mode-pill">Learn</span>
             </div>
 
             <div id="cardContent" class="card-content"></div>
@@ -90,6 +94,6 @@
       </section>
     </main>
 
-    <script src="app.js?v=20261002-shuffle"></script>
+    <script src="app.js?v=20261003-content-2"></script>
   </body>
 </html>
