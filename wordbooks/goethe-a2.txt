@@ -638,7 +638,7 @@ die Bahn | train; railway | Ich fahre mit der Bahn nach Köln. | I travel to Col
 die Banane | banana | Die Banane ist gelb. | The banana is yellow. |  | die Bananen
 die Band | band | Diese Band spielt am Freitag in unserer Stadt. | This band is playing in our city on Friday. |  | die Bands
 die Bank | bank | Die Bank öffnet um neun Uhr. | The bank opens at nine o'clock. |  | die Banken
-die Bank | bench | Im Park sitzen wir auf einer Bank. | We sit on a bench in the park. | | die Bänke
+die Bank | bench | Im Park sitzen wir auf einer Bank. | We sit on a bench in the park. | | assets/vocab-images/a2-die-bank-2-batch50-20261003.png | die Bänke
 die Baustelle | construction site | Wegen der Baustelle fährt der Bus heute anders. | Because of the construction site the bus takes a different route today. |  | die Baustellen
 die Bewerbung | application | Ich habe meine Bewerbung gestern per E-Mail geschickt. | I sent my application by email yesterday. |  | die Bewerbungen
 die Bibliothek | library | In der Bibliothek kann man Bücher kostenlos ausleihen. | You can borrow books for free at the library. |  | die Bibliotheken
