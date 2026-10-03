@@ -34,7 +34,7 @@ const approvedBatch = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-i
 assert.equal(approvedBatch.status, 'approved');
 assert.equal(approvedBatch.approvalScope, 'publish');
 assert.ok(approvedBatch.items.every(item => item.reviewed));
-assert.equal(a2.find(word => word.id === 'die-bank').imagePath, '', 'Bank (bank) must not show a bench');
+assert.equal(a2.find(word => word.id === 'die-bank').imagePath, 'assets/vocab-images/a2-die-bank-batch100-20261003.png', 'Bank (bank) must show the bank storefront');
 assert.equal(a2.find(word => word.id === 'die-bank-2').imagePath, 'assets/vocab-images/a2-die-bank-2-batch50-20261003.png');
 assert.ok(a2.every(word => word.example.split(/\s+/).length <= 22));
 assert.equal(a2.find(word => word.word === 'Bank' && word.meaning === 'bank').plural, 'die Banken');
@@ -104,7 +104,8 @@ assert.equal(selectionCheck.imageFirst, 'image');
 const imageBatches = [
   ['a2-image-prompts.json', 50],
   ['a2-image-prompts-100.json', 100],
-  ['a2-image-prompts-50-20261003.json', 50]
+  ['a2-image-prompts-50-20261003.json', 50],
+  ['a2-image-prompts-100-20261003.json', 100]
 ];
 const revisions = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-images/a2-color-revisions-17.json'), 'utf8')).items;
 assert.equal(revisions.length, 17);
@@ -116,6 +117,11 @@ const imageIds = new Set();
 for (const [file, count] of imageBatches) {
   const batch = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-images', file), 'utf8'));
   assert.equal(batch.items.length, count);
+  if (file === 'a2-image-prompts-100-20261003.json') {
+    assert.equal(batch.status, 'approved');
+    assert.equal(batch.approvalScope, 'publish');
+    assert.ok(batch.items.every(item => item.reviewed));
+  }
   for (const item of batch.items) {
     assert.ok(!imageIds.has(item.id), 'Image batches must cover different words: ' + item.id);
     imageIds.add(item.id);
@@ -130,6 +136,6 @@ for (const [file, count] of imageBatches) {
   }
 }
 assert.ok(revisions.every(item => imageIds.has(item.id)), 'Every revision belongs to an existing image batch');
-assert.equal(imageHashes.size, 200, 'Each vocabulary image must be independent');
-assert.equal(a2.filter(word => word.imagePath && fs.existsSync(path.join(root, word.imagePath))).length, 231);
-console.log('Wordbooks, A2 forms, recall clues, progress, randomized sessions and 200 image bindings (including 17 color revisions): passed');
+assert.equal(imageHashes.size, 300, 'Each vocabulary image must be independent');
+assert.equal(a2.filter(word => word.imagePath && fs.existsSync(path.join(root, word.imagePath))).length, 331);
+console.log('Wordbooks, A2 forms, recall clues, progress, randomized sessions and 300 image bindings (including 17 color revisions): passed');

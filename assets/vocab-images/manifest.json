@@ -862,5 +862,405 @@
   {
     "id": "die-tafel",
     "file": "a2-die-tafel-batch50-20261003.png"
+  },
+  {
+    "id": "der-anrufbeantworter",
+    "file": "a2-der-anrufbeantworter-batch100-20261003-v2.png"
+  },
+  {
+    "id": "die-aerztin",
+    "file": "a2-die-aerztin-batch100-20261003.png"
+  },
+  {
+    "id": "das-baby",
+    "file": "a2-das-baby-batch100-20261003.png"
+  },
+  {
+    "id": "der-automat",
+    "file": "a2-der-automat-batch100-20261003.png"
+  },
+  {
+    "id": "die-autobahn",
+    "file": "a2-die-autobahn-batch100-20261003.png"
+  },
+  {
+    "id": "das-caf",
+    "file": "a2-das-caf-batch100-20261003.png"
+  },
+  {
+    "id": "der-baecker",
+    "file": "a2-der-baecker-batch100-20261003.png"
+  },
+  {
+    "id": "die-band",
+    "file": "a2-die-band-batch100-20261003-v2.png"
+  },
+  {
+    "id": "das-dorf",
+    "file": "a2-das-dorf-batch100-20261003.png"
+  },
+  {
+    "id": "der-bahnsteig",
+    "file": "a2-der-bahnsteig-batch100-20261003.png"
+  },
+  {
+    "id": "die-bank",
+    "file": "a2-die-bank-batch100-20261003.png"
+  },
+  {
+    "id": "das-essen",
+    "file": "a2-das-essen-batch100-20261003.png"
+  },
+  {
+    "id": "der-bauch",
+    "file": "a2-der-bauch-batch100-20261003.png"
+  },
+  {
+    "id": "die-cafeteria",
+    "file": "a2-die-cafeteria-batch100-20261003.png"
+  },
+  {
+    "id": "das-foto",
+    "file": "a2-das-foto-batch100-20261003.png"
+  },
+  {
+    "id": "der-eingang",
+    "file": "a2-der-eingang-batch100-20261003.png"
+  },
+  {
+    "id": "die-friseurin",
+    "file": "a2-die-friseurin-batch100-20261003.png"
+  },
+  {
+    "id": "das-geld",
+    "file": "a2-das-geld-batch100-20261003.png"
+  },
+  {
+    "id": "der-friseur",
+    "file": "a2-der-friseur-batch100-20261003.png"
+  },
+  {
+    "id": "die-hochzeit",
+    "file": "a2-die-hochzeit-batch100-20261003-v2.png"
+  },
+  {
+    "id": "das-geraet",
+    "file": "a2-das-geraet-batch100-20261003.png"
+  },
+  {
+    "id": "der-fuehrerschein",
+    "file": "a2-der-fuehrerschein-batch100-20261003.png"
+  },
+  {
+    "id": "die-jugendherberge",
+    "file": "a2-die-jugendherberge-batch100-20261003.png"
+  },
+  {
+    "id": "das-gericht",
+    "file": "a2-das-gericht-batch100-20261003.png"
+  },
+  {
+    "id": "der-grossvater",
+    "file": "a2-der-grossvater-batch100-20261003.png"
+  },
+  {
+    "id": "die-karte",
+    "file": "a2-die-karte-batch100-20261003-v2.png"
+  },
+  {
+    "id": "das-geschaeft",
+    "file": "a2-das-geschaeft-batch100-20261003.png"
+  },
+  {
+    "id": "der-handwerker",
+    "file": "a2-der-handwerker-batch100-20261003-v2-v2.png"
+  },
+  {
+    "id": "die-kellnerin",
+    "file": "a2-die-kellnerin-batch100-20261003.png"
+  },
+  {
+    "id": "das-gesicht",
+    "file": "a2-das-gesicht-batch100-20261003.png"
+  },
+  {
+    "id": "der-ice",
+    "file": "a2-der-ice-batch100-20261003.png"
+  },
+  {
+    "id": "die-koechin",
+    "file": "a2-die-koechin-batch100-20261003.png"
+  },
+  {
+    "id": "das-getraenk",
+    "file": "a2-das-getraenk-batch100-20261003.png"
+  },
+  {
+    "id": "der-junge",
+    "file": "a2-der-junge-batch100-20261003.png"
+  },
+  {
+    "id": "die-krankenschwester",
+    "file": "a2-die-krankenschwester-batch100-20261003.png"
+  },
+  {
+    "id": "das-gleis",
+    "file": "a2-das-gleis-batch100-20261003-v2.png"
+  },
+  {
+    "id": "der-kalender",
+    "file": "a2-der-kalender-batch100-20261003.png"
+  },
+  {
+    "id": "die-kuenstlerin",
+    "file": "a2-die-kuenstlerin-batch100-20261003.png"
+  },
+  {
+    "id": "das-kaufhaus",
+    "file": "a2-das-kaufhaus-batch100-20261003.png"
+  },
+  {
+    "id": "der-kellner",
+    "file": "a2-der-kellner-batch100-20261003.png"
+  },
+  {
+    "id": "die-landschaft",
+    "file": "a2-die-landschaft-batch100-20261003.png"
+  },
+  {
+    "id": "das-kind",
+    "file": "a2-das-kind-batch100-20261003.png"
+  },
+  {
+    "id": "der-kindergarten",
+    "file": "a2-der-kindergarten-batch100-20261003-v2-v2-v2.png"
+  },
+  {
+    "id": "die-lehrerin",
+    "file": "a2-die-lehrerin-batch100-20261003.png"
+  },
+  {
+    "id": "das-konzert",
+    "file": "a2-das-konzert-batch100-20261003-v2.png"
+  },
+  {
+    "id": "der-koch",
+    "file": "a2-der-koch-batch100-20261003.png"
+  },
+  {
+    "id": "die-polizistin",
+    "file": "a2-die-polizistin-batch100-20261003.png"
+  },
+  {
+    "id": "das-licht",
+    "file": "a2-das-licht-batch100-20261003.png"
+  },
+  {
+    "id": "der-koerper",
+    "file": "a2-der-koerper-batch100-20261003-v2.png"
+  },
+  {
+    "id": "die-post",
+    "file": "a2-die-post-batch100-20261003.png"
+  },
+  {
+    "id": "das-maedchen",
+    "file": "a2-das-maedchen-batch100-20261003.png"
+  },
+  {
+    "id": "der-kopf",
+    "file": "a2-der-kopf-batch100-20261003.png"
+  },
+  {
+    "id": "die-reinigung",
+    "file": "a2-die-reinigung-batch100-20261003.png"
+  },
+  {
+    "id": "das-meer",
+    "file": "a2-das-meer-batch100-20261003.png"
+  },
+  {
+    "id": "der-krankenpfleger",
+    "file": "a2-der-krankenpfleger-batch100-20261003.png"
+  },
+  {
+    "id": "die-saengerin",
+    "file": "a2-die-saengerin-batch100-20261003.png"
+  },
+  {
+    "id": "das-mineralwasser",
+    "file": "a2-das-mineralwasser-batch100-20261003-v2.png"
+  },
+  {
+    "id": "der-kuenstler",
+    "file": "a2-der-kuenstler-batch100-20261003-v2.png"
+  },
+  {
+    "id": "die-schuelerin",
+    "file": "a2-die-schuelerin-batch100-20261003.png"
+  },
+  {
+    "id": "das-mittagessen",
+    "file": "a2-das-mittagessen-batch100-20261003.png"
+  },
+  {
+    "id": "der-lehrer",
+    "file": "a2-der-lehrer-batch100-20261003.png"
+  },
+  {
+    "id": "die-sonne",
+    "file": "a2-die-sonne-batch100-20261003.png"
+  },
+  {
+    "id": "das-museum",
+    "file": "a2-das-museum-batch100-20261003.png"
+  },
+  {
+    "id": "der-markt",
+    "file": "a2-der-markt-batch100-20261003.png"
+  },
+  {
+    "id": "die-speisekarte",
+    "file": "a2-die-speisekarte-batch100-20261003.png"
+  },
+  {
+    "id": "das-papier",
+    "file": "a2-das-papier-batch100-20261003.png"
+  },
+  {
+    "id": "der-mechaniker",
+    "file": "a2-der-mechaniker-batch100-20261003.png"
+  },
+  {
+    "id": "die-stadt",
+    "file": "a2-die-stadt-batch100-20261003-v2-v2.png"
+  },
+  {
+    "id": "das-plakat",
+    "file": "a2-das-plakat-batch100-20261003.png"
+  },
+  {
+    "id": "der-musiker",
+    "file": "a2-der-musiker-batch100-20261003.png"
+  },
+  {
+    "id": "die-strasse",
+    "file": "a2-die-strasse-batch100-20261003.png"
+  },
+  {
+    "id": "das-raetsel",
+    "file": "a2-das-raetsel-batch100-20261003.png"
+  },
+  {
+    "id": "der-polizist",
+    "file": "a2-der-polizist-batch100-20261003-v2.png"
+  },
+  {
+    "id": "die-universitaet",
+    "file": "a2-die-universitaet-batch100-20261003.png"
+  },
+  {
+    "id": "das-rathaus",
+    "file": "a2-das-rathaus-batch100-20261003.png"
+  },
+  {
+    "id": "der-regen",
+    "file": "a2-der-regen-batch100-20261003.png"
+  },
+  {
+    "id": "die-wohnung",
+    "file": "a2-die-wohnung-batch100-20261003.png"
+  },
+  {
+    "id": "das-restaurant",
+    "file": "a2-das-restaurant-batch100-20261003-v2.png"
+  },
+  {
+    "id": "der-schnee",
+    "file": "a2-der-schnee-batch100-20261003.png"
+  },
+  {
+    "id": "die-welt",
+    "file": "a2-die-welt-batch100-20261003.png"
+  },
+  {
+    "id": "das-schloss",
+    "file": "a2-das-schloss-batch100-20261003.png"
+  },
+  {
+    "id": "der-see",
+    "file": "a2-der-see-batch100-20261003.png"
+  },
+  {
+    "id": "die-fundsachen",
+    "file": "a2-die-fundsachen-batch100-20261003.png"
+  },
+  {
+    "id": "das-taxi",
+    "file": "a2-das-taxi-batch100-20261003.png"
+  },
+  {
+    "id": "der-sportplatz",
+    "file": "a2-der-sportplatz-batch100-20261003.png"
+  },
+  {
+    "id": "die-lebensmittel",
+    "file": "a2-die-lebensmittel-batch100-20261003-v2.png"
+  },
+  {
+    "id": "das-telefon",
+    "file": "a2-das-telefon-batch100-20261003.png"
+  },
+  {
+    "id": "der-supermarkt",
+    "file": "a2-der-supermarkt-batch100-20261003-v2.png"
+  },
+  {
+    "id": "die-moebel",
+    "file": "a2-die-moebel-batch100-20261003-v2.png"
+  },
+  {
+    "id": "das-theater",
+    "file": "a2-das-theater-batch100-20261003.png"
+  },
+  {
+    "id": "der-tee",
+    "file": "a2-der-tee-batch100-20261003-v2.png"
+  },
+  {
+    "id": "die-pommes-frites",
+    "file": "a2-die-pommes-frites-batch100-20261003-v2.png"
+  },
+  {
+    "id": "das-wasser",
+    "file": "a2-das-wasser-batch100-20261003.png"
+  },
+  {
+    "id": "der-weg",
+    "file": "a2-der-weg-batch100-20261003-v2.png"
+  },
+  {
+    "id": "die-suessigkeiten",
+    "file": "a2-die-suessigkeiten-batch100-20261003-v2.png"
+  },
+  {
+    "id": "das-woerterbuch",
+    "file": "a2-das-woerterbuch-batch100-20261003.png"
+  },
+  {
+    "id": "der-zettel",
+    "file": "a2-der-zettel-batch100-20261003.png"
+  },
+  {
+    "id": "die-eltern",
+    "file": "a2-die-eltern-batch100-20261003.png"
+  },
+  {
+    "id": "das-wohnzimmer",
+    "file": "a2-das-wohnzimmer-batch100-20261003.png"
+  },
+  {
+    "id": "der-zirkus",
+    "file": "a2-der-zirkus-batch100-20261003.png"
   }
 ]
