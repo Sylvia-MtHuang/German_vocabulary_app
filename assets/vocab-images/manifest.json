@@ -309,7 +309,7 @@
   },
   {
     "id": "das-bier",
-    "file": "a2-das-bier.png"
+    "file": "a2-das-bier-gray-v2.png"
   },
   {
     "id": "der-ball",
@@ -357,7 +357,7 @@
   },
   {
     "id": "das-eis",
-    "file": "a2-das-eis.png"
+    "file": "a2-das-eis-gray-v2.png"
   },
   {
     "id": "der-drucker",
@@ -365,7 +365,7 @@
   },
   {
     "id": "die-familie",
-    "file": "a2-die-familie.png"
+    "file": "a2-die-familie-gray-v2.png"
   },
   {
     "id": "das-fleisch",
@@ -393,7 +393,7 @@
   },
   {
     "id": "das-fruehstueck",
-    "file": "a2-das-fruehstueck.png"
+    "file": "a2-das-fruehstueck-gray-v2.png"
   },
   {
     "id": "der-fluss",
@@ -421,7 +421,7 @@
   },
   {
     "id": "der-hamburger",
-    "file": "a2-der-hamburger.png"
+    "file": "a2-der-hamburger-gray-v2.png"
   },
   {
     "id": "die-hose",
@@ -457,7 +457,7 @@
   },
   {
     "id": "der-kaffee",
-    "file": "a2-der-kaffee.png"
+    "file": "a2-der-kaffee-gray-v2.png"
   },
   {
     "id": "die-kamera",
@@ -521,7 +521,7 @@
   },
   {
     "id": "die-orange",
-    "file": "a2-die-orange.png"
+    "file": "a2-die-orange-gray-v2.png"
   },
   {
     "id": "das-messer",
@@ -529,15 +529,15 @@
   },
   {
     "id": "der-reis",
-    "file": "a2-der-reis.png"
+    "file": "a2-der-reis-gray-v2.png"
   },
   {
     "id": "die-pflanze",
-    "file": "a2-die-pflanze.png"
+    "file": "a2-die-pflanze-gray-v2.png"
   },
   {
     "id": "das-obst",
-    "file": "a2-das-obst.png"
+    "file": "a2-das-obst-gray-v3.png"
   },
   {
     "id": "der-ring",
@@ -545,7 +545,7 @@
   },
   {
     "id": "die-pizza",
-    "file": "a2-die-pizza.png"
+    "file": "a2-die-pizza-gray-v2.png"
   },
   {
     "id": "das-ohr",
@@ -577,7 +577,7 @@
   },
   {
     "id": "der-saft",
-    "file": "a2-der-saft.png"
+    "file": "a2-der-saft-gray-v2.png"
   },
   {
     "id": "die-seife",
@@ -589,11 +589,11 @@
   },
   {
     "id": "der-salat",
-    "file": "a2-der-salat.png"
+    "file": "a2-der-salat-gray-v2.png"
   },
   {
     "id": "die-suppe",
-    "file": "a2-die-suppe.png"
+    "file": "a2-die-suppe-gray-v2.png"
   },
   {
     "id": "das-radio",
@@ -621,7 +621,7 @@
   },
   {
     "id": "das-schwein",
-    "file": "a2-das-schwein.png"
+    "file": "a2-das-schwein-gray-v2.png"
   },
   {
     "id": "der-topf",
@@ -633,7 +633,7 @@
   },
   {
     "id": "das-schwimmbad",
-    "file": "a2-das-schwimmbad.png"
+    "file": "a2-das-schwimmbad-gray-v2.png"
   },
   {
     "id": "der-vogel",
@@ -661,6 +661,6 @@
   },
   {
     "id": "der-zucker",
-    "file": "a2-der-zucker.png"
+    "file": "a2-der-zucker-gray-v2.png"
   }
 ]

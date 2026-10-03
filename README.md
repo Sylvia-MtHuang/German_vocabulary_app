@@ -133,9 +133,9 @@ Short version:
 Photorealistic memory image, square flashcard format.
 One unique image per word; do not reuse the same composition across words.
 The main subject uses the article color strongly and clearly.
-Background and supporting objects avoid the article color.
+Only the core subject carries the article color; all other elements are grayscale.
 Background stays clean and uncluttered, without scenic windows or busy rooms.
-Supporting objects may explain the noun but stay neutral-colored and secondary.
+Supporting objects may explain the noun but stay grayscale and secondary.
 Images may be imaginative or surreal and do not need to match the example sentence themes.
 No readable text, labels, watermarks, cartoons, illustrations, or UI style.
 ```
