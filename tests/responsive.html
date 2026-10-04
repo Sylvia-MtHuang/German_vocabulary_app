@@ -10,6 +10,8 @@
 <iframe title="App under test"></iframe>
 <script>
 const sizes = [[1920,1080],[1440,900],[1366,768],[1280,720],[1024,768],[1280,600],[844,390],[768,1024],[390,844],[320,568]];
+const params = new URLSearchParams(location.search);
+const limit = Number(params.get('limit')) || 0;
 const frame = document.querySelector('iframe');
 const output = document.querySelector('#results');
 const run = document.querySelector('#run');
@@ -34,10 +36,11 @@ window.layoutQA = {
 run.onclick = async () => {
  run.disabled = true;
  try {
-  const [html, source, manifest, books, translations] = await Promise.all([
+  const [html, source, manifest, allBooks, translations] = await Promise.all([
    fetch('../index.html',{cache:'no-store'}).then(r=>r.text()), fetch('../app.js',{cache:'no-store'}).then(r=>r.text()),
    fetch('../assets/vocab-images/manifest.json',{cache:'no-store'}).then(r=>r.json()), fetch('../wordbooks/manifest.json',{cache:'no-store'}).then(r=>r.json()),fetch('../wordbooks/zh-CN.json',{cache:'no-store'}).then(r=>r.json())
   ]);
+  const books = allBooks.filter(book => !params.get('book') || book.id === params.get('book'));
   const texts = await Promise.all(books.map(b=>fetch('../'+b.url).then(r=>r.text())));
   // Omit startup side effects, including progress storage, in this isolated test document.
   const testSource = source.replace(/let state = loadState\(\);/, 'let state = createDefaultState();')
@@ -83,12 +86,15 @@ run.onclick = async () => {
     for (let book=0;book<books.length;book++) {
       const words = qa.load(texts[book],manifest,translations);
       // Exercise every learning card and missed-card state, then all review formats for long entries.
-      const sample = width >= 961 ? words : [...words].sort((a,b)=>(b.word.length+b.example.length)-(a.word.length+a.example.length)).slice(0,language === 'zh' ? 30 : 8);
+      const longest = [...words].sort((a,b)=>(b.word.length+b.example.length)-(a.word.length+a.example.length));
+      const sample = width >= 961 ? (limit ? longest.slice(0,limit) : words) : longest.slice(0,language === 'zh' ? 30 : 8);
       for (const word of sample) {
         for (const view of ['learn','missed']) {
           qa.study(word,view);
           check(language+' '+width+'x'+height+' '+books[book].id+' '+word.word+' '+view,width>=961,true);
         }
+        // Yield during large wordbooks so the results page remains responsive.
+        if (checks % 100 < 2) await new Promise(requestAnimationFrame);
       }
       for (const word of [...words].sort((a,b)=>b.word.length-a.word.length).slice(0,5)) {
         for (const view of ['meaning','article','fill','done']) {

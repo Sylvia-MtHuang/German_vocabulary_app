@@ -11,9 +11,10 @@
 <script>
 const frame=document.querySelector('iframe'),output=document.querySelector('#results'),run=document.querySelector('#run');
 const stored=new Map();
+const bookId=new URLSearchParams(location.search).get('book')==='goethe-b1'?'goethe-b1':'goethe-a2';
 const bridge=`
 window.languageQA={
- init(books,manifest,text,translations){ CHINESE_VOCABULARY=translations; WORDBOOKS=books; IMAGE_PATHS=parseImageManifest(manifest); WORDS=parseVocabulary(text); state.selectedWordbookId='goethe-a2'; syncWordbookPicker(); setLanguage(uiLanguage); },
+ init(books,manifest,text,translations){ CHINESE_VOCABULARY=translations; WORDBOOKS=books; IMAGE_PATHS=parseImageManifest(manifest); WORDS=parseVocabulary(text); state.selectedWordbookId='${bookId}'; syncWordbookPicker(); setLanguage(uiLanguage); },
  study(view,id='die-bank-2'){ clearAutoAdvance(); stopSpeech(); const word=WORDS.find(w=>w.id===id); session=[{word:WORDS[0],phase:'quiz',quizType:'meaning'}]; currentItem={word,phase:view==='learn'?'learn':'quiz',quizType:view==='meaning'?'meaning':'fill'}; locked=false; setupView.classList.add('hidden'); studyView.classList.remove('hidden'); document.body.classList.add('is-studying'); renderNextCardPreview(); updateProgress(); if(view==='learn')renderLearn(word,{autoSpeak:false}); else if(view==='meaning')renderMeaningQuiz(word);else renderFillQuiz(word); },
  miss(){checkQuiz(false)}, review(){showMissedWordCard()}, back(){restoreMissedQuestion()}, done(){renderDone()},
  snapshot(){return JSON.stringify({state,session,currentItem,locked,autoAdvanceTimer,speechRequestId,missedReviewContext})}
@@ -24,7 +25,7 @@ run.onclick=async()=>{
  try{
   const [html,source,books,manifest,text,translations]=await Promise.all([
    fetch('../index.html',{cache:'no-store'}).then(r=>r.text()),fetch('../app.js',{cache:'no-store'}).then(r=>r.text()),
-   fetch('../wordbooks/manifest.json',{cache:'no-store'}).then(r=>r.json()),fetch('../assets/vocab-images/manifest.json',{cache:'no-store'}).then(r=>r.json()),fetch('../wordbooks/goethe-a2.txt',{cache:'no-store'}).then(r=>r.text()),fetch('../wordbooks/zh-CN.json',{cache:'no-store'}).then(r=>r.json())
+   fetch('../wordbooks/manifest.json',{cache:'no-store'}).then(r=>r.json()),fetch('../assets/vocab-images/manifest.json',{cache:'no-store'}).then(r=>r.json()),fetch('../wordbooks/'+bookId+'.txt',{cache:'no-store'}).then(r=>r.text()),fetch('../wordbooks/zh-CN.json',{cache:'no-store'}).then(r=>r.json())
   ]);
   const testSource=source.replace(/let state = loadState\(\);/,'let state = createDefaultState();')
    .replace(/\blocalStorage\b/g,'window.testStorage')

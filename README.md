@@ -37,6 +37,10 @@ The home screen lets you choose a wordbook before starting a session. Learning p
 
 The independent A2 wordbook covers the alphabetical section and thematic groups of the [official Goethe-Zertifikat A2 wordlist](https://www.goethe.de/pro/relaunch/prf/vi/Goethe-Zertifikat_A2_Wortliste.pdf), including words shared with A1. Its 1,498 cards split gender variants, meanings and useful time/date phrases. The official list describes approximately 1,300 lexical units; card counts use a different convention. Short everyday German examples and English translations are independently written or adapted from our existing A1 cards; official example sentences are not reproduced.
 
+The independent B1 wordbook follows the alphabetical and thematic sections of the [official Goethe-Zertifikat B1 wordlist](https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_B1_Wortliste.pdf). Its 3,571 cards include 1,411 reused cards and 2,160 newly written cards, with English and Chinese meanings and translations of short original German examples. Gender, regional, spelling and explicit compound forms are kept separately, including Swiss vocabulary. This differs from the official count of approximately 2,400 lexical units. Sources and normalization decisions are recorded in `reports/b1-source-entries.json` and `reports/B1-wordlist-research-2026-10-04.md`. Select **Goethe-Institut B1 level** / **歌德 B1 词库** after refreshing the app.
+
+Run `node tests/b1-wordbook.test.cjs` for B1 coverage, noun forms and separate progress checks. `tests/language.html?book=goethe-b1` checks B1 language switching; `tests/responsive.html?book=goethe-b1&limit=60` checks its longest 60 cards on desktop and longest samples on phones in both languages, across ten viewport sizes. The default responsive test still checks every desktop card in all wordbooks.
+
 ## English and Chinese
 
 The top-right English / 中文 buttons switch the interface, meanings, example translations and memory hints. The browser remembers the language choice. Switching during study preserves the current card, answer input, question choices and progress. German words and sentences stay in German.
@@ -126,6 +130,8 @@ Images are individually generated PNGs. A2 currently has 331 illustrated cards, 
   { "id": "die-versicherung", "file": "die-versicherung-v2.png" }
 ]
 ```
+
+The approved B1 batch adds 100 distinct photographs with article colors and grayscale surroundings. Its gallery is `tests/b1-images-100-20261004.html`; prompts and revision history are in `assets/vocab-images/b1-image-prompts-100-20261004.json`. Run `node tests/b1-images.test.cjs` for actual B1 image bindings, dimensions and uniqueness.
 
 This lets you test new image versions without deleting old images.
 

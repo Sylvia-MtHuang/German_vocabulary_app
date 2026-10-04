@@ -19,5 +19,12 @@
     "description": "Complete A2 vocabulary with short everyday examples.",
     "url": "wordbooks/goethe-a2.txt",
     "source": "Goethe-Zertifikat A2 official wordlist"
+  },
+  {
+    "id": "goethe-b1",
+    "title": "Goethe-Institut B1 level",
+    "description": "B1 vocabulary with short everyday examples.",
+    "url": "wordbooks/goethe-b1.txt",
+    "source": "Goethe-Zertifikat B1 official wordlist"
   }
 ]

@@ -1262,5 +1262,405 @@
   {
     "id": "der-zirkus",
     "file": "a2-der-zirkus-batch100-20261003.png"
+  },
+  {
+    "id": "der-abfalleimer",
+    "file": "b1-der-abfalleimer-batch100-20261004.png"
+  },
+  {
+    "id": "die-aprikose",
+    "file": "b1-die-aprikose-batch100-20261004-v2.png"
+  },
+  {
+    "id": "das-hallenbad",
+    "file": "b1-das-hallenbad-batch100-20261004.png"
+  },
+  {
+    "id": "der-affe",
+    "file": "b1-der-affe-batch100-20261004-v2.png"
+  },
+  {
+    "id": "die-badewanne",
+    "file": "b1-die-badewanne-batch100-20261004.png"
+  },
+  {
+    "id": "das-blut",
+    "file": "b1-das-blut-batch100-20261004.png"
+  },
+  {
+    "id": "der-akku",
+    "file": "b1-der-akku-batch100-20261004-v2.png"
+  },
+  {
+    "id": "die-batterie",
+    "file": "b1-die-batterie-batch100-20261004-v2.png"
+  },
+  {
+    "id": "das-boot",
+    "file": "b1-das-boot-batch100-20261004.png"
+  },
+  {
+    "id": "der-backofen",
+    "file": "b1-der-backofen-batch100-20261004.png"
+  },
+  {
+    "id": "die-biene",
+    "file": "b1-die-biene-batch100-20261004.png"
+  },
+  {
+    "id": "das-broetli",
+    "file": "b1-das-broetli-batch100-20261004-v2.png"
+  },
+  {
+    "id": "der-bart",
+    "file": "b1-der-bart-batch100-20261004.png"
+  },
+  {
+    "id": "die-bremse",
+    "file": "b1-die-bremse-batch100-20261004.png"
+  },
+  {
+    "id": "das-dach",
+    "file": "b1-das-dach-batch100-20261004.png"
+  },
+  {
+    "id": "der-bauer",
+    "file": "b1-der-bauer-batch100-20261004-v2.png"
+  },
+  {
+    "id": "die-brieftasche",
+    "file": "b1-die-brieftasche-batch100-20261004.png"
+  },
+  {
+    "id": "das-denkmal",
+    "file": "b1-das-denkmal-batch100-20261004.png"
+  },
+  {
+    "id": "der-baer",
+    "file": "b1-der-baer-batch100-20261004-v2.png"
+  },
+  {
+    "id": "die-burg",
+    "file": "b1-die-burg-batch100-20261004.png"
+  },
+  {
+    "id": "das-e-bike",
+    "file": "b1-das-e-bike-batch100-20261004.png"
+  },
+  {
+    "id": "der-bildschirm",
+    "file": "b1-der-bildschirm-batch100-20261004.png"
+  },
+  {
+    "id": "die-buechse",
+    "file": "b1-die-buechse-batch100-20261004-v2.png"
+  },
+  {
+    "id": "das-fahrzeug",
+    "file": "b1-das-fahrzeug-batch100-20261004.png"
+  },
+  {
+    "id": "der-blitz",
+    "file": "b1-der-blitz-batch100-20261004.png"
+  },
+  {
+    "id": "die-buerste",
+    "file": "b1-die-buerste-batch100-20261004.png"
+  },
+  {
+    "id": "das-faschierte",
+    "file": "b1-das-faschierte-batch100-20261004.png"
+  },
+  {
+    "id": "der-briefkasten",
+    "file": "b1-der-briefkasten-batch100-20261004.png"
+  },
+  {
+    "id": "die-couch",
+    "file": "b1-die-couch-batch100-20261004.png"
+  },
+  {
+    "id": "das-fax",
+    "file": "b1-das-fax-batch100-20261004.png"
+  },
+  {
+    "id": "der-briefumschlag",
+    "file": "b1-der-briefumschlag-batch100-20261004.png"
+  },
+  {
+    "id": "die-decke",
+    "file": "b1-die-decke-batch100-20261004.png"
+  },
+  {
+    "id": "das-feld",
+    "file": "b1-das-feld-batch100-20261004.png"
+  },
+  {
+    "id": "der-cd-player",
+    "file": "b1-der-cd-player-batch100-20261004.png"
+  },
+  {
+    "id": "die-dvd",
+    "file": "b1-die-dvd-batch100-20261004.png"
+  },
+  {
+    "id": "das-feuer",
+    "file": "b1-das-feuer-batch100-20261004-v2.png"
+  },
+  {
+    "id": "der-elefant",
+    "file": "b1-der-elefant-batch100-20261004.png"
+  },
+  {
+    "id": "die-ente",
+    "file": "b1-die-ente-batch100-20261004-v2.png"
+  },
+  {
+    "id": "das-feuerzeug",
+    "file": "b1-das-feuerzeug-batch100-20261004.png"
+  },
+  {
+    "id": "der-fauteuil",
+    "file": "b1-der-fauteuil-batch100-20261004.png"
+  },
+  {
+    "id": "die-faehre",
+    "file": "b1-die-faehre-batch100-20261004-v2.png"
+  },
+  {
+    "id": "das-gewuerz",
+    "file": "b1-das-gewuerz-batch100-20261004-v2.png"
+  },
+  {
+    "id": "der-finger",
+    "file": "b1-der-finger-batch100-20261004.png"
+  },
+  {
+    "id": "die-fernbedienung",
+    "file": "b1-die-fernbedienung-batch100-20261004.png"
+  },
+  {
+    "id": "das-gold",
+    "file": "b1-das-gold-batch100-20261004.png"
+  },
+  {
+    "id": "der-grill",
+    "file": "b1-der-grill-batch100-20261004.png"
+  },
+  {
+    "id": "die-festplatte",
+    "file": "b1-die-festplatte-batch100-20261004.png"
+  },
+  {
+    "id": "das-herz",
+    "file": "b1-das-herz-batch100-20261004.png"
+  },
+  {
+    "id": "der-hammer",
+    "file": "b1-der-hammer-batch100-20261004.png"
+  },
+  {
+    "id": "die-fliege",
+    "file": "b1-die-fliege-batch100-20261004.png"
+  },
+  {
+    "id": "das-holz",
+    "file": "b1-das-holz-batch100-20261004.png"
+  },
+  {
+    "id": "der-hase",
+    "file": "b1-der-hase-batch100-20261004-v2.png"
+  },
+  {
+    "id": "die-floete",
+    "file": "b1-die-floete-batch100-20261004.png"
+  },
+  {
+    "id": "das-kabel",
+    "file": "b1-das-kabel-batch100-20261004.png"
+  },
+  {
+    "id": "der-honig",
+    "file": "b1-der-honig-batch100-20261004.png"
+  },
+  {
+    "id": "die-giraffe",
+    "file": "b1-die-giraffe-batch100-20261004.png"
+  },
+  {
+    "id": "das-kissen",
+    "file": "b1-das-kissen-batch100-20261004.png"
+  },
+  {
+    "id": "der-hut",
+    "file": "b1-der-hut-batch100-20261004.png"
+  },
+  {
+    "id": "die-kerze",
+    "file": "b1-die-kerze-batch100-20261004-v2.png"
+  },
+  {
+    "id": "das-knie",
+    "file": "b1-das-knie-batch100-20261004.png"
+  },
+  {
+    "id": "der-kakao",
+    "file": "b1-der-kakao-batch100-20261004.png"
+  },
+  {
+    "id": "die-kiste",
+    "file": "b1-die-kiste-batch100-20261004.png"
+  },
+  {
+    "id": "das-krokodil",
+    "file": "b1-das-krokodil-batch100-20261004-v2.png"
+  },
+  {
+    "id": "der-knopf",
+    "file": "b1-der-knopf-batch100-20261004.png"
+  },
+  {
+    "id": "die-klingel",
+    "file": "b1-die-klingel-batch100-20261004-v2-v2.png"
+  },
+  {
+    "id": "das-leder",
+    "file": "b1-das-leder-batch100-20261004.png"
+  },
+  {
+    "id": "der-kopierer",
+    "file": "b1-der-kopierer-batch100-20261004.png"
+  },
+  {
+    "id": "die-konfituere",
+    "file": "b1-die-konfituere-batch100-20261004.png"
+  },
+  {
+    "id": "das-mehl",
+    "file": "b1-das-mehl-batch100-20261004.png"
+  },
+  {
+    "id": "der-krankenwagen",
+    "file": "b1-der-krankenwagen-batch100-20261004-v2.png"
+  },
+  {
+    "id": "die-kuh",
+    "file": "b1-die-kuh-batch100-20261004-v2.png"
+  },
+  {
+    "id": "das-metall",
+    "file": "b1-das-metall-batch100-20261004.png"
+  },
+  {
+    "id": "der-kugelschreiber",
+    "file": "b1-der-kugelschreiber-batch100-20261004.png"
+  },
+  {
+    "id": "die-leiter",
+    "file": "b1-die-leiter-batch100-20261004.png"
+  },
+  {
+    "id": "das-motorrad",
+    "file": "b1-das-motorrad-batch100-20261004.png"
+  },
+  {
+    "id": "der-lautsprecher",
+    "file": "b1-der-lautsprecher-batch100-20261004.png"
+  },
+  {
+    "id": "die-maus",
+    "file": "b1-die-maus-batch100-20261004.png"
+  },
+  {
+    "id": "das-mountainbike",
+    "file": "b1-das-mountainbike-batch100-20261004.png"
+  },
+  {
+    "id": "der-loewe",
+    "file": "b1-der-loewe-batch100-20261004.png"
+  },
+  {
+    "id": "die-muecke",
+    "file": "b1-die-muecke-batch100-20261004.png"
+  },
+  {
+    "id": "das-netz",
+    "file": "b1-das-netz-batch100-20261004.png"
+  },
+  {
+    "id": "der-mond",
+    "file": "b1-der-mond-batch100-20261004.png"
+  },
+  {
+    "id": "die-nadel",
+    "file": "b1-die-nadel-batch100-20261004.png"
+  },
+  {
+    "id": "das-pflaster",
+    "file": "b1-das-pflaster-batch100-20261004.png"
+  },
+  {
+    "id": "der-nagel",
+    "file": "b1-der-nagel-batch100-20261004-v2.png"
+  },
+  {
+    "id": "die-pfanne",
+    "file": "b1-die-pfanne-batch100-20261004-v2.png"
+  },
+  {
+    "id": "das-puzzle",
+    "file": "b1-das-puzzle-batch100-20261004.png"
+  },
+  {
+    "id": "der-ordner",
+    "file": "b1-der-ordner-batch100-20261004.png"
+  },
+  {
+    "id": "die-pflaume",
+    "file": "b1-die-pflaume-batch100-20261004.png"
+  },
+  {
+    "id": "das-rad",
+    "file": "b1-das-rad-batch100-20261004.png"
+  },
+  {
+    "id": "der-pilz",
+    "file": "b1-der-pilz-batch100-20261004.png"
+  },
+  {
+    "id": "die-puppe",
+    "file": "b1-die-puppe-batch100-20261004.png"
+  },
+  {
+    "id": "das-schaf",
+    "file": "b1-das-schaf-batch100-20261004.png"
+  },
+  {
+    "id": "der-pinguin",
+    "file": "b1-der-pinguin-batch100-20261004.png"
+  },
+  {
+    "id": "die-schildkroete",
+    "file": "b1-die-schildkroete-batch100-20261004.png"
+  },
+  {
+    "id": "das-taschentuch",
+    "file": "b1-das-taschentuch-batch100-20261004.png"
+  },
+  {
+    "id": "der-spiegel",
+    "file": "b1-der-spiegel-batch100-20261004.png"
+  },
+  {
+    "id": "die-vase",
+    "file": "b1-die-vase-batch100-20261004.png"
+  },
+  {
+    "id": "das-werkzeug",
+    "file": "b1-das-werkzeug-batch100-20261004.png"
+  },
+  {
+    "id": "der-stecker",
+    "file": "b1-der-stecker-batch100-20261004.png"
   }
 ]

@@ -74,10 +74,13 @@ const CHINESE_UI = {
   "Local custom list": "本地自定义词库",
   "Goethe-Zertifikat A1 wordlist reference": "歌德 A1 官方词表",
   "Goethe-Zertifikat A2 official wordlist": "歌德 A2 官方词表",
-  "{count} words loaded.": "已加载 {count} 个单词。",
-  "{count} words loaded. Source: {source}": "已加载 {count} 个单词。来源：{source}",
-  "No words loaded yet.": "尚未加载单词。",
-  "No words loaded yet. Source: {source}": "尚未加载单词。来源：{source}"
+  "Goethe-Institut B1 level": "歌德 B1 词库",
+  "B1 vocabulary with short everyday examples.": "B1 词表，配有简短日常例句。",
+  "Goethe-Zertifikat B1 official wordlist": "歌德 B1 官方词表",
+  "{count} cards loaded.": "已加载 {count} 张卡片。",
+  "{count} cards loaded. Source: {source}": "已加载 {count} 张卡片。来源：{source}",
+  "No cards loaded yet.": "尚未加载卡片。",
+  "No cards loaded yet. Source: {source}": "尚未加载卡片。来源：{source}"
 };
 let uiLanguage = loadLanguage();
 
@@ -926,7 +929,7 @@ function normalizeMemoryAid(value) {
 function parseTerm(term) {
   const normalized = term.replace(/\s+/g, " ").trim();
   const match = normalized.match(/^(der|die|das)\s+([^,;(]+)(?:\s*[,;(]\s*(.+?)\s*[)]?)?$/i);
-  if (!match) return { word: normalized };
+  if (!match || !/^(?:[A-ZÄÖÜ]|(?:e-card|ec-Karte)\b)/.test(match[2].trim())) return { word: normalized };
   const word = match[2].trim();
   const pluralOnly = /\bpl\.?/i.test(match[3] || "");
   const singularOnly = /\b(?:sg|sing)\.?/i.test(match[3] || "");
@@ -2074,7 +2077,7 @@ function renderWordbookSummary() {
   if (!wordbookSummary) return;
   const wordbook = getSelectedWordbook();
   const count = WORDS.length;
-  const key = count ? (wordbook.source ? "{count} words loaded. Source: {source}" : "{count} words loaded.") : (wordbook.source ? "No words loaded yet. Source: {source}" : "No words loaded yet.");
+  const key = count ? (wordbook.source ? "{count} cards loaded. Source: {source}" : "{count} cards loaded.") : (wordbook.source ? "No cards loaded yet. Source: {source}" : "No cards loaded yet.");
   setText(wordbookSummary, key, {count, source: wordbook.source});
 }
 
