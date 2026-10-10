@@ -1,0 +1,739 @@
+{
+  "wordbook": "goethe-b1",
+  "createdOn": "2026-10-09",
+  "status": "approved",
+  "count": 50,
+  "completedCount": 50,
+  "items": [
+    {
+      "id": "der-boden",
+      "term": "der Boden",
+      "meaning": "floor",
+      "color": "blue",
+      "file": "b1-der-boden-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Boden (floor). A blue tiled floor across the foreground, low interior perspective, walls and furniture grayscale. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 1
+    },
+    {
+      "id": "die-kanne",
+      "term": "die Kanne",
+      "meaning": "jug; pot",
+      "color": "pink",
+      "file": "b1-die-kanne-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Kanne (jug; pot). A pink ceramic jug with handle and pouring spout, standing on a gray stone counter, side product photograph. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 2
+    },
+    {
+      "id": "das-buffet",
+      "term": "das Buffet",
+      "meaning": "buffet",
+      "color": "green",
+      "file": "b1-das-buffet-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary das Buffet. Fix: Food has yellow/olive and brown highlights; make every food portion emerald green, gray dishes and background.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only green and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 3,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary das Buffet. Fix: Food has yellow/olive and brown highlights; make every food portion emerald green, gray dishes and background.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only green and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Buffet (buffet). A compact buffet spread of green food portions, gray serving dishes, gray utensils and gray serving table, realistic close catering photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-das-buffet-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-das-buffet-batch50-20261009.png",
+      "originalNumber": 3
+    },
+    {
+      "id": "der-bauernhof",
+      "term": "der Bauernhof",
+      "meaning": "farm",
+      "color": "blue",
+      "file": "b1-der-bauernhof-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Bauernhof (farm). A blue farmhouse and blue barn forming one farm complex, gray fences, fields and livestock, realistic miniature photographed at eye level. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 4
+    },
+    {
+      "id": "die-karotte",
+      "term": "die Karotte",
+      "meaning": "carrot",
+      "color": "pink",
+      "file": "b1-die-karotte-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary die Karotte. Fix: Beige root tip, root hairs and warm creases: make grayscale or pink; preserve gray tops.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only pink and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 5,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary die Karotte. Fix: Beige root tip, root hairs and warm creases: make grayscale or pink; preserve gray tops.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only pink and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Karotte (carrot). Two pink carrots with all leafy tops grayscale, one cut section, gray board, tactile vegetable texture. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-die-karotte-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-die-karotte-batch50-20261009.png",
+      "originalNumber": 5
+    },
+    {
+      "id": "das-dessert",
+      "term": "das Dessert",
+      "meaning": "dessert",
+      "color": "green",
+      "file": "b1-das-dessert-batch50-20261009-v2.png",
+      "prompt": "Precise object edit of this exact photograph for das Dessert. Dessert cream and crumbs have yellow/olive highlights. Make every part of cream and cake crumbs vivid emerald green or neutral grayscale. Keep berries gray, glass and spoon and tabletop gray. Preserve geometry, recognizable texture, composition, natural lighting. Only emerald green chromatic hue, every incidental object and reflection grayscale. Square opaque PNG no text.",
+      "generated": true,
+      "reviewed": true,
+      "number": 6,
+      "correctionPrompt": "Precise object edit of this exact photograph for das Dessert. Dessert cream and crumbs have yellow/olive highlights. Make every part of cream and cake crumbs vivid emerald green or neutral grayscale. Keep berries gray, glass and spoon and tabletop gray. Preserve geometry, recognizable texture, composition, natural lighting. Only emerald green chromatic hue, every incidental object and reflection grayscale. Square opaque PNG no text.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Dessert (dessert). A green dessert in a clear glass with green cream layers, gray spoon and gray berries, side-on close food photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-das-dessert-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-das-dessert-batch50-20261009.png",
+      "originalNumber": 6
+    },
+    {
+      "id": "der-braten",
+      "term": "der Braten",
+      "meaning": "roast",
+      "color": "blue",
+      "file": "b1-der-braten-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary der Braten. Fix: Brown roasted crust and seasoning on meat: keep texture, change brown to grayscale or blue.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only blue and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 7,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary der Braten. Fix: Brown roasted crust and seasoning on meat: keep texture, change brown to grayscale or blue.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only blue and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Braten (roast). A blue roast with carved blue slices, gray plate, knife and vegetables, realistic moist meat texture, close dinner-table view. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-der-braten-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-der-braten-batch50-20261009.png",
+      "originalNumber": 7
+    },
+    {
+      "id": "die-kassette",
+      "term": "die Kassette",
+      "meaning": "cassette",
+      "color": "pink",
+      "file": "b1-die-kassette-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Kassette (cassette). A pink audio cassette with two visible gray tape reels, no printed label or letters, diagonal close product view. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 8
+    },
+    {
+      "id": "das-fett",
+      "term": "das Fett",
+      "meaning": "fat",
+      "color": "green",
+      "file": "b1-das-fett-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Fett (fat). A green solid cooking-fat block with one green slice, gray wax paper and gray knife, close tactile food photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 9
+    },
+    {
+      "id": "der-bikini",
+      "term": "der Bikini",
+      "meaning": "bikini",
+      "color": "blue",
+      "file": "b1-der-bikini-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Bikini (bikini). A blue two-piece bikini laid flat with both pieces visible, gray fabric backdrop, overhead fashion photograph. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 10
+    },
+    {
+      "id": "die-klimaanlage",
+      "term": "die Klimaanlage",
+      "meaning": "air conditioning",
+      "color": "pink",
+      "file": "b1-die-klimaanlage-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Klimaanlage (air conditioning). A pink wall-mounted air conditioner with open gray vent blades on a gray wall, close interior photograph. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 11
+    },
+    {
+      "id": "das-gebirge",
+      "term": "das Gebirge",
+      "meaning": "mountain range",
+      "color": "green",
+      "file": "b1-das-gebirge-batch50-20261009-v2.png",
+      "prompt": "Precise object edit of this exact photograph for das Gebirge. Mountain rock and snow have warm beige patches. Make every rock and snow patch neutral grayscale; keep only mountain vegetation emerald green. Gray sky and foreground. Preserve geometry, recognizable texture, composition, natural lighting. Only emerald green chromatic hue, every incidental object and reflection grayscale. Square opaque PNG no text.",
+      "generated": true,
+      "reviewed": true,
+      "number": 12,
+      "correctionPrompt": "Precise object edit of this exact photograph for das Gebirge. Mountain rock and snow have warm beige patches. Make every rock and snow patch neutral grayscale; keep only mountain vegetation emerald green. Gray sky and foreground. Preserve geometry, recognizable texture, composition, natural lighting. Only emerald green chromatic hue, every incidental object and reflection grayscale. Square opaque PNG no text.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Gebirge (mountain range). A recognizable range of several green rocky mountain peaks, all snow, foreground and sky grayscale, realistic landscape photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-das-gebirge-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-das-gebirge-batch50-20261009.png",
+      "originalNumber": 12
+    },
+    {
+      "id": "der-chip",
+      "term": "der Chip",
+      "meaning": "chip",
+      "color": "blue",
+      "file": "b1-der-chip-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Chip (chip). A blue square electronic microchip, metallic gray pins and gray circuit board, macro technical photograph. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 13
+    },
+    {
+      "id": "die-lippe",
+      "term": "die Lippe",
+      "meaning": "lip",
+      "color": "pink",
+      "file": "b1-die-lippe-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Lippe (lip). Close crop of realistic pink lips, all surrounding facial skin and teeth neutral grayscale, no cosmetics container. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 14
+    },
+    {
+      "id": "das-gras",
+      "term": "das Gras",
+      "meaning": "grass",
+      "color": "green",
+      "file": "b1-das-gras-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Gras (grass). A dense patch of green grass blades growing in gray soil, low macro photograph, all background gray. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 15
+    },
+    {
+      "id": "der-essig",
+      "term": "der Essig",
+      "meaning": "vinegar",
+      "color": "blue",
+      "file": "b1-der-essig-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary der Essig. Fix: Blue reflected patch on tabletop under bowl; tabletop must be grayscale.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only blue and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 16,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary der Essig. Fix: Blue reflected patch on tabletop under bowl; tabletop must be grayscale.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only blue and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Essig (vinegar). Blue vinegar pouring from a colorless unlabelled glass bottle into a clear glass bowl, gray table and neutral reflections. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-der-essig-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-der-essig-batch50-20261009.png",
+      "originalNumber": 16
+    },
+    {
+      "id": "die-mappe",
+      "term": "die Mappe",
+      "meaning": "folder",
+      "color": "pink",
+      "file": "b1-die-mappe-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Mappe (folder). A pink document folder opened to hold blank grayscale sheets, gray desk, overhead office photograph. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 17
+    },
+    {
+      "id": "das-hackfleisch",
+      "term": "das Hackfleisch",
+      "meaning": "minced meat",
+      "color": "green",
+      "file": "b1-das-hackfleisch-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Hackfleisch (minced meat). A mound of green minced meat with clearly visible small strands, gray bowl and gray countertop, close food photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 18
+    },
+    {
+      "id": "der-fleck",
+      "term": "der Fleck",
+      "meaning": "stain",
+      "color": "blue",
+      "file": "b1-der-fleck-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Fleck (stain). A clearly visible blue liquid stain on otherwise gray cloth, overhead close view of absorbed irregular edges. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 19
+    },
+    {
+      "id": "die-margarine",
+      "term": "die Margarine",
+      "meaning": "margarine",
+      "color": "pink",
+      "file": "b1-die-margarine-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary die Margarine. Fix: Pink reflections on knife and plate; grayscale these supporting surfaces, preserve pink margarine.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only pink and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 20,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary die Margarine. Fix: Pink reflections on knife and plate; grayscale these supporting surfaces, preserve pink margarine.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only pink and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Margarine (margarine). A pink margarine block with a soft curled pink spread on a gray butter knife, gray plate, realistic smooth food texture. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-die-margarine-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-die-margarine-batch50-20261009.png",
+      "originalNumber": 20
+    },
+    {
+      "id": "das-insekt",
+      "term": "das Insekt",
+      "meaning": "insect",
+      "color": "green",
+      "file": "b1-das-insekt-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Insekt (insect). One green beetle with realistic six gray legs and gray antennae on a gray stone, detailed macro wildlife photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 21
+    },
+    {
+      "id": "der-flur",
+      "term": "der Flur",
+      "meaning": "hallway",
+      "color": "blue",
+      "file": "b1-der-flur-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Flur (hallway). A blue hallway floor leading past grayscale doors on both sides, realistic clean corridor, eye-level perspective. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 22
+    },
+    {
+      "id": "die-mauer",
+      "term": "die Mauer",
+      "meaning": "wall",
+      "color": "pink",
+      "file": "b1-die-mauer-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Mauer (wall). A pink brick wall with visible mortar texture, gray ground and gray surroundings, oblique architectural close view. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 23
+    },
+    {
+      "id": "das-kreuz",
+      "term": "das Kreuz",
+      "meaning": "cross",
+      "color": "green",
+      "file": "b1-das-kreuz-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Kreuz (cross). A simple green wooden cross standing on a gray base, realistic wood grain, blank gray studio backdrop. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 24
+    },
+    {
+      "id": "der-hafen",
+      "term": "der Hafen",
+      "meaning": "harbour",
+      "color": "blue",
+      "file": "b1-der-hafen-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Hafen (harbour). A small harbor with blue quay structures as one subject, gray boats, gray water and gray cranes, close aerial miniature photograph. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 25
+    },
+    {
+      "id": "die-muelltonne",
+      "term": "die Mülltonne",
+      "meaning": "garbage bin",
+      "color": "pink",
+      "file": "b1-die-muelltonne-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Mülltonne (garbage bin). A large pink wheeled outdoor garbage bin with a lifted pink lid, gray pavement and gray wall, three-quarter photograph. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 26
+    },
+    {
+      "id": "das-loch",
+      "term": "das Loch",
+      "meaning": "hole",
+      "color": "green",
+      "file": "b1-das-loch-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary das Loch. Fix: Beige exposed wood chips around hole; make neutral gray or green, keep geometry.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only green and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 27,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary das Loch. Fix: Beige exposed wood chips around hole; make neutral gray or green, keep geometry.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only green and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Loch (hole). A circular hole through a green wooden board, grayscale empty space visible through it, three-quarter macro photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-das-loch-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-das-loch-batch50-20261009.png",
+      "originalNumber": 27
+    },
+    {
+      "id": "der-huegel",
+      "term": "der Hügel",
+      "meaning": "hill",
+      "color": "blue",
+      "file": "b1-der-huegel-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Hügel (hill). One rounded blue grass-covered hill, gray surrounding plain and gray overcast sky, landscape texture visible. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 28
+    },
+    {
+      "id": "die-muenze",
+      "term": "die Münze",
+      "meaning": "coin",
+      "color": "pink",
+      "file": "b1-die-muenze-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary die Münze. Fix: Pink reflected patch on tabletop beside coins; make only the tabletop reflection neutral grayscale.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only pink and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 29,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary die Münze. Fix: Pink reflected patch on tabletop beside coins; make only the tabletop reflection neutral grayscale.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only pink and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Münze (coin). A pink metallic coin seen on its edge beside another pink coin lying flat, embossed abstract relief without readable text, gray surface. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-die-muenze-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-die-muenze-batch50-20261009.png",
+      "originalNumber": 29
+    },
+    {
+      "id": "das-muesli",
+      "term": "das Müsli",
+      "meaning": "muesli",
+      "color": "green",
+      "file": "b1-das-muesli-batch50-20261009-v2.png",
+      "prompt": "Precise object edit of this exact photograph for das Müsli. Muesli oat flakes and seeds are olive/yellow. Make ALL cereal flakes and seeds emerald green with no yellow or olive. Keep milk neutral white and dish/spoon/table gray. Preserve geometry, recognizable texture, composition, natural lighting. Only emerald green chromatic hue, every incidental object and reflection grayscale. Square opaque PNG no text.",
+      "generated": true,
+      "reviewed": true,
+      "number": 30,
+      "correctionPrompt": "Precise object edit of this exact photograph for das Müsli. Muesli oat flakes and seeds are olive/yellow. Make ALL cereal flakes and seeds emerald green with no yellow or olive. Keep milk neutral white and dish/spoon/table gray. Preserve geometry, recognizable texture, composition, natural lighting. Only emerald green chromatic hue, every incidental object and reflection grayscale. Square opaque PNG no text.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Müsli (muesli). Green muesli flakes and green grains in a colorless bowl, gray spoon and gray milk, top-down food photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-das-muesli-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-das-muesli-batch50-20261009.png",
+      "originalNumber": 30
+    },
+    {
+      "id": "der-kanal",
+      "term": "der Kanal",
+      "meaning": "canal",
+      "color": "blue",
+      "file": "b1-der-kanal-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Kanal (canal). A blue narrow canal waterway between grayscale retaining walls, gray bridge and buildings, three-quarter elevated view. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 31
+    },
+    {
+      "id": "die-nase",
+      "term": "die Nase",
+      "meaning": "nose",
+      "color": "pink",
+      "file": "b1-die-nase-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Nase (nose). Close realistic human nose with pink nose skin only, all adjacent cheeks and upper lip grayscale, three-quarter anatomical portrait crop. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 32
+    },
+    {
+      "id": "das-regal",
+      "term": "das Regal",
+      "meaning": "shelf; shelving unit",
+      "color": "green",
+      "file": "b1-das-regal-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary das Regal. Fix: Potted plant leaves on upper shelf retain green; make all plant leaves grayscale and keep shelf green.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only green and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 33,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary das Regal. Fix: Potted plant leaves on upper shelf retain green; make all plant leaves grayscale and keep shelf green.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only green and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Regal (shelf; shelving unit). A green shelving unit with several clearly visible green shelves, a few grayscale books and boxes, gray room background. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-das-regal-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-das-regal-batch50-20261009.png",
+      "originalNumber": 33
+    },
+    {
+      "id": "der-kasten",
+      "term": "der Kasten",
+      "meaning": "cupboard",
+      "color": "blue",
+      "file": "b1-der-kasten-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Kasten (cupboard). A blue freestanding wooden cupboard with one door open, empty gray interior and gray floor, three-quarter product photograph. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 34
+    },
+    {
+      "id": "die-pille",
+      "term": "die Pille",
+      "meaning": "pill",
+      "color": "pink",
+      "file": "b1-die-pille-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary die Pille. Fix: Pink reflection on tabletop beneath pill; make tabletop neutral grayscale, preserve pill pink.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only pink and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 35,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary die Pille. Fix: Pink reflection on tabletop beneath pill; make tabletop neutral grayscale, preserve pill pink.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only pink and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Pille (pill). One pink oval pill beside an open gray unlabelled blister, macro photograph on gray tabletop, no symbols or writing. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-die-pille-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-die-pille-batch50-20261009.png",
+      "originalNumber": 35
+    },
+    {
+      "id": "das-rohr",
+      "term": "das Rohr",
+      "meaning": "pipe",
+      "color": "green",
+      "file": "b1-das-rohr-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Rohr (pipe). A green pipe with its open circular end clearly visible, gray clamp and gray wall, diagonal macro industrial photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 36
+    },
+    {
+      "id": "der-knochen",
+      "term": "der Knochen",
+      "meaning": "bone",
+      "color": "blue",
+      "file": "b1-der-knochen-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Knochen (bone). A single blue bone with realistic joint ends and pores resting diagonally on a gray slab, close museum specimen photograph. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 37
+    },
+    {
+      "id": "die-schachtel",
+      "term": "die Schachtel",
+      "meaning": "box",
+      "color": "pink",
+      "file": "b1-die-schachtel-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary die Schachtel. Fix: Brown/tan inner cardboard walls and lid underside; make grayscale, also grayscale pink shelf reflection.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only pink and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 38,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary die Schachtel. Fix: Brown/tan inner cardboard walls and lid underside; make grayscale, also grayscale pink shelf reflection.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only pink and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Schachtel (box). A pink cardboard box with an open pink lid and empty neutral interior, gray shelf, three-quarter close product photograph. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-die-schachtel-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-die-schachtel-batch50-20261009.png",
+      "originalNumber": 38
+    },
+    {
+      "id": "das-schnitzel",
+      "term": "das Schnitzel",
+      "meaning": "schnitzel; breaded cutlet",
+      "color": "green",
+      "file": "b1-das-schnitzel-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary das Schnitzel. Fix: Golden brown crispy crumbs on cutlet; change only brown/yellow to green or grayscale while preserving crispy texture.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only green and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 39,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary das Schnitzel. Fix: Golden brown crispy crumbs on cutlet; change only brown/yellow to green or grayscale while preserving crispy texture.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only green and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Schnitzel (schnitzel; breaded cutlet). One green breaded cutlet with a cut edge exposing green meat, gray plate and gray lemon wedge, close food photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-das-schnitzel-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-das-schnitzel-batch50-20261009.png",
+      "originalNumber": 39
+    },
+    {
+      "id": "der-laster",
+      "term": "der Laster",
+      "meaning": "truck",
+      "color": "blue",
+      "file": "b1-der-laster-batch50-20261009-v2-v2.png",
+      "prompt": "Edit only the tiny orange yellow marker light at the far left edge of the truck, under the rear cargo corner (around x=58 y=750 of 1254 square), and any other remaining orange yellow marker dots. Make these lights neutral grayscale. Every non-blue surface and reflection strictly grayscale. Preserve exactly the blue truck, photograph composition and all other geometry. Do not leave any amber light. Square opaque photograph, no text.",
+      "generated": true,
+      "reviewed": true,
+      "number": 40,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary der Laster. Fix: Amber/yellow side marker lights beneath truck cargo body; make grayscale without changing vehicle.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only blue and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Laster (truck). A blue heavy delivery truck with enclosed blue cargo body, gray wheels and road, three-quarter vehicle photograph, no driver. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-der-laster-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        },
+        {
+          "prompt": "Edit this exact photograph for German vocabulary der Laster. Fix: Amber/yellow side marker lights beneath truck cargo body; make grayscale without changing vehicle.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only blue and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+          "file": "b1-der-laster-batch50-20261009-v2.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-der-laster-batch50-20261009.png",
+      "originalNumber": 40,
+      "correctionAttempts": 2,
+      "reviewException": "预览已标注微小黄色灯点，用户确认发布此批次，保留该版本。"
+    },
+    {
+      "id": "die-schuessel",
+      "term": "die Schüssel",
+      "meaning": "bowl",
+      "color": "pink",
+      "file": "b1-die-schuessel-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Schüssel (bowl). A pink ceramic mixing bowl with clearly curved deep interior, empty, gray countertop, overhead angled food-equipment photograph. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 41
+    },
+    {
+      "id": "das-spielzeug",
+      "term": "das Spielzeug",
+      "meaning": "toy; toys",
+      "color": "green",
+      "file": "b1-das-spielzeug-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Spielzeug (toy; toys). A small set of green wooden toy blocks and a green toy spinning top, gray play surface, realistic product photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 42
+    },
+    {
+      "id": "der-pfeffer",
+      "term": "der Pfeffer",
+      "meaning": "pepper",
+      "color": "blue",
+      "file": "b1-der-pfeffer-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary der Pfeffer. Fix: Tan cracks and beige flecks on peppercorns/ground pepper; convert beige to grayscale or cobalt blue, retain texture.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only blue and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 43,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary der Pfeffer. Fix: Tan cracks and beige flecks on peppercorns/ground pepper; convert beige to grayscale or cobalt blue, retain texture.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only blue and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Pfeffer (pepper). Blue peppercorns and a small pile of ground blue pepper beside a gray unlabelled grinder, macro food photograph. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-der-pfeffer-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-der-pfeffer-batch50-20261009.png",
+      "originalNumber": 43
+    },
+    {
+      "id": "die-steckdose",
+      "term": "die Steckdose",
+      "meaning": "socket; outlet",
+      "color": "pink",
+      "file": "b1-die-steckdose-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Steckdose (socket; outlet). A pink European electrical wall socket housing with two dark gray round holes and gray grounding contacts, grayscale wall, macro view. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 44
+    },
+    {
+      "id": "das-streichholz",
+      "term": "das Streichholz",
+      "meaning": "match",
+      "color": "green",
+      "file": "b1-das-streichholz-batch50-20261009-v2.png",
+      "prompt": "Edit this exact photograph for German vocabulary das Streichholz. Fix: Beige matchstick shaft; make shaft green preserving wood grain, all matchbox and backdrop gray.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only green and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "generated": true,
+      "reviewed": true,
+      "number": 45,
+      "correctionPrompt": "Edit this exact photograph for German vocabulary das Streichholz. Fix: Beige matchstick shaft; make shaft green preserving wood grain, all matchbox and backdrop gray.. Preserve all composition, geometry, recognizable texture and objects. The subject must use only green and neutral grayscale, with no brown, beige, yellow, orange or other hues. All supporting objects and background, reflected light and surface shadows outside the subject must be STRICT neutral black white gray. No color bleed. Natural realistic photograph, square opaque PNG, no text. Keep every already correct detail.",
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Streichholz (match). A green matchstick with an unlit green head beside a gray unlabelled matchbox, close macro photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+          "file": "b1-das-streichholz-batch50-20261009.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "b1-das-streichholz-batch50-20261009.png",
+      "originalNumber": 45
+    },
+    {
+      "id": "der-teppich",
+      "term": "der Teppich",
+      "meaning": "carpet; rug",
+      "color": "blue",
+      "file": "b1-der-teppich-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Teppich (carpet; rug). A blue textured rug spread across a grayscale floor, slightly folded corner showing thickness, angled room detail. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 46
+    },
+    {
+      "id": "die-tastatur",
+      "term": "die Tastatur",
+      "meaning": "keyboard",
+      "color": "pink",
+      "file": "b1-die-tastatur-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Tastatur (keyboard). A pink computer keyboard with pink keys and no letters or symbols, gray tabletop, angled overhead close photograph. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 47
+    },
+    {
+      "id": "das-tal",
+      "term": "das Tal",
+      "meaning": "valley",
+      "color": "green",
+      "file": "b1-das-tal-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word das Tal (valley). A green valley floor winding between grayscale mountains, grayscale river and sky, realistic wide but closely framed landscape photograph. GREEN is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 48
+    },
+    {
+      "id": "der-turm",
+      "term": "der Turm",
+      "meaning": "tower",
+      "color": "blue",
+      "file": "b1-der-turm-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word der Turm (tower). One tall blue stone tower with clear battlements, gray ground and gray sky, upward architectural photograph. COBALT BLUE is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 49
+    },
+    {
+      "id": "die-zange",
+      "term": "die Zange",
+      "meaning": "pliers",
+      "color": "pink",
+      "file": "b1-die-zange-batch50-20261009.png",
+      "prompt": "Use case: photorealistic-natural. Square opaque vocabulary flashcard photograph, at least1024x1024. German word die Zange (pliers). Pink pliers handles and pink gripping jaws, gray pivot joint, open slightly to show function, diagonal macro tool photograph. PINK is the ONLY chromatic hue, confined to the vocabulary subject. All supporting objects, skin outside subject, plants, sky, surfaces, lighting and reflections must be neutral black, white or gray. Preserve recognizable geometry and realistic materials. Crisp soft neutral lighting, unique close composition, immediately recognizable at thumbnail size. No readable text, logos, watermarks, collage, cartoon, illustration or UI.",
+      "generated": true,
+      "reviewed": true,
+      "number": 50
+    }
+  ],
+  "approvedOn": "2026-10-10",
+  "approvalScope": "publish",
+  "approvalNote": "User requested publishing this preview batch: 你上线吧"
+}

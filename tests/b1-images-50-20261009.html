@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B1 新增 50 张图片 · 2026-10-09</title>
+<style>
+body{font:16px/1.5 system-ui;margin:24px auto;padding:0 20px;max-width:1100px;background:#f5f5f2;color:#242b29}
+h1{font-size:28px;margin-bottom:8px}a{color:#176f62}#gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin:24px 0}
+figure{margin:0;background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px #0001}figure img{display:block;width:100%;aspect-ratio:1;object-fit:contain}figcaption{padding:12px}strong{display:block;font-size:18px}small{color:#56635d}.blue strong{color:#1266b6}.pink strong{color:#ac245c}.green strong{color:#17763a}.yellow strong{color:#9a7900}.pending{aspect-ratio:1;display:grid;place-items:center;background:#eceee9}
+details{padding:0 12px 12px}summary{cursor:pointer;color:#176f62}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.comparison a{font-size:12px}.flag{display:block;color:#a23b23;margin-top:8px}
+</style>
+<h1>B1 新增 50 张图片</h1>
+<p>请检查：主体能否一眼认出词义、是否有歧义、缩小后是否清楚；主体以外是否都接近灰调。冠词配色：der 蓝色 · die 红／粉色 · das 绿色 · 仅复数词黄色。</p>
+<p>这批图片使用 B1 原表中的具体名词。<a href="../">打开 App</a></p>
+<p id="status" role="status">加载中…</p><main id="gallery"></main>
+<script>
+fetch('../assets/vocab-images/b1-image-prompts-50-20261009.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw Error('图片清单加载失败');return response.json()}).then(plan=>{
+ document.querySelector('#status').textContent=plan.items.filter(item=>item.generated).length+' / 50 张已生成；'+plan.items.filter(item=>item.reviewed).length+' 张已检查';
+ plan.items.forEach((item,index)=>{
+  const figure=document.createElement('figure');figure.className=item.color;
+  const imageLink=(file,label)=>{const link=document.createElement('a');link.href='../assets/vocab-images/'+file;link.target='_blank';link.rel='noopener';const img=document.createElement('img');img.src=link.href;img.alt=label;img.loading='eager';link.append(img);return link};
+  if(item.generated)figure.append(imageLink(item.file,item.term+' — '+item.meaning));
+  else{const pending=document.createElement('div');pending.className='pending';pending.textContent='生成中';figure.append(pending)}
+  const caption=document.createElement('figcaption');const name=document.createElement('strong');name.textContent=item.number+'. '+item.term;const meaning=document.createElement('small');meaning.textContent=item.meaning;caption.append(name,meaning);if(item.reviewIssue){const flag=document.createElement('small');flag.className='flag';flag.textContent='待处理：'+item.reviewIssue;caption.append(flag)}figure.append(caption);
+  if(item.reviewException){const note=document.createElement('small');note.style.display='block';note.textContent=typeof item.reviewException==='string'?item.reviewException:'用户已查看并接受所标注的少量残色';caption.append(note)}
+  const original=item.promptHistory?.find(entry=>entry.file)?.file||item.originalFile;
+  if(plan.status==='preview'&&original&&original!==item.file){const details=document.createElement('details');const summary=document.createElement('summary');summary.textContent='查看原图 / 修正版';const comparison=document.createElement('div');comparison.className='comparison';for(const [file,label] of [[original,'原图'],[item.file,'修正版']]){const link=imageLink(file,item.term+' — '+label);link.append(document.createTextNode(label));comparison.append(link)}details.append(summary,comparison);figure.append(details)}
+  document.querySelector('#gallery').append(figure);
+ });
+}).catch(error=>document.querySelector('#status').textContent=error.message);
+</script>
+</html>
