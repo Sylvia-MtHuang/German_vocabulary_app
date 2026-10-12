@@ -105,7 +105,8 @@ const imageBatches = [
   ['a2-image-prompts.json', 50],
   ['a2-image-prompts-100.json', 100],
   ['a2-image-prompts-50-20261003.json', 50],
-  ['a2-image-prompts-100-20261003.json', 100]
+  ['a2-image-prompts-100-20261003.json', 100],
+  ['a2-image-prompts-100b-20261003.json', 100]
 ];
 const revisions = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-images/a2-color-revisions-17.json'), 'utf8')).items;
 assert.equal(revisions.length, 17);
@@ -117,7 +118,7 @@ const imageIds = new Set();
 for (const [file, count] of imageBatches) {
   const batch = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-images', file), 'utf8'));
   assert.equal(batch.items.length, count);
-  if (file === 'a2-image-prompts-100-20261003.json') {
+  if (['a2-image-prompts-100-20261003.json', 'a2-image-prompts-100b-20261003.json'].includes(file)) {
     assert.equal(batch.status, 'approved');
     assert.equal(batch.approvalScope, 'publish');
     assert.ok(batch.items.every(item => item.reviewed));
@@ -132,10 +133,10 @@ for (const [file, count] of imageBatches) {
     imageHashes.add(crypto.createHash('sha256').update(png).digest('hex'));
     assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', item.term);
     assert.equal(png.readUInt32BE(16), png.readUInt32BE(20), item.term + ' must be square');
-    assert.ok(png.readUInt32BE(16) >= 512, item.term);
+    assert.ok(png.readUInt32BE(16) >= (file === 'a2-image-prompts-100b-20261003.json' ? 1024 : 512), item.term);
   }
 }
 assert.ok(revisions.every(item => imageIds.has(item.id)), 'Every revision belongs to an existing image batch');
-assert.equal(imageHashes.size, 300, 'Each vocabulary image must be independent');
-assert.equal(a2.filter(word => word.imagePath && fs.existsSync(path.join(root, word.imagePath))).length, 331);
-console.log('Wordbooks, A2 forms, recall clues, progress, randomized sessions and 300 image bindings (including 17 color revisions): passed');
+assert.equal(imageHashes.size, 400, 'Each vocabulary image must be independent');
+assert.equal(a2.filter(word => word.imagePath && fs.existsSync(path.join(root, word.imagePath))).length, 431);
+console.log('Wordbooks, A2 forms, recall clues, progress, randomized sessions and 400 image bindings (including 17 color revisions): passed');

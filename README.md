@@ -122,7 +122,7 @@ Images are enabled through:
 assets/vocab-images/manifest.json
 ```
 
-Images are individually generated PNGs. A2 currently has 331 illustrated cards, including 300 new images across four approved batches. Review the latest 100 locally at `http://127.0.0.1:8780/tests/a2-images-100-20261003.html`; its exact prompts, final filenames and revision history are in `assets/vocab-images/a2-image-prompts-100-20261003.json`. Earlier galleries remain at `tests/a2-images.html`, `tests/a2-images-100.html` and `tests/a2-images-50-20261003.html`. The manifest can map a word id to any image filename:
+Images are individually generated PNGs. A2 currently has 431 illustrated cards, including 400 new images across five approved batches. Review the previous 100 locally at `http://127.0.0.1:8780/tests/a2-images-100-20261003.html`; its exact prompts, final filenames and revision history are in `assets/vocab-images/a2-image-prompts-100-20261003.json`. Earlier galleries remain at `tests/a2-images.html`, `tests/a2-images-100.html` and `tests/a2-images-50-20261003.html`. The manifest can map a word id to any image filename:
 
 ```json
 [
@@ -135,7 +135,9 @@ The approved B1 batch adds 100 distinct photographs with article colors and gray
 
 The additional 50-image B1 batch is approved for publication on 2026-10-10. Its gallery is `tests/b1-images-50-20261009.html`; run `node tests/b1-images-50.test.cjs` to verify the new bindings. The truck image retains the small marker-light color noted in the approved preview.
 
-The next 100 B1 images use everyday scenes and exaggerated memory cues and are approved for publication on 2026-10-12. The gallery is `tests/b1-images-100-20261012.html`; run `node tests/b1-images-100-20261012.test.cjs` to verify their bindings and unique square images. Numbers 25 and 50 retain the minor residual colors accepted by the user. B1 now has 588 illustrated cards.
+The next 100 B1 images use everyday scenes and exaggerated memory cues and are approved for publication on 2026-10-12. The gallery is `tests/b1-images-100-20261012.html`; run `node tests/b1-images-100-20261012.test.cjs` to verify their bindings and unique square images. Numbers 25 and 50 retain the minor residual colors accepted by the user. B1 now has 675 illustrated cards, including shared A2 image bindings.
+
+The remaining 100-image A2 batch from 2026-10-03 is approved for publication on 2026-10-12. Its gallery is `tests/a2-images-100b-20261003.html`; prompts and revision history are in `assets/vocab-images/a2-image-prompts-100b-20261003.json`. Numbers 30 and 38 retain the minor residual colors accepted by the user. All generated vocabulary batches are now integrated; historical originals and intermediate variants remain separate.
 
 This lets you test new image versions without deleting old images.
 

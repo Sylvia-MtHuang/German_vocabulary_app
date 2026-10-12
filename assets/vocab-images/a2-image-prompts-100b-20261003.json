@@ -1,0 +1,1376 @@
+{
+  "generator": "built-in imagegen",
+  "wordbook": "goethe-a2",
+  "createdOn": "2026-10-03",
+  "status": "approved",
+  "requestedCount": 100,
+  "completedCount": 100,
+  "style": "Square realistic photograph, article hue on essential subject only, achromatic surroundings.",
+  "preview": "tests/a2-images-100b-20261003.html",
+  "items": [
+    {
+      "number": 1,
+      "id": "der-ausgang",
+      "term": "der Ausgang",
+      "meaning": "exit",
+      "example": "Der Ausgang ist dort rechts.",
+      "color": "blue",
+      "file": "a2-der-ausgang-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Ausgang (exit). Subject and composition: A cobalt BLUE exit doorway at the end of a short grayscale indoor corridor, seen from inside; neutral daylight beyond, no signs. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 2,
+      "id": "die-baeckerin",
+      "term": "die Bäckerin",
+      "meaning": "baker (female)",
+      "example": "Die Bäckerin verkauft frisches Brot und Brötchen.",
+      "color": "pink",
+      "file": "a2-die-baeckerin-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Bäckerin (baker (female)). Subject and composition: A female baker in a PINK apron and PINK baker cap shaping gray dough on a gray flour-dusted bakery bench; all skin, ingredients and oven neutral gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 3,
+      "id": "das-e-book",
+      "term": "das E-Book",
+      "meaning": "e-book",
+      "example": "Ich lese das E-Book auf meinem Tablet.",
+      "color": "green",
+      "file": "a2-das-e-book-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das E-Book (e-book). Subject and composition: A GREEN e-book reader body with an open electronic-book page of tiny unreadable gray line patterns on a gray screen, close slightly angled product photo, gray hand and background. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 4,
+      "id": "der-autor",
+      "term": "der Autor",
+      "meaning": "author (male)",
+      "example": "Der Autor liest im Museum aus seinem neuen Buch.",
+      "color": "blue",
+      "file": "a2-der-autor-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Autor (author (male)). Subject and composition: A male author in a BLUE knitted cardigan writing a manuscript with a gray pen at a neutral desk, close profile; page lines unreadable, skin and books gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 5,
+      "id": "die-bahn",
+      "term": "die Bahn",
+      "meaning": "train; railway",
+      "example": "Ich fahre mit der Bahn nach Köln.",
+      "color": "pink",
+      "file": "a2-die-bahn-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Bahn (train; railway). Subject and composition: A PINK passenger train approaching along fully grayscale railway tracks, low three-quarter photo; windows, rails, overhead wires, platform and sky gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 6,
+      "id": "das-erdgeschoss",
+      "term": "das Erdgeschoss",
+      "meaning": "ground floor",
+      "example": "Die Arztpraxis ist im Erdgeschoss.",
+      "color": "green",
+      "file": "a2-das-erdgeschoss-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Erdgeschoss (ground floor). Subject and composition: A house facade whose entire ground-floor section alone is GREEN, upper storeys and street gray, close architectural front view; no plants, labels or colored reflections. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 7,
+      "id": "der-bruder",
+      "term": "der Bruder",
+      "meaning": "brother",
+      "example": "Mein Bruder heißt Paul.",
+      "color": "blue",
+      "file": "a2-der-bruder-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Bruder (brother). Subject and composition: Two adult brothers in a casual sibling shoulder-hug; one main younger brother wears a BLUE hoodie, the other wears gray; neutral skin and room, candid waist-up photo. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 8,
+      "id": "die-chefin",
+      "term": "die Chefin",
+      "meaning": "boss; manager (female)",
+      "example": "Meine Chefin hat heute einen Termin mit einem Kunden.",
+      "color": "pink",
+      "file": "a2-die-chefin-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Chefin (boss; manager (female)). Subject and composition: A female manager in a PINK suit jacket directing a monochrome presentation at a gray office meeting, grayscale colleagues and skin, blank board. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 9,
+      "id": "das-fach",
+      "term": "das Fach",
+      "meaning": "school subject; compartment",
+      "example": "Deutsch ist mein Lieblingsfach in der Schule.",
+      "color": "green",
+      "file": "a2-das-fach-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Fach (school subject; compartment). Subject and composition: One GREEN open compartment in an otherwise achromatic gray storage cabinet, holding gray papers, close view emphasizes a separate cubby, no labels. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 10,
+      "id": "der-chef",
+      "term": "der Chef",
+      "meaning": "boss",
+      "example": "Mein Chef ist heute im Büro.",
+      "color": "blue",
+      "file": "a2-der-chef-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Chef (boss). Subject and composition: A male boss in a BLUE business jacket standing at the head of a gray meeting table and guiding grayscale colleagues, realistic office with blank gray papers. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 11,
+      "id": "die-disco",
+      "term": "die Disco",
+      "meaning": "disco; club",
+      "example": "Am Samstag gehen wir in die Disco.",
+      "color": "pink",
+      "file": "a2-die-disco-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Disco (disco; club). Subject and composition: A disco dance floor with PINK illuminated floor tiles and PINK club wall panels, grayscale people dancing under gray light and a gray disco ball, realistic interior photo. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 12,
+      "id": "das-fest",
+      "term": "das Fest",
+      "meaning": "festival; celebration",
+      "example": "Auf dem Fest gibt es Musik und gutes Essen.",
+      "color": "green",
+      "file": "a2-das-fest-batch100b-20261003-v2.png",
+      "prompt": "Edit only the incidental foreground flower bouquet leaves and stems around the middle-bottom (approximately x=660,y=930 in the 1254x1254 image): make every flower, leaf, stem, vase and reflection in this table bouquet completely neutral achromatic grayscale. The only green objects permitted are the overhead festive paper garlands and hanging paper lanterns. Preserve every other element, framing, texture, lighting, people, all grayscale surroundings, and the exact green garlands and lanterns. Square opaque photograph, no text.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Fest (festival; celebration). Subject and composition: A village celebration with GREEN festive paper garlands and GREEN lanterns forming the essential festival cue above grayscale people and tables; all food, skin and surroundings gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-das-fest-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-das-fest-batch100b-20261003.png"
+    },
+    {
+      "number": 13,
+      "id": "der-comic",
+      "term": "der Comic",
+      "meaning": "comic",
+      "example": "Mein kleiner Bruder liest gern Comics.",
+      "color": "blue",
+      "file": "a2-der-comic-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Comic (comic). Subject and composition: An open BLUE comic book with clearly outlined monochrome panel drawings and blank speech balloons, overhead tabletop photograph; no readable lettering. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 14,
+      "id": "die-ehefrau",
+      "term": "die Ehefrau",
+      "meaning": "wife",
+      "example": "Seine Ehefrau arbeitet im Hotel.",
+      "color": "pink",
+      "file": "a2-die-ehefrau-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Ehefrau (wife). Subject and composition: A wife in a PINK blouse resting her gray hand with a plain silver wedding band on her grayscale husband arm, close natural couple portrait, neutral background. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 15,
+      "id": "das-hobby",
+      "term": "das Hobby",
+      "meaning": "hobby",
+      "example": "Mein Hobby ist Fotografieren, besonders auf Reisen.",
+      "color": "green",
+      "file": "a2-das-hobby-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Hobby (hobby). Subject and composition: A small GREEN model sailboat being carefully assembled as a hobby by grayscale hands, neutral gray crafting table and tools; no colored paint or wood elsewhere. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 16,
+      "id": "der-direktor",
+      "term": "der Direktor",
+      "meaning": "director; headmaster",
+      "example": "Der Direktor begrüßt die neuen Schüler.",
+      "color": "blue",
+      "file": "a2-der-direktor-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Direktor (director; headmaster). Subject and composition: A male headmaster in a BLUE blazer standing in a gray school corridor greeting two grayscale pupils, medium close photo; all skin, school bags and walls gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 17,
+      "id": "die-einladung",
+      "term": "die Einladung",
+      "meaning": "invitation",
+      "example": "Die Einladung kommt per E-Mail.",
+      "color": "pink",
+      "file": "a2-die-einladung-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Einladung (invitation). Subject and composition: A PINK invitation card emerging from a neutral gray envelope, embossed nonletter floral motif with no readable words, close tabletop photograph. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 18,
+      "id": "das-internet",
+      "term": "das Internet",
+      "meaning": "internet",
+      "example": "Ich suche die Adresse im Internet.",
+      "color": "green",
+      "file": "a2-das-internet-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Internet (internet). Subject and composition: A GREEN Wi-Fi router with a simple unlettered GREEN wireless-wave emblem on its case, gray laptop and gray network cables secondary, neutral tabletop photograph. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 19,
+      "id": "der-ehemann",
+      "term": "der Ehemann",
+      "meaning": "husband",
+      "example": "Ihr Ehemann kocht gern.",
+      "color": "blue",
+      "file": "a2-der-ehemann-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Ehemann (husband). Subject and composition: A husband in a BLUE sweater leaning close beside his grayscale wife, their hands together showing plain silver wedding bands, neutral skin and domestic backdrop. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 20,
+      "id": "die-fahrerin",
+      "term": "die Fahrerin",
+      "meaning": "driver (female)",
+      "example": "Die Fahrerin hält den Bus an der nächsten Haltestelle.",
+      "color": "pink",
+      "file": "a2-die-fahrerin-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Fahrerin (driver (female)). Subject and composition: A female bus driver in a PINK uniform blouse at a gray bus steering wheel, photographed from the aisle; grayscale skin, dashboard, seats and window view. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 21,
+      "id": "das-interview",
+      "term": "das Interview",
+      "meaning": "interview",
+      "example": "Die Zeitung veröffentlicht ein Interview mit der Sängerin.",
+      "color": "green",
+      "file": "a2-das-interview-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Interview (interview). Subject and composition: Two grayscale people in an interview, with a GREEN handheld microphone clearly positioned between interviewer and interviewee as the essential interview cue; gray clothes and background. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 22,
+      "id": "der-fahrer",
+      "term": "der Fahrer",
+      "meaning": "driver (male)",
+      "example": "Der Fahrer wartet vor dem Hotel auf die Gäste.",
+      "color": "blue",
+      "file": "a2-der-fahrer-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Fahrer (driver (male)). Subject and composition: A male taxi driver in a BLUE shirt seated behind a grayscale car steering wheel, shot from passenger side; skin, upholstery and outside view gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 23,
+      "id": "die-fahrkarte",
+      "term": "die Fahrkarte",
+      "meaning": "ticket",
+      "example": "Ich kaufe eine Fahrkarte.",
+      "color": "pink",
+      "file": "a2-die-fahrkarte-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Fahrkarte (ticket). Subject and composition: A single PINK perforated train ticket held by a grayscale hand before a grayscale train doorway, paper has blank abstract bars without text, close focus. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 24,
+      "id": "das-lieblingsbuch",
+      "term": "das Lieblingsbuch",
+      "meaning": "favourite book",
+      "example": "Mein Lieblingsbuch lese ich im Urlaub noch einmal.",
+      "color": "green",
+      "file": "a2-das-lieblingsbuch-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Lieblingsbuch (favourite book). Subject and composition: A well-loved GREEN hardcover book with a small GREEN heart-shaped bookmark, gray hand holding it close, neutral unreadable pages and grayscale cozy background. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 25,
+      "id": "die-geschwister",
+      "term": "die Geschwister",
+      "meaning": "siblings",
+      "example": "Meine Geschwister helfen mir bei den Hausaufgaben.",
+      "color": "yellow",
+      "file": "a2-die-geschwister-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Geschwister (siblings). Subject and composition: Three fully clothed siblings of different ages wearing matching YELLOW casual tops, grayscale skin and hair, seated playfully on gray steps, simple neutral background. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: YELLOW is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 26,
+      "id": "der-film",
+      "term": "der Film",
+      "meaning": "film; movie",
+      "example": "Der Film war spannend, aber etwas zu lang.",
+      "color": "blue",
+      "file": "a2-der-film-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Film (film; movie). Subject and composition: A BLUE film reel with a short curled BLUE filmstrip beside a grayscale clapperboard, dramatic close photograph on gray background; clapperboard blank. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 27,
+      "id": "die-farbe",
+      "term": "die Farbe",
+      "meaning": "color",
+      "example": "Meine Lieblingsfarbe ist blau.",
+      "color": "pink",
+      "file": "a2-die-farbe-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Farbe (color). Subject and composition: A thick vivid PINK paint stroke freshly spread on a neutral gray board with a gray brush beside it, rich realistic wet paint texture; only paint colored. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 28,
+      "id": "das-lieblingsessen",
+      "term": "das Lieblingsessen",
+      "meaning": "favourite food",
+      "example": "Pizza ist das Lieblingsessen meiner Schwester.",
+      "color": "green",
+      "file": "a2-das-lieblingsessen-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Lieblingsessen (favourite food). Subject and composition: One appealing GREEN pasta dish with every noodle, sauce ingredient and garnish sharing emerald GREEN, plain gray plate and gray fork; no natural food hues. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 29,
+      "id": "der-flohmarkt",
+      "term": "der Flohmarkt",
+      "meaning": "flea market",
+      "example": "Auf dem Flohmarkt habe ich eine alte Lampe gekauft.",
+      "color": "blue",
+      "file": "a2-der-flohmarkt-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Flohmarkt (flea market). Subject and composition: A flea-market stall of secondhand books, lamps and old crockery, with BLUE folding table and BLUE canopy defining the market; shoppers, merchandise and ground fully gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 30,
+      "id": "die-feier",
+      "term": "die Feier",
+      "meaning": "celebration; party",
+      "example": "Die Feier zum Geburtstag beginnt um sechs Uhr.",
+      "color": "pink",
+      "file": "a2-die-feier-batch100b-20261003-v2-v2.png",
+      "prompt": "Strict localized color cleanup of the three wine glasses being raised at the center: remove ALL remaining magenta/pink pixels from the glass bowls, stems and bases (in particular the tiny pink glints at approximately x=560,y=586; x=645,y=585; x=720,y=590). Every wine glass must be purely grayscale silver/clear neutral, no pink tint anywhere. Keep the pink party balloons, streamers and ribbons unchanged. Preserve all people, textures and framing. Opaque square photograph.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Feier (celebration; party). Subject and composition: A small celebration table with PINK balloons and PINK paper streamers, grayscale people raising gray glasses; all food, drinks, skin and room gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-die-feier-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        },
+        {
+          "prompt": "Make all three raised wine glasses and all their reflections, including the pink flecks at stems, bowls and bases, completely neutral grayscale. Keep every pink balloon, curled streamer and ribbon exactly pink. Everything else stays identical. Strict selective color, no pink reflected color outside the decorations. Opaque square photograph.",
+          "file": "a2-die-feier-batch100b-20261003-v2.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-die-feier-batch100b-20261003-v2.png",
+      "reviewIssueHistory": [
+        {
+          "issue": "两次修正后仍有少量杯底粉色反光，等待选择换成无玻璃杯构图或接受当前图",
+          "resolvedOn": "2026-10-12",
+          "resolution": "User approved current version for publication."
+        }
+      ],
+      "reviewException": "用户已批准保留：杯底有少量粉色反光。"
+    },
+    {
+      "number": 31,
+      "id": "das-lokal",
+      "term": "das Lokal",
+      "meaning": "restaurant; pub",
+      "example": "Das Lokal ist klein.",
+      "color": "green",
+      "file": "a2-das-lokal-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Lokal (restaurant; pub). Subject and composition: A cosy small pub with GREEN wooden bar counter and GREEN fixed booth, grayscale bottles, stools, walls and patrons, close interior scene distinct from restaurant tables. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 32,
+      "id": "der-himmel",
+      "term": "der Himmel",
+      "meaning": "sky",
+      "example": "Heute ist der Himmel blau und die Sonne scheint.",
+      "color": "blue",
+      "file": "a2-der-himmel-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Himmel (sky). Subject and composition: A vivid BLUE sky with realistic white-gray clouds above a tiny achromatic roofline, sky dominates nearly the whole square; no other colors. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 33,
+      "id": "die-firma",
+      "term": "die Firma",
+      "meaning": "company",
+      "example": "Meine Schwester arbeitet seit März bei dieser Firma.",
+      "color": "pink",
+      "file": "a2-die-firma-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Firma (company). Subject and composition: The entrance of a small company with PINK office facade panels, grayscale employees entering through a gray glass door, no company names or signs. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 34,
+      "id": "das-mobiltelefon",
+      "term": "das Mobiltelefon",
+      "meaning": "mobile phone",
+      "example": "Bitte schalten Sie Ihr Mobiltelefon im Kino aus.",
+      "color": "green",
+      "file": "a2-das-mobiltelefon-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Mobiltelefon (mobile phone). Subject and composition: A GREEN modern mobile phone casing lying face down diagonally beside a monochrome hand on gray stone, camera hardware and setting gray, no logos. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 35,
+      "id": "der-hausmann",
+      "term": "der Hausmann",
+      "meaning": "homemaker (male)",
+      "example": "Mein Vater ist Hausmann und kümmert sich um uns.",
+      "color": "blue",
+      "file": "a2-der-hausmann-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Hausmann (homemaker (male)). Subject and composition: A male homemaker in a BLUE apron calmly folding grayscale laundry beside a gray washing basket at home; skin and every garment being folded gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 36,
+      "id": "die-freundin",
+      "term": "die Freundin",
+      "meaning": "female friend; girlfriend",
+      "example": "Meine Freundin kommt heute.",
+      "color": "pink",
+      "file": "a2-die-freundin-batch100b-20261003-v2.png",
+      "prompt": "Remove the pink reflected color from the entire cafe tabletop: make every tabletop reflection fully neutral grayscale. Preserve the main woman's pink cardigan exactly. All skin, cups, tabletop, reflections, companion and surroundings must be completely achromatic gray. Keep framing and every texture and detail unchanged. Opaque square photograph.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Freundin (female friend; girlfriend). Subject and composition: A female friend in a PINK cardigan laughing with a fully grayscale friend at a neutral cafe table; focus on pink-clothed friend, gray skin, cups and setting. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-die-freundin-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-die-freundin-batch100b-20261003.png"
+    },
+    {
+      "number": 37,
+      "id": "das-model",
+      "term": "das Model",
+      "meaning": "fashion model",
+      "example": "Das Model trägt einen roten Mantel auf dem Foto.",
+      "color": "green",
+      "file": "a2-das-model-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Model (fashion model). Subject and composition: An adult fashion model walking a short gray runway wearing a GREEN tailored outfit, all skin, shoes, audience and lighting gray; editorial photo, fully clothed. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 38,
+      "id": "der-herbst",
+      "term": "der Herbst",
+      "meaning": "autumn",
+      "example": "Im Herbst gehen wir gern im Wald spazieren.",
+      "color": "blue",
+      "file": "a2-der-herbst-batch100b-20261003-v2-v2.png",
+      "prompt": "Strict localized color cleanup of the BLUE fallen autumn leaves: convert ALL warm tan/brown veins, spots, stems and dirt on these leaves into cool neutral gray or matching blue. In particular the main foreground leaf veins and weathered central patches should contain NO tan, amber, brown or yellow at all. Blue is the only chromatic hue anywhere. Preserve the blue leaf silhouette, realistic water droplets, textures and exact scene. Background remains completely grayscale. Opaque square photograph.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Herbst (autumn). Subject and composition: A close pile of fallen autumn leaves, all leaves rich BLUE with realistic dry veins and curled edges; grayscale damp path and tree trunks behind. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-der-herbst-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        },
+        {
+          "prompt": "Remove every warm brown or tan patch and leaf vein from the fallen leaves. The essential fallen leaves must be BLUE, with neutral grayscale veins and neutral gray weathered patches, never brown. All other objects including trees, pavement, background vegetation, lamps and sky completely neutral grayscale. Preserve the composition, realism, water droplets and blue leaf shapes. Opaque square photograph.",
+          "file": "a2-der-herbst-batch100b-20261003-v2.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-der-herbst-batch100b-20261003-v2.png",
+      "reviewIssueHistory": [
+        {
+          "issue": "两次修正后仍有少量叶片暖色斑，等待选择更简洁的蓝色秋叶构图或接受当前图",
+          "resolvedOn": "2026-10-12",
+          "resolution": "User approved current version for publication."
+        }
+      ],
+      "reviewException": "用户已批准保留：叶片有少量暖色斑。"
+    },
+    {
+      "number": 39,
+      "id": "die-grossmutter",
+      "term": "die Großmutter",
+      "meaning": "grandmother",
+      "example": "Meine Großmutter liest gern Bücher über Reisen.",
+      "color": "pink",
+      "file": "a2-die-grossmutter-batch100b-20261003-v2.png",
+      "prompt": "Change ALL exposed skin of the grandmother to completely neutral achromatic GRAYSCALE, especially the entire face, forehead, cheeks, ears, lips, neck and both hands. Preserve realistic wrinkles and texture. Preserve ONLY the knitted shawl as pink. Child, book, clothes, hair, eyes, furniture, surrounding plants and all reflections grayscale. Absolutely no peach, brown, warm skin color or colored lips anywhere. Keep framing and all details. Opaque square photograph.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Großmutter (grandmother). Subject and composition: An elderly grandmother wearing a PINK knitted shawl reading a gray storybook to a grayscale grandchild on a gray sofa, close warm but neutral light. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-die-grossmutter-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-die-grossmutter-batch100b-20261003.png"
+    },
+    {
+      "number": 40,
+      "id": "das-paar",
+      "term": "das Paar",
+      "meaning": "pair; couple",
+      "example": "Für den Urlaub brauche ich ein neues Paar Schuhe.",
+      "color": "green",
+      "file": "a2-das-paar-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Paar (pair; couple). Subject and composition: One matching pair of GREEN ankle boots placed side by side on a neutral gray shelf, both boots same hue, sole and eyelets neutral gray, crisp product photograph. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 41,
+      "id": "der-journalist",
+      "term": "der Journalist",
+      "meaning": "journalist (male)",
+      "example": "Der Journalist schreibt einen Artikel über unsere Schule.",
+      "color": "blue",
+      "file": "a2-der-journalist-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Journalist (journalist (male)). Subject and composition: A male journalist in a BLUE jacket interviewing a grayscale person with a gray microphone and notebook, tight candid street photo; no logos. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 42,
+      "id": "die-halle",
+      "term": "die Halle",
+      "meaning": "hall",
+      "example": "Das Konzert findet in der großen Halle statt.",
+      "color": "pink",
+      "file": "a2-die-halle-batch100b-20261003-v2.png",
+      "prompt": "Make the ENTIRE FLOOR completely neutral achromatic grayscale, including every reflection of the pink columns and every patch of pink reflected light. Keep the vertical columns and walls exactly pink. Preserve architecture, perspective, benches, lighting, texture and composition. All surfaces other than pink columns and walls must be neutral gray, black or white, including floor and reflections. Opaque square photograph.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Halle (hall). Subject and composition: A spacious indoor hall with PINK structural columns and PINK wall surfaces, gray floor, ceiling and unoccupied benches, wide-angle architectural photo. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-die-halle-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-die-halle-batch100b-20261003.png"
+    },
+    {
+      "number": 43,
+      "id": "das-poster",
+      "term": "das Poster",
+      "meaning": "poster",
+      "example": "In meinem Zimmer hängt ein Poster von meiner Lieblingsband.",
+      "color": "green",
+      "file": "a2-das-poster-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Poster (poster). Subject and composition: A large GREEN poster sheet pinned flat to a gray indoor wall, subtle monochrome abstract photographic silhouette inside poster, no words or labels, low-angle close photo. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 44,
+      "id": "der-jugendliche",
+      "term": "der Jugendliche",
+      "meaning": "young person (male)",
+      "example": "Der Jugendliche fährt jeden Tag mit dem Bus zur Schule.",
+      "color": "blue",
+      "file": "a2-der-jugendliche-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Jugendliche (young person (male)). Subject and composition: A fully clothed teenage boy in a BLUE casual jacket with grayscale backpack sitting on gray steps outside school, grayscale skin and surroundings, natural photo. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 45,
+      "id": "die-handwerkerin",
+      "term": "die Handwerkerin",
+      "meaning": "tradeswoman; skilled worker",
+      "example": "Die Handwerkerin repariert unsere Heizung.",
+      "color": "pink",
+      "file": "a2-die-handwerkerin-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Handwerkerin (tradeswoman; skilled worker). Subject and composition: A female tradeswoman in PINK overalls using a gray cordless drill on a gray cupboard hinge, close practical work scene; skin, metal and furniture gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 46,
+      "id": "das-produkt",
+      "term": "das Produkt",
+      "meaning": "product",
+      "example": "Dieses Produkt gibt es auch in einer anderen Farbe.",
+      "color": "green",
+      "file": "a2-das-produkt-batch100b-20261003-v2.png",
+      "prompt": "Make the entire stone pedestal, shadow and background completely neutral achromatic grayscale. Remove the faint GREEN light spill/reflection on the pedestal at the lower left of the bottle. Preserve the bottle body's exact green color and all textures and framing. The pump, cap, entire pedestal and all reflected light outside the bottle must be completely neutral gray. Opaque square photograph.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Produkt (product). Subject and composition: One GREEN unbranded household pump bottle presented as a product on a neutral gray pedestal, tactile plastic, blank surface, gray pump hardware and lighting. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-das-produkt-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-das-produkt-batch100b-20261003.png"
+    },
+    {
+      "number": 47,
+      "id": "der-krimi",
+      "term": "der Krimi",
+      "meaning": "crime story; crime film",
+      "example": "Am Abend lese ich einen spannenden Krimi.",
+      "color": "blue",
+      "file": "a2-der-krimi-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Krimi (crime story; crime film). Subject and composition: A BLUE unlabelled crime novel lying open with a small grayscale detective magnifying glass over unreadable page lines, close desk photo; no weapons or text. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 48,
+      "id": "die-hausfrau",
+      "term": "die Hausfrau",
+      "meaning": "homemaker (female)",
+      "example": "Die Hausfrau organisiert den Alltag mit den Kindern.",
+      "color": "pink",
+      "file": "a2-die-hausfrau-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Hausfrau (homemaker (female)). Subject and composition: A female homemaker in a PINK apron ironing grayscale clothes on a gray ironing board, grayscale face, hands, iron and home interior. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 49,
+      "id": "das-reisebuero",
+      "term": "das Reisebüro",
+      "meaning": "travel agency",
+      "example": "Im Reisebüro frage ich nach günstigen Flügen.",
+      "color": "green",
+      "file": "a2-das-reisebuero-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Reisebüro (travel agency). Subject and composition: A travel-agency desk with GREEN counter front and GREEN brochure display, grayscale travel-map imagery and agent, no readable words, neutral gray interior. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 50,
+      "id": "die-grosseltern",
+      "term": "die Großeltern",
+      "meaning": "grandparents",
+      "example": "In den Ferien wohnen wir bei unseren Großeltern.",
+      "color": "yellow",
+      "file": "a2-die-grosseltern-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Großeltern (grandparents). Subject and composition: An elderly grandfather and grandmother wearing YELLOW knitted cardigans seated together with a fully grayscale grandchild, gray skin and living room, close family photo. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: YELLOW is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 51,
+      "id": "der-kunde",
+      "term": "der Kunde",
+      "meaning": "customer (male)",
+      "example": "Der Kunde möchte die Schuhe in einer anderen Größe.",
+      "color": "blue",
+      "file": "a2-der-kunde-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Kunde (customer (male)). Subject and composition: A male customer in a BLUE coat paying at a grayscale shop counter, main customer close and recognizable; shop assistant, products, payment terminal and skin gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 52,
+      "id": "die-hauptstadt",
+      "term": "die Hauptstadt",
+      "meaning": "capital city",
+      "example": "Berlin ist die Hauptstadt von Deutschland.",
+      "color": "pink",
+      "file": "a2-die-hauptstadt-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Hauptstadt (capital city). Subject and composition: A capital-city civic district with one prominent PINK parliament building and surrounding gray urban buildings, empty gray plaza and no flags, cars, flowers or readable signs. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 53,
+      "id": "das-rezept",
+      "term": "das Rezept",
+      "meaning": "recipe; prescription",
+      "example": "Für diese Tabletten brauche ich ein Rezept vom Arzt.",
+      "color": "green",
+      "file": "a2-das-rezept-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Rezept (recipe; prescription). Subject and composition: A GREEN recipe sheet with small grayscale food-picture thumbnails and unreadable gray lines, gray mixing bowl and spoon beside it, overhead practical kitchen photograph. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 54,
+      "id": "der-laden",
+      "term": "der Laden",
+      "meaning": "shop",
+      "example": "Der Laden ist heute offen.",
+      "color": "blue",
+      "file": "a2-der-laden-batch100b-20261003-v2-v2.png",
+      "prompt": "Edit vocabulary photo der Laden. Keep exact composition and saturated BLUE storefront. Remove both potted plants at bottom left/right entirely, leave EMPTY neutral gray stone pots. Every indoor plant flower leaf stem and all merchandise strictly neutral grayscale. No tan brown gold yellow warm flecks anywhere. Only storefront frame door fascia stays blue. Everything else pavement pots stone glass gray. Square photorealistic.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Laden (shop). Subject and composition: A small shop with BLUE front door and BLUE window frame, grayscale neatly displayed merchandise, tight straight-on storefront photo, no signs or labels. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-der-laden-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        },
+        {
+          "prompt": "Remove every warm tan/brown tint from the foliage of BOTH potted plants flanking the shop entrance. All leaves, stems, flowers, planters, merchandise, furniture, glass, stone and pavement must be fully neutral achromatic grayscale. Preserve only the shopfront woodwork, door and window frame as blue. Keep composition, textures and lighting identical. Opaque square photograph.",
+          "file": "a2-der-laden-batch100b-20261003-v2.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-der-laden-batch100b-20261003-v2.png"
+    },
+    {
+      "number": 55,
+      "id": "die-journalistin",
+      "term": "die Journalistin",
+      "meaning": "journalist (female)",
+      "example": "Die Journalistin macht ein Interview mit dem Sänger.",
+      "color": "pink",
+      "file": "a2-die-journalistin-batch100b-20261003-v2.png",
+      "prompt": "Make ALL exposed skin of BOTH people fully neutral achromatic grayscale: faces, lips, ears, neck, chest, forearms, wrists, hands and fingernails. Remove every peach/tan/brown skin or lip tint. Hair and eyes also grayscale. Preserve ONLY the female journalist's blazer as pink. Microphone, notebook, accessories, buildings and all reflections gray. Preserve identities, realistic texture and composition. Opaque square photograph.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Journalistin (journalist (female)). Subject and composition: A female journalist in a PINK jacket recording a grayscale interviewee with a gray audio recorder and gray notebook, tight editorial photo, neutral skin. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-die-journalistin-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-die-journalistin-batch100b-20261003.png"
+    },
+    {
+      "number": 56,
+      "id": "das-schild",
+      "term": "das Schild",
+      "meaning": "sign",
+      "example": "Auf dem Schild steht der Name der Straße.",
+      "color": "green",
+      "file": "a2-das-schild-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Schild (sign). Subject and composition: One GREEN blank rectangular sign mounted on a gray post, close outdoor photo with entirely grayscale background; no readable text or symbols. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 57,
+      "id": "der-nachbar",
+      "term": "der Nachbar",
+      "meaning": "neighbour (male)",
+      "example": "Mein Nachbar hilft mir beim Tragen der Möbel.",
+      "color": "blue",
+      "file": "a2-der-nachbar-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Nachbar (neighbour (male)). Subject and composition: A male neighbour in a BLUE pullover chatting across a low gray garden fence with a grayscale resident; face, fence, buildings and vegetation fully gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 58,
+      "id": "die-kundin",
+      "term": "die Kundin",
+      "meaning": "customer (female)",
+      "example": "Die Kundin bezahlt ihre Einkäufe mit Karte.",
+      "color": "pink",
+      "file": "a2-die-kundin-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Kundin (customer (female)). Subject and composition: A female customer in a PINK trench coat trying a gray pair of glasses in a grayscale shop, assistant and mirror neutral gray, close customer-focused photo. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 59,
+      "id": "das-sekretariat",
+      "term": "das Sekretariat",
+      "meaning": "school office; administrative office",
+      "example": "Im Sekretariat bekomme ich den neuen Stundenplan.",
+      "color": "green",
+      "file": "a2-das-sekretariat-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Sekretariat (school office; administrative office). Subject and composition: A school administrative office with GREEN service desk and GREEN document cabinet, grayscale secretary sorting gray papers, neutral gray classroom corridor behind, no lettering. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 60,
+      "id": "der-onkel",
+      "term": "der Onkel",
+      "meaning": "uncle",
+      "example": "Mein Onkel arbeitet als Koch in einem Hotel.",
+      "color": "blue",
+      "file": "a2-der-onkel-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Onkel (uncle). Subject and composition: An adult uncle in a BLUE shirt helping his fully clothed grayscale niece assemble a gray model airplane at a gray kitchen table; neutral skin. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 61,
+      "id": "die-mechanikerin",
+      "term": "die Mechanikerin",
+      "meaning": "mechanic (female)",
+      "example": "Die Mechanikerin arbeitet in der Werkstatt am Bahnhof.",
+      "color": "pink",
+      "file": "a2-die-mechanikerin-batch100b-20261003-v2.png",
+      "prompt": "Remove ALL pink/magenta reflected light from the brake disc rotor and every metal tool, car part, skin and floor surface. Entire brake rotor must be neutral achromatic silver/gray, including its lower-right reflective quadrant. Preserve only the mechanic's coveralls as pink. Everything else neutral gray. Keep the person, realistic details, lighting and framing. Opaque square photograph.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Mechanikerin (mechanic (female)). Subject and composition: A female mechanic in PINK coveralls inspecting an achromatic wheel and brake assembly on a workshop lift, all skin, tools and car surfaces gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-die-mechanikerin-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-die-mechanikerin-batch100b-20261003.png"
+    },
+    {
+      "number": 62,
+      "id": "das-spiel",
+      "term": "das Spiel",
+      "meaning": "game",
+      "example": "Das Spiel beginnt am Samstag um drei Uhr.",
+      "color": "green",
+      "file": "a2-das-spiel-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Spiel (game). Subject and composition: A GREEN board game with a GREEN folding board and GREEN playing pieces, clear checker-like game geometry, grayscale hands and gray tabletop, no numbers or text. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 63,
+      "id": "der-pc",
+      "term": "der PC",
+      "meaning": "personal computer",
+      "example": "Auf meinem PC schreibe ich die Bewerbung.",
+      "color": "blue",
+      "file": "a2-der-pc-batch100b-20261003-v2.png",
+      "prompt": "Remove all BLUE reflected light from the entire desktop/table surface, especially the patch below the computer tower at lower left and around the monitor base. The entire desk, keyboard, mouse, chair and surroundings must be completely neutral achromatic grayscale. Preserve only the computer tower and monitor housing in blue. Keep realistic textures, geometry, lighting and framing identical. Opaque square photograph.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der PC (personal computer). Subject and composition: A BLUE desktop personal-computer tower and BLUE monitor casing on a neutral gray desk, blank gray screen, gray keyboard and mouse; three-quarter product photo. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-der-pc-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-der-pc-batch100b-20261003.png"
+    },
+    {
+      "number": 64,
+      "id": "die-musik",
+      "term": "die Musik",
+      "meaning": "music",
+      "example": "Zum Lernen höre ich gern ruhige Musik.",
+      "color": "pink",
+      "file": "a2-die-musik-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Musik (music). Subject and composition: A PINK acoustic guitar and PINK violin laid across a neutral gray bench as a clear music cue; strings, bows, hardware, backdrop and lighting gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 65,
+      "id": "das-stockwerk",
+      "term": "das Stockwerk",
+      "meaning": "floor; storey",
+      "example": "Die Wohnung ist im obersten Stockwerk des Hauses.",
+      "color": "green",
+      "file": "a2-das-stockwerk-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Stockwerk (floor; storey). Subject and composition: A gray multi-storey building with exactly one middle floor highlighted GREEN across facade panels, other floors grayscale; close front view, no plants or labels. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 66,
+      "id": "der-prospekt",
+      "term": "der Prospekt",
+      "meaning": "brochure",
+      "example": "Im Hotel gibt es einen Prospekt.",
+      "color": "blue",
+      "file": "a2-der-prospekt-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Prospekt (brochure). Subject and composition: A BLUE folded advertising brochure opened into three panels with grayscale product-photo placeholders and abstract unreadable lines; neutral gray hand and backdrop. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 67,
+      "id": "die-musikerin",
+      "term": "die Musikerin",
+      "meaning": "musician (female)",
+      "example": "Die Musikerin spielt Gitarre in einer Band.",
+      "color": "pink",
+      "file": "a2-die-musikerin-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Musikerin (musician (female)). Subject and composition: A female musician in a PINK blouse playing a grayscale cello, hands and face grayscale, intimate rehearsal-room photograph with gray background. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 68,
+      "id": "das-stueck",
+      "term": "das Stück",
+      "meaning": "piece",
+      "example": "Möchtest du noch ein Stück Kuchen?",
+      "color": "green",
+      "file": "a2-das-stueck-batch100b-20261003-v2.png",
+      "prompt": "Color correction only: make the entire cake slice AND matching larger cake one unmistakable COOL EMERALD GREEN hue family, including every layer, frosting dollop, sponge crumb and topping. Remove every yellow, olive-yellow, tan or brown colored nut and crumb. All cake highlights and shadows are emerald green or neutral gray, no yellow accents. Make incidental loose crumbs on the knife and board neutral gray. Plate, knife, cloth, board, tabletop and background completely grayscale. Preserve the exact composition and realistic food textures. Opaque square photograph.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Stück (piece). Subject and composition: A single cut GREEN cake piece on a gray plate, separated from a larger matching GREEN cake behind, all cake layers and toppings green; knife, plate and backdrop gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-das-stueck-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-das-stueck-batch100b-20261003.png"
+    },
+    {
+      "number": 69,
+      "id": "der-raum",
+      "term": "der Raum",
+      "meaning": "room",
+      "example": "Der Raum ist groß und hell.",
+      "color": "blue",
+      "file": "a2-der-raum-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Raum (room). Subject and composition: An empty versatile room defined by BLUE walls, grayscale floor, ceiling and single gray chair, diagonal architectural interior photo. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 70,
+      "id": "die-mutter",
+      "term": "die Mutter",
+      "meaning": "mother",
+      "example": "Meine Mutter arbeitet heute.",
+      "color": "pink",
+      "file": "a2-die-mutter-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Mutter (mother). Subject and composition: A mother in a PINK knitted sweater holding a fully clothed grayscale young child in her arms, soft natural portrait; all skin and background gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 71,
+      "id": "das-taschengeld",
+      "term": "das Taschengeld",
+      "meaning": "pocket money",
+      "example": "Von meinem Taschengeld kaufe ich manchmal ein Buch.",
+      "color": "green",
+      "file": "a2-das-taschengeld-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Taschengeld (pocket money). Subject and composition: A few GREEN generic coins and a small GREEN banknote being received by a grayscale child hand from a grayscale adult hand, tight neutral table composition; no denominations. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 72,
+      "id": "der-reisefuehrer",
+      "term": "der Reiseführer",
+      "meaning": "travel guide; tour guide",
+      "example": "In meinem Reiseführer stehen viele Tipps für Berlin.",
+      "color": "blue",
+      "file": "a2-der-reisefuehrer-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Reiseführer (travel guide; tour guide). Subject and composition: A male tour guide in a BLUE windbreaker holding a small gray guide pennant while explaining a grayscale landmark to grayscale tourists, close group scene. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 73,
+      "id": "die-natur",
+      "term": "die Natur",
+      "meaning": "nature",
+      "example": "Am Wochenende verbringe ich gern Zeit in der Natur.",
+      "color": "pink",
+      "file": "a2-die-natur-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Natur (nature). Subject and composition: A single beautiful PINK leafy tree and PINK wild shrubs forming the essential nature subject, grayscale stones, soil and neutral sky; plants share exactly one pink hue family. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 74,
+      "id": "das-team",
+      "term": "das Team",
+      "meaning": "team",
+      "example": "Unser Team hat das Spiel gewonnen.",
+      "color": "green",
+      "file": "a2-das-team-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Team (team). Subject and composition: A small mixed adult team in matching GREEN sports shirts forming a huddle with gray hands together, realistic grayscale skin and field surroundings, no emblems. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 75,
+      "id": "die-leute",
+      "term": "die Leute",
+      "meaning": "people",
+      "example": "Viele Leute warten am Bahnhof.",
+      "color": "yellow",
+      "file": "a2-die-leute-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Leute (people). Subject and composition: A diverse small group of adults walking together, all main people wear YELLOW coats, every skin tone converted to grayscale; neutral gray pedestrian square with no vegetation. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: YELLOW is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 76,
+      "id": "der-rentner",
+      "term": "der Rentner",
+      "meaning": "pensioner; retired person (male)",
+      "example": "Der Rentner geht jeden Morgen im Park spazieren.",
+      "color": "blue",
+      "file": "a2-der-rentner-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Rentner (pensioner; retired person (male)). Subject and composition: An elderly retired man in a BLUE waistcoat peacefully reading a gray newspaper in a neutral gray park chair, realistic gray skin, grayscale foliage; print unreadable. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 77,
+      "id": "die-oma",
+      "term": "die Oma",
+      "meaning": "grandma",
+      "example": "Am Sonntag backe ich mit meiner Oma einen Kuchen.",
+      "color": "pink",
+      "file": "a2-die-oma-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Oma (grandma). Subject and composition: An elderly grandma in a PINK cardigan teaching a grayscale child to knead gray cookie dough, close kitchen scene distinct from reading grandmother; all skin and props gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 78,
+      "id": "das-tennis",
+      "term": "das Tennis",
+      "meaning": "tennis",
+      "example": "Am Sonntag spielen wir Tennis im Park.",
+      "color": "green",
+      "file": "a2-das-tennis-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Tennis (tennis). Subject and composition: A GREEN tennis racket beside a GREEN tennis ball on a grayscale tennis-court line, close ground-level photo; racket strings, fence and sky gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 79,
+      "id": "der-saenger",
+      "term": "der Sänger",
+      "meaning": "singer (male)",
+      "example": "Der Sänger singt mein Lieblingslied.",
+      "color": "blue",
+      "file": "a2-der-saenger-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Sänger (singer (male)). Subject and composition: A male singer in a BLUE stage jacket singing into a gray microphone, medium close performance photo; skin, hands, lights and stage background grayscale. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 80,
+      "id": "die-party",
+      "term": "die Party",
+      "meaning": "party",
+      "example": "Am Samstag ist eine Party.",
+      "color": "pink",
+      "file": "a2-die-party-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Party (party). Subject and composition: A lively house party with PINK party hats and PINK bunting as the essential shared celebration cue, grayscale adults chatting, gray furniture and drinks, no colored lights. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 81,
+      "id": "das-ticket",
+      "term": "das Ticket",
+      "meaning": "ticket",
+      "example": "Ich habe mein Ticket für den Zug schon gekauft.",
+      "color": "green",
+      "file": "a2-das-ticket-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Ticket (ticket). Subject and composition: A single GREEN perforated admission ticket partly slipped through a gray entrance turnstile slot, close tactile paper, blank nonletter ruled pattern, everything else grayscale. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 82,
+      "id": "der-schauspieler",
+      "term": "der Schauspieler",
+      "meaning": "actor",
+      "example": "Der Schauspieler spielt in einem neuen Film.",
+      "color": "blue",
+      "file": "a2-der-schauspieler-batch100b-20261003-v2.png",
+      "prompt": "Edit vocabulary photo der Schauspieler. Preserve BLUE actor costume, grayscale face hands and theatrical scene. Change ALL embroidery trim braids buttons and metallic ornament on blue coat to strictly neutral SILVER GRAY, absolutely no beige tan yellow gold brown. Blue fabric sole colored subject, stage props lights skin everything else grayscale. Preserve pose composition photorealistic square.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Schauspieler (actor). Subject and composition: A male actor in a BLUE theatrical coat performing a expressive stage gesture, grayscale curtain and stage props behind, skin and neutral theatrical lighting gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-der-schauspieler-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-der-schauspieler-batch100b-20261003.png"
+    },
+    {
+      "number": 83,
+      "id": "die-polizei",
+      "term": "die Polizei",
+      "meaning": "police",
+      "example": "Die Polizei kommt schnell.",
+      "color": "pink",
+      "file": "a2-die-polizei-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Polizei (police). Subject and composition: Three police officers wearing matching PINK uniforms gathered around an entirely grayscale patrol car, main group close; all skin, badges, car lights and background neutral gray, no lettering. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 84,
+      "id": "das-tier",
+      "term": "das Tier",
+      "meaning": "animal",
+      "example": "Welches Tier magst du am liebsten?",
+      "color": "green",
+      "file": "a2-das-tier-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Tier (animal). Subject and composition: One friendly GREEN rabbit standing on gray ground, realistic fur texture, grayscale eyes, nose and surroundings, close animal portrait distinct from previous zoo or pets. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 85,
+      "id": "der-schueler",
+      "term": "der Schüler",
+      "meaning": "student; pupil",
+      "example": "Der Schüler liest laut.",
+      "color": "blue",
+      "file": "a2-der-schueler-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Schüler (student; pupil). Subject and composition: A school pupil boy in a BLUE sweatshirt raising his gray hand at a gray classroom desk; monochrome classmates and background, clearly a school setting. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 86,
+      "id": "die-schauspielerin",
+      "term": "die Schauspielerin",
+      "meaning": "actress",
+      "example": "Die Schauspielerin spielt heute Abend im Theater.",
+      "color": "pink",
+      "file": "a2-die-schauspielerin-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Schauspielerin (actress). Subject and composition: A female actress in a PINK theatrical dress performing a dramatic gesture beside a gray stage doorway, realistic gray skin and neutral stage lighting. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 87,
+      "id": "das-verkehrsmittel",
+      "term": "das Verkehrsmittel",
+      "meaning": "means of transport",
+      "example": "Welches Verkehrsmittel nehmen wir für die Fahrt zum Flughafen?",
+      "color": "green",
+      "file": "a2-das-verkehrsmittel-batch100b-20261003-v2.png",
+      "prompt": "Edit vocabulary photo das Verkehrsmittel. Preserve GREEN tram and composition. Desaturate ALL tram lights indicator lamps marker lamps headlights and glass reflectors to strictly SILVER GRAY, including small amber/orange rectangular side indicator beside front doors. No warm yellow orange brown anywhere. Green tram body only colored, windows rails wires buildings pavement trees gray. Square photorealistic.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Verkehrsmittel (means of transport). Subject and composition: A GREEN tram on a fully grayscale street with clear rails, overhead wire and empty gray platform, diagonal close street-level photo, no lettering. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-das-verkehrsmittel-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-das-verkehrsmittel-batch100b-20261003.png"
+    },
+    {
+      "number": 88,
+      "id": "der-student",
+      "term": "der Student",
+      "meaning": "university student (male)",
+      "example": "Der Student wohnt in einem kleinen Zimmer in der Stadt.",
+      "color": "blue",
+      "file": "a2-der-student-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Student (university student (male)). Subject and composition: A male university student in a BLUE casual sweater carrying gray books beside an achromatic campus library entrance, close waist-up; skin and background gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 89,
+      "id": "die-schwester",
+      "term": "die Schwester",
+      "meaning": "sister",
+      "example": "Meine Schwester wohnt in Basel.",
+      "color": "pink",
+      "file": "a2-die-schwester-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Schwester (sister). Subject and composition: Two adult sisters chatting on a neutral gray sofa; one main younger sister wears a PINK striped sweater, other sister gray; monochrome skin and setting. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 90,
+      "id": "das-wc",
+      "term": "das WC",
+      "meaning": "toilet",
+      "example": "Das WC ist am Ende des Flurs.",
+      "color": "green",
+      "file": "a2-das-wc-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das WC (toilet). Subject and composition: A GREEN ceramic toilet bowl and tank in a neutral grayscale bathroom, gray seat and fittings, clean realistic architectural photo, no labels. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 91,
+      "id": "der-techniker",
+      "term": "der Techniker",
+      "meaning": "technician (male)",
+      "example": "Der Techniker repariert unseren Computer.",
+      "color": "blue",
+      "file": "a2-der-techniker-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Techniker (technician (male)). Subject and composition: A male technician in BLUE workwear repairing an open grayscale electronic control cabinet with gray tools; recognizable cables, neutral skin and lights. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 92,
+      "id": "die-studentin",
+      "term": "die Studentin",
+      "meaning": "university student (female)",
+      "example": "Die Studentin arbeitet am Wochenende in einem Café.",
+      "color": "pink",
+      "file": "a2-die-studentin-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Studentin (university student (female)). Subject and composition: A female university student in a PINK hoodie studying with gray reference books in a neutral library, close desk-level view; grayscale face, hands, pages and shelves. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 93,
+      "id": "das-zimmer",
+      "term": "das Zimmer",
+      "meaning": "room",
+      "example": "Das Zimmer ist hell.",
+      "color": "green",
+      "file": "a2-das-zimmer-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: das Zimmer (room). Subject and composition: A small furnished guest room with GREEN bedspread and GREEN walls, grayscale bedside table, lamp and floor, cosy close interior photo distinct from empty room. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: GREEN is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 94,
+      "id": "der-verkaeufer",
+      "term": "der Verkäufer",
+      "meaning": "shop assistant; salesperson (male)",
+      "example": "Der Verkäufer zeigt mir eine günstige Kamera.",
+      "color": "blue",
+      "file": "a2-der-verkaeufer-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Verkäufer (shop assistant; salesperson (male)). Subject and composition: A male shop assistant in a BLUE store apron handing a gray purchase bag across a grayscale counter to a grayscale customer; focus on assistant, no branding. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 95,
+      "id": "die-technikerin",
+      "term": "die Technikerin",
+      "meaning": "technician (female)",
+      "example": "Die Technikerin kontrolliert das Gerät im Büro.",
+      "color": "pink",
+      "file": "a2-die-technikerin-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Technikerin (technician (female)). Subject and composition: A female technician in a PINK work jacket checking a grayscale laboratory instrument with gray test leads, clear precision-work action; skin and equipment gray. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 96,
+      "id": "der-wagen",
+      "term": "der Wagen",
+      "meaning": "car; vehicle; carriage",
+      "example": "Unser Wagen steht vor dem Hotel.",
+      "color": "blue",
+      "file": "a2-der-wagen-batch100b-20261003-v2.png",
+      "prompt": "Edit this exact vocabulary image for der Wagen. Keep saturated BLUE car body and exact composition. Rear lamp at extreme LEFT edge of car beside rear hatch currently red: change entire rear lamp glass including red strip to neutral SILVER GRAY. All lights reflectors glass wheels street trees building neutral gray. No red yellow orange brown or green. Only car blue paint colored. Photorealistic square.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Wagen (car; vehicle; carriage). Subject and composition: A single BLUE compact car in side-front three-quarter view parked on gray paving, monochrome windows, wheels, lights and backdrop; no badge or text. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-der-wagen-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-der-wagen-batch100b-20261003.png"
+    },
+    {
+      "number": 97,
+      "id": "die-verkaeuferin",
+      "term": "die Verkäuferin",
+      "meaning": "shop assistant; salesperson (female)",
+      "example": "Die Verkäuferin hilft mir bei der Wahl der Schuhe.",
+      "color": "pink",
+      "file": "a2-die-verkaeuferin-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Verkäuferin (shop assistant; salesperson (female)). Subject and composition: A female shop assistant in a PINK apron arranging gray merchandise on a grayscale shelf while helping a gray customer, neutral skin, no logos. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: PINK is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 98,
+      "id": "der-wind",
+      "term": "der Wind",
+      "meaning": "wind",
+      "example": "Der Wind ist heute kalt und stark.",
+      "color": "blue",
+      "file": "a2-der-wind-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Wind (wind). Subject and composition: BLUE windsock stretched fully sideways by strong wind on a gray pole; nearby grayscale grass visibly bending, neutral cloudy sky, close crisp outdoor photo. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 99,
+      "id": "der-zoo",
+      "term": "der Zoo",
+      "meaning": "zoo",
+      "example": "Im Zoo möchten die Kinder die großen Tiere sehen.",
+      "color": "blue",
+      "file": "a2-der-zoo-batch100b-20261003.png",
+      "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: der Zoo (zoo). Subject and composition: A zoo enclosure with a BLUE giraffe behind gray fencing, close clear animal shape, monochrome keeper, vegetation and visitor area; no readable signs. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: BLUE is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 100,
+      "id": "die-papiere",
+      "term": "die Papiere",
+      "meaning": "documents; papers",
+      "example": "Für die Reise brauchen wir unsere Papiere.",
+      "color": "yellow",
+      "file": "a2-die-papiere-batch100b-20261003-v2.png",
+      "prompt": "Edit exact vocabulary image for plural-only die Papiere. Preserve yellow document sheets and composition. All exposed hands fingers fingernails skin must be absolutely NEUTRAL GRAYSCALE with no pink peach red brown warm tint. Especially left thumb nail touching yellow papers and right thumb/nail and fingertips. Paper clips passport desk pens sleeves grayscale. Only document paper yellow. Printed markings neutral gray. Photorealistic square.",
+      "generated": true,
+      "reviewed": true,
+      "promptHistory": [
+        {
+          "prompt": "Use case: photorealistic-natural. Create ONE distinct square opaque German vocabulary flashcard photograph, at least 1024x1024. Word: die Papiere (documents; papers). Subject and composition: A neat fan of YELLOW official paper documents with gray paper clips and gray passport cover as a supporting cue, abstract unreadable marks only, neutral gray desk. Realistic tactile materials, convincing forms and hands, recognizable at thumbnail size. STRICT SELECTIVE COLOR: YELLOW is the ONLY chromatic hue anywhere, confined to the essential vocabulary subject named above. Neutral highlights and shadows permitted. ALL other objects, skin, hair, surroundings, plants, sky, utensils, food, containers, props, light and reflections outside the subject must be black, white or near-achromatic gray. Preserve realistic shape and texture instead of natural colors. No warm wood, natural colored skin, brown leaves, colored lights or stray reflections. No readable words, numerals, logos, watermark, illustration, collage or UI.",
+          "file": "a2-die-papiere-batch100b-20261003.png",
+          "outcome": "Replaced after visual review"
+        }
+      ],
+      "originalFile": "a2-die-papiere-batch100b-20261003.png"
+    }
+  ],
+  "reviewedCount": 100,
+  "approvalStatus": "Approved for publication of all 100 final images, including disclosed color exceptions 30 and 38.",
+  "approvedOn": "2026-10-12",
+  "approvalScope": "publish",
+  "approvalNote": "User approved organizing and publishing every remaining unpublished image: 没有上线的图片可以把它们都整理上线么?"
+}
