@@ -133,7 +133,9 @@ Images are individually generated PNGs. A2 currently has 331 illustrated cards, 
 
 The approved B1 batch adds 100 distinct photographs with article colors and grayscale surroundings. Its gallery is `tests/b1-images-100-20261004.html`; prompts and revision history are in `assets/vocab-images/b1-image-prompts-100-20261004.json`. Run `node tests/b1-images.test.cjs` for actual B1 image bindings, dimensions and uniqueness.
 
-The additional 50-image B1 batch is approved for publication on 2026-10-10. Its gallery is `tests/b1-images-50-20261009.html`; run `node tests/b1-images-50.test.cjs` to verify the new bindings. B1 now has 488 illustrated cards. The truck image retains the small marker-light color noted in the approved preview.
+The additional 50-image B1 batch is approved for publication on 2026-10-10. Its gallery is `tests/b1-images-50-20261009.html`; run `node tests/b1-images-50.test.cjs` to verify the new bindings. The truck image retains the small marker-light color noted in the approved preview.
+
+The next 100 B1 images use everyday scenes and exaggerated memory cues and are approved for publication on 2026-10-12. The gallery is `tests/b1-images-100-20261012.html`; run `node tests/b1-images-100-20261012.test.cjs` to verify their bindings and unique square images. Numbers 25 and 50 retain the minor residual colors accepted by the user. B1 now has 588 illustrated cards.
 
 This lets you test new image versions without deleting old images.
 
