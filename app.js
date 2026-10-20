@@ -2,9 +2,11 @@ let WORDS = [];
 const VOCABULARY_URL = "vocabulary.txt";
 const WORDBOOK_MANIFEST_URL = "wordbooks/manifest.json";
 const IMAGE_MANIFEST_URL = "assets/vocab-images/manifest.json";
+const CUSTOM_WORDBOOKS_KEY = "deutsch-memo-custom-wordbooks-v1";
 const IMAGE_CACHE_KEY = Date.now();
 let IMAGE_PATHS = new Map();
 let WORDBOOKS = [];
+let MANIFEST_WORDBOOKS = [];
 let CHINESE_VOCABULARY = {};
 
 const UI_LANGUAGE_KEY = "deutsch-memo-ui-language";
@@ -66,6 +68,19 @@ const CHINESE_UI = {
   "Study again": "再学一组",
   "Choose count": "重新选择数量",
   "Custom wordbook": "自定义词库",
+  "Custom vocabulary": "自定义词汇",
+  "Manage your imported TXT wordbooks.": "管理你导入的 TXT 词库。",
+  "Back to wordbooks": "返回词库",
+  "Study this wordbook": "学习这个词库",
+  "Import a TXT wordbook": "导入 TXT 词库",
+  "Wordbook name": "词库名称",
+  "Choose TXT file": "选择 TXT 文件",
+  "Import or replace": "导入或替换",
+  "Required columns: German | English meaning | German example | English example. Optional: memory aid | image or plural | plural | Chinese meaning | Chinese example.": "必填列：德语 | 英文释义 | 德语例句 | 英文例句。可选列：记忆提示 | 图片或复数 | 复数 | 中文释义 | 中文例句。",
+  "Choose a TXT file and enter a wordbook name.": "请选择 TXT 文件并输入词库名称。",
+  "The TXT file contains no readable vocabulary.": "TXT 文件中没有可读取的词汇。",
+  "{title} imported with {count} cards.": "已导入 {title}，共 {count} 张卡片。",
+  "Imported TXT": "导入的 TXT",
   "Your editable vocabulary.txt file.": "你可以编辑的自定义单词列表。",
   "Goethe-Institut A1 level": "歌德 A1 词库",
   "Expanded A1 set based on the Goethe A1 wordlist.": "根据歌德 A1 官方词表整理。",
@@ -150,9 +165,10 @@ function setLanguage(language) {
 const DEFAULT_WORDBOOKS = [
   {
     id: "custom",
-    title: "Custom wordbook",
-    description: "Your editable vocabulary.txt file.",
-    url: VOCABULARY_URL
+    title: "Schritte PLUS B1.2",
+    description: "Unit 8 · Unter Kollegen · 42 cards",
+    url: VOCABULARY_URL,
+    group: "custom"
   }
 ];
 
@@ -670,6 +686,13 @@ let promotePreviewOnNextRender = false;
 let missedReviewContext = null;
 
 const setupView = document.querySelector("#setupView");
+const customWordbookView = document.querySelector("#customWordbookView");
+const customWordbookList = document.querySelector("#customWordbookList");
+const customWordbookBack = document.querySelector("#customWordbookBack");
+const customWordbookForm = document.querySelector("#customWordbookForm");
+const customWordbookTitle = document.querySelector("#customWordbookTitle");
+const customWordbookFile = document.querySelector("#customWordbookFile");
+const customWordbookStatus = document.querySelector("#customWordbookStatus");
 const studyView = document.querySelector("#studyView");
 const wordbookPicker = document.querySelector("#wordbookPicker");
 const wordbookSummary = document.querySelector("#wordbookSummary");
@@ -716,10 +739,12 @@ async function loadWordbooks() {
     if (!response.ok) throw new Error("No wordbook manifest");
     const entries = await response.json();
     const parsed = Array.isArray(entries) ? entries.map(normalizeWordbook).filter(Boolean) : [];
-    WORDBOOKS = parsed.length ? parsed : DEFAULT_WORDBOOKS;
+    MANIFEST_WORDBOOKS = parsed.length ? parsed : DEFAULT_WORDBOOKS;
   } catch {
-    WORDBOOKS = DEFAULT_WORDBOOKS;
+    MANIFEST_WORDBOOKS = DEFAULT_WORDBOOKS;
   }
+
+  WORDBOOKS = mergeCustomWordbooks(MANIFEST_WORDBOOKS, loadSavedCustomWordbooks());
 
   if (!WORDBOOKS.some((wordbook) => wordbook.id === state.selectedWordbookId)) {
     state.selectedWordbookId = WORDBOOKS[0].id;
@@ -738,8 +763,44 @@ function normalizeWordbook(entry) {
     title,
     url,
     description: String(entry.description || "").trim(),
-    source: String(entry.source || "").trim()
+    source: String(entry.source || "").trim(),
+    group: String(entry.group || "").trim(),
+    text: String(entry.text || "")
   };
+}
+
+function loadSavedCustomWordbooks() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(CUSTOM_WORDBOOKS_KEY) || "[]");
+    return Array.isArray(saved) ? saved.map(normalizeSavedCustomWordbook).filter(Boolean) : [];
+  } catch {
+    return [];
+  }
+}
+
+function normalizeSavedCustomWordbook(entry) {
+  if (!entry || typeof entry !== "object") return null;
+  const title = String(entry.title || "").trim();
+  const text = String(entry.text || "").trim();
+  if (!title || !text) return null;
+  return {
+    id: String(entry.id || `custom-${slugify(title)}`).trim(),
+    title,
+    text,
+    description: String(entry.description || "").trim(),
+    source: "Imported TXT",
+    group: "custom"
+  };
+}
+
+function mergeCustomWordbooks(manifestBooks, savedBooks) {
+  const books = manifestBooks.map((book) => ({...book}));
+  savedBooks.map(normalizeSavedCustomWordbook).filter(Boolean).forEach((saved) => {
+    const index = books.findIndex((book) => book.id === saved.id || (book.group === "custom" && book.title.toLowerCase() === saved.title.toLowerCase()));
+    if (index >= 0) books[index] = {...books[index], ...saved, id: books[index].id};
+    else books.push(saved);
+  });
+  return books;
 }
 
 async function loadSelectedWordbook() {
@@ -749,11 +810,14 @@ async function loadSelectedWordbook() {
   setText(feedback, "");
 
   try {
-    const response = await fetch(`${wordbook.url}?t=${Date.now()}`, { cache: "no-store" });
-    if (!response.ok) throw new Error(`Could not load ${wordbook.url}`);
-
-    const text = await response.text();
+    let text = wordbook.text;
+    if (!text) {
+      const response = await fetch(`${wordbook.url}?t=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error(`Could not load ${wordbook.url}`);
+      text = await response.text();
+    }
     WORDS = parseVocabulary(text);
+    applyCustomTranslations(WORDS);
     pruneOldRecords();
 
     if (!WORDS.length) {
@@ -772,6 +836,13 @@ async function loadSelectedWordbook() {
     setText(wordbookSummary, "Could not load {title}.", {title: wordbook.title});
     renderStats();
   }
+}
+
+function applyCustomTranslations(words) {
+  words.forEach((word) => {
+    if (word.meaningZh) CHINESE_VOCABULARY[`${word.word} | ${word.meaning}`] = word.meaningZh;
+    if (word.translationZh) CHINESE_VOCABULARY[word.translation] = word.translationZh;
+  });
 }
 
 function getSelectedWordbook() {
@@ -862,7 +933,7 @@ function parseVocabulary(text) {
 
 function parseRichVocabularyLine(line) {
   const separator = line.includes("|") ? "|" : "\t";
-  const [term, meaning = "", example = "", translation = "", memoryAid = "", imageOrPlural = "", plural = ""] = line
+  const [term, meaning = "", example = "", translation = "", memoryAid = "", imageOrPlural = "", plural = "", meaningZh = "", translationZh = ""] = line
     .split(separator)
     .map((part) => part.trim());
   const sixthFieldIsImage = looksLikeImagePath(imageOrPlural);
@@ -873,7 +944,9 @@ function parseRichVocabularyLine(line) {
     translation,
     memoryAid,
     imagePath: sixthFieldIsImage ? imageOrPlural : "",
-    plural: plural || (sixthFieldIsImage ? "" : imageOrPlural)
+    plural: plural || (sixthFieldIsImage ? "" : imageOrPlural),
+    meaningZh,
+    translationZh
   };
 }
 
@@ -889,8 +962,10 @@ function normalizeVocabularyEntry(entry) {
     ...parsed,
     pos: parsed.article ? "noun" : "word",
     meaning: entry.meaning || "",
+    meaningZh: entry.meaningZh || "",
     example: entry.example || generated.example,
     translation: entry.translation || generated.translation,
+    translationZh: entry.translationZh || "",
     plural: parsed.article && !parsed.pluralOnly && !parsed.singularOnly
       ? normalizePlural(entry.plural || parsed.plural || BUILT_IN_PLURALS[memoryAidKey(parsed.word)] || "")
       : "",
@@ -2061,7 +2136,14 @@ function syncCountPicker() {
 
 function syncWordbookPicker() {
   if (!wordbookPicker) return;
-  wordbookPicker.innerHTML = WORDBOOKS.map((wordbook) => {
+  const selectedCustom = getSelectedWordbook().group === "custom";
+  const pickerBooks = WORDBOOKS.filter((wordbook) => wordbook.group !== "custom");
+  wordbookPicker.innerHTML = `
+    <button class="wordbook-option${selectedCustom ? " is-selected" : ""}" type="button" data-custom-wordbooks role="radio" aria-checked="${selectedCustom}">
+      <span>${uiText("Custom vocabulary")}</span>
+      <small>${uiText("Manage your imported TXT wordbooks.")}</small>
+    </button>
+  ` + pickerBooks.map((wordbook) => {
     const selected = wordbook.id === state.selectedWordbookId;
     return `
       <button class="wordbook-option${selected ? " is-selected" : ""}" type="button" data-wordbook-id="${escapeAttribute(wordbook.id)}" role="radio" aria-checked="${selected}">
@@ -2071,6 +2153,59 @@ function syncWordbookPicker() {
     `;
   }).join("");
   renderWordbookSummary();
+}
+
+function openCustomWordbooks() {
+  renderCustomWordbooks();
+  setupView.classList.add("hidden");
+  customWordbookView.classList.remove("hidden");
+}
+
+function closeCustomWordbooks() {
+  customWordbookView.classList.add("hidden");
+  setupView.classList.remove("hidden");
+}
+
+function renderCustomWordbooks() {
+  const books = WORDBOOKS.filter((wordbook) => wordbook.group === "custom");
+  customWordbookList.innerHTML = books.map((wordbook) => `
+    <div class="custom-wordbook-row">
+      <div>
+        <strong>${escapeAttribute(wordbook.title)}</strong>
+        <small>${escapeAttribute(t(wordbook.source || "Imported TXT"))}</small>
+      </div>
+      <button class="answer-button primary" type="button" data-custom-wordbook-id="${escapeAttribute(wordbook.id)}">${uiText("Study this wordbook")}</button>
+    </div>
+  `).join("");
+}
+
+async function importCustomWordbook(event) {
+  event.preventDefault();
+  const title = customWordbookTitle.value.trim();
+  const file = customWordbookFile.files[0];
+  if (!title || !file) {
+    setText(customWordbookStatus, "Choose a TXT file and enter a wordbook name.");
+    return;
+  }
+
+  const text = await file.text();
+  const words = parseVocabulary(text);
+  if (!words.length) {
+    setText(customWordbookStatus, "The TXT file contains no readable vocabulary.");
+    return;
+  }
+
+  const existing = WORDBOOKS.find((wordbook) => wordbook.group === "custom" && wordbook.title.toLowerCase() === title.toLowerCase());
+  const saved = loadSavedCustomWordbooks();
+  const entry = {id: existing?.id || `custom-${slugify(title)}`, title, text};
+  const index = saved.findIndex((wordbook) => wordbook.id === entry.id || wordbook.title.toLowerCase() === title.toLowerCase());
+  if (index >= 0) saved[index] = entry;
+  else saved.push(entry);
+  localStorage.setItem(CUSTOM_WORDBOOKS_KEY, JSON.stringify(saved));
+  WORDBOOKS = mergeCustomWordbooks(MANIFEST_WORDBOOKS, saved);
+  renderCustomWordbooks();
+  customWordbookForm.reset();
+  setText(customWordbookStatus, "{title} imported with {count} cards.", {title, count: words.length});
 }
 
 function renderWordbookSummary() {
@@ -2107,11 +2242,32 @@ countPicker.addEventListener("click", (event) => {
 });
 
 wordbookPicker.addEventListener("click", async (event) => {
+  if (event.target.closest("[data-custom-wordbooks]")) {
+    openCustomWordbooks();
+    return;
+  }
   const button = event.target.closest(".wordbook-option");
   if (!button || button.dataset.wordbookId === state.selectedWordbookId) return;
   state.selectedWordbookId = button.dataset.wordbookId;
   syncWordbookPicker();
   saveState();
+  await loadSelectedWordbook();
+});
+
+customWordbookBack.addEventListener("click", closeCustomWordbooks);
+customWordbookForm.addEventListener("submit", importCustomWordbook);
+customWordbookFile.addEventListener("change", () => {
+  if (!customWordbookTitle.value.trim() && customWordbookFile.files[0]) {
+    customWordbookTitle.value = customWordbookFile.files[0].name.replace(/\.txt$/i, "");
+  }
+});
+customWordbookList.addEventListener("click", async (event) => {
+  const button = event.target.closest("[data-custom-wordbook-id]");
+  if (!button) return;
+  state.selectedWordbookId = button.dataset.customWordbookId;
+  saveState();
+  closeCustomWordbooks();
+  syncWordbookPicker();
   await loadSelectedWordbook();
 });
 

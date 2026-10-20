@@ -31,13 +31,14 @@ for (const book of books) {
   context.text = fs.readFileSync(book.url, 'utf8');
   const words = vm.runInContext('parseVocabulary(text)', context);
   context.words = words;
-  vm.runInContext("WORDS = words;", context);
+  vm.runInContext("WORDS = words; applyCustomTranslations(words);", context);
   for (const word of words) {
     context.probe = word;
     const labels = vm.runInContext("getMeaningChoices({word: probe}).map(choice => t(choice, {term: choice === probe.meaning ? probe.word : WORDS.find(item => item.meaning === choice)?.word}))", context);
     assert.equal(new Set(labels).size, 4, `Distinct Chinese meaning choices: ${book.id}: ${word.id}`);
     for (const text of [word.meaning, word.translation, ...word.memoryAid.map(part => part[1] || part[0])]) {
-      if (text) assert.ok(Object.hasOwn(context.translations, text) && /[\u3400-\u9fff]/u.test(context.translations[text]), `${book.id}: ${word.id}: ${text}`);
+      const inline = text === word.meaning ? word.meaningZh : text === word.translation ? word.translationZh : "";
+      if (text) assert.ok(/[\u3400-\u9fff]/u.test(inline || context.translations[text] || ""), `${book.id}: ${word.id}: ${text}`);
     }
     count++;
   }

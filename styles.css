@@ -154,6 +154,106 @@ h2 {
   border-radius: 28px;
 }
 
+.custom-manager-panel {
+  width: min(760px, 100%);
+  padding: clamp(24px, 6vw, 44px);
+  border-radius: 28px;
+}
+
+.custom-manager-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.custom-manager-header h2,
+.custom-manager-header p,
+.custom-import-form h3,
+.custom-import-form p {
+  margin: 0;
+}
+
+.custom-manager-header p,
+.custom-wordbook-row small,
+.format-help,
+.import-status {
+  color: var(--muted);
+}
+
+.custom-manager-header p {
+  margin-top: 6px;
+}
+
+
+.custom-wordbook-list {
+  border-top: 1px solid var(--line);
+}
+
+.custom-wordbook-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.custom-wordbook-row strong,
+.custom-wordbook-row small {
+  display: block;
+}
+
+.custom-wordbook-row small {
+  margin-top: 4px;
+}
+
+.custom-import-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 30px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.custom-import-form h3 {
+  margin-bottom: 6px;
+}
+
+.custom-import-form label {
+  margin-top: 4px;
+  font-weight: 720;
+}
+
+.custom-import-form input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--text);
+  font: inherit;
+}
+
+.custom-import-form input[type="file"] {
+  padding: 9px 10px;
+}
+
+.format-help,
+.import-status {
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.custom-import-form .primary-button {
+  margin-top: 8px;
+}
+
+.import-status:not(:empty) {
+  min-height: 1.3em;
+}
+
 .wordbook-section {
   margin-bottom: 26px;
 }
@@ -769,8 +869,13 @@ body.is-studying .app-shell {
   }
 
   .intro-panel,
+  .custom-manager-panel,
   .word-card {
     border-radius: 22px;
+  }
+
+  .custom-wordbook-row {
+    grid-template-columns: 1fr;
   }
 
   .card-stack::before,

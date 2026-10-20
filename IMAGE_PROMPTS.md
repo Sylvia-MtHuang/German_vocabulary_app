@@ -84,6 +84,38 @@ chromatic hue fails the color check and needs a revised sibling image before
 being presented as ready. Keep the historical batch prompts above unchanged;
 new images and revisions follow the current strict color contract.
 
+## Direct feedback revision workflow
+
+When the user submits concrete image feedback, revise the affected assets
+directly and show the result in the local-only feedback gallery. Do not ask for
+another design confirmation unless the feedback contains a material ambiguity.
+Keep each original, create a versioned sibling, and record the revision in a
+separate batch JSON before generation. The active manifest remains unchanged
+until the user approves the revised preview; review pages stay out of the
+published site.
+
+Apply these learned preferences to future vocabulary images:
+
+- When the vocabulary subject is a person or group and the user asks for the
+  article cue on that subject, color the complete person or group—not only
+  clothing, furniture, or another incidental prop.
+- Put the article color on meaning-bearing information: chart marks for a
+  study and poem writing for a poem, rather than only a folder or pen.
+- Show long durations literally with a year calendar and one continuous span
+  across several months.
+- Avoid romantic ambiguity for friendship; prefer two girls' hands with an
+  unmistakably platonic friendship gesture and friendship bracelets.
+- Avoid decorative overhead structures for atmosphere because they can look
+  like lamps. Prefer an aura, surrounding air, mist, or another spatial cue.
+- Make abstract adjectives immediately interpretable through one familiar,
+  sensible action. Avoid a generic repair scene for `sinnvoll`.
+- For `treu`, use one isolated dog with no owner, scenery, or competing props.
+- Keep `duzen` and `siezen` text-only.
+- For climate concepts, the user prefers a transparent green bubble over an
+  opaque ring or arch.
+- For `die Arbeitsatmosphäre`, use red atmospheric mist visibly suspended in
+  the office air; avoid a colored table.
+
 ## A2 color revisions: 17 approved images
 
 Approved on 2026-10-03. The app manifest now uses the final selective-color revisions for these words, with the original assets retained. Prompts and final filenames: [a2-color-revisions-17.json](assets/vocab-images/a2-color-revisions-17.json). Before/after gallery: [tests/a2-color-revisions.html](tests/a2-color-revisions.html). Historical batch prompt files continue to describe the original images.

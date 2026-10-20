@@ -1,10 +1,11 @@
 [
   {
     "id": "custom",
-    "title": "Custom wordbook",
-    "description": "Your editable vocabulary.txt file.",
+    "title": "Schritte PLUS B1.2",
+    "description": "Unit 8 · Unter Kollegen · 42 cards",
     "url": "vocabulary.txt",
-    "source": "Local custom list"
+    "source": "Schritte PLUS B1.2 · Unit 8 Unter Kollegen",
+    "group": "custom"
   },
   {
     "id": "goethe-a1",
