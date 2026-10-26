@@ -1,11 +1,27 @@
 [
   {
-    "id": "custom",
-    "title": "Schritte PLUS B1.2",
-    "description": "Units 8–9 · 91 cards",
+    "id": "custom-unit-8",
+    "title": "Schritte PLUS B1.2 · Unit 8",
+    "description": "Unter Kollegen · 42 cards",
     "url": "vocabulary.txt",
-    "source": "Schritte PLUS B1.2 · Units 8–9",
-    "group": "custom"
+    "source": "Schritte PLUS B1.2 · Unit 8",
+    "group": "custom",
+    "rangeStart": 0,
+    "rangeCount": 42,
+    "cardCount": 42,
+    "legacyId": "custom"
+  },
+  {
+    "id": "custom-unit-9",
+    "title": "Schritte PLUS B1.2 · Unit 9",
+    "description": "Virtuelle Welt · 49 cards",
+    "url": "vocabulary.txt",
+    "source": "Schritte PLUS B1.2 · Unit 9",
+    "group": "custom",
+    "rangeStart": 42,
+    "rangeCount": 49,
+    "cardCount": 49,
+    "legacyId": "custom"
   },
   {
     "id": "goethe-a1",

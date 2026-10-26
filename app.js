@@ -3,6 +3,7 @@ const VOCABULARY_URL = "vocabulary.txt";
 const WORDBOOK_MANIFEST_URL = "wordbooks/manifest.json";
 const IMAGE_MANIFEST_URL = "assets/vocab-images/manifest.json";
 const CUSTOM_WORDBOOKS_KEY = "deutsch-memo-custom-wordbooks-v1";
+const CUSTOM_ALL_WORDBOOK_ID = "custom-all";
 const IMAGE_CACHE_KEY = Date.now();
 let IMAGE_PATHS = new Map();
 let WORDBOOKS = [];
@@ -164,11 +165,28 @@ function setLanguage(language) {
 
 const DEFAULT_WORDBOOKS = [
   {
-    id: "custom",
-    title: "Schritte PLUS B1.2",
-    description: "Unit 8 · Unter Kollegen · 42 cards",
+    id: "custom-unit-8",
+    title: "Schritte PLUS B1.2 · Unit 8",
+    description: "Unter Kollegen · 42 cards",
     url: VOCABULARY_URL,
-    group: "custom"
+    source: "Schritte PLUS B1.2 · Unit 8",
+    group: "custom",
+    rangeStart: 0,
+    rangeCount: 42,
+    cardCount: 42,
+    legacyId: "custom"
+  },
+  {
+    id: "custom-unit-9",
+    title: "Schritte PLUS B1.2 · Unit 9",
+    description: "Virtuelle Welt · 49 cards",
+    url: VOCABULARY_URL,
+    source: "Schritte PLUS B1.2 · Unit 9",
+    group: "custom",
+    rangeStart: 42,
+    rangeCount: 49,
+    cardCount: 49,
+    legacyId: "custom"
   }
 ];
 
@@ -744,9 +762,12 @@ async function loadWordbooks() {
     MANIFEST_WORDBOOKS = DEFAULT_WORDBOOKS;
   }
 
-  WORDBOOKS = mergeCustomWordbooks(MANIFEST_WORDBOOKS, loadSavedCustomWordbooks());
+  WORDBOOKS = withCustomAggregate(mergeCustomWordbooks(MANIFEST_WORDBOOKS, loadSavedCustomWordbooks()));
 
-  if (!WORDBOOKS.some((wordbook) => wordbook.id === state.selectedWordbookId)) {
+  if (state.selectedWordbookId === "custom") {
+    state.selectedWordbookId = CUSTOM_ALL_WORDBOOK_ID;
+    saveState();
+  } else if (!WORDBOOKS.some((wordbook) => wordbook.id === state.selectedWordbookId)) {
     state.selectedWordbookId = WORDBOOKS[0].id;
     saveState();
   }
@@ -765,7 +786,12 @@ function normalizeWordbook(entry) {
     description: String(entry.description || "").trim(),
     source: String(entry.source || "").trim(),
     group: String(entry.group || "").trim(),
-    text: String(entry.text || "")
+    text: String(entry.text || ""),
+    rangeStart: Math.max(0, Number(entry.rangeStart) || 0),
+    rangeCount: Math.max(0, Number(entry.rangeCount) || 0),
+    cardCount: Math.max(0, Number(entry.cardCount) || 0),
+    legacyId: String(entry.legacyId || "").trim(),
+    aggregate: Boolean(entry.aggregate)
   };
 }
 
@@ -789,7 +815,12 @@ function normalizeSavedCustomWordbook(entry) {
     text,
     description: String(entry.description || "").trim(),
     source: "Imported TXT",
-    group: "custom"
+    group: "custom",
+    rangeStart: 0,
+    rangeCount: 0,
+    cardCount: parseVocabulary(text).length,
+    legacyId: String(entry.legacyId || "").trim(),
+    aggregate: false
   };
 }
 
@@ -797,10 +828,44 @@ function mergeCustomWordbooks(manifestBooks, savedBooks) {
   const books = manifestBooks.map((book) => ({...book}));
   savedBooks.map(normalizeSavedCustomWordbook).filter(Boolean).forEach((saved) => {
     const index = books.findIndex((book) => book.id === saved.id || (book.group === "custom" && book.title.toLowerCase() === saved.title.toLowerCase()));
-    if (index >= 0) books[index] = {...books[index], ...saved, id: books[index].id};
+    if (index >= 0) books[index] = {...books[index], ...saved, id: books[index].id, rangeStart: 0, rangeCount: 0};
     else books.push(saved);
   });
   return books;
+}
+
+function getCustomUnits(books = WORDBOOKS) {
+  return books.filter((wordbook) => wordbook.group === "custom" && !wordbook.aggregate && wordbook.id !== CUSTOM_ALL_WORDBOOK_ID);
+}
+
+function withCustomAggregate(books) {
+  const actualBooks = books.filter((wordbook) => !wordbook.aggregate && wordbook.id !== CUSTOM_ALL_WORDBOOK_ID);
+  const units = getCustomUnits(actualBooks);
+  const aggregate = {
+    id: CUSTOM_ALL_WORDBOOK_ID,
+    title: "All custom vocabulary",
+    description: `${units.length} TXT units`,
+    source: "All imported TXT units",
+    group: "custom",
+    aggregate: true,
+    cardCount: units.reduce((sum, unit) => sum + unit.cardCount, 0)
+  };
+  return [aggregate, ...actualBooks];
+}
+
+async function loadUnitWords(wordbook) {
+  let text = wordbook.text;
+  if (!text) {
+    if (!wordbook.url) return [];
+    const response = await fetch(`${wordbook.url}?t=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Could not load ${wordbook.url}`);
+    text = await response.text();
+  }
+  const parsed = parseVocabulary(text);
+  const words = wordbook.rangeCount
+    ? parsed.slice(wordbook.rangeStart, wordbook.rangeStart + wordbook.rangeCount)
+    : parsed;
+  return words.map((word) => ({...word, unitId: wordbook.id, legacyId: wordbook.legacyId || ""}));
 }
 
 async function loadSelectedWordbook() {
@@ -810,13 +875,9 @@ async function loadSelectedWordbook() {
   setText(feedback, "");
 
   try {
-    let text = wordbook.text;
-    if (!text) {
-      const response = await fetch(`${wordbook.url}?t=${Date.now()}`, { cache: "no-store" });
-      if (!response.ok) throw new Error(`Could not load ${wordbook.url}`);
-      text = await response.text();
-    }
-    WORDS = parseVocabulary(text);
+    const units = wordbook.aggregate ? getCustomUnits() : [wordbook];
+    const results = await Promise.allSettled(units.map(loadUnitWords));
+    WORDS = results.flatMap((result) => result.status === "fulfilled" ? result.value : []);
     applyCustomTranslations(WORDS);
     pruneOldRecords();
 
@@ -1074,12 +1135,15 @@ function hasMemoryAid(word) {
 }
 
 function pruneOldRecords() {
-  const prefix = `${getSelectedWordbook().id}::`;
-  const validIds = new Set(WORDS.map((word) => recordKey(word.id)));
-  Object.keys(state.records).forEach((id) => {
-    if (id.startsWith(prefix) && !validIds.has(id)) delete state.records[id];
-  });
-  WORDS.forEach((word) => getRecord(word.id));
+  const selected = getSelectedWordbook();
+  const validIds = new Set(WORDS.map(recordKey));
+  if (!selected.aggregate) {
+    const prefix = `${selected.id}::`;
+    Object.keys(state.records).forEach((id) => {
+      if (id.startsWith(prefix) && !validIds.has(id)) delete state.records[id];
+    });
+  }
+  WORDS.forEach(getRecord);
   saveState();
 }
 
@@ -1104,14 +1168,18 @@ function saveState() {
   renderStats();
 }
 
-function recordKey(wordId) {
-  return `${getSelectedWordbook().id}::${wordId}`;
+function recordKey(word) {
+  const wordId = typeof word === "string" ? word : word.id;
+  const unitId = typeof word === "string" ? getSelectedWordbook().id : (word.unitId || getSelectedWordbook().id);
+  return `${unitId}::${wordId}`;
 }
 
-function getRecord(wordId) {
-  const key = recordKey(wordId);
+function getRecord(word) {
+  const wordId = typeof word === "string" ? word : word.id;
+  const key = recordKey(word);
   if (!state.records[key]) {
-    const legacyRecord = getSelectedWordbook().id === "custom" ? state.records[wordId] : null;
+    const legacyId = typeof word === "string" ? "" : word.legacyId;
+    const legacyRecord = (legacyId && state.records[`${legacyId}::${wordId}`]) || state.records[wordId];
     state.records[key] = legacyRecord || {
       seen: false,
       strength: 0,
@@ -1225,7 +1293,7 @@ function shuffle(items) {
 function pickSessionWords(count) {
   const now = Date.now();
   return shuffle(WORDS)
-    .map((word) => ({ word, record: getRecord(word.id) }))
+    .map((word) => ({ word, record: getRecord(word) }))
     .sort((a, b) => {
       const aDue = isDue(a.record, now) ? 0 : 1;
       const bDue = isDue(b.record, now) ? 0 : 1;
@@ -1271,7 +1339,7 @@ function startSession() {
   const words = pickSessionWords(state.selectedCount);
   session = words.map((word) => ({
     word,
-    phase: getRecord(word.id).seen ? "quiz" : "learn",
+    phase: getRecord(word).seen ? "quiz" : "learn",
     quizType: null
   }));
   document.body.classList.add("is-studying");
@@ -1634,7 +1702,7 @@ function rateLearn(rating, direction = SWIPE_RATING_DIRECTIONS[rating]) {
 
 function commitLearnRating(rating) {
   const { word } = currentItem;
-  const record = getRecord(word.id);
+  const record = getRecord(word);
   applyInitialRating(record, rating);
   saveState();
 
@@ -1818,7 +1886,7 @@ function checkQuiz(isCorrect) {
   locked = true;
 
   const { word } = currentItem;
-  const record = getRecord(word.id);
+  const record = getRecord(word);
   record.seen = true;
 
   if (isCorrect) {
@@ -2102,7 +2170,7 @@ function goHome() {
 
 function updateProgress(done = false) {
   const total = state.selectedCount;
-  const remainingUnique = new Set(session.map((item) => item.word.id)).size + (currentItem && !done ? 1 : 0);
+  const remainingUnique = new Set(session.map((item) => recordKey(item.word))).size + (currentItem && !done ? 1 : 0);
   const completed = done ? total : Math.max(0, total - Math.min(total, remainingUnique));
   const percent = total ? Math.round((completed / total) * 100) : 0;
   progressBar.style.width = `${percent}%`;
@@ -2111,7 +2179,7 @@ function updateProgress(done = false) {
 
 function getStats() {
   const now = Date.now();
-  const records = WORDS.map((word) => getRecord(word.id));
+  const records = WORDS.map(getRecord);
   return {
     mastered: records.filter((record) => record.seen && record.intervalDays >= 7 && record.strength >= 7).length,
     due: records.filter((record) => record.seen && record.dueAt <= now).length,
@@ -2195,14 +2263,14 @@ async function importCustomWordbook(event) {
     return;
   }
 
-  const existing = WORDBOOKS.find((wordbook) => wordbook.group === "custom" && wordbook.title.toLowerCase() === title.toLowerCase());
+  const existing = getCustomUnits().find((wordbook) => wordbook.title.toLowerCase() === title.toLowerCase());
   const saved = loadSavedCustomWordbooks();
   const entry = {id: existing?.id || `custom-${slugify(title)}`, title, text};
   const index = saved.findIndex((wordbook) => wordbook.id === entry.id || wordbook.title.toLowerCase() === title.toLowerCase());
   if (index >= 0) saved[index] = entry;
   else saved.push(entry);
   localStorage.setItem(CUSTOM_WORDBOOKS_KEY, JSON.stringify(saved));
-  WORDBOOKS = mergeCustomWordbooks(MANIFEST_WORDBOOKS, saved);
+  WORDBOOKS = withCustomAggregate(mergeCustomWordbooks(MANIFEST_WORDBOOKS, saved));
   renderCustomWordbooks();
   customWordbookForm.reset();
   setText(customWordbookStatus, "{title} imported with {count} cards.", {title, count: words.length});

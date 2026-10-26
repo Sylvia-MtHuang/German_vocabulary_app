@@ -36,11 +36,15 @@ const manifest = new Map(manifestEntries.map(item => typeof item === 'string'
 context.images = manifestEntries;
 vm.runInContext('IMAGE_PATHS = parseImageManifest(images);', context);
 context.text = fs.readFileSync(path.join(root, 'vocabulary.txt'), 'utf8');
-const words = vm.runInContext('parseVocabulary(text)', context);
+const books = JSON.parse(fs.readFileSync(path.join(root, 'wordbooks/manifest.json'), 'utf8'));
+const unit9 = books.find(book => book.id === 'custom-unit-9');
+const allWords = vm.runInContext('parseVocabulary(text)', context);
+const words = allWords.slice(unit9.rangeStart, unit9.rangeStart + unit9.rangeCount);
 const custom = new Map(words.map(word => [word.id, word]));
 
-assert.equal(words.length, 91);
-assert.equal(custom.size, 91);
+assert.equal(allWords.length, 91);
+assert.equal(words.length, 49);
+assert.equal(custom.size, 49);
 assert.ok(words.every(word => word.meaning && word.meaningZh));
 assert.ok(words.every(word => word.example && word.translation && word.translationZh));
 
@@ -65,9 +69,7 @@ for (const item of textOnly) {
   assert.ok(!manifest.has(item.id), `text-only manifest mapping: ${item.id}`);
 }
 
-const books = JSON.parse(fs.readFileSync(path.join(root, 'wordbooks/manifest.json'), 'utf8'));
-const customBook = books.find(book => book.id === 'custom');
-assert.equal(customBook.description, 'Units 8–9 · 91 cards');
-assert.equal(customBook.source, 'Schritte PLUS B1.2 · Units 8–9');
+assert.equal(unit9.cardCount, 49);
+assert.equal(unit9.source, 'Schritte PLUS B1.2 · Unit 9');
 
 console.log('Schritte PLUS B1.2 Unit 9: 49 entries, 45 reviewed images and 4 text-only cards passed.');

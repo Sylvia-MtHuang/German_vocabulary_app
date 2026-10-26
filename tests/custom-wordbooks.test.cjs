@@ -24,9 +24,9 @@ const source = fs.readFileSync(path.join(root, 'app.js'), 'utf8')
 vm.runInContext(source, context);
 
 const books = JSON.parse(fs.readFileSync(path.join(root, 'wordbooks/manifest.json'), 'utf8'));
-const custom = books.find(book => book.id === 'custom');
-assert.equal(custom.title, 'Schritte PLUS B1.2');
-assert.equal(custom.group, 'custom');
+const customUnits = books.filter(book => book.group === 'custom');
+assert.deepEqual(customUnits.map(book => book.id), ['custom-unit-8', 'custom-unit-9']);
+assert.deepEqual(customUnits.map(book => book.cardCount), [42, 49]);
 
 context.text = fs.readFileSync(path.join(root, 'vocabulary.txt'), 'utf8');
 const words = vm.runInContext('parseVocabulary(text)', context);
@@ -37,12 +37,13 @@ assert.match(words.find(word => word.id === 'die-distanz').example, /Distanz/);
 
 context.manifestBooks = books;
 context.savedBooks = [
-  {id: 'custom', title: 'Schritte PLUS B1.2', text: 'die Distanz | distance | Distanz ist wichtig. | Distance matters.'},
+  {id: 'ignored', title: 'Schritte PLUS B1.2 · Unit 8', text: 'die Distanz | distance | Distanz ist wichtig. | Distance matters.'},
   {id: 'custom-mein-kurs', title: 'Mein Kurs', text: 'lernen | to learn | Ich lerne. | I learn.'}
 ];
 const merged = JSON.parse(vm.runInContext('JSON.stringify(mergeCustomWordbooks(manifestBooks, savedBooks))', context));
-assert.equal(merged.filter(book => book.id === 'custom').length, 1);
-assert.equal(merged.find(book => book.id === 'custom').text, context.savedBooks[0].text);
+assert.equal(merged.filter(book => book.id === 'custom-unit-8').length, 1);
+assert.equal(merged.find(book => book.id === 'custom-unit-8').text, context.savedBooks[0].text);
+assert.equal(merged.find(book => book.id === 'custom-unit-8').rangeCount, 0);
 assert.equal(merged.find(book => book.id === 'custom-mein-kurs').title, 'Mein Kurs');
 
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
