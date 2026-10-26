@@ -117,6 +117,36 @@ async function run() {
   assert.equal(vm.runInContext('state.selectedWordbookId', context), 'custom-all');
   assert.equal(vm.runInContext("WORDBOOKS.filter(book => book.id === 'custom-all').length", context), 1);
 
+  const englishMarkup = vm.runInContext(`
+    state.selectedWordbookId = 'custom-all';
+    uiLanguage = 'en';
+    renderCustomWordbooks();
+    customWordbookList.innerHTML;
+  `, context);
+  assert.match(englishMarkup, /custom-wordbook-row is-aggregate/);
+  assert.match(englishMarkup, /data-custom-wordbook-id="custom-all"/);
+  assert.match(englishMarkup, /aria-current="true"/);
+  assert.match(englishMarkup, />Study all</);
+  assert.match(englishMarkup, /91 cards/);
+  assert.match(englishMarkup, /42 cards/);
+  assert.match(englishMarkup, /49 cards/);
+  assert.match(englishMarkup, />Study this unit</);
+
+  const chineseMarkup = vm.runInContext(`
+    uiLanguage = 'zh';
+    renderCustomWordbooks();
+    customWordbookList.innerHTML;
+  `, context);
+  assert.match(chineseMarkup, /全部自定义词汇/);
+  assert.match(chineseMarkup, /复习全部/);
+  assert.match(chineseMarkup, /复习这个单元/);
+
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  assert.match(html, /data-i18n="Import a TXT unit"/);
+  assert.match(html, /data-i18n="Unit name"/);
+  assert.match(html, /data-i18n="Import or replace unit"/);
+  assert.ok(!JSON.stringify(vm.runInContext('loadSavedCustomWordbooks()', context)).includes('custom-all'));
+
   console.log('Custom TXT units, dynamic aggregate, replacement and progress migration: passed');
 }
 

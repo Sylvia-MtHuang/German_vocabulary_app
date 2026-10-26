@@ -29,7 +29,9 @@ const books = JSON.parse(fs.readFileSync('wordbooks/manifest.json', 'utf8'));
 let count = 0;
 for (const book of books) {
   context.text = fs.readFileSync(book.url, 'utf8');
-  const words = vm.runInContext('parseVocabulary(text)', context);
+  const parsed = vm.runInContext('parseVocabulary(text)', context);
+  const start = Number.isInteger(book.rangeStart) ? book.rangeStart : 0;
+  const words = Number.isInteger(book.rangeCount) ? parsed.slice(start, start + book.rangeCount) : parsed.slice(start);
   context.words = words;
   vm.runInContext("WORDS = words; applyCustomTranslations(words);", context);
   for (const word of words) {

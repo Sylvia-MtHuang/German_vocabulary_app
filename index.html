@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles.css?v=20261003-language-2">
+    <link rel="stylesheet" href="styles.css?v=20261026-custom-units">
   </head>
   <body>
     <main class="app-shell">
@@ -71,18 +71,19 @@
             <button id="customWordbookBack" class="icon-button" type="button" data-i18n-aria-label="Back to wordbooks" aria-label="Back to wordbooks">&lt;</button>
             <div>
               <h2 id="customWordbookHeading" data-i18n="Custom vocabulary">Custom vocabulary</h2>
-              <p data-i18n="Manage your imported TXT wordbooks.">Manage your imported TXT wordbooks.</p>
+              <p data-i18n="Choose one TXT unit or study them all.">Choose one TXT unit or study them all.</p>
             </div>
           </header>
           <div id="customWordbookList" class="custom-wordbook-list"></div>
           <form id="customWordbookForm" class="custom-import-form">
-            <h3 data-i18n="Import a TXT wordbook">Import a TXT wordbook</h3>
-            <label for="customWordbookTitle" data-i18n="Wordbook name">Wordbook name</label>
+            <h3 data-i18n="Import a TXT unit">Import a TXT unit</h3>
+            <p data-i18n="Each TXT file becomes one review unit.">Each TXT file becomes one review unit.</p>
+            <label for="customWordbookTitle" data-i18n="Unit name">Unit name</label>
             <input id="customWordbookTitle" name="title" type="text" autocomplete="off" required>
             <label for="customWordbookFile" data-i18n="Choose TXT file">Choose TXT file</label>
             <input id="customWordbookFile" name="file" type="file" accept=".txt,text/plain" required>
             <p class="format-help" data-i18n="Required columns: German | English meaning | German example | English example. Optional: memory aid | image or plural | plural | Chinese meaning | Chinese example.">Required columns: German | English meaning | German example | English example. Optional: memory aid | image or plural | plural | Chinese meaning | Chinese example.</p>
-            <button class="primary-button" type="submit" data-i18n="Import or replace">Import or replace</button>
+            <button class="primary-button" type="submit" data-i18n="Import or replace unit">Import or replace unit</button>
             <p id="customWordbookStatus" class="import-status" role="status"></p>
           </form>
         </div>
@@ -117,6 +118,6 @@
       </section>
     </main>
 
-    <script src="app.js?v=20261019-custom-wordbooks"></script>
+    <script src="app.js?v=20261026-custom-units"></script>
   </body>
 </html>

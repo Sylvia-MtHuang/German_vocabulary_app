@@ -19,7 +19,8 @@ const bridge = `
 window.layoutQA = {
   language(value) { setLanguage(value); },
   load(text, manifest, translations) { CHINESE_VOCABULARY = translations; IMAGE_PATHS = parseImageManifest(manifest); WORDS = parseVocabulary(text); return WORDS; },
-  setup(books) { WORDBOOKS = books; syncWordbookPicker(); document.body.classList.remove('is-studying'); setupView.classList.remove('hidden'); studyView.classList.add('hidden'); },
+  setup(books) { WORDBOOKS = withCustomAggregate(books.map(normalizeWordbook).filter(Boolean)); syncWordbookPicker(); document.body.classList.remove('is-studying'); setupView.classList.remove('hidden'); customWordbookView.classList.add('hidden'); studyView.classList.add('hidden'); },
+  custom() { renderCustomWordbooks(); setupView.classList.add('hidden'); customWordbookView.classList.remove('hidden'); },
   study(word, view) {
     document.body.classList.add('is-studying'); setupView.classList.add('hidden'); studyView.classList.remove('hidden');
     card.className = 'word-card neutral'; cardStack.className = 'card-stack neutral'; nextCardPreview.classList.add('is-empty');
@@ -75,6 +76,21 @@ run.onclick = async () => {
     }
     if (issues.length) failures.push({label,issues});
   };
+  const checkCustom = (label) => {
+    checks++;
+    const width = frame.contentWindow.innerWidth;
+    const root = doc.documentElement;
+    const issues = [];
+    if (root.scrollWidth > width + 1) issues.push('page horizontal overflow');
+    const rows = [...doc.querySelectorAll('.custom-wordbook-row')];
+    if (!rows.some(row => row.classList.contains('is-aggregate'))) issues.push('aggregate row missing');
+    for (const button of doc.querySelectorAll('.custom-wordbook-row button, .custom-import-form button, .custom-import-form input')) {
+      const rect = button.getBoundingClientRect();
+      if (rect.left < -1 || rect.right > width + 1) issues.push('custom control outside viewport');
+      if (rect.height < 47) issues.push('custom control below 48px target');
+    }
+    if (issues.length) failures.push({label,issues:[...new Set(issues)]});
+  };
   for (const language of ['en','zh']) {
   for (const [width,height] of sizes) {
     frame.width = width; frame.height = height;
@@ -83,6 +99,9 @@ run.onclick = async () => {
     qa.language(language);
     qa.setup(books);
     check(language+' '+width+'x'+height+' setup',width>=961,false);
+    qa.custom();
+    checkCustom(language+' '+width+'x'+height+' custom units');
+    qa.setup(books);
     for (let book=0;book<books.length;book++) {
       const words = qa.load(texts[book],manifest,translations);
       // Exercise every learning card and missed-card state, then all review formats for long entries.

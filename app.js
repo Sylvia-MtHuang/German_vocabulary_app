@@ -70,17 +70,23 @@ const CHINESE_UI = {
   "Choose count": "重新选择数量",
   "Custom wordbook": "自定义词库",
   "Custom vocabulary": "自定义词汇",
-  "Manage your imported TXT wordbooks.": "管理你导入的 TXT 词库。",
+  "Choose one TXT unit or study them all.": "选择一个 TXT 单元，或复习全部单元。",
+  "All custom vocabulary": "全部自定义词汇",
+  "All imported TXT units": "所有已导入的 TXT 单元",
+  "{count} cards · {units} units": "{count} 张卡片 · {units} 个单元",
+  "{count} cards · {source}": "{count} 张卡片 · {source}",
   "Back to wordbooks": "返回词库",
-  "Study this wordbook": "学习这个词库",
-  "Import a TXT wordbook": "导入 TXT 词库",
-  "Wordbook name": "词库名称",
+  "Study all": "复习全部",
+  "Study this unit": "复习这个单元",
+  "Import a TXT unit": "导入 TXT 单元",
+  "Unit name": "单元名称",
   "Choose TXT file": "选择 TXT 文件",
-  "Import or replace": "导入或替换",
+  "Import or replace unit": "导入或替换单元",
+  "Each TXT file becomes one review unit.": "每个 TXT 文件会成为一个复习单元。",
   "Required columns: German | English meaning | German example | English example. Optional: memory aid | image or plural | plural | Chinese meaning | Chinese example.": "必填列：德语 | 英文释义 | 德语例句 | 英文例句。可选列：记忆提示 | 图片或复数 | 复数 | 中文释义 | 中文例句。",
-  "Choose a TXT file and enter a wordbook name.": "请选择 TXT 文件并输入词库名称。",
+  "Choose a TXT file and enter a unit name.": "请选择 TXT 文件并输入单元名称。",
   "The TXT file contains no readable vocabulary.": "TXT 文件中没有可读取的词汇。",
-  "{title} imported with {count} cards.": "已导入 {title}，共 {count} 张卡片。",
+  "{title} imported as a unit with {count} cards.": "已将 {title} 作为单元导入，共 {count} 张卡片。",
   "Imported TXT": "导入的 TXT",
   "Your editable vocabulary.txt file.": "你可以编辑的自定义单词列表。",
   "Goethe-Institut A1 level": "歌德 A1 词库",
@@ -95,8 +101,12 @@ const CHINESE_UI = {
   "Goethe-Zertifikat B1 official wordlist": "歌德 B1 官方词表",
   "{count} cards loaded.": "已加载 {count} 张卡片。",
   "{count} cards loaded. Source: {source}": "已加载 {count} 张卡片。来源：{source}",
+  "{title}: {count} cards loaded.": "{title}：已加载 {count} 张卡片。",
+  "{title}: {count} cards loaded. Source: {source}": "{title}：已加载 {count} 张卡片。来源：{source}",
   "No cards loaded yet.": "尚未加载卡片。",
-  "No cards loaded yet. Source: {source}": "尚未加载卡片。来源：{source}"
+  "No cards loaded yet. Source: {source}": "尚未加载卡片。来源：{source}",
+  "{title}: no cards loaded yet.": "{title}：尚未加载卡片。",
+  "{title}: no cards loaded yet. Source: {source}": "{title}：尚未加载卡片。来源：{source}"
 };
 let uiLanguage = loadLanguage();
 
@@ -160,6 +170,7 @@ function setLanguage(language) {
   document.querySelectorAll("[data-language]").forEach(button => {
     button.setAttribute("aria-pressed", String(button.dataset.language === uiLanguage));
   });
+  if (WORDBOOKS.length) renderCustomWordbooks();
 }
 
 
@@ -2209,7 +2220,7 @@ function syncWordbookPicker() {
   wordbookPicker.innerHTML = `
     <button class="wordbook-option${selectedCustom ? " is-selected" : ""}" type="button" data-custom-wordbooks role="radio" aria-checked="${selectedCustom}">
       <span>${uiText("Custom vocabulary")}</span>
-      <small>${uiText("Manage your imported TXT wordbooks.")}</small>
+      <small>${uiText("Choose one TXT unit or study them all.")}</small>
     </button>
   ` + pickerBooks.map((wordbook) => {
     const selected = wordbook.id === state.selectedWordbookId;
@@ -2235,16 +2246,25 @@ function closeCustomWordbooks() {
 }
 
 function renderCustomWordbooks() {
-  const books = WORDBOOKS.filter((wordbook) => wordbook.group === "custom");
-  customWordbookList.innerHTML = books.map((wordbook) => `
-    <div class="custom-wordbook-row">
+  const units = getCustomUnits();
+  const aggregate = WORDBOOKS.find((wordbook) => wordbook.id === CUSTOM_ALL_WORDBOOK_ID);
+  const books = aggregate ? [aggregate, ...units] : units;
+  customWordbookList.innerHTML = books.map((wordbook) => {
+    const isAggregate = wordbook.id === CUSTOM_ALL_WORDBOOK_ID;
+    const selected = wordbook.id === state.selectedWordbookId;
+    const detail = isAggregate
+      ? t("{count} cards · {units} units", {count: wordbook.cardCount || 0, units: units.length})
+      : t("{count} cards · {source}", {count: wordbook.cardCount || 0, source: wordbook.source || "Imported TXT"});
+    return `
+    <div class="custom-wordbook-row${isAggregate ? " is-aggregate" : ""}${selected ? " is-selected" : ""}">
       <div>
-        <strong>${escapeAttribute(wordbook.title)}</strong>
-        <small>${escapeAttribute(t(wordbook.source || "Imported TXT"))}</small>
+        <strong>${escapeAttribute(t(wordbook.title))}</strong>
+        <small>${escapeAttribute(detail)}</small>
       </div>
-      <button class="answer-button primary" type="button" data-custom-wordbook-id="${escapeAttribute(wordbook.id)}">${uiText("Study this wordbook")}</button>
+      <button class="answer-button primary" type="button" data-custom-wordbook-id="${escapeAttribute(wordbook.id)}" aria-current="${selected}">${uiText(isAggregate ? "Study all" : "Study this unit")}</button>
     </div>
-  `).join("");
+  `;
+  }).join("");
 }
 
 async function importCustomWordbook(event) {
@@ -2252,7 +2272,7 @@ async function importCustomWordbook(event) {
   const title = customWordbookTitle.value.trim();
   const file = customWordbookFile.files[0];
   if (!title || !file) {
-    setText(customWordbookStatus, "Choose a TXT file and enter a wordbook name.");
+    setText(customWordbookStatus, "Choose a TXT file and enter a unit name.");
     return;
   }
 
@@ -2273,15 +2293,17 @@ async function importCustomWordbook(event) {
   WORDBOOKS = withCustomAggregate(mergeCustomWordbooks(MANIFEST_WORDBOOKS, saved));
   renderCustomWordbooks();
   customWordbookForm.reset();
-  setText(customWordbookStatus, "{title} imported with {count} cards.", {title, count: words.length});
+  setText(customWordbookStatus, "{title} imported as a unit with {count} cards.", {title, count: words.length});
 }
 
 function renderWordbookSummary() {
   if (!wordbookSummary) return;
   const wordbook = getSelectedWordbook();
   const count = WORDS.length;
-  const key = count ? (wordbook.source ? "{count} cards loaded. Source: {source}" : "{count} cards loaded.") : (wordbook.source ? "No cards loaded yet. Source: {source}" : "No cards loaded yet.");
-  setText(wordbookSummary, key, {count, source: wordbook.source});
+  const key = count
+    ? (wordbook.source ? "{title}: {count} cards loaded. Source: {source}" : "{title}: {count} cards loaded.")
+    : (wordbook.source ? "{title}: no cards loaded yet. Source: {source}" : "{title}: no cards loaded yet.");
+  setText(wordbookSummary, key, {title: wordbook.title, count, source: wordbook.source});
 }
 
 function escapeAttribute(value) {

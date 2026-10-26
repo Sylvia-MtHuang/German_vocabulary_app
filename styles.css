@@ -199,9 +199,29 @@ h2 {
   border-bottom: 1px solid var(--line);
 }
 
+.custom-wordbook-row > div {
+  min-width: 0;
+}
+
+.custom-wordbook-row.is-aggregate {
+  margin: 12px 0 10px;
+  padding: 18px;
+  border-bottom: 0;
+  border-radius: 16px;
+  background: rgba(31, 122, 104, 0.09);
+}
+
+.custom-wordbook-row.is-selected strong {
+  color: var(--accent);
+}
+
 .custom-wordbook-row strong,
 .custom-wordbook-row small {
   display: block;
+}
+
+.custom-wordbook-row strong {
+  overflow-wrap: anywhere;
 }
 
 .custom-wordbook-row small {
@@ -876,6 +896,10 @@ body.is-studying .app-shell {
 
   .custom-wordbook-row {
     grid-template-columns: 1fr;
+  }
+
+  .custom-wordbook-row .answer-button {
+    width: 100%;
   }
 
   .card-stack::before,
