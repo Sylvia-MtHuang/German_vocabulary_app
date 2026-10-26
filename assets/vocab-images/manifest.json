@@ -2786,5 +2786,149 @@
   {
     "id": "die-arbeitsatmosphaere",
     "file": "custom-die-arbeitsatmosphaere-schritte-plus-b12-v2.png"
+  },
+  {
+    "id": "virtuell",
+    "file": "custom-virtuell-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "die-datei",
+    "file": "custom-die-datei-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "der-virus",
+    "file": "custom-der-virus-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "loeschen",
+    "file": "custom-loeschen-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "anschliessen",
+    "file": "custom-anschliessen-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "anklicken",
+    "file": "custom-anklicken-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "herunterladen",
+    "file": "custom-herunterladen-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "klicken",
+    "file": "custom-klicken-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "der-quatsch",
+    "file": "custom-der-quatsch-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "der-unsinn",
+    "file": "custom-der-unsinn-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "die-erfindung",
+    "file": "custom-die-erfindung-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "installieren",
+    "file": "custom-installieren-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "der-kursleiter",
+    "file": "custom-der-kursleiter-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "die-kursleiterin",
+    "file": "custom-die-kursleiterin-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "herrlich",
+    "file": "custom-herrlich-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "der-manager",
+    "file": "custom-der-manager-schritte-plus-b12-unit9-from-managerin-v2.png"
+  },
+  {
+    "id": "die-managerin",
+    "file": "custom-die-managerin-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "der-wohnblock",
+    "file": "custom-der-wohnblock-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "klingen",
+    "file": "custom-klingen-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "beschreiben",
+    "file": "custom-beschreiben-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "beschliessen",
+    "file": "custom-beschliessen-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "erstellen",
+    "file": "custom-erstellen-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "das-passwort",
+    "file": "custom-das-passwort-schritte-plus-b12-unit9-gray-v2.png"
+  },
+  {
+    "id": "das-symbol",
+    "file": "custom-das-symbol-schritte-plus-b12-unit9-gray-v2.png"
+  },
+  {
+    "id": "suechtig",
+    "file": "custom-suechtig-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "vorne",
+    "file": "custom-vorne-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "saemtlich",
+    "file": "custom-saemtlich-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "fort",
+    "file": "custom-fort-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "wieso",
+    "file": "custom-wieso-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "aufregen",
+    "file": "custom-aufregen-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "digital",
+    "file": "custom-digital-schritte-plus-b12-unit9-v2.png"
+  },
+  {
+    "id": "diskutieren",
+    "file": "custom-diskutieren-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "der-moderator",
+    "file": "custom-der-moderator-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "die-moderatorin",
+    "file": "custom-die-moderatorin-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "die-diskussion",
+    "file": "custom-die-diskussion-schritte-plus-b12-unit9.png"
+  },
+  {
+    "id": "der-standpunkt",
+    "file": "custom-der-standpunkt-schritte-plus-b12-unit9.png"
   }
 ]

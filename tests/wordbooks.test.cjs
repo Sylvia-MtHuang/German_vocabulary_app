@@ -138,5 +138,5 @@ for (const [file, count] of imageBatches) {
 }
 assert.ok(revisions.every(item => imageIds.has(item.id)), 'Every revision belongs to an existing image batch');
 assert.equal(imageHashes.size, 400, 'Each vocabulary image must be independent');
-assert.equal(a2.filter(word => word.imagePath && fs.existsSync(path.join(root, word.imagePath))).length, 433);
+assert.equal(a2.filter(word => word.imagePath && fs.existsSync(path.join(root, word.imagePath))).length, 438);
 console.log('Wordbooks, A2 forms, recall clues, progress, randomized sessions and shared global image bindings: passed');

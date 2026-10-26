@@ -40,3 +40,52 @@ siezen | to address someone formally | Am Elternabend werde ich vom Klassenlehre
 die Distanz | distance; social distance | Im Berufsleben ist es wichtig, Nähe und Distanz gut auszubalancieren. | In professional life, it is important to balance closeness and distance well. |  |  | die Distanzen | 距离；疏离感 | 在职场中，妥善平衡亲近与距离很重要。
 das Betriebsklima | workplace climate | Freundschaften im Job haben einen positiven Einfluss auf das Betriebsklima. | Friendships at work have a positive influence on the workplace climate. |  |  |  | 职场氛围；企业内部环境 | 职场友谊对工作氛围有积极影响。
 die Arbeitsatmosphäre | working atmosphere | Je angenehmer die Arbeitsatmosphäre ist, desto weniger Stress haben die Mitarbeitenden. | The more pleasant the working atmosphere is, the less stress employees have. |  |  |  | 工作氛围 | 工作氛围越愉快，员工的压力就越小。
+virtuell | virtual | Das Treffen findet heute virtuell statt. | The meeting takes place virtually today. |  |  |  | 虚拟的 | 今天的会议在线上举行。
+der Ordner | folder; binder | Ich speichere das Dokument in einem neuen Ordner. | I save the document in a new folder. |  |  | die Ordner | 文件夹；档案夹 | 我把文件保存在一个新文件夹里。
+die Festplatte | hard drive | Alle Fotos sind auf der Festplatte gespeichert. | All the photos are saved on the hard drive. |  |  | die Festplatten | 硬盘 | 所有照片都保存在硬盘上。
+die Datei | computer file | Bitte öffne die Datei auf deinem Computer. | Please open the file on your computer. |  |  | die Dateien | （电子）文件 | 请在你的电脑上打开这个文件。
+der Virus | computer virus | Ein Virus kann wichtige Dateien beschädigen. | A virus can damage important files. |  |  | die Viren | （电脑）病毒 | 电脑病毒可能会损坏重要文件。
+der Monitor | monitor | Der Monitor steht neben der Tastatur. | The monitor is next to the keyboard. |  |  | die Monitore | 显示器 | 显示器放在键盘旁边。
+die Tastatur | keyboard | Die Tastatur ist mit dem Computer verbunden. | The keyboard is connected to the computer. |  |  | die Tastaturen | 键盘 | 键盘已经连接到电脑。
+löschen | to delete; erase | Ich möchte diese alte Datei löschen. | I want to delete this old file. |  |  |  | 删除；清除 | 我想删除这个旧文件。
+anschliessen | to connect; plug in | Kannst du den Drucker an den Computer anschliessen? | Can you connect the printer to the computer? |  |  |  | 连接（设备）；接通 | 你能把打印机连接到电脑吗？
+anklicken | to click on | Klicken Sie das Symbol bitte einmal an. | Please click the icon once. |  |  |  | 点击（某个项目） | 请点击一下这个图标。
+herunterladen | to download | Du kannst das Programm kostenlos herunterladen. | You can download the program for free. |  |  |  | 下载 | 你可以免费下载这个程序。
+klicken | to click | Klicken Sie hier, um die Datei zu öffnen. | Click here to open the file. |  |  |  | 点击；单击 | 点击这里打开文件。
+der Quatsch | nonsense; rubbish | Das ist doch völliger Quatsch! | That is complete nonsense! |  |  |  | 废话；胡说八道 | 这完全是胡说八道！
+bevor | before | Speichere die Datei, bevor du den Computer ausschaltest. | Save the file before you switch off the computer. |  |  |  | 在……之前 | 关电脑之前先保存文件。
+der Unsinn | nonsense; absurdity | Glaub diesen Unsinn bitte nicht. | Please do not believe this nonsense. |  |  |  | 胡言乱语；荒唐事 | 请不要相信这些荒唐话。
+die Erfindung | invention; fabrication | Das Internet ist eine bedeutende Erfindung. | The internet is an important invention. |  |  | die Erfindungen | 发明；编造的事情 | 互联网是一项重要的发明。
+der Akku | rechargeable battery; charge | Der Akku meines Handys ist fast leer. | My phone battery is almost empty. |  |  | die Akkus | 充电电池；电量 | 我的手机电量快用完了。
+nachdem | after | Nachdem ich das Programm installiert habe, starte ich den Computer neu. | After I have installed the program, I restart the computer. |  |  |  | 在……之后 | 安装好程序后，我重新启动电脑。
+installieren | to install software | Wir müssen die neue Software installieren. | We have to install the new software. |  |  |  | 安装（软件） | 我们必须安装这个新软件。
+der Kursleiter | male course instructor | Der Kursleiter erklärt die Aufgabe Schritt für Schritt. | The male course instructor explains the task step by step. |  |  | die Kursleiter | 男课程负责人；男授课老师 | 男授课老师一步一步地讲解任务。
+die Kursleiterin | female course instructor | Die Kursleiterin beantwortet alle Fragen. | The female course instructor answers all the questions. |  |  | die Kursleiterinnen | 女课程负责人；女授课老师 | 女授课老师回答了所有问题。
+als ob | as if | Er tut so, als ob er alles wüsste. | He acts as if he knew everything. |  |  |  | 好像；仿佛 | 他表现得好像什么都知道似的。
+wie wenn | as if | Es klingt, wie wenn der Akku leer wäre. | It sounds as if the battery were empty. |  |  |  | 好像；仿佛 | 听起来好像电池没电了。
+herrlich | wonderful; lovely | Die Aussicht vom Berg ist herrlich. | The view from the mountain is wonderful. |  |  |  | 美妙的；棒极了 | 山上的景色美极了。
+der Manager | male manager | Der Manager bespricht mit dem Team die neuen Ziele. | The male manager discusses the new goals with the team. |  |  | die Manager | 男经理；管理人员 | 男经理和团队讨论新的目标。
+die Managerin | female manager | Die Managerin leitet heute die Besprechung. | The female manager is leading the meeting today. |  |  | die Managerinnen | 女经理；女管理人员 | 女经理今天主持会议。
+der Wohnblock | apartment block | Wir wohnen in einem grossen Wohnblock. | We live in a large apartment block. |  |  | die Wohnblöcke | 公寓楼；住宅楼 | 我们住在一栋大型住宅楼里。
+klingen | to sound | Deine Idee klingt sehr interessant. | Your idea sounds very interesting. |  |  |  | 听起来；发出声音 | 你的想法听起来很有意思。
+beschreiben | to describe | Kannst du das Problem genauer beschreiben? | Can you describe the problem more precisely? |  |  |  | 描述 | 你能更准确地描述这个问题吗？
+beschliessen | to decide; resolve | Wir beschliessen, das Projekt gemeinsam zu starten. | We decide to start the project together. |  |  |  | 决定；下决心 | 我们决定一起启动这个项目。
+der Knopf | button; clothing button | Drücken Sie den blauen Knopf. | Press the blue button. |  |  | die Knöpfe | 按钮；纽扣 | 请按下蓝色按钮。
+erstellen | to create; produce | Ich erstelle ein sicheres Passwort. | I create a secure password. |  |  |  | 创建；制作 | 我创建了一个安全的密码。
+das Passwort | password | Mein Passwort kennt niemand ausser mir. | Nobody except me knows my password. |  |  | die Passwörter | 密码（账户登录） | 除了我，没有人知道我的密码。
+das Symbol | icon; symbol | Klicken Sie auf das grüne Symbol. | Click the green icon. |  |  | die Symbole | 图标；符号 | 请点击绿色图标。
+süchtig | addicted | Manche Menschen sind süchtig nach Computerspielen. | Some people are addicted to computer games. |  |  |  | 上瘾的；成瘾的 | 有些人沉迷于电脑游戏。
+vorne | at the front | Der Eingang befindet sich vorne am Gebäude. | The entrance is at the front of the building. |  |  |  | 在前面；在前部 | 入口位于建筑物前面。
+sämtlich- | all; entire | Sämtliche Dateien wurden erfolgreich gespeichert. | All the files were saved successfully. |  |  |  | 所有的；全部的 | 所有文件都已成功保存。
+das Mountainbike | mountain bike | Mit dem Mountainbike fährt sie durch den Wald. | She rides through the forest on her mountain bike. |  |  | die Mountainbikes | 山地自行车 | 她骑山地自行车穿过森林。
+fort | away; on | Als ich zurückkam, war der Computer fort. | When I came back, the computer was gone. |  |  |  | 离开；继续 | 我回来时，电脑已经不见了。
+wieso | why; how come | Wieso funktioniert das Internet heute nicht? | Why is the internet not working today? |  |  |  | 为什么；怎么会 | 为什么今天网络不能用？
+aufregen | to upset; annoy | Reg dich nicht über den langsamen Computer auf. | Do not get upset about the slow computer. |  |  |  | 使生气；使激动 | 别因为电脑运行缓慢而生气。
+digital | digital | Die Zeichnung entsteht digital auf einem Tablet. | The drawing is created digitally on a tablet. |  |  |  | 数字的；数码的 | 这幅图是在平板电脑上以数字方式创作的。
+diskutieren | to discuss; debate | Wir diskutieren über die Vor- und Nachteile des Internets. | We discuss the advantages and disadvantages of the internet. |  |  |  | 讨论；辩论 | 我们讨论互联网的优缺点。
+der Moderator | male moderator; host | Der Moderator eröffnet die Diskussion. | The male moderator opens the discussion. |  |  | die Moderatoren | 男主持人；男讨论协调人 | 男主持人宣布讨论开始。
+die Moderatorin | female moderator; host | Die Moderatorin gibt allen Gästen das Wort. | The female moderator gives every guest a chance to speak. |  |  | die Moderatorinnen | 女主持人；女讨论协调人 | 女主持人让每位嘉宾都有发言机会。
+die Diskussion | discussion; debate | Die Diskussion über soziale Medien dauert lange. | The discussion about social media lasts a long time. |  |  | die Diskussionen | 讨论；辩论 | 关于社交媒体的讨论持续了很久。
+der Standpunkt | point of view; standpoint | Ich verstehe deinen Standpunkt gut. | I understand your point of view well. |  |  | die Standpunkte | 观点；立场 | 我很理解你的观点。
+der Computer | computer | Der Computer startet heute sehr langsam. | The computer starts very slowly today. |  |  | die Computer | 电脑 | 这台电脑今天启动得很慢。
+der Bildschirm | screen | Auf dem Bildschirm erscheint ein neues Fenster. | A new window appears on the screen. |  |  | die Bildschirme | 屏幕 | 屏幕上出现了一个新窗口。

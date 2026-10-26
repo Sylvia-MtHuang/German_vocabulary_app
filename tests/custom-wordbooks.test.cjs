@@ -30,7 +30,7 @@ assert.equal(custom.group, 'custom');
 
 context.text = fs.readFileSync(path.join(root, 'vocabulary.txt'), 'utf8');
 const words = vm.runInContext('parseVocabulary(text)', context);
-assert.equal(words.length, 42);
+assert.equal(words.length, 91);
 assert.ok(words.every(word => word.meaning && word.meaningZh));
 assert.ok(words.every(word => word.example && word.translation && word.translationZh));
 assert.match(words.find(word => word.id === 'die-distanz').example, /Distanz/);
