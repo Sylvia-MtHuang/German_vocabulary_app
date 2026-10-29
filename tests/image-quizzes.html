@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image quiz checks</title>
+<style>body{font:16px system-ui;margin:20px}button{padding:10px;margin:4px}pre{white-space:pre-wrap}iframe{display:block;border:1px solid #ccc;max-width:100%;margin-top:16px}</style>
+<h1>Image quiz checks</h1>
+<button id="run">Run image quiz checks</button>
+<button id="word-image">Preview word → images</button>
+<button id="image-word">Preview image → words</button>
+<pre id="results" role="status">Ready</pre>
+<iframe title="App under test" width="360" height="780"></iframe>
+<script>
+const frame=document.querySelector('iframe'),output=document.querySelector('#results');
+const bridge=`
+window.imageQA={
+ init(manifest){IMAGE_PATHS=parseImageManifest(manifest); WORDS=parseVocabulary('der Apfel | apple\\nder Hund | dog\\nder Stuhl | chair\\ndas Auto | car'); state=createDefaultState();},
+ show(type,word=WORDS[0]){clearAutoAdvance();stopSpeech();locked=false;missedReviewContext=null;currentItem={word,phase:'quiz',quizType:type};session=[{word:WORDS[1],phase:'quiz',quizType:'image-word'}];setupView.classList.add('hidden');studyView.classList.remove('hidden');document.body.classList.add('is-studying');renderCurrent();return currentItem;},
+ item(){return currentItem}, snapshot(){return JSON.stringify(state)}, language(value){setLanguage(value)},
+ next(){nextCard()}, review(){showMissedWordCard()}, back(){restoreMissedQuestion()},
+ stop(){clearAutoAdvance()}, failCached(){return failedQuizImages.size},
+ long(){return {...WORDS[0],id:'long',word:'außergewöhnlich lange deutsche Wortverbindung',article:'',pos:'word'}}
+};`;
+let qa,doc;
+const wait=async predicate=>{const end=Date.now()+6000;while(!predicate()){if(Date.now()>end)throw Error('Timed out waiting for images');await new Promise(r=>setTimeout(r,25))}};
+async function load(){
+ const [html,source,manifest]=await Promise.all(['../index.html','../app.js','../assets/vocab-images/manifest.json'].map(p=>fetch(p,{cache:'no-store'}).then(r=>p.endsWith('.json')?r.json():r.text())));
+ const testSource=source.replace(/let state = loadState\(\);/,'let state = createDefaultState();').replace(/\blocalStorage\b/g,'window.testStorage').replace(/loadVoices\(\);\s*syncCountPicker\(\);\s*loadVocabulary\(\);\s*$/,'');
+ const loaded=new Promise(r=>frame.onload=r);
+ frame.srcdoc=html.replace('<head>','<head><base href="'+new URL('../',location.href).href+'"><script>window.testStorage={getItem:()=>null,setItem(){}};<\/script>').replace(/<script src="app\.js[^\"]*"><\/script>/,()=>'<script>'+testSource+'\n'+bridge+'<\/script>');
+ await loaded;doc=frame.contentDocument;qa=frame.contentWindow.imageQA;qa.init(manifest);
+}
+document.querySelector('#run').onclick=async()=>{
+ let checks=0;const check=(ok,message)=>{checks++;if(!ok)throw Error(message)};
+ try{
+ await load();
+ for(const type of ['word-image','image-word']){
+  const item=qa.show(type);const initial=qa.snapshot();
+  const buttons=[...doc.querySelectorAll('#cardContent [data-image-choice]')];
+  check(buttons.length===4,'Four image quiz choices must render');
+  if(!item.imageReady){buttons[0].click();check(qa.snapshot()===initial,'Loading choices cannot score');}
+  await wait(()=>item.imageReady);
+  check(doc.querySelector('#card').classList.contains('neutral'),'Image quiz card must be neutral');
+  check(doc.querySelector('#nextCardPreview').classList.contains('neutral'),'Image quiz preview must be neutral');
+  if(type==='image-word'){
+   check(buttons.every(b=>!(/^(der|die|das)\s/.test(b.textContent))),'Image-word options must omit every article');
+   check(!doc.querySelector('#cardContent .speak-button'),'Image-word must not offer answer audio');
+   check([...doc.querySelectorAll('#cardContent img')].every(img=>!img.alt.includes('Apfel')),'Image alt must not disclose the answer');
+  }
+  const choiceOrder=buttons.map(b=>b.textContent+'|'+b.dataset.imageChoice).join();
+  qa.language('zh');check(doc.querySelector('#cardContent .prompt').textContent.includes('选择'),'Chinese prompt');
+  check(buttons.map(b=>b.textContent+'|'+b.dataset.imageChoice).join()===choiceOrder,'Language switch retains choice order and nodes');
+  const correct=buttons[item.imageChoices.indexOf(item.word)];correct.click();qa.stop();
+  check(doc.querySelector('#feedback').textContent.includes('der Apfel'),'Correct feedback includes full German answer');
+  check(doc.querySelector('#feedback').textContent.includes('正确'),'Correct Chinese feedback');
+  const after=qa.snapshot();correct.click();check(qa.snapshot()===after,'Double activation must score only once');
+  qa.language('en');check(doc.querySelector('#feedback').textContent.includes('der Apfel'),'English feedback retains answer');
+ }
+ const item=qa.show('image-word');await wait(()=>item.imageReady);
+ const wrong=[...doc.querySelectorAll('#cardContent [data-image-choice]')].find(b=>Number(b.dataset.imageChoice)!==item.imageChoices.indexOf(item.word));wrong.click();
+ check(doc.querySelector('#feedback').textContent==='Correct answer: der Apfel','Wrong answer discloses full answer');
+ const answered=qa.snapshot();const labels=[...doc.querySelectorAll('#cardContent [data-image-choice]')].map(b=>b.querySelector('[lang=de]').textContent).join();
+ qa.review();qa.language('zh');qa.back();await wait(()=>item.imageReady);
+ check(qa.snapshot()===answered,'Missed-card return and language switch cannot score');
+ check([...doc.querySelectorAll('#cardContent [data-image-choice]')].map(b=>b.querySelector('[lang=de]').textContent).join()===labels,'Missed-card return retains choices');
+ check(doc.querySelectorAll('#cardContent .is-correct').length===1&&doc.querySelectorAll('#cardContent .is-wrong').length===1,'Missed-card return restores choice feedback');
+ const stale=doc.querySelector('#cardContent img');qa.next();const nextItem=qa.item();stale.dispatchEvent(new Event('error'));check(qa.item()===nextItem&&qa.item().quizType==='image-word','Stale image error cannot change the next item');
+ let textItem=qa.show('image-word'),before=qa.snapshot();doc.querySelector('#useTextQuestion').click();check(!['word-image','image-word'].includes(textItem.quizType)&&qa.snapshot()===before,'Text fallback keeps progress unchanged');
+ const broken=qa.show('word-image',{...qa.item().word,imagePath:'assets/vocab-images/missing-image-quiz-test.png'});before=qa.snapshot();
+ await wait(()=>!['word-image','image-word'].includes(broken.quizType));
+ check(!['word-image','image-word'].includes(broken.quizType)&&qa.snapshot()===before,'Broken image falls back without scoring');
+ check(qa.failCached()===1,'Failed image is remembered for the session');
+ // Reload restores a clean image pool, then measure actual product controls.
+ await load();
+ for(const [width,height] of [[1280,800],[360,780],[320,568]]){
+  frame.width=width;frame.height=height;frame.style.maxWidth='none';
+  for(const type of ['word-image','image-word']){
+   const shown=qa.show(type);await wait(()=>shown.imageReady);
+   await new Promise(r=>frame.contentWindow.requestAnimationFrame(r));
+   check(doc.documentElement.scrollWidth<=width,'No page horizontal overflow at '+width);
+   check(doc.querySelector('#cardContent').scrollWidth<=doc.querySelector('#cardContent').clientWidth+1,'No choice overflow at '+width);
+   check([...doc.querySelectorAll('#cardContent [data-image-choice]')].every(b=>b.getBoundingClientRect().height>=44),'Touch targets at least 44px at '+width);
+  }
+ }
+ const longItem=qa.show('image-word',qa.long());await wait(()=>longItem.imageReady);
+ check(doc.querySelector('#cardContent').scrollWidth<=doc.querySelector('#cardContent').clientWidth+1,'Long phrase wraps without overflow');
+ frame.width=360;frame.height=780;frame.style.maxWidth='100%';qa.show('image-word');
+ output.textContent=checks+' image quiz checks passed';
+ }catch(error){output.textContent='FAILED after '+checks+' checks: '+error.message;}
+};
+for(const type of ['word-image','image-word'])document.getElementById(type).onclick=async()=>{if(!qa)await load();qa.show(type)};
+</script>
+</html>

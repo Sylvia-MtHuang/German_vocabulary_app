@@ -6,6 +6,7 @@ const CUSTOM_WORDBOOKS_KEY = "deutsch-memo-custom-wordbooks-v1";
 const CUSTOM_ALL_WORDBOOK_ID = "custom-all";
 const IMAGE_CACHE_KEY = Date.now();
 let IMAGE_PATHS = new Map();
+const failedQuizImages = new Set();
 let WORDBOOKS = [];
 let MANIFEST_WORDBOOKS = [];
 let CHINESE_VOCABULARY = {};
@@ -53,6 +54,15 @@ const CHINESE_UI = {
   "plural": "复数",
   "Choose the correct meaning": "选择正确的释义",
   "Choose the correct article": "选择正确的冠词",
+  "Choose the matching picture": "选择对应的图片",
+  "Choose the matching German word": "选择对应的德语单词",
+  "Picture to identify": "待识别的图片",
+  "Picture option {number}": "图片选项 {number}",
+  "Loading pictures...": "正在加载图片…",
+  "Use a text question": "切换文字题",
+  "Correct: {answer}": "回答正确：{answer}",
+  "Your choice": "你的选择",
+  "Correct choice": "正确选项",
   "Fill in the German word": "填写德语单词",
   "Type the German word": "输入德语单词",
   "Check": "检查答案",
@@ -1347,6 +1357,7 @@ function startSession() {
     return;
   }
 
+  failedQuizImages.clear();
   const words = pickSessionWords(state.selectedCount);
   session = words.map((word) => ({
     word,
@@ -1379,17 +1390,46 @@ function nextCard() {
   renderCurrent();
 }
 
-function chooseQuizType(word) {
+function chooseQuizType(word, allowImages = true) {
   const types = [];
   if (hasMeaning(word)) types.push("meaning");
   if (isNoun(word)) types.push("article");
   types.push("fill");
+  if (allowImages && getImageChoices({word}).length === 4) types.push("word-image", "image-word");
   return types[Math.floor(Math.random() * types.length)];
+}
+
+function isImageQuiz(item) {
+  return item.quizType === "word-image" || item.quizType === "image-word";
+}
+
+function getImageChoices(item) {
+  if (item.imageChoices) return item.imageChoices;
+  const {word} = item;
+  if (!word.imagePath || failedQuizImages.has(word.imagePath)) return [];
+  const key = value => (value || "").normalize("NFC").trim().replace(/\s+/g, " ").toLocaleLowerCase("de");
+  const paths = new Set([word.imagePath]);
+  const labels = new Set([key(displayWord(word, false))]);
+  const meanings = new Set([key(word.meaning)].filter(Boolean));
+  const choices = [word];
+  for (const candidate of shuffle(WORDS)) {
+    const label = key(displayWord(candidate, false));
+    const meaning = key(candidate.meaning);
+    if (!candidate.imagePath || failedQuizImages.has(candidate.imagePath) || paths.has(candidate.imagePath) || labels.has(label) || (meaning && meanings.has(meaning))) continue;
+    choices.push(candidate);
+    paths.add(candidate.imagePath);
+    labels.add(label);
+    if (meaning) meanings.add(meaning);
+    if (choices.length === 4) break;
+  }
+  if (choices.length !== 4) return [];
+  item.imageChoices = shuffle(choices);
+  return item.imageChoices;
 }
 
 function renderCurrent() {
   const { word, phase, quizType } = currentItem;
-  const revealGender = phase === "learn" || quizType !== "article";
+  const revealGender = phase === "learn" || (quizType !== "article" && !isImageQuiz(currentItem));
   const genderClass = getGenderClass(word, revealGender);
   const shouldPromotePreview = promotePreviewOnNextRender;
   promotePreviewOnNextRender = false;
@@ -1407,6 +1447,7 @@ function renderCurrent() {
     if (quizType === "meaning") renderMeaningQuiz(word);
     if (quizType === "article") renderArticleQuiz(word);
     if (quizType === "fill") renderFillQuiz(word);
+    if (isImageQuiz(currentItem)) renderImageQuiz(currentItem);
   }
 
   if (shouldPromotePreview) {
@@ -1510,7 +1551,7 @@ function renderNextCardPreview() {
     nextItem.quizType = chooseQuizType(nextItem.word);
   }
 
-  const revealGender = nextItem.phase === "learn" || nextItem.quizType !== "article";
+  const revealGender = nextItem.phase === "learn" || (nextItem.quizType !== "article" && !isImageQuiz(nextItem));
   const genderClass = getGenderClass(nextItem.word, revealGender);
   nextCardPreview.className = `word-card next-card-preview ${genderClass}`;
   nextCardPreview.innerHTML = previewMarkup(nextItem);
@@ -1548,6 +1589,12 @@ function previewMarkup(item) {
         <button class="answer-button high" type="button" tabindex="-1">${uiText("Know it")}</button>
       </div>
     `;
+  }
+
+  if (isImageQuiz(item)) {
+    return `<div class="card-top"><span class="mode-pill">${uiText("Review")}</span></div>
+      <div class="card-content preview-content">${imageQuizMarkup(item, true)}</div>
+      <div class="feedback"></div><div class="actions preview-actions"></div>`;
   }
 
   if (quizType === "meaning") {
@@ -1606,6 +1653,95 @@ function previewMarkup(item) {
     <div class="feedback"></div>
     <div class="actions preview-actions"></div>
   `;
+}
+
+function imageQuizMarkup(item, preview = false) {
+  const choices = getImageChoices(item);
+  const pictureChoices = item.quizType === "word-image";
+  const inactive = preview ? ' tabindex="-1"' : "";
+  const image = (word, label) => `<img src="${imageUrl(word.imagePath)}" alt="${escapeAttribute(t(label))}" data-i18n-alt="${label}">`;
+  return `<div class="image-quiz">
+    <p class="prompt">${uiText(pictureChoices ? "Choose the matching picture" : "Choose the matching German word")}</p>
+    ${pictureChoices ? `<div class="word-line"><div class="quiz-word" lang="de">${escapeAttribute(displayWord(item.word))}</div>
+      <button class="speak-button" type="button" aria-label="${escapeAttribute(t("Play German pronunciation"))}" data-i18n-aria-label="Play German pronunciation"${inactive}>${speakerIcon()}</button></div>`
+      : `<figure class="quiz-picture">${image(item.word, "Picture to identify")}</figure>`}
+    <div class="choices ${pictureChoices ? "image-choices" : "image-word-choices"}">
+      ${choices.map((choice, index) => `<button class="choice-button ${pictureChoices ? "image-choice" : "image-word-choice"}" type="button" data-image-choice="${index}" disabled${inactive}>
+        ${pictureChoices ? `<img src="${imageUrl(choice.imagePath)}" alt="${escapeAttribute(t("Picture option {number}", {number: index + 1}))}" data-i18n-alt="Picture option {number}" data-i18n-values="${escapeAttribute(JSON.stringify({number: index + 1}))}">` : `<span lang="de">${escapeAttribute(displayWord(choice, false))}</span>`}
+        <span class="choice-result"></span></button>`).join("")}
+    </div>
+  </div>`;
+}
+
+function renderImageQuiz(item) {
+  const choices = getImageChoices(item);
+  if (choices.length !== 4 || choices.some(choice => failedQuizImages.has(choice.imagePath))) {
+    useTextQuestion(item);
+    return;
+  }
+  item.imageReady = false;
+  cardContent.innerHTML = imageQuizMarkup(item);
+  const root = cardContent.querySelector(".image-quiz");
+  const buttons = [...root.querySelectorAll("[data-image-choice]")];
+  const images = [...root.querySelectorAll("img")];
+  const active = () => currentItem === item && cardContent.contains(root) && !studyView.classList.contains("hidden");
+  let pending = images.length;
+  const refresh = () => {
+    buttons.forEach((button, index) => {
+      button.disabled = !item.imageReady || locked;
+      const answered = Number.isInteger(item.selectedImageChoice);
+      const correct = answered && choices[index] === item.word;
+      const wrong = answered && index === item.selectedImageChoice && !correct;
+      button.classList.toggle("is-correct", correct);
+      button.classList.toggle("is-wrong", wrong);
+      button.querySelector(".choice-result").innerHTML = correct ? uiText("Correct choice") : wrong ? uiText("Your choice") : "";
+    });
+  };
+  if (!locked) {
+    setText(feedback, "Loading pictures...");
+    actions.innerHTML = `<button class="text-question-button" id="useTextQuestion" type="button">${uiText("Use a text question")}</button>`;
+    actions.querySelector("#useTextQuestion").addEventListener("click", () => useTextQuestion(item));
+  }
+  root.querySelector(".speak-button")?.addEventListener("click", () => speak(item.word.word));
+  buttons.forEach((button, index) => button.addEventListener("click", () => {
+    if (!active() || locked || !item.imageReady) return;
+    item.selectedImageChoice = index;
+    checkQuiz(choices[index] === item.word);
+    refresh();
+  }));
+  images.forEach((img, index) => {
+    let settled = false;
+    const finish = success => {
+      if (settled || !active()) return;
+      settled = true;
+      if (!success) {
+        failedQuizImages.add(item.quizType === "word-image" ? choices[index].imagePath : item.word.imagePath);
+        useTextQuestion(item);
+        return;
+      }
+      pending -= 1;
+      if (!pending) {
+        item.imageReady = true;
+        if (!locked) setText(feedback, "");
+        refresh();
+      }
+    };
+    img.addEventListener("load", () => finish(true), {once: true});
+    img.addEventListener("error", () => finish(false), {once: true});
+    if (img.complete) finish(img.naturalWidth > 0);
+  });
+  refresh();
+}
+
+function useTextQuestion(item) {
+  if (currentItem !== item || locked || !isImageQuiz(item)) return;
+  stopSpeech();
+  item.quizType = chooseQuizType(item.word, false);
+  delete item.imageChoices;
+  delete item.selectedImageChoice;
+  delete item.imageReady;
+  setText(feedback, "");
+  renderCurrent();
 }
 
 function renderMeaningQuiz(word) {
@@ -1894,6 +2030,7 @@ function ratingFromSwipe(dx, dy) {
 
 function checkQuiz(isCorrect) {
   if (locked) return;
+  if (isImageQuiz(currentItem) && !currentItem.imageReady) return;
   locked = true;
 
   const { word } = currentItem;
@@ -1903,7 +2040,7 @@ function checkQuiz(isCorrect) {
   if (isCorrect) {
     applyReviewResult(record, "good");
     state.streak += 1;
-    setText(feedback, "Correct");
+    setText(feedback, isImageQuiz(currentItem) ? "Correct: {answer}" : "Correct", {answer: displayWord(word)});
     feedback.className = "feedback correct";
     actions.innerHTML = "";
     saveState();

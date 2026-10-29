@@ -83,6 +83,10 @@ If the sixth field does not look like an image path or URL, the app treats it as
 
 If meanings are provided, the app enables meaning-choice review questions. If the file only contains German words, the app uses article and fill-in-the-word review questions.
 
+Review also mixes in word-to-picture and picture-to-word questions when four distinct illustrated choices are available. Eligible question types have equal probability. Picture-to-word choices hide noun articles until the answer is submitted. If an image fails to load, or the learner chooses a text question, the app switches without recording an answer.
+
+Run `node tests/image-quizzes.test.cjs` and open `tests/image-quizzes.html` for image-question checks.
+
 ## Memory Scheduling
 
 The app uses a lightweight spaced-repetition scheduler inspired by Ebbinghaus-style review timing and Anki's SM-2 approach.
