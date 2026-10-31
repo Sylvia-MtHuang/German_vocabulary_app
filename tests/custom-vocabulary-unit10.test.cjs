@@ -29,6 +29,21 @@ const batch = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-images/cu
 assert.deepEqual(batch.items.map(item => item.id), Array.from(words, word => word.id));
 assert.equal(batch.items.filter(item => item.file).length, 49);
 assert.deepEqual(batch.items.filter(item => !item.file).map(item => item.id), ['sowohl-als-auch', 'weder-noch', 'einerseits']);
+context.translations = JSON.parse(fs.readFileSync(path.join(root, 'wordbooks/zh-CN.json'), 'utf8'));
+vm.runInContext('CHINESE_VOCABULARY = translations;', context);
+for (const word of words) {
+  context.probe = word;
+  vm.runInContext('uiLanguage = "en";', context);
+  const english = vm.runInContext('memoryAidMarkup(probe)', context);
+  assert.doesNotMatch(english, /[\u3400-\u9fff]/u, `English hint must not contain Chinese: ${word.id}`);
+  vm.runInContext('uiLanguage = "zh";', context);
+  const chinese = vm.runInContext('memoryAidMarkup(probe)', context);
+  assert.match(chinese, /[\u3400-\u9fff]/u, `Chinese hint must remain available: ${word.id}`);
+}
+context.probe = words.find(word => word.id === 'benoetigen');
+vm.runInContext('uiLanguage = "en";', context);
+assert.match(vm.runInContext('memoryAidMarkup(probe)', context), /brauchen/);
+assert.match(vm.runInContext('memoryAidMarkup(probe)', context), /hat benötigt/);
 const revisions = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-images/custom-unit10-person-blue-revisions-20261031.json'), 'utf8'));
 const overrides = new Map(revisions.items.map(item => [item.id, item.file]));
 const images = JSON.parse(fs.readFileSync(path.join(root, 'assets/vocab-images/manifest.json'), 'utf8'));

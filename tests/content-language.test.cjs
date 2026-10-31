@@ -36,6 +36,9 @@ for (const book of books) {
   vm.runInContext("WORDS = words; applyCustomTranslations(words);", context);
   for (const word of words) {
     context.probe = word;
+    for (const englishText of [word.meaning, word.translation, ...word.memoryAid.flat()]) {
+      assert.doesNotMatch(englishText, /[\u3400-\u9fff]/u, `Chinese text in English content: ${book.id}: ${word.id}`);
+    }
     const labels = vm.runInContext("getMeaningChoices({word: probe}).map(choice => t(choice, {term: choice === probe.meaning ? probe.word : WORDS.find(item => item.meaning === choice)?.word}))", context);
     assert.equal(new Set(labels).size, 4, `Distinct Chinese meaning choices: ${book.id}: ${word.id}`);
     for (const text of [word.meaning, word.translation, ...word.memoryAid.map(part => part[1] || part[0])]) {
