@@ -55,7 +55,7 @@ async function run() {
   const withAll = JSON.parse(vm.runInContext('JSON.stringify(withCustomAggregate(normalized))', context));
   assert.equal(withAll.filter(book => book.id === 'custom-all').length, 1);
   assert.equal(withAll[0].aggregate, true);
-  assert.equal(withAll[0].cardCount, 91);
+  assert.equal(withAll[0].cardCount, 143);
 
   context.units = [
     {id: 'custom-alpha', title: 'Alpha', group: 'custom', text: 'die Bank | bench | Die Bank ist frei. | The bench is free.'},
@@ -127,7 +127,8 @@ async function run() {
   assert.match(englishMarkup, /data-custom-wordbook-id="custom-all"/);
   assert.match(englishMarkup, /aria-current="true"/);
   assert.match(englishMarkup, />Study all</);
-  assert.match(englishMarkup, /91 cards/);
+  assert.match(englishMarkup, /143 cards/);
+  assert.match(englishMarkup, /52 cards/);
   assert.match(englishMarkup, /42 cards/);
   assert.match(englishMarkup, /49 cards/);
   assert.match(englishMarkup, />Study this unit</);

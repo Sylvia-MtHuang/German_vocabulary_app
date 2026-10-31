@@ -1,0 +1,37 @@
+{
+  "batch": "Unit 10 people color revisions",
+  "createdOn": "2026-10-31",
+  "status": "approved",
+  "approvedOn": "2026-10-31",
+  "approvalScope": "publish",
+  "items": [
+    {
+      "number": 37,
+      "id": "der-konsument",
+      "term": "der Konsument",
+      "meaning": "consumer",
+      "originalFile": "custom-der-konsument-schritte-plus-b12-unit10.png",
+      "file": "custom-der-konsument-schritte-plus-b12-unit10-blue-person-v2.png",
+      "subject": "the shopper comparing products",
+      "originalNumber": 37,
+      "color": "blue",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve composition, pose, facial identity, objects, geometry, realistic texture and lighting. The complete visible body of the shopper comparing products must be saturated cobalt BLUE: face, skin, ears, hands, hair, every item of clothing and footwear visible, including all garments under the jacket. Use one consistent blue hue with realistic highlights and shadows, preserving skin and fabric detail; no remaining grayscale parts on this person. All other people, goods, wallet, shelving, furniture, background and all objects remain neutral grayscale. No text, watermark or logo.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "number": 45,
+      "id": "der-dieb",
+      "term": "der Dieb",
+      "meaning": "thief",
+      "originalFile": "custom-der-dieb-schritte-plus-b12-unit10.png",
+      "file": "custom-der-dieb-schritte-plus-b12-unit10-blue-person-v2.png",
+      "subject": "the thief reaching for the wallet",
+      "originalNumber": 45,
+      "color": "blue",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve composition, pose, facial identity, objects, geometry, realistic texture and lighting. The complete visible body of the thief reaching for the wallet must be saturated cobalt BLUE: face, skin, ears, hands, hair, every item of clothing and footwear visible, including all garments under the jacket. Use one consistent blue hue with realistic highlights and shadows, preserving skin and fabric detail; no remaining grayscale parts on this person. All other people, goods, wallet, shelving, furniture, background and all objects remain neutral grayscale. No text, watermark or logo.",
+      "generated": true,
+      "reviewed": true
+    }
+  ]
+}
