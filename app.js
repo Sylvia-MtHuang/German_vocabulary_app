@@ -1819,7 +1819,7 @@ function renderFillQuiz(word) {
     event.preventDefault();
     const answer = normalizeAnswer(input.value);
     const correct = normalizeAnswer(word.word);
-    checkQuiz(answer === correct);
+    checkQuiz(answer === correct || answer === normalizeAnswer(displayWord(word)));
   });
 }
 
