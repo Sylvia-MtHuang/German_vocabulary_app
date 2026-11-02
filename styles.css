@@ -1272,9 +1272,23 @@ body.is-studying .language-switcher {
   .language-switcher { position: static; justify-self: end; }
   .language-switcher button { min-height: 44px; }
   body.is-studying .app-shell {
-    grid-template-rows: auto minmax(0, 1fr);
-    gap: 8px;
+    grid-template-rows: minmax(0, 1fr);
+    gap: 0;
   }
+  body.is-studying .language-switcher {
+    position: absolute;
+    top: calc(8px + env(safe-area-inset-top));
+    width: 120px;
+  }
+  body.is-studying .language-switcher button {
+    flex: 1;
+    padding: 4px 6px;
+    font-size: 0.8rem;
+  }
+  body.is-studying .session-strip { padding-right: 128px; min-height: 52px; }
+  body.is-studying .study-view { padding-bottom: 22px; }
+  body.is-studying .card-stack::before { inset: 0; transform: translateY(7px); }
+  body.is-studying .card-stack::after { inset: 0; transform: translateY(15px); }
 }
 
 @media (max-height: 620px) and (min-width: 721px) {
