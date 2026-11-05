@@ -1474,9 +1474,9 @@ function renderCurrent() {
 
   if (phase === "learn") {
     setText(modePill, "Learn");
-    renderLearn(word, cardOnly ? {actionsHtml: `<button class="answer-button" type="button" id="previousBrowseCard" ${browseHistory.length ? "" : "disabled"}>${uiText("Previous card")}</button><button class="answer-button primary" type="button" id="nextBrowseCard">${uiText("Next card")}</button>`} : {});
+    renderLearn(word, cardOnly ? {actionsHtml: `${browseHistory.length ? `<button class="answer-button" type="button" id="previousBrowseCard">${uiText("Previous card")}</button>` : ""}<button class="answer-button primary" type="button" id="nextBrowseCard">${uiText("Next card")}</button>`} : {});
     if (cardOnly) {
-      document.querySelector("#previousBrowseCard").addEventListener("click", previousBrowseCard);
+      document.querySelector("#previousBrowseCard")?.addEventListener("click", previousBrowseCard);
       document.querySelector("#nextBrowseCard").addEventListener("click", nextCard);
     }
   } else {
