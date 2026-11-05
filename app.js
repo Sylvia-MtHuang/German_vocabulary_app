@@ -32,6 +32,7 @@ const CHINESE_UI = {
   "Start studying": "开始学习",
   "Browse cards": "纯学习：浏览卡片",
   "Next card": "下一张",
+  "Previous card": "上一张",
   "Cards complete": "卡片浏览完成",
   "You have viewed all cards in this session.": "本次卡片已全部浏览。",
   "Back to setup": "返回设置",
@@ -720,6 +721,7 @@ let state = loadState();
 let session = [];
 let cardOnly = false;
 let cardOnlyTotal = 0;
+let browseHistory = [];
 let currentItem = null;
 let locked = false;
 let autoAdvanceTimer = null;
@@ -1379,6 +1381,8 @@ function startSession(browse = false) {
     if (cardOnly) state.records = originalRecords;
   }
   cardOnlyTotal = words.length;
+  browseHistory = [];
+  currentItem = null;
   session = words.map((word) => ({
     word,
     phase: cardOnly || !getRecord(word).seen ? "learn" : "quiz",
@@ -1403,10 +1407,19 @@ function nextCard() {
     return;
   }
 
+  if (cardOnly && currentItem) browseHistory.push(currentItem);
   currentItem = session.shift();
   if (currentItem.phase === "quiz" && !currentItem.quizType) {
     currentItem.quizType = chooseQuizType(currentItem.word);
   }
+  renderCurrent();
+}
+
+function previousBrowseCard() {
+  if (!cardOnly || !browseHistory.length) return;
+  stopSpeech();
+  session.unshift(currentItem);
+  currentItem = browseHistory.pop();
   renderCurrent();
 }
 
@@ -1461,8 +1474,11 @@ function renderCurrent() {
 
   if (phase === "learn") {
     setText(modePill, "Learn");
-    renderLearn(word, cardOnly ? {actionsHtml: `<button class="answer-button primary" type="button" id="nextBrowseCard">${uiText("Next card")}</button>`} : {});
-    if (cardOnly) document.querySelector("#nextBrowseCard").addEventListener("click", nextCard);
+    renderLearn(word, cardOnly ? {actionsHtml: `<button class="answer-button" type="button" id="previousBrowseCard" ${browseHistory.length ? "" : "disabled"}>${uiText("Previous card")}</button><button class="answer-button primary" type="button" id="nextBrowseCard">${uiText("Next card")}</button>`} : {});
+    if (cardOnly) {
+      document.querySelector("#previousBrowseCard").addEventListener("click", previousBrowseCard);
+      document.querySelector("#nextBrowseCard").addEventListener("click", nextCard);
+    }
   } else {
     setText(modePill, "Review");
     if (quizType === "meaning") renderMeaningQuiz(word);
