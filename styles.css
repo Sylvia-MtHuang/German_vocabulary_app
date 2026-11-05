@@ -366,6 +366,13 @@ h2 {
   font-weight: 760;
 }
 
+.browse-button {
+  margin-top: 10px;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
 .count-option:hover,
 .wordbook-option:hover,
 .primary-button:hover,

@@ -30,6 +30,10 @@ const CHINESE_UI = {
   "Choose how many words to study": "选择本次学习的单词数量",
   "Choose word count": "选择单词数量",
   "Start studying": "开始学习",
+  "Browse cards": "纯学习：浏览卡片",
+  "Next card": "下一张",
+  "Cards complete": "卡片浏览完成",
+  "You have viewed all cards in this session.": "本次卡片已全部浏览。",
   "Back to setup": "返回设置",
   "Session progress": "本次学习进度",
   "Reset learning history": "重置学习记录",
@@ -714,6 +718,8 @@ const BUILT_IN_MEMORY_AIDS = {
 
 let state = loadState();
 let session = [];
+let cardOnly = false;
+let cardOnlyTotal = 0;
 let currentItem = null;
 let locked = false;
 let autoAdvanceTimer = null;
@@ -737,6 +743,7 @@ const wordbookPicker = document.querySelector("#wordbookPicker");
 const wordbookSummary = document.querySelector("#wordbookSummary");
 const countPicker = document.querySelector("#countPicker");
 const startButton = document.querySelector("#startButton");
+const browseButton = document.querySelector("#browseButton");
 const backButton = document.querySelector("#backButton");
 const resetButton = document.querySelector("#resetButton");
 const cardStack = document.querySelector(".card-stack");
@@ -755,6 +762,7 @@ const streakCount = document.querySelector("#streakCount");
 async function loadVocabulary() {
   setLanguage(uiLanguage);
   startButton.disabled = true;
+  browseButton.disabled = true;
   setText(startButton, "Loading wordbook...");
 
   try {
@@ -892,6 +900,7 @@ async function loadUnitWords(wordbook) {
 async function loadSelectedWordbook() {
   const wordbook = getSelectedWordbook();
   startButton.disabled = true;
+  browseButton.disabled = true;
   setText(startButton, "Loading wordbook...");
   setText(feedback, "");
 
@@ -909,6 +918,7 @@ async function loadSelectedWordbook() {
     }
 
     startButton.disabled = false;
+    browseButton.disabled = false;
     setText(startButton, "Start studying");
     renderWordbookSummary();
     renderStats();
@@ -1351,17 +1361,27 @@ function imagePriority(word) {
   return 1;
 }
 
-function startSession() {
+function startSession(browse = false) {
   if (!WORDS.length) {
     setText(feedback, "No vocabulary has been loaded yet.");
     return;
   }
 
   failedQuizImages.clear();
-  const words = pickSessionWords(state.selectedCount);
+  cardOnly = browse;
+  resetButton.classList.toggle("hidden", cardOnly);
+  const originalRecords = state.records;
+  if (cardOnly) state.records = JSON.parse(JSON.stringify(originalRecords));
+  let words;
+  try {
+    words = pickSessionWords(state.selectedCount);
+  } finally {
+    if (cardOnly) state.records = originalRecords;
+  }
+  cardOnlyTotal = words.length;
   session = words.map((word) => ({
     word,
-    phase: getRecord(word).seen ? "quiz" : "learn",
+    phase: cardOnly || !getRecord(word).seen ? "learn" : "quiz",
     quizType: null
   }));
   document.body.classList.add("is-studying");
@@ -1435,13 +1455,14 @@ function renderCurrent() {
   promotePreviewOnNextRender = false;
   resetCardMotion({ immediate: shouldPromotePreview });
   cardStack.className = `card-stack ${genderClass}`;
-  card.className = `word-card ${genderClass}${phase === "learn" ? " is-swipeable" : ""}`;
+  card.className = `word-card ${genderClass}${phase === "learn" && !cardOnly ? " is-swipeable" : ""}`;
   renderNextCardPreview();
   updateProgress();
 
   if (phase === "learn") {
     setText(modePill, "Learn");
-    renderLearn(word);
+    renderLearn(word, cardOnly ? {actionsHtml: `<button class="answer-button primary" type="button" id="nextBrowseCard">${uiText("Next card")}</button>`} : {});
+    if (cardOnly) document.querySelector("#nextBrowseCard").addEventListener("click", nextCard);
   } else {
     setText(modePill, "Review");
     if (quizType === "meaning") renderMeaningQuiz(word);
@@ -2291,19 +2312,19 @@ function renderDone() {
   nextCardPreview.className = "word-card next-card-preview neutral is-empty";
   nextCardPreview.innerHTML = "";
   card.className = "word-card neutral";
-  setText(modePill, "Done");
+  setText(modePill, cardOnly ? "Cards complete" : "Done");
   cardContent.innerHTML = `
     <div class="word-line">
       <div class="word" lang="de">Sehr gut</div>
     </div>
-    <div class="meaning">${uiText("This session is complete. Words answered incorrectly were returned to the queue and practiced again.")}</div>
+    <div class="meaning">${uiText(cardOnly ? "You have viewed all cards in this session." : "This session is complete. Words answered incorrectly were returned to the queue and practiced again.")}</div>
   `;
   setText(feedback, "");
   actions.innerHTML = `
     <button class="answer-button primary" type="button" id="againButton">${uiText("Study again")}</button>
     <button class="answer-button" type="button" id="homeButton">${uiText("Choose count")}</button>
   `;
-  document.querySelector("#againButton").addEventListener("click", startSession);
+  document.querySelector("#againButton").addEventListener("click", () => startSession(cardOnly));
   document.querySelector("#homeButton").addEventListener("click", goHome);
   updateProgress(true);
 }
@@ -2313,11 +2334,11 @@ function goHome() {
   document.body.classList.remove("is-studying");
   studyView.classList.add("hidden");
   setupView.classList.remove("hidden");
-  renderStats();
+  if (!cardOnly) renderStats();
 }
 
 function updateProgress(done = false) {
-  const total = state.selectedCount;
+  const total = cardOnly ? cardOnlyTotal : state.selectedCount;
   const remainingUnique = new Set(session.map((item) => recordKey(item.word))).size + (currentItem && !done ? 1 : 0);
   const completed = done ? total : Math.max(0, total - Math.min(total, remainingUnique));
   const percent = total ? Math.round((completed / total) * 100) : 0;
@@ -2498,7 +2519,8 @@ customWordbookList.addEventListener("click", async (event) => {
   await loadSelectedWordbook();
 });
 
-startButton.addEventListener("click", startSession);
+startButton.addEventListener("click", () => startSession(false));
+browseButton.addEventListener("click", () => startSession(true));
 backButton.addEventListener("click", goHome);
 resetButton.addEventListener("click", () => {
   clearAutoAdvance();
