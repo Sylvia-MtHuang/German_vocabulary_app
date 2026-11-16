@@ -1,0 +1,20 @@
+{
+  "batch": "Unit 11 lügen new scene",
+  "status": "approved",
+  "items": [
+    {
+      "originalNumber": 56,
+      "id": "luegen",
+      "term": "lügen",
+      "meaning": "to lie; tell an untruth",
+      "color": "natural",
+      "originalFile": "custom-luegen-schritte-plus-b12-unit11-feedback-v3.png",
+      "file": "custom-luegen-schritte-plus-b12-unit11-new-scene-v4.png",
+      "prompt": "Square opaque photorealistic German vocabulary flashcard for lügen, to tell a lie. An adult person speaking to a skeptical listener across a table; the speaker has a comically long wooden Pinocchio-style nose as an unmistakable visual metaphor for lying. Both people are shown from the shoulders up only, with all hands and arms outside the frame. Natural restrained colors, realistic faces, one coherent scene, uncluttered background. No readable text, captions, logos, watermarks, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    }
+  ],
+  "approvedOn": "2026-11-16",
+  "approvalScope": "publish"
+}

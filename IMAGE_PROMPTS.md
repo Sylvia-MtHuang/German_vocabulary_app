@@ -119,3 +119,7 @@ Apply these learned preferences to future vocabulary images:
 ## A2 color revisions: 17 approved images
 
 Approved on 2026-10-03. The app manifest now uses the final selective-color revisions for these words, with the original assets retained. Prompts and final filenames: [a2-color-revisions-17.json](assets/vocab-images/a2-color-revisions-17.json). Before/after gallery: [tests/a2-color-revisions.html](tests/a2-color-revisions.html). Historical batch prompt files continue to describe the original images.
+
+## Schritte PLUS B1.2 Unit 11
+
+The approved Unit 11 vocabulary images and their prompts are recorded in [the initial batch](assets/vocab-images/custom-schritte-plus-b1-2-unit11-images-20261116.json), [feedback revisions](assets/vocab-images/custom-unit11-feedback-revisions-20261116.json), [second revisions](assets/vocab-images/custom-unit11-feedback-second-revisions-20261116.json), and [the new lügen scene](assets/vocab-images/custom-unit11-luegen-new-scene-20261116.json). The user requested the Austrian flag in its red-white-red colors. Anschliessend is text-only.

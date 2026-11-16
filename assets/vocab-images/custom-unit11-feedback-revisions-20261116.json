@@ -1,0 +1,79 @@
+{
+  "batch": "Unit 11 feedback revisions",
+  "status": "approved",
+  "textOnly": {
+    "originalNumber": 55,
+    "id": "anschliessend",
+    "action": "text-only"
+  },
+  "items": [
+    {
+      "originalNumber": 16,
+      "id": "der-oesterreicher",
+      "term": "der Österreicher",
+      "meaning": "Austrian man / Austrian woman",
+      "color": "blue",
+      "originalFile": "custom-der-oesterreicher-schritte-plus-b12-unit11.png",
+      "file": "custom-der-oesterreicher-schritte-plus-b12-unit11-feedback-v2.png",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve the man, identity, pose, realistic texture, lighting, and gray alpine background. Replace the edelweiss in his hand with a clearly visible small Austrian flag: three equal horizontal stripes red, white, red, with no emblem. Keep his entire person vivid blue and everything else grayscale. The red flag is an explicit meaning-critical exception. No text or logos.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "originalNumber": 21,
+      "id": "betruegen",
+      "term": "betrügen",
+      "meaning": "cheat; deceive; defraud",
+      "color": "natural",
+      "originalFile": "custom-betruegen-schritte-plus-b12-unit11.png",
+      "file": "custom-betruegen-schritte-plus-b12-unit11-feedback-v2.png",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve scene, faces, card game, composition, natural lighting and colors. Correct the male player anatomy: exactly two separate arms and two natural hands, each with five correctly joined fingers. One hand holds the fan of cards and the other discreetly retrieves a hidden card from his own sleeve, with a coherent wrist and sleeve connection. No extra hands, fingers or limbs; no text or logos.",
+      "generated": true,
+      "reviewed": true,
+      "refinement": {
+        "file": "custom-betruegen-schritte-plus-b12-unit11-feedback-v3.png",
+        "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve the card players, faces, lighting, overall composition and natural colors. Correct the cheating gesture: remove the disconnected empty sleeve and all hidden objects near his torso. He has only two arms, each with exactly one natural hand attached to its own wrist. One hand holds his fan of cards; his other hand lies flat on the tabletop with one playing card discreetly concealed partly under that hand. No floating sleeves, no extra hands, no extra arms or fingers. Photorealistic.",
+        "generated": true,
+        "reviewed": true
+      }
+    },
+    {
+      "originalNumber": 22,
+      "id": "illegal",
+      "term": "illegal",
+      "meaning": "illegal",
+      "color": "natural",
+      "originalFile": "custom-illegal-schritte-plus-b12-unit11.png",
+      "file": "custom-illegal-schritte-plus-b12-unit11-feedback-v2.png",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Replace the physically impossible pose with a coherent scene: the same man climbing OVER a closed locked gate at night, with both legs and both arms visibly on the correct side of the bars and anatomically connected, no limbs passing through solid metal. Preserve photorealistic style, nighttime atmosphere and natural restrained colors. No extra limbs, words, logos or watermarks.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "originalNumber": 56,
+      "id": "luegen",
+      "term": "lügen",
+      "meaning": "lie",
+      "color": "natural",
+      "originalFile": "custom-luegen-schritte-plus-b12-unit11.png",
+      "file": "custom-luegen-schritte-plus-b12-unit11-feedback-v2.png",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve the woman, man, natural colors and conversational scene. Correct the woman’s anatomy to exactly two arms and two hands: one hand holds crossed fingers behind her back and her other arm rests naturally at her side. Remove the extra hand on her chest and any detached limbs. Five natural fingers per hand, correctly attached wrists, no extra arms, hands or fingers. No text or logos.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "originalNumber": 57,
+      "id": "beschaedigen",
+      "term": "beschädigen",
+      "meaning": "damage",
+      "color": "natural",
+      "originalFile": "custom-beschaedigen-schritte-plus-b12-unit11.png",
+      "file": "custom-beschaedigen-schritte-plus-b12-unit11-feedback-v2.png",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve the damaged ceramic vase, its crack, flower arrangement, table, photographic texture and natural lighting. Remove the hand and entire arm completely. Show the vase alone with a clear large crack and a small broken ceramic shard on the table. No people, hands, or text.",
+      "generated": true,
+      "reviewed": true
+    }
+  ],
+  "approvedOn": "2026-11-16",
+  "approvalScope": "publish"
+}

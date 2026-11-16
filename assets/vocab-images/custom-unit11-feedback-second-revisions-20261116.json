@@ -1,0 +1,33 @@
+{
+  "batch": "Unit 11 second feedback",
+  "status": "approved",
+  "items": [
+    {
+      "id": "luegen",
+      "term": "lügen",
+      "meaning": "lie",
+      "color": "natural",
+      "originalNumber": 56,
+      "originalFile": "custom-luegen-schritte-plus-b12-unit11-feedback-v2.png",
+      "file": "custom-luegen-schritte-plus-b12-unit11-feedback-v3.png",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve the two people, faces, their conversation, pose, clothing, realistic lighting and natural colors. Correct the woman’s anatomy. Remove the crossed-finger hand entirely, and hide that entire hand naturally behind her back, with the arm connected to her shoulder. Her other arm and hand rest naturally at her side. No detached hand, no extra hand or arm, no unnatural fingers; keep her expression suggesting she is telling a lie. No words or logos.",
+      "generated": true,
+      "reviewed": false,
+      "reviewNote": "Anatomy corrected; the lie cue is less explicit without crossed fingers."
+    },
+    {
+      "id": "beschaedigen",
+      "term": "beschädigen",
+      "meaning": "damage",
+      "color": "natural",
+      "originalNumber": 57,
+      "originalFile": "custom-beschaedigen-schritte-plus-b12-unit11-feedback-v2.png",
+      "file": "custom-beschaedigen-schritte-plus-b12-unit11-feedback-v3.png",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve the vase, its clear cracks, floral pattern, flowers, tabletop, composition, colors, lighting and texture. Remove only the separate ceramic shard from the tabletop and restore continuous unmarked wood where it was. Keep the vase cracked. No fragments, no hands, no people, no text.",
+      "generated": true,
+      "reviewed": true
+    }
+  ],
+  "approvedOn": "2026-11-16",
+  "approvalScope": "publish"
+}
