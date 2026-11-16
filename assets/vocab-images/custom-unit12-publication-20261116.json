@@ -1,0 +1,439 @@
+{
+  "batch": "Schritte PLUS B1.2 Unit 12",
+  "status": "approved",
+  "approvedOn": "2026-11-16",
+  "approvalScope": "publish",
+  "note": "User approved other images and requested the full-person red correction for die Mühe before publishing.",
+  "items": [
+    {
+      "id": "die-streichholzschachtel",
+      "term": "die Streichholzschachtel",
+      "file": "custom-die-streichholzschachtel-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque realistic photo of die Streichholzschachtel (matchbox): a vivid red open matchbox and neutral gray matches, on a gray tabletop. Red only on box; everything else grayscale. No text, logo, watermark or collage.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "der-kreis",
+      "term": "der Kreis",
+      "file": "custom-der-kreis-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque realistic photo of der Kreis (circle): one clearly circular thick vivid blue hoop lying flat on a gray tabletop, viewed at slight angle. Blue only on hoop; everything else neutral grayscale. No text, logo, watermark or collage.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-wolle",
+      "term": "die Wolle",
+      "file": "custom-die-wolle-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque realistic photo of die Wolle (wool): a vivid red ball of wool yarn with a short trailing strand on a gray table. Red only on wool; everything else neutral grayscale. No text, logo, watermark or collage.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "der-babysitter",
+      "term": "der Babysitter",
+      "file": "custom-der-babysitter-schritte-plus-b12-unit12-v2.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic flashcard for German masculine noun der Babysitter (male babysitter). A clearly adult man in a vivid blue sweater reads a picture book to a small child. The male babysitter is the primary subject. All skin, child, book, room and background grayscale, only the man’s sweater is blue. No text, logo, watermark, illustration or collage.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "das-publikum",
+      "term": "das Publikum",
+      "file": "custom-das-publikum-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque realistic photo for das Publikum (audience): seated audience wearing vivid green clothing seen from a stage, auditorium and skin grayscale. Green only on audience clothing; everything else neutral grayscale. No text, logo, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-klinik",
+      "term": "die Klinik",
+      "file": "custom-die-klinik-schritte-plus-b12-unit12-v2.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic flashcard for die Klinik (clinic/hospital). A small recognizable medical clinic with a vivid red facade and a clear white medical cross on the building above the entrance. All surrounding trees, sky, road, glass and lighting grayscale. Red only on the building, white cross. No letters, words, logos, watermark, illustration or collage.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-versammlung",
+      "term": "die Versammlung",
+      "file": "custom-die-versammlung-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque realistic photo for die Versammlung (meeting): a group of people in vivid red clothing seated in a circle together for a meeting; skin and meeting room are gray. Red only on group clothing; everything else neutral grayscale. No text, logo, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "der-umweltschutz",
+      "term": "der Umweltschutz",
+      "file": "custom-der-umweltschutz-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque realistic photo for der Umweltschutz (environmental protection): a vivid blue transparent protective dome shelters a little grayscale tree, close view. Blue only on dome; everything else neutral grayscale. No text, logo, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "der-fluechtling",
+      "term": "der Flüchtling",
+      "file": "custom-der-fluechtling-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque realistic photo for der Flüchtling (refugee): a person wearing a vivid blue coat and carrying a gray suitcase walks away from damaged buildings, grayscale surroundings. Blue only on coat; all skin and everything else neutral grayscale. Dignified empathetic composition. No text, logo, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-betreuung",
+      "term": "die Betreuung",
+      "file": "custom-die-betreuung-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque realistic photo for die Betreuung (caregiving): a caregiver wearing vivid red clothing gently assists an elderly person to walk, in a gray room. Red only on caregiver clothing; skin, elderly person, and everything else neutral grayscale. No text, logo, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "das-mitglied",
+      "term": "das Mitglied",
+      "file": "custom-das-mitglied-schritte-plus-b12-unit12-feedback-11-20261116-v2.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit attached membership-card photo. Preserve the green card, white icon, hands, lanyard, cardholder, exact composition, geometry, realistic texture and lighting. Make the hands and skin neutral grayscale, and make the entire brown wooden tabletop and background neutral grayscale. Green only on membership card; no warm skin, wood, reflections or other colors. No text or watermark.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-organisation",
+      "term": "die Organisation",
+      "file": "custom-die-organisation-schritte-plus-b12-unit12-feedback-12-20261116-v2.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit attached building photo. Preserve the vivid red building, white emblem, exact architecture, composition, geometry, realistic texture and lighting. Make all plants visible through the windows, interior furnishings, lighting and every background object neutral grayscale. RED is the only chromatic hue, confined to the facade. No green or warm window interiors, no text or watermark.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-geduld",
+      "term": "die Geduld",
+      "file": "custom-die-geduld-schritte-plus-b12-unit12-feedback-13-20261116-v2.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit attached photo of a patient woman in a red coat waiting in a line. Remove the entire white text label and every printed letter from the bottom of the image, naturally reconstruct the red coat and scene behind it. Preserve the exact person, queue, clock, framing, lighting and selective red/gray palette. No words, letters, typography, labels, logo, watermark, collage or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-bevoelkerung",
+      "term": "die Bevölkerung",
+      "file": "custom-die-bevoelkerung-schritte-plus-b12-unit12-feedback-14-20261116.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve its composition, subject identity, geometry, realistic texture and lighting. Make every person in the crowd entirely vivid RED, including skin, faces, hair and clothing, while preserving all people, facial features and pose and keeping background city and sky neutral grayscale. No text, logo, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-integration",
+      "term": "die Integration",
+      "file": "custom-die-integration-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for die Integration (融入、融合). A person fitting a vivid red puzzle piece into a nearly completed grayscale jigsaw puzzle. RED is the only chromatic hue, confined to the central subject or symbol. Skin, background, secondary objects, lighting, and everything else neutral grayscale. Clear simple composition, realistic anatomy. No readable text, logos, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-demokratie",
+      "term": "die Demokratie",
+      "file": "custom-die-demokratie-schritte-plus-b12-unit12-feedback-16-20261116.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve its composition, subject identity, geometry, realistic texture and lighting. Make the ballot paper vivid RED as well as the ballot box. Preserve composition and realistic details. The hand, sleeve, shadows and background stay neutral grayscale; red only on ballot and box. No text, logo, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-wirtschaft",
+      "term": "die Wirtschaft",
+      "file": "custom-die-wirtschaft-schritte-plus-b12-unit12-feedback-17-20261116.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic German vocabulary flashcard for \"die Wirtschaft\". A close tabletop arrangement of a vivid RED rising stock market line chart on a neutral gray board alongside a small stack of vivid RED coins and a red upward graph arrow. No labels or numbers; gray background. Crisp realistic textures and anatomy; no logo, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-vermittlung",
+      "term": "die Vermittlung",
+      "file": "custom-die-vermittlung-schritte-plus-b12-unit12-feedback-18-20261116.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic German vocabulary flashcard for \"die Vermittlung\". A vivid RED thread neatly connects two neutral grayscale objects on opposite sides, tied firmly to both as a physical symbol of bringing two sides together, close studio still life. No people, hands, words, diagram or collage. Crisp realistic textures and anatomy; no logo, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-philosophie",
+      "term": "die Philosophie",
+      "file": "custom-die-philosophie-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for die Philosophie (哲学). A red classical philosopher bust posed thoughtfully beside a grayscale open book. RED is the only chromatic hue, confined to the central subject or symbol. Skin, background, secondary objects, lighting, and everything else neutral grayscale. Clear simple composition, realistic anatomy. No readable text, logos, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-luege",
+      "term": "die Lüge",
+      "file": "custom-die-luege-schritte-plus-b12-unit12-feedback-20-20261116.png",
+      "source": "new",
+      "prompt": "Square photorealistic vocabulary image representing die Lüge (a lie): a vivid red theatrical smiling mask held in front of a neutral gray face, with the real serious face partly visible beside the mask. The mask is the visual symbol of deception. Grayscale surroundings, grayscale person and hand, realistic anatomy. No words, lettering, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "der-verein",
+      "term": "der Verein",
+      "file": "custom-der-verein-schritte-plus-b12-unit12-feedback-21-20261116.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve its composition, subject identity, geometry, realistic texture and lighting. Make all club members entirely vivid BLUE including skin, faces, hair, arms and clothing. Preserve all faces, poses and composition, gray sports equipment and neutral grayscale background. No text, logo, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-gesellschaft",
+      "term": "die Gesellschaft",
+      "file": "custom-die-gesellschaft-schritte-plus-b12-unit12-feedback-22-20261116.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve its composition, subject identity, geometry, realistic texture and lighting. Make all people entirely vivid RED including skin, faces, hair and clothes. Preserve people and composition; all buildings, sky, surroundings and other objects remain neutral grayscale. No text, logo, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "das-gewissen",
+      "term": "das Gewissen",
+      "file": "custom-das-gewissen-schritte-plus-b12-unit12-feedback-23-20261116.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve its composition, subject identity, geometry, realistic texture and lighting. Make the whole principal person vivid GREEN including skin, face, hair, hands and clothing. Preserve pose, subject identity, wallet, other person and composition. Everything else neutral grayscale. No text, logo, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-biene",
+      "term": "die Biene",
+      "file": "custom-die-biene-schritte-plus-b12-unit12-feedback-24-20261116.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit the attached original. Preserve its composition, subject identity, geometry, realistic texture and lighting. Make the entire bee vivid RED including body, head, antennae, legs and wings, preserving the realistic bee anatomy, textures and composition. Flower, sky, background and all supporting objects remain neutral grayscale. No text, logo, watermark, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "das-geld",
+      "term": "das Geld",
+      "file": "a2-das-geld-batch100-20261003.png",
+      "source": "existing",
+      "generated": false,
+      "reviewed": true
+    },
+    {
+      "id": "die-feuerwehr",
+      "term": "die Feuerwehr",
+      "file": "b1-die-feuerwehr-batch100-20261012-v2-v2.png",
+      "source": "existing",
+      "generated": false,
+      "reviewed": true
+    },
+    {
+      "id": "unterstuetzen",
+      "term": "unterstützen",
+      "file": "custom-unterstuetzen-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for German word \"unterstützen\" (支持、帮助). A volunteer helping a neighbor carry heavy grocery bags up stairs. Natural restrained colors, realistic proportions and simple close framing. No readable words, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "auffuehren",
+      "term": "aufführen",
+      "file": "custom-auffuehren-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for German word \"aufführen\" (演出、表演). Actors in costume performing on a small theater stage before a seated audience. Natural restrained colors, realistic proportions and simple close framing. No readable words, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "klettern",
+      "term": "klettern",
+      "file": "custom-klettern-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for German word \"klettern\" (攀爬、攀岩). A climber wearing a helmet and safety harness climbing up a rock wall. Natural restrained colors, realistic proportions and simple close framing. No readable words, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "versorgen",
+      "term": "versorgen",
+      "file": "custom-versorgen-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for German word \"versorgen\" (照料、供给). A person caring for an elderly neighbor by bringing them a tray of food and a glass of water. Natural restrained colors, realistic proportions and simple close framing. No readable words, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "eintreten",
+      "term": "eintreten",
+      "file": "custom-eintreten-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for German word \"eintreten\" (进入、加入). A person opening a door and stepping into a room, clear motion. Natural restrained colors, realistic proportions and simple close framing. No readable words, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "sich-einsetzen",
+      "term": "sich einsetzen",
+      "file": "custom-sich-einsetzen-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for German word \"sich einsetzen\" (积极投入、致力于). A volunteer picking up litter in a public park and putting it into a bag. Natural restrained colors, realistic proportions and simple close framing. No readable words, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "ueberleben",
+      "term": "überleben",
+      "file": "custom-ueberleben-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for German word \"überleben\" (幸存). A rescued survivor in a life jacket being helped aboard a rescue boat. Natural restrained colors, realistic proportions and simple close framing. No readable words, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "heimlich",
+      "term": "heimlich",
+      "file": "custom-heimlich-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for German word \"heimlich\" (偷偷地). A person quietly sneaking a biscuit from a jar while looking over their shoulder. Natural restrained colors, realistic proportions and simple close framing. No readable words, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "entlassen",
+      "term": "entlassen",
+      "file": "custom-entlassen-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for German word \"entlassen\" (解雇). A manager at an office desk having a serious dismissal conversation with an employee holding a small box of belongings. Natural restrained colors, realistic proportions and simple close framing. No readable words, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "reich",
+      "term": "reich",
+      "file": "custom-reich-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for German word \"reich\" (富有的). A wealthy person in a tasteful suit sitting beside a visible stack of coins and banknotes. Natural restrained colors, realistic proportions and simple close framing. No readable words, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "tolerant",
+      "term": "tolerant",
+      "file": "custom-tolerant-schritte-plus-b12-unit12.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic vocabulary flashcard for German word \"tolerant\" (包容的). People from different backgrounds warmly sharing a meal together at a table. Natural restrained colors, realistic proportions and simple close framing. No readable words, logos, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "verantwortlich",
+      "term": "verantwortlich",
+      "file": "custom-verantwortlich-schritte-plus-b12-unit12-feedback-39-20261116-v2.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit the attached photo of the responsible team leader and coworkers. Remove the entire white title banner and the printed word at top, reconstruct the office background naturally. Remove all letters and words on the papers and background whiteboard, leaving blank paper and neutral blank board. Preserve the people, office, composition, lighting and natural colors. No letters, typography, text, logo, watermark or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "sonstig",
+      "term": "sonstig-",
+      "file": "custom-sonstig-schritte-plus-b12-unit12-feedback-40-20261116-v2.png",
+      "source": "new",
+      "prompt": "Square realistic vocabulary photo for German adjective sonstig- (other, remaining). A group of three identical red apples neatly arranged on one side of a plain wooden table; on the other side, a visibly different single pear, clearly separated, representing something else among the items. Natural restrained colors; simple uncluttered framing. Absolutely no text, letters, digits, signs, logos, watermarks, collage or illustration.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "der-augenblick",
+      "term": "der Augenblick",
+      "file": "custom-der-augenblick-schritte-plus-b12-unit12-feedback-41-20261116.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic German vocabulary flashcard for \"der Augenblick\". A single vivid BLUE water droplet captured exactly at the instant it touches a grayscale water surface, with a crisp crown splash; this fleeting instant is the subject. Crisp realistic textures and anatomy; no logo, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "zukuenftig",
+      "term": "zukünftig",
+      "file": "custom-zukuenftig-schritte-plus-b12-unit12-feedback-42-20261116.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic German vocabulary flashcard for \"zukünftig\". A person looking toward a distant modern sustainable city skyline at sunrise, suggesting the future. Natural restrained colors, no dates or words. Crisp realistic textures and anatomy; no logo, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "woechentlich",
+      "term": "wöchentlich",
+      "file": "custom-woechentlich-schritte-plus-b12-unit12-feedback-43-20261116.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic German vocabulary flashcard for \"wöchentlich\". A realistic paper monthly calendar seen from above, with four evenly spaced dates seven days apart circled, clearly suggesting something happening every week. The dates are meaningful digits; no words or other text. Natural restrained colors. Crisp realistic textures and anatomy; no logo, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "verpflichtet-sein",
+      "term": "verpflichtet sein",
+      "file": "custom-verpflichtet-sein-schritte-plus-b12-unit12-feedback-44-20261116.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic German vocabulary flashcard for \"verpflichtet sein\". A worker in safety equipment carrying out a required safety inspection and checking a paper checklist, a necessary assigned duty. Natural restrained colors; checklist has no legible writing. Crisp realistic textures and anatomy; no logo, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "jahrzehntelang",
+      "term": "jahrzehntelang",
+      "file": "custom-jahrzehntelang-schritte-plus-b12-unit12-feedback-45-20261116.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic German vocabulary flashcard for \"jahrzehntelang\". A photographic arrangement of old yearly calendars representing decades, from an old page marked 1980 to a newer page marked 2020, with several intermediate years, showing long passage of time. Only legible text is years, no other words. Natural restrained colors. Crisp realistic textures and anatomy; no logo, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-massnahme",
+      "term": "die Massnahme",
+      "file": "custom-die-massnahme-schritte-plus-b12-unit12-feedback-47-20261116-v2.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit the attached photo of red flood sandbags. Keep the entire sandbag barrier vivid red, preserve its composition, shape, wet texture, lighting and details. Change only the floodwater and reflections below and around the barrier to neutral grayscale, with no red tint anywhere on the water. Door, walls and all background remain neutral grayscale. No text, logos or watermark.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "vorgestern",
+      "term": "vorgestern",
+      "file": "custom-vorgestern-schritte-plus-b12-unit12-feedback-48-20261116.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic German vocabulary flashcard for \"vorgestern\". A single desk calendar opened to a three-day sequence 14, 15, 16, with 14 circled and a small neutral marker on 16 to show the day before yesterday. Dates are essential numbers, no words or additional legible text. Natural restrained colors. Crisp realistic textures and anatomy; no logo, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "die-muehe",
+      "term": "die Mühe",
+      "file": "custom-die-muehe-schritte-plus-b12-unit12-feedback-49-person-red-v2.png",
+      "source": "new",
+      "prompt": "Use case: precise-object-edit. Edit the attached original photograph. Preserve exactly the person, identity, posture, strained expression, heavy box, stairs, composition, geometry, photographic texture and lighting. Color the entire person vivid RED: hair, face, neck, arms, hands, legs, clothing and shoes. All parts of the person are red, including skin and footwear. Keep the heavy box, backpack straps, stairway, wall, background and other objects neutral grayscale. Red is the only hue. No text, logos, watermark or collage.",
+      "generated": true,
+      "reviewed": true
+    },
+    {
+      "id": "verantwortlich-sein",
+      "term": "verantwortlich sein",
+      "file": "custom-verantwortlich-sein-schritte-plus-b12-unit12-feedback-50-20261116.png",
+      "source": "new",
+      "prompt": "Square opaque photorealistic German vocabulary flashcard for \"verantwortlich sein\". A responsible parent carefully holding a small child’s hand at a zebra crossing, looking attentively at the road, showing responsibility for someone. Natural restrained colors. Crisp realistic textures and anatomy; no logo, watermark, collage, illustration or UI.",
+      "generated": true,
+      "reviewed": true
+    }
+  ]
+}
