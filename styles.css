@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("assets/fonts/fraunces-latin-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
   --page-top: #f7f8fb;
@@ -85,11 +93,26 @@ p {
   margin-top: 0;
 }
 
-h1 {
+.app-title {
   margin-bottom: 0;
-  font-size: clamp(1.65rem, 3vw, 2.5rem);
-  line-height: 1.08;
-  letter-spacing: 0;
+  color: var(--accent-dark);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2.375rem, 1.75rem + 2.8vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+}
+
+.app-subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+body.is-studying .app-title {
+  font-size: 2rem;
 }
 
 h2 {
@@ -1179,7 +1202,6 @@ button:focus-visible {
   .topbar { align-items: flex-start; flex-direction: column; }
   .stats { width: 100%; }
   body.is-studying .topbar { flex-direction: row; align-items: center; }
-  body.is-studying h1 { font-size: 1.7rem; }
   body.is-studying .stats { width: auto; }
   .vocab-image { width: min(100%, 190px); }
   .word { font-size: 2.4rem; }
