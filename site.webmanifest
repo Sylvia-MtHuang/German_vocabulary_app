@@ -1,6 +1,6 @@
 {
-  "name": "German Vocabulary Flashcards",
-  "short_name": "Deutsch Memo",
+  "name": "Wortfarben",
+  "short_name": "Wortfarben",
   "description": "A cheerful German vocabulary flashcard app.",
   "start_url": ".",
   "display": "standalone",

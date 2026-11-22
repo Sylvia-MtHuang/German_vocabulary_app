@@ -32,7 +32,7 @@ function Send-Response {
 }
 
 $Listener.Start()
-Write-Host "German Flashcards running at http://127.0.0.1:$Port/"
+Write-Host "Wortfarben running at http://127.0.0.1:$Port/"
 
 try {
   while ($true) {

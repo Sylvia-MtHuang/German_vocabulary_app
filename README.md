@@ -1,4 +1,4 @@
-# German Vocabulary Flashcards
+# Wortfarben
 
 A small local flashcard app for German vocabulary practice.
 
