@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Dancing Script";
-  src: url("assets/fonts/dancing-script-latin-700.woff2") format("woff2");
+  font-family: "Berkshire Swash";
+  src: url("assets/fonts/berkshire-swash-latin-400.woff2") format("woff2");
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
 }
 
@@ -96,9 +96,9 @@ p {
 .app-title {
   margin-bottom: 0;
   color: var(--accent-dark);
-  font-family: "Dancing Script", Georgia, serif;
-  font-size: clamp(2.75rem, 2rem + 3vw, 3.875rem);
-  font-weight: 700;
+  font-family: "Berkshire Swash", Georgia, serif;
+  font-size: clamp(2.75rem, 2rem + 3vw, 3.5rem);
+  font-weight: 400;
   line-height: 1.04;
 }
 
