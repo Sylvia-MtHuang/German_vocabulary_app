@@ -25,8 +25,10 @@ vm.runInContext(source, context);
 
 const books = JSON.parse(fs.readFileSync(path.join(root, 'wordbooks/manifest.json'), 'utf8'));
 const customUnits = books.filter(book => book.group === 'custom');
-assert.deepEqual(customUnits.map(book => book.id), ['custom-unit-8', 'custom-unit-9', 'custom-unit-10', 'custom-unit-11']);
-assert.deepEqual(customUnits.map(book => book.cardCount), [42, 49, 52, 60]);
+assert.deepEqual(customUnits.map(book => book.id), [
+  'custom-unit-8', 'custom-unit-9', 'custom-unit-10', 'custom-unit-11', 'custom-unit-12', 'custom-unit-13'
+]);
+assert.deepEqual(customUnits.map(book => book.cardCount), [42, 49, 52, 60, 50, 57]);
 
 context.text = fs.readFileSync(path.join(root, 'vocabulary.txt'), 'utf8');
 const words = vm.runInContext('parseVocabulary(text)', context);

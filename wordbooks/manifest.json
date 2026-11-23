@@ -51,6 +51,15 @@
     "cardCount": 50
   },
   {
+    "id": "custom-unit-13",
+    "title": "Schritte PLUS B1.2 · Unit 13",
+    "description": "Aus Politik und Geschichte · 57 cards",
+    "url": "wordbooks/custom-unit-13.txt",
+    "source": "Schritte PLUS B1.2 · Unit 13",
+    "group": "custom",
+    "cardCount": 57
+  },
+  {
     "id": "goethe-a1",
     "title": "Goethe-Institut A1 level",
     "description": "Expanded A1 set based on the Goethe A1 wordlist.",
