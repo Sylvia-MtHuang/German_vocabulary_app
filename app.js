@@ -526,6 +526,24 @@ const SWIPE_RATING_DIRECTIONS = {
   2: "right"
 };
 const BUILT_IN_MEMORY_AIDS = {
+  schalten: [
+    ["schalten", "to switch"],
+    ["einschalten / ausschalten", "to switch on / off"],
+    ["umschalten", "to switch over; change channels"]
+  ],
+  gerecht: [
+    ["gerecht", "fair"],
+    ["un-", "not; opposite"],
+    ["ungerecht", "unfair"]
+  ],
+  entwicklung: [
+    ["entwickeln", "to develop"],
+    ["-ung", "turns a verb into a noun"]
+  ],
+  forschung: [
+    ["forschen", "to research"],
+    ["-ung", "turns a verb into a noun"]
+  ],
   abmeldung: [
     ["ab-", "off; away"],
     ["die Meldung", "notice; report"],
@@ -540,16 +558,6 @@ const BUILT_IN_MEMORY_AIDS = {
     ["ändern", "to change"],
     ["-ung", "turns a verb into a noun"],
     ["merken", "An Änderung is the result of changing something."]
-  ],
-  nachricht: [
-    ["nach", "after; toward"],
-    ["richten", "to direct; arrange"],
-    ["merken", "A Nachricht is information directed to someone."]
-  ],
-  hinweis: [
-    ["hin", "there; toward"],
-    ["der Weise / weisen", "way; to point"],
-    ["merken", "A Hinweis points you toward the right way."]
   ],
   moeglichkeit: [
     ["möglich", "possible"],
@@ -586,34 +594,15 @@ const BUILT_IN_MEMORY_AIDS = {
     ["-ung", "turns a verb into a noun"],
     ["merken", "Bedeutung is what something means."]
   ],
-  aufgabe: [
-    ["auf-", "up; onto"],
-    ["geben", "to give"],
-    ["merken", "An Aufgabe is something given to you to do."]
-  ],
-  anfang: [
-    ["an-", "on; at"],
-    ["fangen", "to catch; start"],
-    ["merken", "Der Anfang is where something starts."]
-  ],
   verbindung: [
     ["verbinden", "to connect"],
     ["-ung", "turns a verb into a noun"],
     ["merken", "Eine Verbindung is the result of connecting."]
   ],
-  umgebung: [
-    ["um", "around"],
-    ["geben", "to give"],
-    ["merken", "Die Umgebung is what is given/located around you: the surroundings."]
-  ],
   kreuzung: [
     ["das Kreuz", "cross"],
     ["-ung", "noun ending"],
     ["merken", "Eine Kreuzung is where roads cross."]
-  ],
-  ampel: [
-    ["Ampel", "traffic light"],
-    ["merken", "Historically from a hanging lamp; modern German uses it for traffic lights."]
   ],
   fahrplan: [
     ["fahren", "to travel; drive"],
@@ -622,14 +611,8 @@ const BUILT_IN_MEMORY_AIDS = {
   ],
   verspaetung: [
     ["spät", "late"],
-    ["ver-", "change/result prefix"],
     ["-ung", "turns a verb/adjective idea into a noun"],
     ["merken", "Verspätung is the state/result of being late."]
-  ],
-  anschluss: [
-    ["an-", "on; to"],
-    ["der Schluss / schließen", "close; join"],
-    ["merken", "Der Anschluss is the connection that joins onto your route."]
   ],
   kontrolle: [
     ["kontrollieren", "to check; control"],
@@ -645,11 +628,6 @@ const BUILT_IN_MEMORY_AIDS = {
     ["rechnen", "to calculate"],
     ["-ung", "turns a verb into a noun"],
     ["merken", "Eine Rechnung is a calculation on paper: bill or invoice."]
-  ],
-  betrag: [
-    ["tragen", "to carry"],
-    ["be-", "prefix"],
-    ["merken", "Der Betrag is the amount a bill carries."]
   ],
   ueberweisung: [
     ["über", "over; across"],
@@ -673,19 +651,13 @@ const BUILT_IN_MEMORY_AIDS = {
     ["-ung", "noun ending"],
     ["merken", "Eine Kündigung is the notice that cancels something."]
   ],
-  antrag: [
-    ["an-", "to; toward"],
-    ["tragen", "to carry"],
-    ["merken", "Ein Antrag carries a request toward an office or person."]
-  ],
   unterschrift: [
     ["unter", "under"],
     ["die Schrift", "writing"],
     ["merken", "Die Unterschrift is the writing under a document: signature."]
   ],
   bewilligung: [
-    ["willigen", "to consent"],
-    ["be-", "prefix"],
+    ["bewilligen", "to approve; grant"],
     ["-ung", "noun ending"],
     ["merken", "Eine Bewilligung is official consent or authorization."]
   ],
@@ -712,7 +684,6 @@ const BUILT_IN_MEMORY_AIDS = {
   ],
   angebot: [
     ["anbieten", "to offer"],
-    ["das Gebot", "offer; bid"],
     ["merken", "Ein Angebot is something offered to you."]
   ]
 };
@@ -1085,6 +1056,8 @@ function normalizePlural(value) {
 
 function normalizeMemoryAid(value) {
   if (!value || !value.trim()) return [];
+  // Older imported chapters used this template for forms and example translations, not memory aids.
+  if (/^memory\s*=.*\bForms:/i.test(value.trim())) return [];
   return value
     .split(";")
     .map((part) => part.trim())
